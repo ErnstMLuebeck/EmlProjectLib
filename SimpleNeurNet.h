@@ -1,8 +1,8 @@
 /* Simple feed-forward neural network including training
  * Source: robotics.hobbizine.com/arduinoann.html
  * 
- * $Author: E. M. Luebeck$
- * $Date: 2021-04-23$
+ * @author E. M. Luebeck
+ * @date 2021-04-23
  */
 
 //#include <stdio.h>

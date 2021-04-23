@@ -1,7 +1,10 @@
-/* Parallel PID controller with anti-windup
+/** 
+ * Parallel PID controller with anti-windup and filtered D-part. The class also features
+ * functions for gain scheduling (update controller gains during run-time), set value of integrator,
+ * as well as an input for feed-forward control.
  * 
- * $Author: E. M. Luebeck$
- * $Date: 2021-04-23$
+ * @author E. M. Luebeck
+ * @date 2021-04-23
  */
 
 #ifndef PIDCTRLR_H_

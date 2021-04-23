@@ -1,7 +1,8 @@
-/* First order low-pass filter
+/**
+ * First order low-pass filter
  * 
- * $Author: E. M. Luebeck$
- * $Date: 2021-04-23$
+ * @author E. M. Luebeck
+ * @date 2021-04-23
  */
 
 #ifndef LOWPASSFILTER_H
@@ -10,12 +11,12 @@
 class LowPassFilter 
 {
     public:
-        LowPassFilter(float _Ts, float _Tc, float _y_n1) ;
+        LowPassFilter(float _Ts, float _Tc, float _y_kn1);
         float calculate(float);
-        void setValue(float _y_n1);
+        void setValue(float _y_kn1);
 
     private:
-        float y_n1;  // y[k-1]
+        float y_kn1;  // y[k-1]
         float Ts;   // sample time
         float Tc;   // time constant
         float alpha;  // filter constant

@@ -1,5 +1,15 @@
 #include "PidCtrlr.h"
 
+/**
+ * Construct object with controller parameters. 
+ * 
+ * @param _Kp [-], proportional controller gain
+ * @param _Ki [-], integral controller gain
+ * @param _Kd [-], derivative controller gain
+ * @param _Kaw [-], anti windup gain
+ * @param _TcDpart [s], filter time constant of derivative filter
+ * @param _Ts [s], sample time
+ */
 PidCtrlr::PidCtrlr(float _Kp, float _Ki, float _Kd, float _Kaw, float _TcDpart, float _Ts)
 {
     Ts = _Ts;
@@ -20,49 +30,62 @@ PidCtrlr::PidCtrlr(float _Kp, float _Ki, float _Kd, float _Kaw, float _TcDpart, 
     integral = 0;
 }
 
+/**
+ * Update sample time (it is recommended to keep it fixed) 
+ * 
+ * @param _Ts [s], controller sample time
+ */
 void PidCtrlr::setTs(float _Ts)
-{   /* Update sample time (recommended to keep it fixed) */
+{   
     Ts = _Ts;
 }
 
+/**
+ * Update the controller gains during run-time in case gain-scheduling is used
+ * 
+ * @param _Kp [-], proportional controller gain
+ * @param _Ki [-], integral controller gain
+ * @param _Kd [-], derivative controller gain
+ * @param _Kaw [-], anti windup gain
+ */
 void PidCtrlr::setCtrlrGains(float _Kp, float _Ki, float _Kd, float _Kaw)
-{   /* Update the controller gains during run-time in case gain-scheduling
-    is used */
+{   
     Kp = _Kp;
     Ki = _Ki;
     Kd = _Kd;
     Kaw = _Kaw;
 }
 
+/**
+ * Initialize integrator with defined value
+ * 
+ * @param _IpartInit [-], reset value for integrator
+ */
 void PidCtrlr::setIpart(float _IpartInit)
-{   /* Initialize integrator with defined value */
+{   
     integral = _IpartInit;
 }
 
+/**
+ * Calculate PID control algorithm.
+ * Note that the actuator is typically limited to physical limits (e.g. 0..100%).
+ * If not, u_true can simply be set to u_kn1, the last controller output.
+ * If feed-foorward is not used, set it to 0.
+ * 
+ * @param y_sp plant output setpoint
+ * @param y actual/measured plant output
+ * @param u_true implemented actuator position after saturation
+ * @param u_ff feed-forward actuator position, keep 0 if no FF control is used
+ * @return u unlimited actuator position
+ */
 float PidCtrlr::calculate(float y_sp, float y, float u_true, float u_ff)
 {
-    /* Calculate PID control algorithm 
-        
-        inputs:
-        y_sp = Plant output setpoint
-        y = Actual/Measured plant output
-        u_true = Implemented actuator position after saturation
-        u_ff = feed-forward actuator position, keep 0 if no FF control is used
-        outputs:
-        u = Unlimited actuator position
-
-        Note that the actuator is typically limited to physical limits (e.g. 0..100%).
-        If not, u_true can simply be set to u_kn1, the last controller output.
-
-    */
-
     float error_k, integral, derivative;
     float up, ui, ud;
     
     error_k = y_sp - y;
     integral = integral + (error_k * Ts) + (Kaw * (u_true - u_kn1));
-    
-    /* Todo: implement filtering of D-part */
+
     derivative = (error_k - error_kn1) / Ts;
     error_kn1 = error_k;
 

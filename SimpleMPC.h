@@ -1,7 +1,7 @@
 /* Simple, unconstrained MIMO Model-Predictive-Control (MPC)
  * 
- * $Author: E. M. Luebeck$
- * $Date: 2021-04-23$
+ * @author E. M. Luebeck
+ * @date 2021-04-23
  */
 
 #ifndef SIMPLEMPC_H

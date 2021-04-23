@@ -35,8 +35,8 @@ int date2day(int day, int month);
 /**
  * Convert conventional date to day within the year
  * 
- * @param day of the date
- * @param month of the date
+ * @param day of the date (1..31)
+ * @param month of the date (1..12)
  * @return day within the year (1..365)
  */
 int date2day(int day, int month)
@@ -45,13 +45,24 @@ int date2day(int day, int month)
     int days = 0;
 
     for(int i=0; i<month; i++) days += tage_pro_monat[i];
-        days += day;
+
+    days += day;
 
     return(days);
 }
 
-
-
+/**
+ * Calculate the sun angle (azimut and elevation) based on date, time and GPS coordinates
+ * 
+ * @param latitude
+ * @param longitude
+ * @param month
+ * @param day
+ * @param hour
+ * @param minute
+ * @return azimut (-180..+180) [deg]
+ * @return elevation (0..90) [deg]
+ */
 void calcSunAngle(float lati, float longi, int month, int day, int hour, int minute, float* azimut, float* elevation)
 { 
     int days = date2day(day,month);
@@ -70,18 +81,19 @@ void calcSunAngle(float lati, float longi, int month, int day, int hour, int min
   
     if(hour>=12) *azimut = 360 - *azimut;
   
-    // calculation validated agains MATLAB. Identical results.
-  
-    //Serial.print(deklination,4); Serial.println(" deklination");
-    //Serial.print(zeitgleichung,4); Serial.println(" zeitgleichung");
-    //Serial.print(stundenwinkel,4); Serial.println(" stundenwinkel");
-    //Serial.print(sin_hoehe,4); Serial.println(" sin_hoehe");
-    //Serial.print(y,4); Serial.println(" y");
-    //Serial.print(days); Serial.println(" days");
+    /* calculation validated agains MATLAB. Identical results. */
 }
 
-
-
+/**
+ * Calculate the sunrise time of a specific day
+ * 
+ * @param latitude
+ * @param longitude
+ * @param month [m]
+ * @param day [d]
+ * @return hour of sunrise [h]
+ * @return minute of sunrise [min]
+ */
 void calcSunriseTime(float lati, float longi, int month, int day, int& rise_h, int& rise_min)
 {
     float azimut, elevation;
@@ -104,6 +116,16 @@ void calcSunriseTime(float lati, float longi, int month, int day, int& rise_h, i
     }
 }
 
+/**
+ * Calculate the sunset time of a specific day
+ * 
+ * @param latitude
+ * @param longitude
+ * @param month [m]
+ * @param day [d]
+ * @return hour of sunset [h]
+ * @return minute of sunset [min]
+ */
 void calcSunsetTime(float lati, float longi, int month, int day, int& set_h, int& set_min)
 {
     float azimut, elevation;

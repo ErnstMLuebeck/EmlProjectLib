@@ -1,13 +1,8 @@
 #include "StateSpaceModel.h"
 
-/*
-% Plant model --------------------------------------------------------------    
-w_kn1 = sigmaQ*randn(Nx,1); % process noise p(w)~N(0,Q)
-x_plant = A*x_plant_kn1 + B*du(:,k) + w_kn1;
-x_true(:,k) = x_plant_kn1;
-x_plant_kn1 = x_plant;
-*/
-
+/**
+ * Construct state space model object
+ */
 StateSpaceModel::StateSpaceModel()
 {   
     /* Pre-calculate arrays */
@@ -27,7 +22,16 @@ StateSpaceModel::StateSpaceModel()
 
 }
 
-
+/**
+ * Calculate the new system outputs based on the new inputs. The outputs and states can then be 
+ * obtained by the respective get* functions.
+ * 
+ * Standard form of a state-space model:
+ * x_k = A*x_kn1 + B*u_k;
+ * y_k = C*x_kn1;
+ *  
+ * @param u_k [-], system input vector (can also be a vector of size [1x1])
+ */
 void StateSpaceModel::calculate(float* u_k)
 {  
     /* x_k = A*x_kn1 + B*u_k; */
@@ -71,6 +75,16 @@ void StateSpaceModel::calculate(float* u_k)
 
 }
 
+/**
+ * Calculate the new observer based on the new inputs and measured plant output. 
+ * The observer outputs and states can then be obtained by the respective get* functions.
+ * 
+ * Standard matrix equations of a state observer:
+ * x_hat_k = (A-L*C) * x_hat_kn1 + B*u_k + L*y_sens;
+ *  
+ * @param u_k [-], system input vector (can also be a vector of size [1x1])
+ * @param y_sens [-], measured plant output
+ */
 void StateSpaceModel::calculateObserver(float* u_k, float* y_sens)
 {  
     /* x_hat_k = (A-L*C) * x_hat_kn1 + B*u_k + L*y_sens; */
@@ -127,6 +141,11 @@ void StateSpaceModel::calculateObserver(float* u_k, float* y_sens)
 
 }
 
+/**
+ * Get states of the state space system.
+ * 
+ * @return _x_k [-], last calculated system state vector
+ */
 void StateSpaceModel::getStates(float* _x_k)
 {
     int row1 = NX;
@@ -135,6 +154,11 @@ void StateSpaceModel::getStates(float* _x_k)
 
 }
 
+/**
+ * Set states of the state space system.
+ * 
+ * @return _x_kn1 [-], state vector, mainly used for initialization
+ */
 void StateSpaceModel::setStates(float* _x_kn1)
 {
     int row1 = NX;
@@ -143,6 +167,11 @@ void StateSpaceModel::setStates(float* _x_kn1)
 
 }
 
+/**
+ * Get states of the state observer.
+ * 
+ * @return _x_hat_k [-], last calculated observer state vector
+ */
 void StateSpaceModel::getObserverStates(float* _x_hat_k)
 {
     int row1 = NX;

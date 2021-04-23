@@ -1,7 +1,8 @@
-/* State Space Model (MIMO compatible) with state observer
+/**
+ * State Space Model (MIMO compatible) with state observer
  * 
- * $Author: E. M. Luebeck$
- * $Date: 2021-04-23$
+ * @author E. M. Luebeck
+ * @date 2021-04-23
  */
 
 #ifndef STATESPACEMODEL_H
