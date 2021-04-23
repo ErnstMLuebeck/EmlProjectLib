@@ -1,4 +1,8 @@
-
+/* Turn on/off delay
+ * 
+ * $Author: E. M. Luebeck$
+ * $Date: 2021-04-23$
+ */
 
 #ifndef TURNONOFFDELAY_H
 #define TURNONOFFDELAY_H

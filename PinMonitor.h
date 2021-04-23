@@ -1,14 +1,17 @@
-
+/* The PinMonitor is watching a physical pin and can return
+ * a number of events: rising edge, falling edge, toggle, state,.. 
+ * The state can also be debounced.
+ * 
+ * $Author: E. M. Luebeck$
+ * $Date: 2021-04-23$
+ */
 
 #ifndef PINMONITOR_H
 #define PINMONITOR_H
 
 #include <Arduino.h>
 
-/* The PinMonitor is watching a physical pin and can return
- * a number of events: rising edge, falling edge, toggle. 
- * The pin is also debounced.
- */
+
  
 class PinMonitor 
 {

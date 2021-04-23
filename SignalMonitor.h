@@ -1,11 +1,13 @@
-
+/* The SignalMonitor is watching an integer software-signal and detects changes
+ * 
+ * $Author: E. M. Luebeck$
+ * $Date: 2021-04-23$
+ */
 
 #ifndef SIGNALMONITOR_H
 #define SIGNALMONITOR_H
 
 #include <Arduino.h>
-
-/* The SignalMonitor is watching a signal and detects changes */
  
 class SignalMonitor 
 {

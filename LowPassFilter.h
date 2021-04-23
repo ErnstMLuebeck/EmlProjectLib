@@ -1,4 +1,8 @@
-
+/* First order low-pass filter
+ * 
+ * $Author: E. M. Luebeck$
+ * $Date: 2021-04-23$
+ */
 
 #ifndef LOWPASSFILTER_H
 #define LOWPASSFILTER_H

@@ -1,3 +1,9 @@
+/* Simple, unconstrained MIMO Model-Predictive-Control (MPC)
+ * 
+ * $Author: E. M. Luebeck$
+ * $Date: 2021-04-23$
+ */
+
 #ifndef SIMPLEMPC_H
 #define SIMPLEMPC_H
 

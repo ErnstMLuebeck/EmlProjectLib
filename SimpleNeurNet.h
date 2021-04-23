@@ -1,9 +1,9 @@
-/******************************************************************
- * Generic NN
- * All basic settings can be controlled via the Network Configuration
- * section.
- * See robotics.hobbizine.com/arduinoann.html for details.
- ******************************************************************/
+/* Simple feed-forward neural network including training
+ * Source: robotics.hobbizine.com/arduinoann.html
+ * 
+ * $Author: E. M. Luebeck$
+ * $Date: 2021-04-23$
+ */
 
 //#include <stdio.h>
 #include <stdlib.h>  

@@ -1,7 +1,11 @@
+/* State Space Model (MIMO compatible) with state observer
+ * 
+ * $Author: E. M. Luebeck$
+ * $Date: 2021-04-23$
+ */
+
 #ifndef STATESPACEMODEL_H
 #define STATESPACEMODEL_H
-
-/* State Space Model (MIMO compatible) with observer */
 
 #include <Arduino.h>
 #include <math.h>

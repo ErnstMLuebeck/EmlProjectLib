@@ -1,7 +1,7 @@
 /* Parallel PID controller with anti-windup
  * 
  * $Author: E. M. Luebeck$
- * $Date: 2018-05-03$
+ * $Date: 2021-04-23$
  */
 
 #ifndef PIDCTRLR_H_
