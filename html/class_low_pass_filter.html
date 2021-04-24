@@ -5,13 +5,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EmlProjectLib: LowPassFilter Class Reference</title>
+<title>Porject Library: LowPassFilter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,8 +29,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="OnlineLogo2p1_bmp.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">EmlProjectLib
+   <div id="projectname">Porject Library
+   &#160;<span id="projectnumber">2021-04-24</span>
    </div>
+   <div id="projectbrief">Collection of useful classes and functions.</div>
   </td>
  </tr>
  </tbody>
@@ -64,6 +73,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_low_pass_filter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LowPassFilter Class Reference</div>  </div>
@@ -76,10 +86,21 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aefb43482a1aefdf1506daf9a1aeab17d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#aefb43482a1aefdf1506daf9a1aeab17d">LowPassFilter</a> (float _Ts, float _Tc, float _y_kn1)</td></tr>
 <tr class="separator:aefb43482a1aefdf1506daf9a1aeab17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9e9cc319151d5bdbd223c577a10776e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#af9e9cc319151d5bdbd223c577a10776e">calculate</a> (float)</td></tr>
-<tr class="separator:af9e9cc319151d5bdbd223c577a10776e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af913e20eb292ce6056689840ce80e824"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#af913e20eb292ce6056689840ce80e824">calculate</a> (float _x)</td></tr>
+<tr class="separator:af913e20eb292ce6056689840ce80e824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54320ac1e367691c2dc8e96fa9469775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775">setValue</a> (float _y_kn1)</td></tr>
 <tr class="separator:a54320ac1e367691c2dc8e96fa9469775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aaea94c6ff1d479e529dc823b10012222"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#aaea94c6ff1d479e529dc823b10012222">y_kn1</a></td></tr>
+<tr class="separator:aaea94c6ff1d479e529dc823b10012222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31bbf3dc56fec8f0ad178c82729707b2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#a31bbf3dc56fec8f0ad178c82729707b2">Ts</a></td></tr>
+<tr class="separator:a31bbf3dc56fec8f0ad178c82729707b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3484d5e87ce7fd6a0ab6944be62d896c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#a3484d5e87ce7fd6a0ab6944be62d896c">Tc</a></td></tr>
+<tr class="separator:a3484d5e87ce7fd6a0ab6944be62d896c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f178b15dc85b3122cbcddcb6e4dc13b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#a4f178b15dc85b3122cbcddcb6e4dc13b">alpha</a></td></tr>
+<tr class="separator:a4f178b15dc85b3122cbcddcb6e4dc13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>First order low-pass filter</p>
@@ -119,7 +140,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct filter object with parameters and initial values.</p>
+<p>Construct filter object with parameters and initial values. The filter coefficient is calculated by:</p>
+<p>\( \alpha = 1 - \frac{Ts}{Tc} \)</p>
+<p>The coefficient is then limited between 0 and 1 in case the user input is incorrect.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_Ts</td><td>[s], sample time </td></tr>
@@ -129,13 +152,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8cpp_source.html#l00010">10</a> of file <a class="el" href="_low_pass_filter_8cpp_source.html">LowPassFilter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8cpp_source.html#l00014">14</a> of file <a class="el" href="_low_pass_filter_8cpp_source.html">LowPassFilter.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af9e9cc319151d5bdbd223c577a10776e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9e9cc319151d5bdbd223c577a10776e">&#9670;&nbsp;</a></span>calculate()</h2>
+<a id="af913e20eb292ce6056689840ce80e824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af913e20eb292ce6056689840ce80e824">&#9670;&nbsp;</a></span>calculate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +172,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Calculate filter output.</p>
+<p>Calculate filter output according to the following difference equation:</p>
+<p>\( y[k] = \alpha \cdot y[k-1] + (1-\alpha) \cdot x[k] \)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_x</td><td>[-], filter input </td></tr>
@@ -158,7 +182,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>_y [-], filter output </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8cpp_source.html#l00026">26</a> of file <a class="el" href="_low_pass_filter_8cpp_source.html">LowPassFilter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8cpp_source.html#l00032">32</a> of file <a class="el" href="_low_pass_filter_8cpp_source.html">LowPassFilter.cpp</a>.</p>
 
 </div>
 </div>
@@ -185,7 +209,107 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8cpp_source.html#l00037">37</a> of file <a class="el" href="_low_pass_filter_8cpp_source.html">LowPassFilter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8cpp_source.html#l00043">43</a> of file <a class="el" href="_low_pass_filter_8cpp_source.html">LowPassFilter.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4f178b15dc85b3122cbcddcb6e4dc13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f178b15dc85b3122cbcddcb6e4dc13b">&#9670;&nbsp;</a></span>alpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LowPassFilter::alpha</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8h_source.html#l00026">26</a> of file <a class="el" href="_low_pass_filter_8h_source.html">LowPassFilter.h</a>.</p>
+
+</div>
+</div>
+<a id="a3484d5e87ce7fd6a0ab6944be62d896c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3484d5e87ce7fd6a0ab6944be62d896c">&#9670;&nbsp;</a></span>Tc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LowPassFilter::Tc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>[s], time constant </p>
+
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8h_source.html#l00024">24</a> of file <a class="el" href="_low_pass_filter_8h_source.html">LowPassFilter.h</a>.</p>
+
+</div>
+</div>
+<a id="a31bbf3dc56fec8f0ad178c82729707b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31bbf3dc56fec8f0ad178c82729707b2">&#9670;&nbsp;</a></span>Ts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LowPassFilter::Ts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>[s], sample time </p>
+
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8h_source.html#l00022">22</a> of file <a class="el" href="_low_pass_filter_8h_source.html">LowPassFilter.h</a>.</p>
+
+</div>
+</div>
+<a id="aaea94c6ff1d479e529dc823b10012222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea94c6ff1d479e529dc823b10012222">&#9670;&nbsp;</a></span>y_kn1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LowPassFilter::y_kn1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>previous state y[k-1] </p>
+
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8h_source.html#l00020">20</a> of file <a class="el" href="_low_pass_filter_8h_source.html">LowPassFilter.h</a>.</p>
 
 </div>
 </div>

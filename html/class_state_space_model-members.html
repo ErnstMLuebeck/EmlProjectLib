@@ -5,13 +5,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EmlProjectLib: Member List</title>
+<title>Porject Library: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,8 +29,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="OnlineLogo2p1_bmp.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">EmlProjectLib
+   <div id="projectname">Porject Library
+   &#160;<span id="projectnumber">2021-04-24</span>
    </div>
+   <div id="projectbrief">Collection of useful classes and functions.</div>
   </td>
  </tr>
  </tbody>
@@ -69,15 +78,39 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="class_state_space_model.html">StateSpaceModel</a>, including all inherited members.</p>
 <table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a7e714c27112f100cc5e249bdb0129700">A_L_C</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#ad73a19ab98c88bc72258bbc1fe04ef9d">B</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab">C</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a0f0f419fe5212b2a89c9669465197332">calculate</a>(float *u_k)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_state_space_model.html#a2c0cb5dab56850c28f01a79d6ddb8700">calculateObserver</a>(float *u_k, float *y_sens)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#aee323da64468472e008ea59567e22488">getObserverStates</a>(float *_x_hat_k)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a6257e5a180c8b0b161a26a5c674eda17">getOutputs</a>(float *_y_k)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a7fc79402025e8137a54a82e05b953d6b">getOutputsKn1</a>(float *_y_kn1)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_state_space_model.html#ae78abcea793dbd0ad16949b8bd987bb3">getStates</a>(float *_x_k)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a4ce33a53f266b7df4547b4ce381162f9">setObserverStates</a>(float *_x0_hat)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a4a6c553555d627bc9db2ec6d28ec93dd">setStates</a>(float *_x0)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a578d1e313e891dd7df4ec07f07d7ee61">StateSpaceModel</a>()</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a25f407adf51eef0da6e643675f775524">D</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#aee323da64468472e008ea59567e22488">getObserverStates</a>(float *_x_hat_k)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a6257e5a180c8b0b161a26a5c674eda17">getOutputs</a>(float *_y_k)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a7fc79402025e8137a54a82e05b953d6b">getOutputsKn1</a>(float *_y_kn1)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#ae78abcea793dbd0ad16949b8bd987bb3">getStates</a>(float *_x_k)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a96a6cecde5b17eb8b90c8cd37c43302e">L</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a8e2a66bbc082f432001a0e0edef99320">L_C</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#aa2a66214ea7327331d54e7bc4f783563">MatrixAdd</a>(float *A, float *B, int m, int n, float *C)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a2b0558c953b20179bea6fb5088fc68f7">MatrixCopy</a>(float *A, int n, int m, float *B)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a82f4b77e4942703bf822e86ccf4ec244">MatrixInvert</a>(float *A, int n)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#ae44cc980afbea5b6d4730106033a30e4">MatrixMultiply</a>(float *A, float *B, int m, int p, int n, float *C)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#ad5e8ed27ca34adf63a66de1d211e9e13">MatrixPrint</a>(float *A, int m, int n)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a8bdcd57569e655d61a262e1737a3f921">MatrixScale</a>(float *A, int m, int n, float k, float *C)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a43c1eea272d8871b089143d29b6d18d9">MatrixSubtract</a>(float *A, float *B, int m, int n, float *C)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a805be1dc99e5bfa552d3f28c79ce7471">MatrixTranspose</a>(float *A, int m, int n, float *C)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a370e21c037e4b5d0a931aa336b839f53">Nu</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#ac69773ac74047688da2580c993465c39">Nx</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#aa974c3b026acdee2c139576ce3cbe53a">Ny</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a2355a97e0b51f82b6d1bb8cd6ef37a6d">p</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a4ce33a53f266b7df4547b4ce381162f9">setObserverStates</a>(float *_x0_hat)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a4a6c553555d627bc9db2ec6d28ec93dd">setStates</a>(float *_x0)</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a578d1e313e891dd7df4ec07f07d7ee61">StateSpaceModel</a>()</td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a01dac646074153d86480134c543dcb68">Ts</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#ab8a0732113bd67fb8584661004f2caae">x_hat_kn1</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#a5fff555b773ddf30ecc8e44af6741e0c">x_kn1</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_state_space_model.html#a9aaa16a7ed364ec4d8546dd72de19361">y_k</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state_space_model.html#ae0f3adfbc10fe54fac45f620b9af2d71">y_kn1</a></td><td class="entry"><a class="el" href="class_state_space_model.html">StateSpaceModel</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -24,11 +24,11 @@ StateSpaceModel::StateSpaceModel()
 
 /**
  * Calculate the new system outputs based on the new inputs. The outputs and states can then be 
- * obtained by the respective get* functions.
+ * obtained by the respective get* functions. Standard form of a state-space model:
  * 
- * Standard form of a state-space model:
- * x_k = A*x_kn1 + B*u_k;
- * y_k = C*x_kn1;
+ * \f$ x[k] = A \cdot x[k-1] + B \cdot u[k] \f$
+ * 
+ * \f$ y[k] = C \cdot x[k-1] \f$
  *  
  * @param u_k [-], system input vector (can also be a vector of size [1x1])
  */
@@ -77,10 +77,10 @@ void StateSpaceModel::calculate(float* u_k)
 
 /**
  * Calculate the new observer based on the new inputs and measured plant output. 
- * The observer outputs and states can then be obtained by the respective get* functions.
- * 
+ * The observer outputs and states can then be obtained by the respective get* functions. 
  * Standard matrix equations of a state observer:
- * x_hat_k = (A-L*C) * x_hat_kn1 + B*u_k + L*y_sens;
+ * 
+ * \f$ \hat{x}[k] = (A-L\cdot C) \cdot \hat{x}[k-1] + B \cdot u[k] + L \cdot y_{sens}\f$
  *  
  * @param u_k [-], system input vector (can also be a vector of size [1x1])
  * @param y_sens [-], measured plant output

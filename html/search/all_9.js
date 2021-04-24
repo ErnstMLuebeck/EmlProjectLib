@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['mapfloat_54',['mapfloat',['../_project_lib_8h.html#ad4356009db72f8d1f602de671a9490b3',1,'ProjectLib.h']]],
-  ['momentum_55',['Momentum',['../_simple_neur_net_8h.html#a0b18c38f18641d201fc9024e013fb931',1,'SimpleNeurNet.h']]]
+  ['kaw_70',['Kaw',['../class_pid_ctrlr.html#af84bfb8b8a9211a7a0400c24bd732754',1,'PidCtrlr']]],
+  ['kd_71',['Kd',['../class_pid_ctrlr.html#a86e2357eab63b443ef28dd930507851b',1,'PidCtrlr']]],
+  ['ki_72',['Ki',['../class_pid_ctrlr.html#adb69c10ff0018cb7bf0ec9df52430715',1,'PidCtrlr']]],
+  ['kp_73',['Kp',['../class_pid_ctrlr.html#a9dd2e89d2d459189b881d1e834c98db9',1,'PidCtrlr']]]
 ];

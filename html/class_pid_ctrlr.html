@@ -5,13 +5,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EmlProjectLib: PidCtrlr Class Reference</title>
+<title>Porject Library: PidCtrlr Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,8 +29,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="OnlineLogo2p1_bmp.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">EmlProjectLib
+   <div id="projectname">Porject Library
+   &#160;<span id="projectnumber">2021-04-24</span>
    </div>
+   <div id="projectbrief">Collection of useful classes and functions.</div>
   </td>
  </tr>
  </tbody>
@@ -64,6 +73,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_pid_ctrlr-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PidCtrlr Class Reference</div>  </div>
@@ -84,6 +94,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab218e096b304b274a584ec04a9e6430e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af05a9a6032e3f00e88cf707a248ed9b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#af05a9a6032e3f00e88cf707a248ed9b4">setIpart</a> (float _IpartInit)</td></tr>
 <tr class="separator:af05a9a6032e3f00e88cf707a248ed9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6ee7f1a60d80f2d38bedb7d1682197cd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a6ee7f1a60d80f2d38bedb7d1682197cd">Ts</a></td></tr>
+<tr class="separator:a6ee7f1a60d80f2d38bedb7d1682197cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd2e89d2d459189b881d1e834c98db9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a9dd2e89d2d459189b881d1e834c98db9">Kp</a></td></tr>
+<tr class="separator:a9dd2e89d2d459189b881d1e834c98db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb69c10ff0018cb7bf0ec9df52430715"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#adb69c10ff0018cb7bf0ec9df52430715">Ki</a></td></tr>
+<tr class="separator:adb69c10ff0018cb7bf0ec9df52430715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e2357eab63b443ef28dd930507851b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a86e2357eab63b443ef28dd930507851b">Kd</a></td></tr>
+<tr class="separator:a86e2357eab63b443ef28dd930507851b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84bfb8b8a9211a7a0400c24bd732754"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#af84bfb8b8a9211a7a0400c24bd732754">Kaw</a></td></tr>
+<tr class="separator:af84bfb8b8a9211a7a0400c24bd732754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d3f15c2190e6d0c2cf426a6244857c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a64d3f15c2190e6d0c2cf426a6244857c">error_kn1</a></td></tr>
+<tr class="separator:a64d3f15c2190e6d0c2cf426a6244857c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac220c23e14c6d91b0e4e3d62d8554f98"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#ac220c23e14c6d91b0e4e3d62d8554f98">u_kn1</a></td></tr>
+<tr class="separator:ac220c23e14c6d91b0e4e3d62d8554f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e7e0d7d54014d7e5945dcb654a2a29"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a28e7e0d7d54014d7e5945dcb654a2a29">derivative_kn1</a></td></tr>
+<tr class="separator:a28e7e0d7d54014d7e5945dcb654a2a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ec2d28ba5d5e5a346019f024bd6467"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a29ec2d28ba5d5e5a346019f024bd6467">integral</a></td></tr>
+<tr class="separator:a29ec2d28ba5d5e5a346019f024bd6467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22ccc3acbb82b3ba494e4cb8ef17d4f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#af22ccc3acbb82b3ba494e4cb8ef17d4f">TcDpart</a></td></tr>
+<tr class="separator:af22ccc3acbb82b3ba494e4cb8ef17d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db65e8820170a07e2bd45fc08551456"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a4db65e8820170a07e2bd45fc08551456">CoeffFiltDpart</a></td></tr>
+<tr class="separator:a4db65e8820170a07e2bd45fc08551456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parallel PID controller with anti-windup and filtered D-part. The class also features functions for gain scheduling (update controller gains during run-time), set value of integrator, as well as an input for feed-forward control.</p>
@@ -315,6 +350,271 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00038">38</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4db65e8820170a07e2bd45fc08551456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4db65e8820170a07e2bd45fc08551456">&#9670;&nbsp;</a></span>CoeffFiltDpart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::CoeffFiltDpart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00029">29</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="a28e7e0d7d54014d7e5945dcb654a2a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e7e0d7d54014d7e5945dcb654a2a29">&#9670;&nbsp;</a></span>derivative_kn1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::derivative_kn1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00026">26</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="a64d3f15c2190e6d0c2cf426a6244857c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d3f15c2190e6d0c2cf426a6244857c">&#9670;&nbsp;</a></span>error_kn1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::error_kn1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00024">24</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="a29ec2d28ba5d5e5a346019f024bd6467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ec2d28ba5d5e5a346019f024bd6467">&#9670;&nbsp;</a></span>integral</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::integral</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00027">27</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="af84bfb8b8a9211a7a0400c24bd732754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84bfb8b8a9211a7a0400c24bd732754">&#9670;&nbsp;</a></span>Kaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::Kaw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00023">23</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="a86e2357eab63b443ef28dd930507851b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e2357eab63b443ef28dd930507851b">&#9670;&nbsp;</a></span>Kd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::Kd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00023">23</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="adb69c10ff0018cb7bf0ec9df52430715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb69c10ff0018cb7bf0ec9df52430715">&#9670;&nbsp;</a></span>Ki</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::Ki</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00023">23</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="a9dd2e89d2d459189b881d1e834c98db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd2e89d2d459189b881d1e834c98db9">&#9670;&nbsp;</a></span>Kp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::Kp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00023">23</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="af22ccc3acbb82b3ba494e4cb8ef17d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22ccc3acbb82b3ba494e4cb8ef17d4f">&#9670;&nbsp;</a></span>TcDpart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::TcDpart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00028">28</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="a6ee7f1a60d80f2d38bedb7d1682197cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee7f1a60d80f2d38bedb7d1682197cd">&#9670;&nbsp;</a></span>Ts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::Ts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00022">22</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+
+</div>
+</div>
+<a id="ac220c23e14c6d91b0e4e3d62d8554f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac220c23e14c6d91b0e4e3d62d8554f98">&#9670;&nbsp;</a></span>u_kn1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PidCtrlr::u_kn1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00025">25</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>

@@ -10,14 +10,15 @@
 #define NZ 1
 
 /**
- * State Space Model (MIMO compatible) with state observer
+ * State Space Model (MIMO compatible) with state observer:
  * 
- * State space model:
- * x_k = A*x_kn1 + B*u_k;
- * y_k = C*x_kn1;
+ * \f$ x[k] = A \cdot x[k-1] + B \cdot u[k] \f$
+ * 
+ * \f$ y[k] = C \cdot x[k-1] \f$
  * 
  * State observer:
- * x_hat_k = (A-L*C) * x_hat_kn1 + B*u_k + L*y_sens;
+ * 
+ * \f$ \hat{x}[k] = (A-L\cdot C) \cdot \hat{x}[k-1] + B \cdot u[k] + L \cdot y_{sens}\f$
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

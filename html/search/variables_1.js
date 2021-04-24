@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['changehiddennodesweights_223',['ChangeHiddenNodesWeights',['../_simple_neur_net_8h.html#a67169958dbf14019d7066cc1287b52c3',1,'SimpleNeurNet.h']]],
-  ['changeoutputweights_224',['ChangeOutputWeights',['../_simple_neur_net_8h.html#aafc50ba127771fabfe09973552580946',1,'SimpleNeurNet.h']]]
+  ['b_305',['B',['../class_simple_mpc.html#af9db23f635da63075744222eba378d68',1,'SimpleMpc::B()'],['../class_state_space_model.html#ad73a19ab98c88bc72258bbc1fe04ef9d',1,'StateSpaceModel::B()']]]
 ];

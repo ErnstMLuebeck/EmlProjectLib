@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['flgneurnetinitialized_226',['FlgNeurNetInitialized',['../_simple_neur_net_8h.html#a8e3eedce2f54aba669a8ab44f4de6560',1,'SimpleNeurNet.h']]],
-  ['flgneurnettrained_227',['FlgNeurNetTrained',['../_simple_neur_net_8h.html#aaf8e39a2f4f2fa3589fd6c3ca5ba76d5',1,'SimpleNeurNet.h']]],
-  ['flgreport1000_228',['FlgReport1000',['../_simple_neur_net_8h.html#acac86eff53c8a2357bcf2fcd1fff735f',1,'SimpleNeurNet.h']]]
+  ['d_311',['D',['../class_state_space_model.html#a25f407adf51eef0da6e643675f775524',1,'StateSpaceModel']]],
+  ['deltau_5fopt_312',['deltaU_opt',['../class_simple_mpc.html#a5b34ffd4bbf4584ff482fad6d550c244',1,'SimpleMpc']]],
+  ['deltau_5fopt_5fkn1_313',['deltaU_opt_kn1',['../class_simple_mpc.html#ac132c41b99c644426985f95386b48832',1,'SimpleMpc']]],
+  ['derivative_5fkn1_314',['derivative_kn1',['../class_pid_ctrlr.html#a28e7e0d7d54014d7e5945dcb654a2a29',1,'PidCtrlr']]]
 ];

@@ -5,13 +5,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EmlProjectLib: PinMonitor Class Reference</title>
+<title>Porject Library: PinMonitor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,8 +29,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="OnlineLogo2p1_bmp.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">EmlProjectLib
+   <div id="projectname">Porject Library
+   &#160;<span id="projectnumber">2021-04-24</span>
    </div>
+   <div id="projectbrief">Collection of useful classes and functions.</div>
   </td>
  </tr>
  </tbody>
@@ -64,6 +73,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_pin_monitor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PinMonitor Class Reference</div>  </div>
@@ -104,6 +114,39 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac22e234c49351266f51b955b58d7ed13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaf88a4b1e2f863d69594827d3e7b5a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#adaf88a4b1e2f863d69594827d3e7b5a6">ignoreNxtFallngEdge</a> ()</td></tr>
 <tr class="separator:adaf88a4b1e2f863d69594827d3e7b5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa009483e567a7423161a407a0a132b84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#aa009483e567a7423161a407a0a132b84">numPin</a></td></tr>
+<tr class="separator:aa009483e567a7423161a407a0a132b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9006633eaabcd6f4229eb1db804d1da3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a9006633eaabcd6f4229eb1db804d1da3">stActv</a></td></tr>
+<tr class="separator:a9006633eaabcd6f4229eb1db804d1da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5594513960387d5e16abbf27e6e6a95d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a5594513960387d5e16abbf27e6e6a95d">numDeBnceCycles</a></td></tr>
+<tr class="separator:a5594513960387d5e16abbf27e6e6a95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d220d64f4754a09129474c54e31bb2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a79d220d64f4754a09129474c54e31bb2">cntrDeBnce</a></td></tr>
+<tr class="separator:a79d220d64f4754a09129474c54e31bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad990f50f4860cf0092ee32c79a281fb3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#ad990f50f4860cf0092ee32c79a281fb3">y_0</a></td></tr>
+<tr class="separator:ad990f50f4860cf0092ee32c79a281fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4ab510b0e914d8584a149f13bc4f1e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#aad4ab510b0e914d8584a149f13bc4f1e">y_n1</a></td></tr>
+<tr class="separator:aad4ab510b0e914d8584a149f13bc4f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17061988a95c88271cee1764ed42a98"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#ae17061988a95c88271cee1764ed42a98">flgRisngEdgePndng</a></td></tr>
+<tr class="separator:ae17061988a95c88271cee1764ed42a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49bf90a2116db84cff6efae5450289d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#ab49bf90a2116db84cff6efae5450289d">flgFallngEdgePndng</a></td></tr>
+<tr class="separator:ab49bf90a2116db84cff6efae5450289d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1727e279fa705b30ebf09d12f101d676"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a1727e279fa705b30ebf09d12f101d676">flgEdgePndng</a></td></tr>
+<tr class="separator:a1727e279fa705b30ebf09d12f101d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f045ae77ec6dee849f4d81ce4dbc6cb"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a3f045ae77ec6dee849f4d81ce4dbc6cb">TiRisngEdge</a></td></tr>
+<tr class="separator:a3f045ae77ec6dee849f4d81ce4dbc6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455e71645840b8b00f16ee8c0f839faa"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a455e71645840b8b00f16ee8c0f839faa">TiFallngEdge</a></td></tr>
+<tr class="separator:a455e71645840b8b00f16ee8c0f839faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8169a1a442efe98ac59c89c9fd7c4432"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a8169a1a442efe98ac59c89c9fd7c4432">TiHighLim</a></td></tr>
+<tr class="separator:a8169a1a442efe98ac59c89c9fd7c4432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e799088f93f5de89d16683bad05d9f3"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a0e799088f93f5de89d16683bad05d9f3">TiLowLim</a></td></tr>
+<tr class="separator:a0e799088f93f5de89d16683bad05d9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0248fa686b5924e784e5d38a68a0601"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#ae0248fa686b5924e784e5d38a68a0601">flgIgnoreNxtRisngEdge</a></td></tr>
+<tr class="separator:ae0248fa686b5924e784e5d38a68a0601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939e3318614776943094b2c98dd85538"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pin_monitor.html#a939e3318614776943094b2c98dd85538">flgIgnoreNxtFallngEdge</a></td></tr>
+<tr class="separator:a939e3318614776943094b2c98dd85538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_pin_monitor.html">PinMonitor</a> is watching a physical pin and can return a number of events: rising edge, falling edge, toggle, state,.. The state can also be debounced.</p>
@@ -471,6 +514,367 @@ Public Member Functions</h2></td></tr>
 <p>Update pin monitor states. This function needs to be called regularly. The pin is sampled and a debounce counter is incremented/decremented according to the pin state. If the debounce threshold is reached, the state is set. All kind of edges are detected. There is an inhibit flag to skip the next edge. This is used after a long press, so the button release does not trigger an additional action. </p>
 
 <p class="definition">Definition at line <a class="el" href="_pin_monitor_8cpp_source.html#l00081">81</a> of file <a class="el" href="_pin_monitor_8cpp_source.html">PinMonitor.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a79d220d64f4754a09129474c54e31bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d220d64f4754a09129474c54e31bb2">&#9670;&nbsp;</a></span>cntrDeBnce</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t PinMonitor::cntrDeBnce</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00037">37</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a1727e279fa705b30ebf09d12f101d676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1727e279fa705b30ebf09d12f101d676">&#9670;&nbsp;</a></span>flgEdgePndng</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::flgEdgePndng</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00041">41</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="ab49bf90a2116db84cff6efae5450289d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49bf90a2116db84cff6efae5450289d">&#9670;&nbsp;</a></span>flgFallngEdgePndng</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::flgFallngEdgePndng</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00040">40</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a939e3318614776943094b2c98dd85538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939e3318614776943094b2c98dd85538">&#9670;&nbsp;</a></span>flgIgnoreNxtFallngEdge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::flgIgnoreNxtFallngEdge</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00047">47</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="ae0248fa686b5924e784e5d38a68a0601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0248fa686b5924e784e5d38a68a0601">&#9670;&nbsp;</a></span>flgIgnoreNxtRisngEdge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::flgIgnoreNxtRisngEdge</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00046">46</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="ae17061988a95c88271cee1764ed42a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17061988a95c88271cee1764ed42a98">&#9670;&nbsp;</a></span>flgRisngEdgePndng</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::flgRisngEdgePndng</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00039">39</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a5594513960387d5e16abbf27e6e6a95d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5594513960387d5e16abbf27e6e6a95d">&#9670;&nbsp;</a></span>numDeBnceCycles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t PinMonitor::numDeBnceCycles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00036">36</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="aa009483e567a7423161a407a0a132b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa009483e567a7423161a407a0a132b84">&#9670;&nbsp;</a></span>numPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PinMonitor::numPin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00034">34</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a9006633eaabcd6f4229eb1db804d1da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9006633eaabcd6f4229eb1db804d1da3">&#9670;&nbsp;</a></span>stActv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::stActv</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00035">35</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a455e71645840b8b00f16ee8c0f839faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455e71645840b8b00f16ee8c0f839faa">&#9670;&nbsp;</a></span>TiFallngEdge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long PinMonitor::TiFallngEdge</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00043">43</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a8169a1a442efe98ac59c89c9fd7c4432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8169a1a442efe98ac59c89c9fd7c4432">&#9670;&nbsp;</a></span>TiHighLim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long PinMonitor::TiHighLim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00044">44</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a0e799088f93f5de89d16683bad05d9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e799088f93f5de89d16683bad05d9f3">&#9670;&nbsp;</a></span>TiLowLim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long PinMonitor::TiLowLim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00045">45</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="a3f045ae77ec6dee849f4d81ce4dbc6cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f045ae77ec6dee849f4d81ce4dbc6cb">&#9670;&nbsp;</a></span>TiRisngEdge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long PinMonitor::TiRisngEdge</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00042">42</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="ad990f50f4860cf0092ee32c79a281fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad990f50f4860cf0092ee32c79a281fb3">&#9670;&nbsp;</a></span>y_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::y_0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00038">38</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
+
+</div>
+</div>
+<a id="aad4ab510b0e914d8584a149f13bc4f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ab510b0e914d8584a149f13bc4f1e">&#9670;&nbsp;</a></span>y_n1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean PinMonitor::y_n1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pin_monitor_8h_source.html#l00038">38</a> of file <a class="el" href="_pin_monitor_8h_source.html">PinMonitor.h</a>.</p>
 
 </div>
 </div>
