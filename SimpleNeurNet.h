@@ -1,4 +1,7 @@
-/* Simple feed-forward neural network including training
+#ifndef SIMPLENEURNET_H
+#define SIMPLENEURNET_H
+
+/** Simple feed-forward neural network including training
  * Source: robotics.hobbizine.com/arduinoann.html
  * 
  * @author E. M. Luebeck
@@ -368,3 +371,4 @@ void printTrainingData()
     }
 }
 
+#endif /* SIMPLENEURNET_H */

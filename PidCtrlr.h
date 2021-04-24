@@ -1,3 +1,6 @@
+#ifndef PIDCTRLR_H_
+#define PIDCTRLR_H_
+
 /** 
  * Parallel PID controller with anti-windup and filtered D-part. The class also features
  * functions for gain scheduling (update controller gains during run-time), set value of integrator,
@@ -6,10 +9,6 @@
  * @author E. M. Luebeck
  * @date 2021-04-23
  */
-
-#ifndef PIDCTRLR_H_
-#define PIDCTRLR_H_
-
 class PidCtrlr
 {
     public:

@@ -1,9 +1,3 @@
-/* Simple, unconstrained MIMO Model-Predictive-Control (MPC)
- * 
- * @author E. M. Luebeck
- * @date 2021-04-23
- */
-
 #ifndef SIMPLEMPC_H
 #define SIMPLEMPC_H
 
@@ -16,6 +10,11 @@
 #define NU 1
 #define NP 12
 
+/* Simple, unconstrained MIMO Model-Predictive-Control (MPC)
+ * 
+ * @author E. M. Luebeck
+ * @date 2021-04-23
+ */
 class SimpleMpc
 {
 public:
@@ -122,7 +121,7 @@ private:
 };
 
 
-#endif
+#endif /* SIMPLEMPC_H */
 
 
 

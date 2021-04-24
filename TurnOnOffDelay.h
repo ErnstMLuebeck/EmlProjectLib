@@ -1,14 +1,13 @@
-/* Turn on/off delay
- * 
- * @author E. M. Luebeck
- * @date 2021-04-23
- */
-
 #ifndef TURNONOFFDELAY_H
 #define TURNONOFFDELAY_H
 
 #include <Arduino.h> 
 
+/** Turn on/off delay
+ * 
+ * @author E. M. Luebeck
+ * @date 2021-04-23
+ */
 class TurnOnOffDelay 
 {
     public:
@@ -24,6 +23,6 @@ class TurnOnOffDelay
         unsigned long TiFallngEdge; /* [ms], absolute time of last falling edge */
 };
 
-#endif
+#endif /* TURNONOFFDELAY_H */
 
 

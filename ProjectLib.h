@@ -1,4 +1,4 @@
-/* Collection of useful functions
+/* @file Collection of useful functions
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23
@@ -122,4 +122,4 @@ uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)
     return(BitWord);
 }
 
-#endif
+#endif /* PROJECTLIB_H */

@@ -1,13 +1,12 @@
+#ifndef LOWPASSFILTER_H
+#define LOWPASSFILTER_H
+
 /**
  * First order low-pass filter
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23
  */
-
-#ifndef LOWPASSFILTER_H
-#define LOWPASSFILTER_H
-
 class LowPassFilter 
 {
     public:
@@ -22,6 +21,6 @@ class LowPassFilter
         float alpha;  // filter constant
 };
 
-#endif
+#endif /* LOWPASSFILTER_H */
 
 

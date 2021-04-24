@@ -1,9 +1,12 @@
-
-
 #include "TurnOnOffDelay.h"
 
 
-// Class Constructor
+/** 
+ * Construct turn on/off delay object
+ * 
+ * @param _TiOnDly [ms], Turn on delay time
+ * @param _TiOffDly [ms], Turn off delay time
+ */ 
 TurnOnOffDelay::TurnOnOffDelay(unsigned long _TiOnDly, unsigned long _TiOffDly)
 {
     TiOnDly = _TiOnDly;
@@ -14,12 +17,24 @@ TurnOnOffDelay::TurnOnOffDelay(unsigned long _TiOnDly, unsigned long _TiOffDly)
     y = 0;
 }
 
+/** 
+ * Change turn on/off delay times during runtime
+ * 
+ * @param _TiOnDly [ms], Turn on delay time
+ * @param _TiOffDly [ms], Turn off delay time
+ */ 
 void TurnOnOffDelay::setTiDly(unsigned long _TiOnDly, unsigned long _TiOffDly)
 {
     TiOnDly = _TiOnDly;
     TiOffDly = _TiOffDly;
 }
 
+/** 
+ * Update and get state of turn on/off delay
+ * 
+ * @param x [-], input
+ * @return y [-], output after turn on/off delay
+ */ 
 uint8_t TurnOnOffDelay::update(uint8_t x)
 {
     unsigned long TiEval = millis();
@@ -42,7 +57,6 @@ uint8_t TurnOnOffDelay::update(uint8_t x)
 
     /* else */
     return(y);
-    
 }
 
 

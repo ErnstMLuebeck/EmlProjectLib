@@ -1,10 +1,3 @@
-/**
- * State Space Model (MIMO compatible) with state observer
- * 
- * @author E. M. Luebeck
- * @date 2021-04-23
- */
-
 #ifndef STATESPACEMODEL_H
 #define STATESPACEMODEL_H
 
@@ -16,6 +9,19 @@
 #define NU 2
 #define NZ 1
 
+/**
+ * State Space Model (MIMO compatible) with state observer
+ * 
+ * State space model:
+ * x_k = A*x_kn1 + B*u_k;
+ * y_k = C*x_kn1;
+ * 
+ * State observer:
+ * x_hat_k = (A-L*C) * x_hat_kn1 + B*u_k + L*y_sens;
+ * 
+ * @author E. M. Luebeck
+ * @date 2021-04-23
+ */
 class StateSpaceModel
 {
 
@@ -77,7 +83,7 @@ private:
 };
 
 
-#endif
+#endif /* STATESPACEMODEL_H */
 
 
 

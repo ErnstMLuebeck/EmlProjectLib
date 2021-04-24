@@ -1,3 +1,8 @@
+#ifndef PINMONITOR_H
+#define PINMONITOR_H
+
+#include <Arduino.h>
+
 /**
  * The PinMonitor is watching a physical pin and can return
  * a number of events: rising edge, falling edge, toggle, state,.. 
@@ -6,12 +11,6 @@
  * @author E. M. Luebeck
  * @date 2021-04-23
  */
-
-#ifndef PINMONITOR_H
-#define PINMONITOR_H
-
-#include <Arduino.h>
-
 class PinMonitor 
 {
     public:
@@ -49,6 +48,6 @@ class PinMonitor
         
 };
 
-#endif
+#endif /* PINMONITOR_H */
 
 

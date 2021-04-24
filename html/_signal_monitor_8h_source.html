@@ -66,33 +66,32 @@ $(function() {
 <div class="title">SignalMonitor.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_signal_monitor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* The SignalMonitor is watching an integer software-signal and detects changes</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @author E. M. Luebeck</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @date 2021-04-23</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef SIGNALMONITOR_H</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SIGNALMONITOR_H</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_signal_monitor.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_signal_monitor.html">SignalMonitor</a> </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_signal_monitor.html#a11ec4280331d302ad92c28cc7fa9f7e2">SignalMonitor</a>(<span class="keywordtype">int</span> _x_kn1);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65">detectIncrease</a>(<span class="keywordtype">int</span> _x_k);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="class_signal_monitor.html#af80cd4f7c04c8ca4ed1352606f94a9ca">detectDecrease</a>(<span class="keywordtype">int</span> _x_k);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="class_signal_monitor.html#ac9f3ec017429d84521f3aa588696376c">detectChange</a>(<span class="keywordtype">int</span> _x_k);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> x_kn1;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="_signal_monitor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SIGNALMONITOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SIGNALMONITOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/* The SignalMonitor is watching an integer software-signal and detects changes</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @author E. M. Luebeck</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * @date 2021-04-23</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_signal_monitor.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_signal_monitor.html">SignalMonitor</a> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_signal_monitor.html#a11ec4280331d302ad92c28cc7fa9f7e2">SignalMonitor</a>(<span class="keywordtype">int</span> _x_kn1);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65">detectIncrease</a>(<span class="keywordtype">int</span> _x_k);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="class_signal_monitor.html#af80cd4f7c04c8ca4ed1352606f94a9ca">detectDecrease</a>(<span class="keywordtype">int</span> _x_k);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="class_signal_monitor.html#ac9f3ec017429d84521f3aa588696376c">detectChange</a>(<span class="keywordtype">int</span> _x_k);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> x_kn1;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SIGNALMONITOR_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="ttc" id="aclass_signal_monitor_html"><div class="ttname"><a href="class_signal_monitor.html">SignalMonitor</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_monitor_8h_source.html#l00012">SignalMonitor.h:13</a></div></div>
+<div class="ttc" id="aclass_signal_monitor_html"><div class="ttname"><a href="class_signal_monitor.html">SignalMonitor</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_monitor_8h_source.html#l00011">SignalMonitor.h:12</a></div></div>
 <div class="ttc" id="aclass_signal_monitor_html_a11ec4280331d302ad92c28cc7fa9f7e2"><div class="ttname"><a href="class_signal_monitor.html#a11ec4280331d302ad92c28cc7fa9f7e2">SignalMonitor::SignalMonitor</a></div><div class="ttdeci">SignalMonitor(int _x_kn1)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_monitor_8cpp_source.html#l00004">SignalMonitor.cpp:4</a></div></div>
 <div class="ttc" id="aclass_signal_monitor_html_ab2f2e2f7a5b3ad431837884786820c65"><div class="ttname"><a href="class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65">SignalMonitor::detectIncrease</a></div><div class="ttdeci">boolean detectIncrease(int _x_k)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_monitor_8cpp_source.html#l00011">SignalMonitor.cpp:11</a></div></div>
 <div class="ttc" id="aclass_signal_monitor_html_ac9f3ec017429d84521f3aa588696376c"><div class="ttname"><a href="class_signal_monitor.html#ac9f3ec017429d84521f3aa588696376c">SignalMonitor::detectChange</a></div><div class="ttdeci">boolean detectChange(int _x_k)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_monitor_8cpp_source.html#l00031">SignalMonitor.cpp:31</a></div></div>

@@ -94,8 +94,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7fc79402025e8137a54a82e05b953d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00019">19</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<div class="textblock"><p>State Space Model (MIMO compatible) with state observer</p>
+<p>State space model: x_k = A*x_kn1 + B*u_k; y_k = C*x_kn1;</p>
+<p>State observer: x_hat_k = (A-L*C) * x_hat_kn1 + B*u_k + L*y_sens;</p>
+<dl class="section author"><dt>Author</dt><dd>E. M. Luebeck </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2021-04-23 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00025">25</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a578d1e313e891dd7df4ec07f07d7ee61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a578d1e313e891dd7df4ec07f07d7ee61">&#9670;&nbsp;</a></span>StateSpaceModel()</h2>

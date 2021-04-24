@@ -66,34 +66,33 @@ $(function() {
 <div class="title">PidCtrlr.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_pid_ctrlr_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef PIDCTRLR_H_</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define PIDCTRLR_H_</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_pid_ctrlr.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pid_ctrlr.html">PidCtrlr</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_pid_ctrlr.html#a7a88a75c2210bf1678c57824f8c3d7bb">PidCtrlr</a>(<span class="keywordtype">float</span> _Kp, <span class="keywordtype">float</span> _Ki, <span class="keywordtype">float</span> _Kd, <span class="keywordtype">float</span> _Kaw, <span class="keywordtype">float</span> _TcDpart, <span class="keywordtype">float</span> _Ts);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_pid_ctrlr.html#a5f7a7ec3a4362d27b263d4d2e3b42687">calculate</a>(<span class="keywordtype">float</span> y_sp, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> u_true, <span class="keywordtype">float</span> u_ff);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pid_ctrlr.html#ad281921fc4f38db0a981a320794b7409">setTs</a>(<span class="keywordtype">float</span> _Ts);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e">setCtrlrGains</a>(<span class="keywordtype">float</span> _Kp, <span class="keywordtype">float</span> _Ki, <span class="keywordtype">float</span> _Kd, <span class="keywordtype">float</span> _Kaw);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pid_ctrlr.html#af05a9a6032e3f00e88cf707a248ed9b4">setIpart</a>(<span class="keywordtype">float</span> _IpartInit);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> Ts; <span class="comment">/* [s], sample time */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> Kp, Ki, Kd, Kaw; <span class="comment">/* [-], controller gains */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> error_kn1; <span class="comment">/* [-], control error of last sample kn1 = [k-1], k being the time index*/</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> u_kn1; <span class="comment">/* [-], controller output of last sample */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> derivative_kn1; <span class="comment">/* [-], previous derivative part for low-pass filter */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> integral; <span class="comment">/* [-], integrator of integral part */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">float</span> TcDpart; <span class="comment">/* [s], filter time constant of derivative part filter */</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> CoeffFiltDpart; <span class="comment">/* [-], filter coefficient of derivative part filter */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*  PIDCTRLR_H_ */</span><span class="preprocessor"></span></div>
+<a href="_pid_ctrlr_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PIDCTRLR_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PIDCTRLR_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_pid_ctrlr.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pid_ctrlr.html">PidCtrlr</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_pid_ctrlr.html#a7a88a75c2210bf1678c57824f8c3d7bb">PidCtrlr</a>(<span class="keywordtype">float</span> _Kp, <span class="keywordtype">float</span> _Ki, <span class="keywordtype">float</span> _Kd, <span class="keywordtype">float</span> _Kaw, <span class="keywordtype">float</span> _TcDpart, <span class="keywordtype">float</span> _Ts);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_pid_ctrlr.html#a5f7a7ec3a4362d27b263d4d2e3b42687">calculate</a>(<span class="keywordtype">float</span> y_sp, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> u_true, <span class="keywordtype">float</span> u_ff);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pid_ctrlr.html#ad281921fc4f38db0a981a320794b7409">setTs</a>(<span class="keywordtype">float</span> _Ts);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e">setCtrlrGains</a>(<span class="keywordtype">float</span> _Kp, <span class="keywordtype">float</span> _Ki, <span class="keywordtype">float</span> _Kd, <span class="keywordtype">float</span> _Kaw);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pid_ctrlr.html#af05a9a6032e3f00e88cf707a248ed9b4">setIpart</a>(<span class="keywordtype">float</span> _IpartInit);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> Ts; <span class="comment">/* [s], sample time */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> Kp, Ki, Kd, Kaw; <span class="comment">/* [-], controller gains */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> error_kn1; <span class="comment">/* [-], control error of last sample kn1 = [k-1], k being the time index*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> u_kn1; <span class="comment">/* [-], controller output of last sample */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> derivative_kn1; <span class="comment">/* [-], previous derivative part for low-pass filter */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> integral; <span class="comment">/* [-], integrator of integral part */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> TcDpart; <span class="comment">/* [s], filter time constant of derivative part filter */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">float</span> CoeffFiltDpart; <span class="comment">/* [-], filter coefficient of derivative part filter */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*  PIDCTRLR_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="ttc" id="aclass_pid_ctrlr_html"><div class="ttname"><a href="class_pid_ctrlr.html">PidCtrlr</a></div><div class="ttdef"><b>Definition:</b> <a href="_pid_ctrlr_8h_source.html#l00013">PidCtrlr.h:14</a></div></div>
+<div class="ttc" id="aclass_pid_ctrlr_html"><div class="ttname"><a href="class_pid_ctrlr.html">PidCtrlr</a></div><div class="ttdef"><b>Definition:</b> <a href="_pid_ctrlr_8h_source.html#l00012">PidCtrlr.h:13</a></div></div>
 <div class="ttc" id="aclass_pid_ctrlr_html_a5f7a7ec3a4362d27b263d4d2e3b42687"><div class="ttname"><a href="class_pid_ctrlr.html#a5f7a7ec3a4362d27b263d4d2e3b42687">PidCtrlr::calculate</a></div><div class="ttdeci">float calculate(float y_sp, float y, float u_true, float u_ff)</div><div class="ttdef"><b>Definition:</b> <a href="_pid_ctrlr_8cpp_source.html#l00081">PidCtrlr.cpp:81</a></div></div>
 <div class="ttc" id="aclass_pid_ctrlr_html_a7a88a75c2210bf1678c57824f8c3d7bb"><div class="ttname"><a href="class_pid_ctrlr.html#a7a88a75c2210bf1678c57824f8c3d7bb">PidCtrlr::PidCtrlr</a></div><div class="ttdeci">PidCtrlr(float _Kp, float _Ki, float _Kd, float _Kaw, float _TcDpart, float _Ts)</div><div class="ttdef"><b>Definition:</b> <a href="_pid_ctrlr_8cpp_source.html#l00013">PidCtrlr.cpp:13</a></div></div>
 <div class="ttc" id="aclass_pid_ctrlr_html_ab218e096b304b274a584ec04a9e6430e"><div class="ttname"><a href="class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e">PidCtrlr::setCtrlrGains</a></div><div class="ttdeci">void setCtrlrGains(float _Kp, float _Ki, float _Kd, float _Kaw)</div><div class="ttdef"><b>Definition:</b> <a href="_pid_ctrlr_8cpp_source.html#l00051">PidCtrlr.cpp:51</a></div></div>
