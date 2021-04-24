@@ -57,6 +57,21 @@ void PidCtrlr::setCtrlrGains(float _Kp, float _Ki, float _Kd, float _Kaw)
 }
 
 /**
+ * Update filter constant of derivative part low-pass filter
+ * 
+ * @param _TcDpart [s], filter time constant of derivative filter
+ */
+void PidCtrlr::setTcDpart(float _TcDpart)
+{   
+    TcDpart = _TcDpart;
+
+    /* Calculate filter coefficient from time constant */
+    CoeffFiltDpart = 1 - Ts/_TcDpart;
+    if(CoeffFiltDpart > 1.0) CoeffFiltDpart = 1.0;
+    if(CoeffFiltDpart < 0.0) CoeffFiltDpart = 0.0;
+}
+
+/**
  * Initialize integrator with defined value
  * 
  * @param _IpartInit [-], reset value for integrator
@@ -80,7 +95,7 @@ void PidCtrlr::setIpart(float _IpartInit)
  */
 float PidCtrlr::calculate(float y_sp, float y, float u_true, float u_ff)
 {
-    float error_k, integral, derivative;
+    float error_k, derivative;
     float up, ui, ud;
     
     error_k = y_sp - y;

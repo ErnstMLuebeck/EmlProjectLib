@@ -17,6 +17,7 @@ class PidCtrlr
     void setTs(float _Ts);
     void setCtrlrGains(float _Kp, float _Ki, float _Kd, float _Kaw);
     void setIpart(float _IpartInit);
+    void setTcDpart(float _TcDpart);
 
     private:
     float Ts; /* [s], sample time */
