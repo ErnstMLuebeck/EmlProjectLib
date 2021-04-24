@@ -90,6 +90,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af913e20eb292ce6056689840ce80e824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54320ac1e367691c2dc8e96fa9469775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775">setValue</a> (float _y_kn1)</td></tr>
 <tr class="separator:a54320ac1e367691c2dc8e96fa9469775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9f36025737b3cfeb65a133d9ff971f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_low_pass_filter.html#a5c9f36025737b3cfeb65a133d9ff971f">setTc</a> (float _Tc)</td></tr>
+<tr class="separator:a5c9f36025737b3cfeb65a133d9ff971f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -186,6 +188,35 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5c9f36025737b3cfeb65a133d9ff971f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9f36025737b3cfeb65a133d9ff971f">&#9670;&nbsp;</a></span>setTc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LowPassFilter::setTc </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_Tc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The filter coefficient is updated by:</p>
+<p>\( \alpha = 1 - \frac{Ts}{Tc} \)</p>
+<p>The coefficient is then limited between 0 and 1 in case the user input is incorrect.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_Tc</td><td>[s], filter time constant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8cpp_source.html#l00057">57</a> of file <a class="el" href="_low_pass_filter_8cpp_source.html">LowPassFilter.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a54320ac1e367691c2dc8e96fa9469775"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54320ac1e367691c2dc8e96fa9469775">&#9670;&nbsp;</a></span>setValue()</h2>
 
@@ -233,6 +264,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], filter constant </p>
 
 <p class="definition">Definition at line <a class="el" href="_low_pass_filter_8h_source.html#l00026">26</a> of file <a class="el" href="_low_pass_filter_8h_source.html">LowPassFilter.h</a>.</p>
 

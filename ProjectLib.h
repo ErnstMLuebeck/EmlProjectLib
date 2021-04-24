@@ -14,8 +14,6 @@
 float LookupTable(float axis[], float data[], uint8_t size, float input);
 float saturate(float in, float LimLwr, float LimUpr);
 float mapfloat(float x, float in_min, float in_max, float out_min, float out_max);
-uint16_t read16(File &f);
-uint32_t read32(File &f);
 boolean getBit16(uint16_t BitWord, uint16_t PosnBit);
 uint16_t setBit16(uint16_t BitWord, uint16_t PosnBit);
 uint16_t clearBit16(uint16_t BitWord, uint16_t PosnBit);
