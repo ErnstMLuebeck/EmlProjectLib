@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lowpassfilter_199',['LowPassFilter',['../class_low_pass_filter.html',1,'']]]
+  ['hysteresis_214',['Hysteresis',['../class_hysteresis.html',1,'']]]
 ];

@@ -32,6 +32,11 @@ boolean Hysteresis::update(float x)
     return(y_kn1);
 }
 
+/** Update the left and right thresholds of the hysteresis
+ * 
+ * @param _ThrLeft [-], left threshold (turn off)
+ * @param _ThrRight [-], right threshold (turn on)
+ */
 void Hysteresis::setThresholds(float _ThrLeft, float _ThrRight)
 {
     ThrLeft = _ThrLeft;
@@ -39,6 +44,10 @@ void Hysteresis::setThresholds(float _ThrLeft, float _ThrRight)
 
 }
 
+/** Update the state of the hysteresis block (for initialization)
+ * 
+ * @param _y_kn1 [-], state of hysteresis block y[k-1]
+ */
 void Hysteresis::setState(boolean _y_kn1)
 {
     y_kn1 = _y_kn1;

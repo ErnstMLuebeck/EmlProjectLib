@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pidctrlr_200',['PidCtrlr',['../class_pid_ctrlr.html',1,'']]],
-  ['pinmonitor_201',['PinMonitor',['../class_pin_monitor.html',1,'']]]
+  ['iirfilter_215',['IIRFilter',['../class_i_i_r_filter.html',1,'']]]
 ];

@@ -6,7 +6,9 @@
 	],
 	"settings": {
 		"files.associations": {
-			"__locale": "cpp"
+			"__locale": "cpp",
+			"locale": "cpp",
+			"string": "cpp"
 		}
 	}
 }

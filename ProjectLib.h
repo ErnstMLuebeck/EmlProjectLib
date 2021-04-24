@@ -1,4 +1,4 @@
-/* @file Collection of useful functions
+/** Collection of useful functions
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

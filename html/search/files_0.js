@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lowpassfilter_2ecpp_206',['LowPassFilter.cpp',['../_low_pass_filter_8cpp.html',1,'']]],
-  ['lowpassfilter_2eh_207',['LowPassFilter.h',['../_low_pass_filter_8h.html',1,'']]]
+  ['hysteresis_2ecpp_223',['Hysteresis.cpp',['../_hysteresis_8cpp.html',1,'']]],
+  ['hysteresis_2eh_224',['Hysteresis.h',['../_hysteresis_8h.html',1,'']]]
 ];
