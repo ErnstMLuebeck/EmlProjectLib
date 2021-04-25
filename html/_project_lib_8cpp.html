@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EML Project Library: ProjectLib.h File Reference</title>
+<title>EML Project Library: ProjectLib.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,13 +75,12 @@ $(function() {
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ProjectLib.h File Reference</div>  </div>
+<div class="title">ProjectLib.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
-<code>#include &lt;math.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_project_lib_8h_source.html">ProjectLib.h</a>&quot;</code><br />
 </div>
-<p><a href="_project_lib_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="_project_lib_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -102,18 +101,18 @@ Functions</h2></td></tr>
 <tr class="separator:aeaa1036eac482abf39615abdcdf7a8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2a3d03adaed0e69ae752316ec6b2d23"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23">ProjectLib::clearBit16</a> (uint16_t BitWord, uint16_t PosnBit)</td></tr>
 <tr class="separator:aa2a3d03adaed0e69ae752316ec6b2d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05a00c2653259cab750d2796870464a9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">ProjectLib::toggleBit16</a> (uint16_t BitWord, uint16_t PosnBit)</td></tr>
-<tr class="separator:a05a00c2653259cab750d2796870464a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab771b14d351a9aec4c59964bf84bf207"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ab771b14d351a9aec4c59964bf84bf207">ProjectLib::putBit16</a> (uint16_t BitWord, uint16_t PosnBit, boolean BitNew)</td></tr>
 <tr class="separator:ab771b14d351a9aec4c59964bf84bf207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a00c2653259cab750d2796870464a9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">ProjectLib::toggleBit16</a> (uint16_t BitWord, uint16_t PosnBit)</td></tr>
+<tr class="separator:a05a00c2653259cab750d2796870464a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5f3b556189dc85ad958a1010e9f093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">ProjectLib::MatrixMultiply</a> (float *A, float *B, int m, int p, int n, float *C)</td></tr>
 <tr class="separator:a3d5f3b556189dc85ad958a1010e9f093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7341e3c81322f065cca086a9e2d44ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">ProjectLib::MatrixPrint</a> (float *A, int m, int n)</td></tr>
 <tr class="separator:ad7341e3c81322f065cca086a9e2d44ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1300416169292f42f2292adb06fb268a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">ProjectLib::MatrixSubtract</a> (float *A, float *B, int m, int n, float *C)</td></tr>
-<tr class="separator:a1300416169292f42f2292adb06fb268a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a7035117925528bdd96e32ac48222e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">ProjectLib::MatrixAdd</a> (float *A, float *B, int m, int n, float *C)</td></tr>
 <tr class="separator:a0a7035117925528bdd96e32ac48222e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1300416169292f42f2292adb06fb268a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">ProjectLib::MatrixSubtract</a> (float *A, float *B, int m, int n, float *C)</td></tr>
+<tr class="separator:a1300416169292f42f2292adb06fb268a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9034ece3e96a976d51e9addeaef6e7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">ProjectLib::MatrixScale</a> (float *A, int m, int n, float k, float *C)</td></tr>
 <tr class="separator:ab9034ece3e96a976d51e9addeaef6e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9c52ceab3cae778cd494433c1d665e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">ProjectLib::MatrixCopy</a> (float *A, int n, int m, float *B)</td></tr>
@@ -123,13 +122,7 @@ Functions</h2></td></tr>
 <tr class="memitem:acabdc9a082b0a8def81ceb00ab67e3e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">ProjectLib::MatrixInvert</a> (float *A, int n)</td></tr>
 <tr class="separator:acabdc9a082b0a8def81ceb00ab67e3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Collection of useful functions.</p>
-<dl class="section author"><dt>Author</dt><dd>E. M. Luebeck </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2021-04-23 </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="_project_lib_8h_source.html">ProjectLib.h</a>.</p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

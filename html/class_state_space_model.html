@@ -73,7 +73,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_state_space_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -87,6 +86,10 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a578d1e313e891dd7df4ec07f07d7ee61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a578d1e313e891dd7df4ec07f07d7ee61">StateSpaceModel</a> ()</td></tr>
 <tr class="separator:a578d1e313e891dd7df4ec07f07d7ee61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ce7040397b542d06baa957c351cc42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a11ce7040397b542d06baa957c351cc42">initStateSpaceModel</a> (float *Aa, float *Bb, float *Cc, int _Nx, int _Nu, int _Ny, float _Ts)</td></tr>
+<tr class="separator:a11ce7040397b542d06baa957c351cc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ec94e8261469ff66e6ed36bb6ce352"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352">initStateObserver</a> (float *Ll, float *pp)</td></tr>
+<tr class="separator:ae7ec94e8261469ff66e6ed36bb6ce352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f0f419fe5212b2a89c9669465197332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a0f0f419fe5212b2a89c9669465197332">calculate</a> (float *u_k)</td></tr>
 <tr class="separator:a0f0f419fe5212b2a89c9669465197332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c0cb5dab56850c28f01a79d6ddb8700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a2c0cb5dab56850c28f01a79d6ddb8700">calculateObserver</a> (float *u_k, float *y_sens)</td></tr>
@@ -104,59 +107,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7fc79402025e8137a54a82e05b953d6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a7fc79402025e8137a54a82e05b953d6b">getOutputsKn1</a> (float *_y_kn1)</td></tr>
 <tr class="separator:a7fc79402025e8137a54a82e05b953d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ae44cc980afbea5b6d4730106033a30e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ae44cc980afbea5b6d4730106033a30e4">MatrixMultiply</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, float *<a class="el" href="class_state_space_model.html#ad73a19ab98c88bc72258bbc1fe04ef9d">B</a>, int m, int <a class="el" href="class_state_space_model.html#a2355a97e0b51f82b6d1bb8cd6ef37a6d">p</a>, int n, float *<a class="el" href="class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab">C</a>)</td></tr>
-<tr class="separator:ae44cc980afbea5b6d4730106033a30e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5e8ed27ca34adf63a66de1d211e9e13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ad5e8ed27ca34adf63a66de1d211e9e13">MatrixPrint</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, int m, int n)</td></tr>
-<tr class="separator:ad5e8ed27ca34adf63a66de1d211e9e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c1eea272d8871b089143d29b6d18d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a43c1eea272d8871b089143d29b6d18d9">MatrixSubtract</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, float *<a class="el" href="class_state_space_model.html#ad73a19ab98c88bc72258bbc1fe04ef9d">B</a>, int m, int n, float *<a class="el" href="class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab">C</a>)</td></tr>
-<tr class="separator:a43c1eea272d8871b089143d29b6d18d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a66214ea7327331d54e7bc4f783563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#aa2a66214ea7327331d54e7bc4f783563">MatrixAdd</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, float *<a class="el" href="class_state_space_model.html#ad73a19ab98c88bc72258bbc1fe04ef9d">B</a>, int m, int n, float *<a class="el" href="class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab">C</a>)</td></tr>
-<tr class="separator:aa2a66214ea7327331d54e7bc4f783563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdcd57569e655d61a262e1737a3f921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a8bdcd57569e655d61a262e1737a3f921">MatrixScale</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, int m, int n, float k, float *<a class="el" href="class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab">C</a>)</td></tr>
-<tr class="separator:a8bdcd57569e655d61a262e1737a3f921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b0558c953b20179bea6fb5088fc68f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a2b0558c953b20179bea6fb5088fc68f7">MatrixCopy</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, int n, int m, float *<a class="el" href="class_state_space_model.html#ad73a19ab98c88bc72258bbc1fe04ef9d">B</a>)</td></tr>
-<tr class="separator:a2b0558c953b20179bea6fb5088fc68f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a805be1dc99e5bfa552d3f28c79ce7471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a805be1dc99e5bfa552d3f28c79ce7471">MatrixTranspose</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, int m, int n, float *<a class="el" href="class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab">C</a>)</td></tr>
-<tr class="separator:a805be1dc99e5bfa552d3f28c79ce7471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f4b77e4942703bf822e86ccf4ec244"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a82f4b77e4942703bf822e86ccf4ec244">MatrixInvert</a> (float *<a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a>, int n)</td></tr>
-<tr class="separator:a82f4b77e4942703bf822e86ccf4ec244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a01dac646074153d86480134c543dcb68"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a01dac646074153d86480134c543dcb68">Ts</a> = {0.00100}</td></tr>
 <tr class="separator:a01dac646074153d86480134c543dcb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac69773ac74047688da2580c993465c39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ac69773ac74047688da2580c993465c39">Nx</a> = {3}</td></tr>
+<tr class="memitem:ac69773ac74047688da2580c993465c39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ac69773ac74047688da2580c993465c39">Nx</a> = 1</td></tr>
 <tr class="separator:ac69773ac74047688da2580c993465c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a370e21c037e4b5d0a931aa336b839f53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a370e21c037e4b5d0a931aa336b839f53">Nu</a> = {2}</td></tr>
+<tr class="memitem:a370e21c037e4b5d0a931aa336b839f53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a370e21c037e4b5d0a931aa336b839f53">Nu</a> = 1</td></tr>
 <tr class="separator:a370e21c037e4b5d0a931aa336b839f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa974c3b026acdee2c139576ce3cbe53a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#aa974c3b026acdee2c139576ce3cbe53a">Ny</a> = {1}</td></tr>
+<tr class="memitem:aa974c3b026acdee2c139576ce3cbe53a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#aa974c3b026acdee2c139576ce3cbe53a">Ny</a> = 1</td></tr>
 <tr class="separator:aa974c3b026acdee2c139576ce3cbe53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59b3e0d814e92e6a7f9411f83c94b630"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a59b3e0d814e92e6a7f9411f83c94b630">A</a> [3][3]</td></tr>
-<tr class="separator:a59b3e0d814e92e6a7f9411f83c94b630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad73a19ab98c88bc72258bbc1fe04ef9d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ad73a19ab98c88bc72258bbc1fe04ef9d">B</a> [3][2]</td></tr>
-<tr class="separator:ad73a19ab98c88bc72258bbc1fe04ef9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87b3eeb7279f55be0dc4b13931550bab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab">C</a> [1][3] = {{0.00001, 0.00050, 1.00000}}</td></tr>
-<tr class="separator:a87b3eeb7279f55be0dc4b13931550bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f407adf51eef0da6e643675f775524"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a25f407adf51eef0da6e643675f775524">D</a> [1][2] = {{0.00000, -0.00003}}</td></tr>
-<tr class="separator:a25f407adf51eef0da6e643675f775524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2355a97e0b51f82b6d1bb8cd6ef37a6d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a2355a97e0b51f82b6d1bb8cd6ef37a6d">p</a> [1][3] = {{0.80000, 0.81000, 0.82000}}</td></tr>
-<tr class="separator:a2355a97e0b51f82b6d1bb8cd6ef37a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a6cecde5b17eb8b90c8cd37c43302e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a96a6cecde5b17eb8b90c8cd37c43302e">L</a> [3][1]</td></tr>
-<tr class="separator:a96a6cecde5b17eb8b90c8cd37c43302e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e2a66bbc082f432001a0e0edef99320"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a8e2a66bbc082f432001a0e0edef99320">L_C</a> [<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>] = {{0}}</td></tr>
-<tr class="separator:a8e2a66bbc082f432001a0e0edef99320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e714c27112f100cc5e249bdb0129700"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a7e714c27112f100cc5e249bdb0129700">A_L_C</a> [<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>]</td></tr>
-<tr class="separator:a7e714c27112f100cc5e249bdb0129700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fff555b773ddf30ecc8e44af6741e0c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a5fff555b773ddf30ecc8e44af6741e0c">x_kn1</a> [<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][1] = {{0}}</td></tr>
-<tr class="separator:a5fff555b773ddf30ecc8e44af6741e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aaa16a7ed364ec4d8546dd72de19361"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a9aaa16a7ed364ec4d8546dd72de19361">y_k</a> [<a class="el" href="_state_space_model_8h.html#a652e87ecc9140879666ae9d6bf4ca893">NY</a>][1] = {{0}}</td></tr>
-<tr class="separator:a9aaa16a7ed364ec4d8546dd72de19361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0f3adfbc10fe54fac45f620b9af2d71"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ae0f3adfbc10fe54fac45f620b9af2d71">y_kn1</a> [<a class="el" href="_state_space_model_8h.html#a652e87ecc9140879666ae9d6bf4ca893">NY</a>][1] = {{0}}</td></tr>
-<tr class="separator:ae0f3adfbc10fe54fac45f620b9af2d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a0732113bd67fb8584661004f2caae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#ab8a0732113bd67fb8584661004f2caae">x_hat_kn1</a> [<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][1] = {{10}, {20},{33}}</td></tr>
-<tr class="separator:ab8a0732113bd67fb8584661004f2caae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79be2dd9ce6e2aa62110fb1fed6dd1e6"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a79be2dd9ce6e2aa62110fb1fed6dd1e6">A</a></td></tr>
+<tr class="separator:a79be2dd9ce6e2aa62110fb1fed6dd1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9bb4d64e98cb9deb8d46e073d4fcc5"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a9b9bb4d64e98cb9deb8d46e073d4fcc5">B</a></td></tr>
+<tr class="separator:a9b9bb4d64e98cb9deb8d46e073d4fcc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e98b3bf944c5e0c08913538bfff739"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a66e98b3bf944c5e0c08913538bfff739">C</a></td></tr>
+<tr class="separator:a66e98b3bf944c5e0c08913538bfff739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c2d49f42d9863958c5198de611d713"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#af8c2d49f42d9863958c5198de611d713">L</a></td></tr>
+<tr class="separator:af8c2d49f42d9863958c5198de611d713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2cc45b8b86e00fb8203f3877517992"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#aea2cc45b8b86e00fb8203f3877517992">p</a></td></tr>
+<tr class="separator:aea2cc45b8b86e00fb8203f3877517992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63118ad58bf11cd6d88b31e6b15855aa"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a63118ad58bf11cd6d88b31e6b15855aa">x_kn1</a></td></tr>
+<tr class="separator:a63118ad58bf11cd6d88b31e6b15855aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0f026c432ab17fb70a4bac918718c2"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#afb0f026c432ab17fb70a4bac918718c2">y_k</a></td></tr>
+<tr class="separator:afb0f026c432ab17fb70a4bac918718c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afceba65c7e7fd98631d707c9022e1753"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#afceba65c7e7fd98631d707c9022e1753">y_kn1</a></td></tr>
+<tr class="separator:afceba65c7e7fd98631d707c9022e1753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc20c500e3b05f9e3f340c32d823ab7"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a8bc20c500e3b05f9e3f340c32d823ab7">x_hat_kn1</a></td></tr>
+<tr class="separator:a8bc20c500e3b05f9e3f340c32d823ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc45c1c931272b41a9b3cdd79c1eebf"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#a3bc45c1c931272b41a9b3cdd79c1eebf">L_C</a></td></tr>
+<tr class="separator:a3bc45c1c931272b41a9b3cdd79c1eebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7826ba1546fddcabd4b69b4f37ec90"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_space_model.html#aed7826ba1546fddcabd4b69b4f37ec90">A_L_C</a></td></tr>
+<tr class="separator:aed7826ba1546fddcabd4b69b4f37ec90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>State Space Model (MIMO compatible) with state observer:</p>
@@ -167,7 +149,7 @@ Private Attributes</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>E. M. Luebeck </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-04-23 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00026">26</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00021">21</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a578d1e313e891dd7df4ec07f07d7ee61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a578d1e313e891dd7df4ec07f07d7ee61">&#9670;&nbsp;</a></span>StateSpaceModel()</h2>
@@ -183,7 +165,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct state space model object </p>
+<p>Nothing is done here. </p>
 
 <p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00006">6</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
@@ -215,7 +197,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00035">35</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00097">97</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
@@ -254,7 +236,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00088">88</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00150">150</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +258,7 @@ Private Attributes</h2></td></tr>
 <p>Get states of the state observer.</p>
 <dl class="section return"><dt>Returns</dt><dd>_x_hat_k [-], last calculated observer state vector </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00175">175</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00237">237</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
@@ -296,7 +278,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00191">191</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00253">253</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +298,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00200">200</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00262">262</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
@@ -338,48 +320,27 @@ Private Attributes</h2></td></tr>
 <p>Get states of the state space system.</p>
 <dl class="section return"><dt>Returns</dt><dd>_x_k [-], last calculated system state vector </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00149">149</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00211">211</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa2a66214ea7327331d54e7bc4f783563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2a66214ea7327331d54e7bc4f783563">&#9670;&nbsp;</a></span>MatrixAdd()</h2>
+<a id="ae7ec94e8261469ff66e6ed36bb6ce352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ec94e8261469ff66e6ed36bb6ce352">&#9670;&nbsp;</a></span>initStateObserver()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StateSpaceModel::MatrixAdd </td>
+          <td class="memname">void StateSpaceModel::initStateObserver </td>
           <td>(</td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
+          <td class="paramname"><em>Ll</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
+          <td class="paramname"><em>pp</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -387,249 +348,67 @@ Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p>Initialize the state observer with all matrices and dimensions. Be careful what to pass this method, since it can easily mess with undesired memory sections!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Ll</td><td>pointer to source matrix </td></tr>
+    <tr><td class="paramname">pp</td><td>pointer to pole matrix </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00245">245</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00055">55</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a2b0558c953b20179bea6fb5088fc68f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b0558c953b20179bea6fb5088fc68f7">&#9670;&nbsp;</a></span>MatrixCopy()</h2>
+<a id="a11ce7040397b542d06baa957c351cc42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ce7040397b542d06baa957c351cc42">&#9670;&nbsp;</a></span>initStateSpaceModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StateSpaceModel::MatrixCopy </td>
+          <td class="memname">void StateSpaceModel::initStateSpaceModel </td>
           <td>(</td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>Aa</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>B</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00280">280</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a82f4b77e4942703bf822e86ccf4ec244"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82f4b77e4942703bf822e86ccf4ec244">&#9670;&nbsp;</a></span>MatrixInvert()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int StateSpaceModel::MatrixInvert </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00309">309</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ae44cc980afbea5b6d4730106033a30e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae44cc980afbea5b6d4730106033a30e4">&#9670;&nbsp;</a></span>MatrixMultiply()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateSpaceModel::MatrixMultiply </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
+          <td class="paramname"><em>Bb</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
+          <td class="paramname"><em>Cc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>_Nx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
+          <td class="paramname"><em>_Nu</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00208">208</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ad5e8ed27ca34adf63a66de1d211e9e13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5e8ed27ca34adf63a66de1d211e9e13">&#9670;&nbsp;</a></span>MatrixPrint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateSpaceModel::MatrixPrint </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00226">226</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a8bdcd57569e655d61a262e1737a3f921"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bdcd57569e655d61a262e1737a3f921">&#9670;&nbsp;</a></span>MatrixScale()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateSpaceModel::MatrixScale </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
+          <td class="paramname"><em>_Ny</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>k</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
+          <td class="paramname"><em>_Ts</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -637,120 +416,21 @@ Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p>Initialize the SSM with all matrices and dimensions. Be careful what to pass this method, since it can easily mess with undesired memory sections!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Aa</td><td>pointer to source matrix </td></tr>
+    <tr><td class="paramname">Bb</td><td>pointer to source matrix </td></tr>
+    <tr><td class="paramname">Cc</td><td>pointer to source matrix </td></tr>
+    <tr><td class="paramname">Nx</td><td>number of states </td></tr>
+    <tr><td class="paramname">Nu</td><td>number of inputs (actuators) </td></tr>
+    <tr><td class="paramname">Ny</td><td>outputs </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00273">273</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a43c1eea272d8871b089143d29b6d18d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43c1eea272d8871b089143d29b6d18d9">&#9670;&nbsp;</a></span>MatrixSubtract()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateSpaceModel::MatrixSubtract </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00260">260</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a805be1dc99e5bfa552d3f28c79ce7471"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a805be1dc99e5bfa552d3f28c79ce7471">&#9670;&nbsp;</a></span>MatrixTranspose()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateSpaceModel::MatrixTranspose </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00290">290</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00022">22</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
@@ -770,7 +450,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00183">183</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00245">245</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
@@ -792,13 +472,13 @@ Private Attributes</h2></td></tr>
 <p>Set states of the state space system.</p>
 <dl class="section return"><dt>Returns</dt><dd>_x_kn1 [-], state vector, mainly used for initialization </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00162">162</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8cpp_source.html#l00224">224</a> of file <a class="el" href="_state_space_model_8cpp_source.html">StateSpaceModel.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a59b3e0d814e92e6a7f9411f83c94b630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59b3e0d814e92e6a7f9411f83c94b630">&#9670;&nbsp;</a></span>A</h2>
+<a id="a79be2dd9ce6e2aa62110fb1fed6dd1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79be2dd9ce6e2aa62110fb1fed6dd1e6">&#9670;&nbsp;</a></span>A</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -807,34 +487,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::A[3][3]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {{0.70970, -0.03520, 0.00000},</div>
-<div class="line">    {0.05609, 0.99858, 0.00000},</div>
-<div class="line">    {0.00003, 0.00100, 1.00000}}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00058">58</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
-
-</div>
-</div>
-<a id="a7e714c27112f100cc5e249bdb0129700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e714c27112f100cc5e249bdb0129700">&#9670;&nbsp;</a></span>A_L_C</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float StateSpaceModel::A_L_C[<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>]</td>
+          <td class="memname">float* StateSpaceModel::A</td>
         </tr>
       </table>
   </td>
@@ -844,39 +497,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00076">76</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00048">48</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="ad73a19ab98c88bc72258bbc1fe04ef9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad73a19ab98c88bc72258bbc1fe04ef9d">&#9670;&nbsp;</a></span>B</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float StateSpaceModel::B[3][2]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {{0.10057, 0.00220},</div>
-<div class="line">    {0.00330, -0.12491},</div>
-<div class="line">    {0.00000, -0.00006}}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00061">61</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
-
-</div>
-</div>
-<a id="a87b3eeb7279f55be0dc4b13931550bab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87b3eeb7279f55be0dc4b13931550bab">&#9670;&nbsp;</a></span>C</h2>
+<a id="aed7826ba1546fddcabd4b69b4f37ec90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7826ba1546fddcabd4b69b4f37ec90">&#9670;&nbsp;</a></span>A_L_C</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -885,7 +511,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::C[1][3] = {{0.00001, 0.00050, 1.00000}}</td>
+          <td class="memname">float* StateSpaceModel::A_L_C</td>
         </tr>
       </table>
   </td>
@@ -895,12 +521,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00065">65</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00060">60</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="a25f407adf51eef0da6e643675f775524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25f407adf51eef0da6e643675f775524">&#9670;&nbsp;</a></span>D</h2>
+<a id="a9b9bb4d64e98cb9deb8d46e073d4fcc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9bb4d64e98cb9deb8d46e073d4fcc5">&#9670;&nbsp;</a></span>B</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -909,7 +535,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::D[1][2] = {{0.00000, -0.00003}}</td>
+          <td class="memname">float* StateSpaceModel::B</td>
         </tr>
       </table>
   </td>
@@ -919,39 +545,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00066">66</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00049">49</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="a96a6cecde5b17eb8b90c8cd37c43302e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96a6cecde5b17eb8b90c8cd37c43302e">&#9670;&nbsp;</a></span>L</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float StateSpaceModel::L[3][1]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {{-22.65057},</div>
-<div class="line">    {25.86176},</div>
-<div class="line">    {0.26568}}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00070">70</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
-
-</div>
-</div>
-<a id="a8e2a66bbc082f432001a0e0edef99320"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e2a66bbc082f432001a0e0edef99320">&#9670;&nbsp;</a></span>L_C</h2>
+<a id="a66e98b3bf944c5e0c08913538bfff739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e98b3bf944c5e0c08913538bfff739">&#9670;&nbsp;</a></span>C</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -960,7 +559,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::L_C[<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>] = {{0}}</td>
+          <td class="memname">float* StateSpaceModel::C</td>
         </tr>
       </table>
   </td>
@@ -970,7 +569,55 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00075">75</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00050">50</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+
+</div>
+</div>
+<a id="af8c2d49f42d9863958c5198de611d713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c2d49f42d9863958c5198de611d713">&#9670;&nbsp;</a></span>L</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* StateSpaceModel::L</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00051">51</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+
+</div>
+</div>
+<a id="a3bc45c1c931272b41a9b3cdd79c1eebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc45c1c931272b41a9b3cdd79c1eebf">&#9670;&nbsp;</a></span>L_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* StateSpaceModel::L_C</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00059">59</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
@@ -984,7 +631,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int StateSpaceModel::Nu = {2}</td>
+          <td class="memname">int StateSpaceModel::Nu = 1</td>
         </tr>
       </table>
   </td>
@@ -994,7 +641,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00055">55</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00044">44</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
@@ -1008,7 +655,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int StateSpaceModel::Nx = {3}</td>
+          <td class="memname">int StateSpaceModel::Nx = 1</td>
         </tr>
       </table>
   </td>
@@ -1018,7 +665,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00054">54</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00043">43</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +679,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int StateSpaceModel::Ny = {1}</td>
+          <td class="memname">int StateSpaceModel::Ny = 1</td>
         </tr>
       </table>
   </td>
@@ -1042,12 +689,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00056">56</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00045">45</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="a2355a97e0b51f82b6d1bb8cd6ef37a6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2355a97e0b51f82b6d1bb8cd6ef37a6d">&#9670;&nbsp;</a></span>p</h2>
+<a id="aea2cc45b8b86e00fb8203f3877517992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2cc45b8b86e00fb8203f3877517992">&#9670;&nbsp;</a></span>p</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1056,7 +703,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::p[1][3] = {{0.80000, 0.81000, 0.82000}}</td>
+          <td class="memname">float* StateSpaceModel::p</td>
         </tr>
       </table>
   </td>
@@ -1066,7 +713,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00069">69</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00052">52</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
@@ -1090,12 +737,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00053">53</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00042">42</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="ab8a0732113bd67fb8584661004f2caae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8a0732113bd67fb8584661004f2caae">&#9670;&nbsp;</a></span>x_hat_kn1</h2>
+<a id="a8bc20c500e3b05f9e3f340c32d823ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bc20c500e3b05f9e3f340c32d823ab7">&#9670;&nbsp;</a></span>x_hat_kn1</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1104,7 +751,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::x_hat_kn1[<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][1] = {{10}, {20},{33}}</td>
+          <td class="memname">float* StateSpaceModel::x_hat_kn1</td>
         </tr>
       </table>
   </td>
@@ -1114,12 +761,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00082">82</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00058">58</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="a5fff555b773ddf30ecc8e44af6741e0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fff555b773ddf30ecc8e44af6741e0c">&#9670;&nbsp;</a></span>x_kn1</h2>
+<a id="a63118ad58bf11cd6d88b31e6b15855aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63118ad58bf11cd6d88b31e6b15855aa">&#9670;&nbsp;</a></span>x_kn1</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1128,7 +775,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::x_kn1[<a class="el" href="_state_space_model_8h.html#a4a9d32ff035c82119003134767948ebf">NX</a>][1] = {{0}}</td>
+          <td class="memname">float* StateSpaceModel::x_kn1</td>
         </tr>
       </table>
   </td>
@@ -1138,12 +785,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00078">78</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00054">54</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="a9aaa16a7ed364ec4d8546dd72de19361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aaa16a7ed364ec4d8546dd72de19361">&#9670;&nbsp;</a></span>y_k</h2>
+<a id="afb0f026c432ab17fb70a4bac918718c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0f026c432ab17fb70a4bac918718c2">&#9670;&nbsp;</a></span>y_k</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1152,7 +799,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::y_k[<a class="el" href="_state_space_model_8h.html#a652e87ecc9140879666ae9d6bf4ca893">NY</a>][1] = {{0}}</td>
+          <td class="memname">float* StateSpaceModel::y_k</td>
         </tr>
       </table>
   </td>
@@ -1162,12 +809,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00079">79</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00055">55</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>
-<a id="ae0f3adfbc10fe54fac45f620b9af2d71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0f3adfbc10fe54fac45f620b9af2d71">&#9670;&nbsp;</a></span>y_kn1</h2>
+<a id="afceba65c7e7fd98631d707c9022e1753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afceba65c7e7fd98631d707c9022e1753">&#9670;&nbsp;</a></span>y_kn1</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1176,7 +823,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StateSpaceModel::y_kn1[<a class="el" href="_state_space_model_8h.html#a652e87ecc9140879666ae9d6bf4ca893">NY</a>][1] = {{0}}</td>
+          <td class="memname">float* StateSpaceModel::y_kn1</td>
         </tr>
       </table>
   </td>
@@ -1186,7 +833,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00080">80</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_state_space_model_8h_source.html#l00056">56</a> of file <a class="el" href="_state_space_model_8h_source.html">StateSpaceModel.h</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_8',['C',['../class_simple_mpc.html#af7c0cd0c04178e411a5611ccac20f744',1,'SimpleMpc::C()'],['../class_state_space_model.html#a87b3eeb7279f55be0dc4b13931550bab',1,'StateSpaceModel::C()']]],
+  ['c_8',['C',['../class_simple_mpc.html#af7c0cd0c04178e411a5611ccac20f744',1,'SimpleMpc::C()'],['../class_state_space_model.html#a66e98b3bf944c5e0c08913538bfff739',1,'StateSpaceModel::C()']]],
   ['calcf_9',['calcF',['../class_simple_mpc.html#a725cf1b8362b1237836c85ffb47d176f',1,'SimpleMpc']]],
   ['calcneurnet_10',['calcNeurNet',['../_simple_neur_net_8h.html#aca5fa58fc399a604ef40d6b1852cdd44',1,'SimpleNeurNet.h']]],
   ['calcphi_11',['calcPhi',['../class_simple_mpc.html#acd865b38b35b6941d0381713d032a91d',1,'SimpleMpc']]],
@@ -13,7 +13,7 @@ var searchData=
   ['calculateobserver_18',['calculateObserver',['../class_state_space_model.html#a2c0cb5dab56850c28f01a79d6ddb8700',1,'StateSpaceModel']]],
   ['changehiddennodesweights_19',['ChangeHiddenNodesWeights',['../_simple_neur_net_8h.html#a67169958dbf14019d7066cc1287b52c3',1,'SimpleNeurNet.h']]],
   ['changeoutputweights_20',['ChangeOutputWeights',['../_simple_neur_net_8h.html#aafc50ba127771fabfe09973552580946',1,'SimpleNeurNet.h']]],
-  ['clearbit16_21',['clearBit16',['../_project_lib_8h.html#ae064a401a9c32b427afb35942c0bad3f',1,'ProjectLib.h']]],
+  ['clearbit16_21',['clearBit16',['../namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23',1,'ProjectLib']]],
   ['clearlist_22',['clearList',['../class_data_list.html#ac4890cf854292e7d356d9e684d23e595',1,'DataList']]],
   ['cntrdebnce_23',['cntrDeBnce',['../class_pin_monitor.html#a79d220d64f4754a09129474c54e31bb2',1,'PinMonitor']]],
   ['coefffiltdpart_24',['CoeffFiltDpart',['../class_pid_ctrlr.html#a4db65e8820170a07e2bd45fc08551456',1,'PidCtrlr']]],

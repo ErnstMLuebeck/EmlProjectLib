@@ -76,139 +76,53 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_project_lib_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef PROJECTLIB_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define PROJECTLIB_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//#include &quot;WConstants.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">float</span> <a class="code" href="_project_lib_8h.html#a21241024196612ccdab0c4886bc2b224">LookupTable</a>(<span class="keywordtype">float</span> axis[], <span class="keywordtype">float</span> data[], uint8_t size, <span class="keywordtype">float</span> input);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">float</span> <a class="code" href="_project_lib_8h.html#a3d8f21500ba61d5c4f0d0b334b1ce743">saturate</a>(<span class="keywordtype">float</span> in, <span class="keywordtype">float</span> LimLwr, <span class="keywordtype">float</span> LimUpr);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">float</span> <a class="code" href="_project_lib_8h.html#ad4356009db72f8d1f602de671a9490b3">mapfloat</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> in_min, <span class="keywordtype">float</span> in_max, <span class="keywordtype">float</span> out_min, <span class="keywordtype">float</span> out_max);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">boolean</span> <a class="code" href="_project_lib_8h.html#a595608f842f970e3d740918c5fc296a4">getBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#aa374a948bc480be5ac5ca10b2f760d0d">setBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#ae064a401a9c32b427afb35942c0bad3f">clearBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#a94903016cf4fcc46867aa21215cc1dff">toggleBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#a5e260dc651d8d91916e197a33d10a7a8">putBit16</a>(uint16_t BitWord, uint16_t PosnBit, <span class="keywordtype">boolean</span> BitNew);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#a21241024196612ccdab0c4886bc2b224">   35</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_project_lib_8h.html#a21241024196612ccdab0c4886bc2b224">LookupTable</a>(<span class="keywordtype">float</span> axis[], <span class="keywordtype">float</span> data[], uint8_t size, <span class="keywordtype">float</span> input)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{   <span class="comment">/* Axis must be strictly monotonic increasing */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">float</span> output = 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">float</span> factor = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/* saturate under-/overflow */</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span>(input &lt;= axis[0]) </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {   <span class="comment">//Serial.println(&quot;Underflow&quot;);</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span>(data[0]);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(input &gt;= axis[size-1]) </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {   <span class="comment">//Serial.println(&quot;Overflow&quot;);</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span>(data[size-1]);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }  </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {   <span class="comment">//Serial.println(&quot;Interpolation&quot;);</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; size; i++)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {   </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span>(input == axis[i]) </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {   <span class="comment">//Serial.println(&quot;Exact breakpoint&quot;);</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">return</span>(data[i]);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }            </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(axis[i] &gt; input)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {   <span class="comment">/* linear interpolation */</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="comment">// Serial.print(&quot;Between Breakpoints [&quot;);</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="comment">// Serial.print(axis[i-1],3);</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">// Serial.print(&quot;, &quot;);</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="comment">// Serial.print(axis[i],3);</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="comment">// Serial.println(&quot;]&quot;);</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                factor = (input-axis[i-1]) / (axis[i]-axis[i-1]);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                output = factor * (data[i]-data[i-1]) + data[i-1];</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span>(output);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">/* should not be reached */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span>(input);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#a3d8f21500ba61d5c4f0d0b334b1ce743">   78</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_project_lib_8h.html#a3d8f21500ba61d5c4f0d0b334b1ce743">saturate</a>(<span class="keywordtype">float</span> in, <span class="keywordtype">float</span> LimLwr, <span class="keywordtype">float</span> LimUpr)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{   <span class="keywordtype">float</span> ret;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    ret = in;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(in &gt;= LimUpr) ret = LimUpr;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span>(in &lt;= LimLwr) ret = LimLwr;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span>(ret);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#ad4356009db72f8d1f602de671a9490b3">   87</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_project_lib_8h.html#ad4356009db72f8d1f602de671a9490b3">mapfloat</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> in_min, <span class="keywordtype">float</span> in_max, <span class="keywordtype">float</span> out_min, <span class="keywordtype">float</span> out_max)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#a595608f842f970e3d740918c5fc296a4">   92</a></span>&#160;<span class="keywordtype">boolean</span> <a class="code" href="_project_lib_8h.html#a595608f842f970e3d740918c5fc296a4">getBit16</a>(uint16_t BitWord, uint16_t PosnBit)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span>(BitWord &amp; (1 &lt;&lt; PosnBit))</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span>(1);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span>(0);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#aa374a948bc480be5ac5ca10b2f760d0d">  104</a></span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#aa374a948bc480be5ac5ca10b2f760d0d">setBit16</a>(uint16_t BitWord, uint16_t PosnBit)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    BitWord |=  1 &lt;&lt; PosnBit;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span>(BitWord);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#ae064a401a9c32b427afb35942c0bad3f">  110</a></span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#ae064a401a9c32b427afb35942c0bad3f">clearBit16</a>(uint16_t BitWord, uint16_t PosnBit)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    BitWord &amp;= ~(1 &lt;&lt; PosnBit);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span>(BitWord);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#a5e260dc651d8d91916e197a33d10a7a8">  116</a></span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#a5e260dc651d8d91916e197a33d10a7a8">putBit16</a>(uint16_t BitWord, uint16_t PosnBit, <span class="keywordtype">boolean</span> BitNew)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span>(BitNew)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        BitWord |=  1 &lt;&lt; PosnBit;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        BitWord &amp;= ~(1 &lt;&lt; PosnBit);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span>(BitWord);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="_project_lib_8h.html#a94903016cf4fcc46867aa21215cc1dff">  130</a></span>&#160;uint16_t <a class="code" href="_project_lib_8h.html#a94903016cf4fcc46867aa21215cc1dff">toggleBit16</a>(uint16_t BitWord, uint16_t PosnBit)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span>(BitWord &amp; (1 &lt;&lt; PosnBit)) </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        BitWord &amp;= ~(1 &lt;&lt; PosnBit);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    {   </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        BitWord |=  1 &lt;&lt; PosnBit;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span>(BitWord);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PROJECTLIB_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="a_project_lib_8h_html_a21241024196612ccdab0c4886bc2b224"><div class="ttname"><a href="_project_lib_8h.html#a21241024196612ccdab0c4886bc2b224">LookupTable</a></div><div class="ttdeci">float LookupTable(float axis[], float data[], uint8_t size, float input)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00035">ProjectLib.h:35</a></div></div>
-<div class="ttc" id="a_project_lib_8h_html_a3d8f21500ba61d5c4f0d0b334b1ce743"><div class="ttname"><a href="_project_lib_8h.html#a3d8f21500ba61d5c4f0d0b334b1ce743">saturate</a></div><div class="ttdeci">float saturate(float in, float LimLwr, float LimUpr)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00078">ProjectLib.h:78</a></div></div>
-<div class="ttc" id="a_project_lib_8h_html_a595608f842f970e3d740918c5fc296a4"><div class="ttname"><a href="_project_lib_8h.html#a595608f842f970e3d740918c5fc296a4">getBit16</a></div><div class="ttdeci">boolean getBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00092">ProjectLib.h:92</a></div></div>
-<div class="ttc" id="a_project_lib_8h_html_a5e260dc651d8d91916e197a33d10a7a8"><div class="ttname"><a href="_project_lib_8h.html#a5e260dc651d8d91916e197a33d10a7a8">putBit16</a></div><div class="ttdeci">uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00116">ProjectLib.h:116</a></div></div>
-<div class="ttc" id="a_project_lib_8h_html_a94903016cf4fcc46867aa21215cc1dff"><div class="ttname"><a href="_project_lib_8h.html#a94903016cf4fcc46867aa21215cc1dff">toggleBit16</a></div><div class="ttdeci">uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00130">ProjectLib.h:130</a></div></div>
-<div class="ttc" id="a_project_lib_8h_html_aa374a948bc480be5ac5ca10b2f760d0d"><div class="ttname"><a href="_project_lib_8h.html#aa374a948bc480be5ac5ca10b2f760d0d">setBit16</a></div><div class="ttdeci">uint16_t setBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00104">ProjectLib.h:104</a></div></div>
-<div class="ttc" id="a_project_lib_8h_html_ad4356009db72f8d1f602de671a9490b3"><div class="ttname"><a href="_project_lib_8h.html#ad4356009db72f8d1f602de671a9490b3">mapfloat</a></div><div class="ttdeci">float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00087">ProjectLib.h:87</a></div></div>
-<div class="ttc" id="a_project_lib_8h_html_ae064a401a9c32b427afb35942c0bad3f"><div class="ttname"><a href="_project_lib_8h.html#ae064a401a9c32b427afb35942c0bad3f">clearBit16</a></div><div class="ttdeci">uint16_t clearBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8h_source.html#l00110">ProjectLib.h:110</a></div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_project_lib.html">ProjectLib</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/* Signal conditioning */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">float</span> <a class="code" href="namespace_project_lib.html#a3031cfd8611234ad052ea77b733bf1c1">LookupTable</a>(<span class="keywordtype">float</span> axis[], <span class="keywordtype">float</span> data[], uint8_t size, <span class="keywordtype">float</span> input);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">float</span> <a class="code" href="namespace_project_lib.html#af85cd20dbe0d80e643869595663a107b">saturate</a>(<span class="keywordtype">float</span> in, <span class="keywordtype">float</span> LimLwr, <span class="keywordtype">float</span> LimUpr);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">float</span> <a class="code" href="namespace_project_lib.html#a93c50891e9122c26e6b23ffeedfec17e">mapfloat</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> in_min, <span class="keywordtype">float</span> in_max, <span class="keywordtype">float</span> out_min, <span class="keywordtype">float</span> out_max);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/* Bit operations */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">boolean</span> <a class="code" href="namespace_project_lib.html#ad053391ef987e1193ca74d5c4b4070aa">getBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;uint16_t <a class="code" href="namespace_project_lib.html#aeaa1036eac482abf39615abdcdf7a8cf">setBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;uint16_t <a class="code" href="namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23">clearBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;uint16_t <a class="code" href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">toggleBit16</a>(uint16_t BitWord, uint16_t PosnBit);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;uint16_t <a class="code" href="namespace_project_lib.html#ab771b14d351a9aec4c59964bf84bf207">putBit16</a>(uint16_t BitWord, uint16_t PosnBit, <span class="keywordtype">boolean</span> BitNew);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/* Matrix operations */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">MatrixMultiply</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> p, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">MatrixPrint</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">MatrixSubtract</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">MatrixAdd</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">MatrixScale</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span> k, <span class="keywordtype">float</span>* C);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">MatrixCopy</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">float</span>* B);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">MatrixTranspose</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">MatrixInvert</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <span class="comment">/* namespace ProjectLib */</span></div>
+<div class="ttc" id="anamespace_project_lib_html"><div class="ttname"><a href="namespace_project_lib.html">ProjectLib</a></div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00003">ProjectLib.cpp:3</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a05a00c2653259cab750d2796870464a9"><div class="ttname"><a href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">ProjectLib::toggleBit16</a></div><div class="ttdeci">uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00110">ProjectLib.cpp:110</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a0a7035117925528bdd96e32ac48222e0"><div class="ttname"><a href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">ProjectLib::MatrixAdd</a></div><div class="ttdeci">void MatrixAdd(float *A, float *B, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00186">ProjectLib.cpp:186</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a1300416169292f42f2292adb06fb268a"><div class="ttname"><a href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">ProjectLib::MatrixSubtract</a></div><div class="ttdeci">void MatrixSubtract(float *A, float *B, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00208">ProjectLib.cpp:208</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a3031cfd8611234ad052ea77b733bf1c1"><div class="ttname"><a href="namespace_project_lib.html#a3031cfd8611234ad052ea77b733bf1c1">ProjectLib::LookupTable</a></div><div class="ttdeci">float LookupTable(float axis[], float data[], uint8_t size, float input)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00015">ProjectLib.cpp:15</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a3d5f3b556189dc85ad958a1010e9f093"><div class="ttname"><a href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">ProjectLib::MatrixMultiply</a></div><div class="ttdeci">void MatrixMultiply(float *A, float *B, int m, int p, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00133">ProjectLib.cpp:133</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a51f1f895ff3722e042707703a89beaf1"><div class="ttname"><a href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">ProjectLib::MatrixTranspose</a></div><div class="ttdeci">void MatrixTranspose(float *A, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00263">ProjectLib.cpp:263</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a93c50891e9122c26e6b23ffeedfec17e"><div class="ttname"><a href="namespace_project_lib.html#a93c50891e9122c26e6b23ffeedfec17e">ProjectLib::mapfloat</a></div><div class="ttdeci">float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00067">ProjectLib.cpp:67</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_aa2a3d03adaed0e69ae752316ec6b2d23"><div class="ttname"><a href="namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23">ProjectLib::clearBit16</a></div><div class="ttdeci">uint16_t clearBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00090">ProjectLib.cpp:90</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_aa9c52ceab3cae778cd494433c1d665e9"><div class="ttname"><a href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">ProjectLib::MatrixCopy</a></div><div class="ttdeci">void MatrixCopy(float *A, int n, int m, float *B)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00245">ProjectLib.cpp:245</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_ab771b14d351a9aec4c59964bf84bf207"><div class="ttname"><a href="namespace_project_lib.html#ab771b14d351a9aec4c59964bf84bf207">ProjectLib::putBit16</a></div><div class="ttdeci">uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00096">ProjectLib.cpp:96</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_ab9034ece3e96a976d51e9addeaef6e7a"><div class="ttname"><a href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">ProjectLib::MatrixScale</a></div><div class="ttdeci">void MatrixScale(float *A, int m, int n, float k, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00230">ProjectLib.cpp:230</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_acabdc9a082b0a8def81ceb00ab67e3e0"><div class="ttname"><a href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">ProjectLib::MatrixInvert</a></div><div class="ttdeci">int MatrixInvert(float *A, int n)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00285">ProjectLib.cpp:285</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_ad053391ef987e1193ca74d5c4b4070aa"><div class="ttname"><a href="namespace_project_lib.html#ad053391ef987e1193ca74d5c4b4070aa">ProjectLib::getBit16</a></div><div class="ttdeci">boolean getBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00072">ProjectLib.cpp:72</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_ad7341e3c81322f065cca086a9e2d44ac"><div class="ttname"><a href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">ProjectLib::MatrixPrint</a></div><div class="ttdeci">void MatrixPrint(float *A, int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00158">ProjectLib.cpp:158</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_aeaa1036eac482abf39615abdcdf7a8cf"><div class="ttname"><a href="namespace_project_lib.html#aeaa1036eac482abf39615abdcdf7a8cf">ProjectLib::setBit16</a></div><div class="ttdeci">uint16_t setBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00084">ProjectLib.cpp:84</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_af85cd20dbe0d80e643869595663a107b"><div class="ttname"><a href="namespace_project_lib.html#af85cd20dbe0d80e643869595663a107b">ProjectLib::saturate</a></div><div class="ttdeci">float saturate(float in, float LimLwr, float LimUpr)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00058">ProjectLib.cpp:58</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
