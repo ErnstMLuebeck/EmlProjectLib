@@ -1,4 +1,6 @@
-/** Collection of useful functions
+/**@file ProjectLib.h
+ * 
+ * Collection of useful functions.
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23
@@ -20,6 +22,16 @@ uint16_t clearBit16(uint16_t BitWord, uint16_t PosnBit);
 uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit);
 uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew);
 
+/**
+ * 2D look-up table (1D axis and 1D data) which uses linear interpolation between breakpoints 
+ * and saturation in case the input is outside the axis range.
+ * 
+ * @param axis (float*) pointer to breakpoint vector
+ * @param data (float*) pointer to curve data vector
+ * @param size (uint8_t) length of axis and data vector
+ * @param input (float) input to be mapped on data 
+ * 
+ */
 float LookupTable(float axis[], float data[], uint8_t size, float input)
 {   /* Axis must be strictly monotonic increasing */
 
@@ -64,10 +76,12 @@ float LookupTable(float axis[], float data[], uint8_t size, float input)
 }
 
 float saturate(float in, float LimLwr, float LimUpr)
-{
-    if(in >= LimUpr) return(LimUpr);
-    if(in <= LimLwr) return(LimLwr);
-    return(in);
+{   float ret;
+
+    ret = in;
+    if(in >= LimUpr) ret = LimUpr;
+    if(in <= LimLwr) ret = LimLwr;
+    return(ret);
 }
 
 float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)

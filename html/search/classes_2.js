@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lowpassfilter_216',['LowPassFilter',['../class_low_pass_filter.html',1,'']]]
+  ['iirfilter_251',['IIRFilter',['../class_i_i_r_filter.html',1,'']]]
 ];

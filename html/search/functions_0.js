@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['actfunc_244',['actFunc',['../_simple_neur_net_8h.html#ae4d29a2053b3ac5f9cde4853c6fea8d4',1,'SimpleNeurNet.h']]],
-  ['anyedge_245',['anyEdge',['../class_pin_monitor.html#ad1a178a99d74099b90d8b0f7dae15a71',1,'PinMonitor']]]
+  ['actfunc_284',['actFunc',['../_simple_neur_net_8h.html#ae4d29a2053b3ac5f9cde4853c6fea8d4',1,'SimpleNeurNet.h']]],
+  ['additemhead_285',['addItemHead',['../class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4',1,'DataList']]],
+  ['anyedge_286',['anyEdge',['../class_pin_monitor.html#ad1a178a99d74099b90d8b0f7dae15a71',1,'PinMonitor']]]
 ];

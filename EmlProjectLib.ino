@@ -1,3 +1,20 @@
+/**@file EmlProjectLib.ino */
+
+/*! \mainpage Collection of useful classes and functions
+ *
+ * \section intro_sec Introduction
+ *
+ * This collection of classes and functions are aimed to be used in microcontroller hardware
+ * projected, e.g Arduino, Teensy, ESP32, etc.
+ * 
+ * Most of them are tested in the EmlProjectLib.ino sketch, where (very) simple testcases are executed.
+ *
+ * \section license_sec License
+ *
+ * Feel free to use and adapt these function as you wish. If your rocket crashes, please do not blame me.
+ *
+ */
+
 #include <Arduino.h>
 
 #include "LowPassFilter.h"
@@ -7,6 +24,7 @@
 #include "ProjectLib.h"
 #include "SignalMonitor.h"
 #include "Hysteresis.h"
+#include "IIRFilter.h"
 
 #define NUM_TESTCASE_SAMPLES 500
 #define NUM_PRE_SAMPLES 100
@@ -20,6 +38,10 @@ PidCtrlr PIDC1 = PidCtrlr(1.0, 1.0, 0.0, 0.0, 0.0, Ts);
 SignalMonitor SM1 = SignalMonitor(0);
 Hysteresis HYS1 = Hysteresis(-0.5, 0.5, 0);
 
+float test_num[3] = {0.052004382885834, 0.008913673017008, 0.666};
+float test_den[3] = {1.000000000000000, -0.939081944097158, 0.666};
+IIRFilter IIR1 = IIRFilter(test_num, test_den, 3);
+
 /* Testcase stimuli */
 float Sigma[NUM_TESTCASE_SAMPLES];
 float Delta[NUM_TESTCASE_SAMPLES];
@@ -30,7 +52,7 @@ float Triangle[NUM_TESTCASE_SAMPLES];
 void setup()
 {
     Serial.begin(9600);
-    delay(100);
+    while(!Serial); /* does not work without PC connected! */
 
     /* Generate testcase stimuli */
     for(int i=0; i<NUM_PRE_SAMPLES; i++)
@@ -64,6 +86,17 @@ void setup()
     }
 
     Delta[NUM_PRE_SAMPLES] = 1;
+
+    /* TC015 IIR Filter debugging */
+    // IIR1.printFilterData();
+    // IIR1.calculate(1);
+    // IIR1.printFilterData();
+    // IIR1.calculate(2);
+    // IIR1.printFilterData();
+    // IIR1.calculate(3);
+    // IIR1.printFilterData();
+    // IIR1.calculate(4);
+    // IIR1.printFilterData();
 }
 
 void loop()
@@ -174,6 +207,10 @@ void loop()
         /* TC014 mapfloat */
         x1 = Triangle[i];
         y1 = mapfloat(x1, -1, 1, -2, 2);
+
+        /* TC015 IIR Filter */
+        //IIR1.printFilterData();
+
 
         /* Plot Signals */
         Serial.print(x1, 4);

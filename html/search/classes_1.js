@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iirfilter_215',['IIRFilter',['../class_i_i_r_filter.html',1,'']]]
+  ['hysteresis_250',['Hysteresis',['../class_hysteresis.html',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Porject Library: IIRFilter.h Source File</title>
+<title>EML Project Library: IIRFilter.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="OnlineLogo2p1_bmp.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Porject Library
-   &#160;<span id="projectnumber">2021-04-24</span>
+   <div id="projectname">EML Project Library
+   &#160;<span id="projectnumber">2021-04-25</span>
    </div>
    <div id="projectbrief">Collection of useful classes and functions.</div>
   </td>
@@ -88,21 +88,23 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#ac3927e7b1b07cb0d89c9bdae50ee8478">   19</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_i_i_r_filter.html#ac3927e7b1b07cb0d89c9bdae50ee8478">order</a> = 2;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a8c93e9544ab8b6dbdfd8cb09ac5aef5c">   20</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a8c93e9544ab8b6dbdfd8cb09ac5aef5c">input_buffer</a>[2];</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a451e59ef484b7abe0c8b9543bfa924d6">   21</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a451e59ef484b7abe0c8b9543bfa924d6">output_buffer</a>[2];</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a7f4cde3739e9db884816e7389cb5d128">   22</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a7f4cde3739e9db884816e7389cb5d128">num</a>[2] = {0.052004382885834, 0.008913673017008};</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a087f872fd17d39bc6bebbcf4661e44fd">   23</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a087f872fd17d39bc6bebbcf4661e44fd">den</a>[2] = {1.000000000000000, -0.939081944097158};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* IIRFILTER_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a7b8bfa6925fa3c2c9760338dd52b760f">   20</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_i_i_r_filter.html#a7b8bfa6925fa3c2c9760338dd52b760f">IdxWrite</a> = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a8c93e9544ab8b6dbdfd8cb09ac5aef5c">   21</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a8c93e9544ab8b6dbdfd8cb09ac5aef5c">input_buffer</a>[2];</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a451e59ef484b7abe0c8b9543bfa924d6">   22</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a451e59ef484b7abe0c8b9543bfa924d6">output_buffer</a>[2];</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a7f4cde3739e9db884816e7389cb5d128">   23</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a7f4cde3739e9db884816e7389cb5d128">num</a>[2] = {0.052004382885834, 0.008913673017008};</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_i_i_r_filter.html#a087f872fd17d39bc6bebbcf4661e44fd">   24</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_i_i_r_filter.html#a087f872fd17d39bc6bebbcf4661e44fd">den</a>[2] = {1.000000000000000, -0.939081944097158};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* IIRFILTER_H */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="ttc" id="aclass_i_i_r_filter_html"><div class="ttname"><a href="class_i_i_r_filter.html">IIRFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00012">IIRFilter.h:13</a></div></div>
-<div class="ttc" id="aclass_i_i_r_filter_html_a087f872fd17d39bc6bebbcf4661e44fd"><div class="ttname"><a href="class_i_i_r_filter.html#a087f872fd17d39bc6bebbcf4661e44fd">IIRFilter::den</a></div><div class="ttdeci">float den[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00023">IIRFilter.h:23</a></div></div>
-<div class="ttc" id="aclass_i_i_r_filter_html_a451e59ef484b7abe0c8b9543bfa924d6"><div class="ttname"><a href="class_i_i_r_filter.html#a451e59ef484b7abe0c8b9543bfa924d6">IIRFilter::output_buffer</a></div><div class="ttdeci">float output_buffer[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00021">IIRFilter.h:21</a></div></div>
+<div class="ttc" id="aclass_i_i_r_filter_html_a087f872fd17d39bc6bebbcf4661e44fd"><div class="ttname"><a href="class_i_i_r_filter.html#a087f872fd17d39bc6bebbcf4661e44fd">IIRFilter::den</a></div><div class="ttdeci">float den[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00024">IIRFilter.h:24</a></div></div>
+<div class="ttc" id="aclass_i_i_r_filter_html_a451e59ef484b7abe0c8b9543bfa924d6"><div class="ttname"><a href="class_i_i_r_filter.html#a451e59ef484b7abe0c8b9543bfa924d6">IIRFilter::output_buffer</a></div><div class="ttdeci">float output_buffer[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00022">IIRFilter.h:22</a></div></div>
 <div class="ttc" id="aclass_i_i_r_filter_html_a63408f45298f7a9e5451f7163cbba401"><div class="ttname"><a href="class_i_i_r_filter.html#a63408f45298f7a9e5451f7163cbba401">IIRFilter::IIRFilter</a></div><div class="ttdeci">IIRFilter()</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8cpp_source.html#l00009">IIRFilter.cpp:9</a></div></div>
-<div class="ttc" id="aclass_i_i_r_filter_html_a7f4cde3739e9db884816e7389cb5d128"><div class="ttname"><a href="class_i_i_r_filter.html#a7f4cde3739e9db884816e7389cb5d128">IIRFilter::num</a></div><div class="ttdeci">float num[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00022">IIRFilter.h:22</a></div></div>
-<div class="ttc" id="aclass_i_i_r_filter_html_a8c93e9544ab8b6dbdfd8cb09ac5aef5c"><div class="ttname"><a href="class_i_i_r_filter.html#a8c93e9544ab8b6dbdfd8cb09ac5aef5c">IIRFilter::input_buffer</a></div><div class="ttdeci">float input_buffer[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00020">IIRFilter.h:20</a></div></div>
+<div class="ttc" id="aclass_i_i_r_filter_html_a7b8bfa6925fa3c2c9760338dd52b760f"><div class="ttname"><a href="class_i_i_r_filter.html#a7b8bfa6925fa3c2c9760338dd52b760f">IIRFilter::IdxWrite</a></div><div class="ttdeci">int IdxWrite</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00020">IIRFilter.h:20</a></div></div>
+<div class="ttc" id="aclass_i_i_r_filter_html_a7f4cde3739e9db884816e7389cb5d128"><div class="ttname"><a href="class_i_i_r_filter.html#a7f4cde3739e9db884816e7389cb5d128">IIRFilter::num</a></div><div class="ttdeci">float num[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00023">IIRFilter.h:23</a></div></div>
+<div class="ttc" id="aclass_i_i_r_filter_html_a8c93e9544ab8b6dbdfd8cb09ac5aef5c"><div class="ttname"><a href="class_i_i_r_filter.html#a8c93e9544ab8b6dbdfd8cb09ac5aef5c">IIRFilter::input_buffer</a></div><div class="ttdeci">float input_buffer[2]</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00021">IIRFilter.h:21</a></div></div>
 <div class="ttc" id="aclass_i_i_r_filter_html_abdea7d7cbeccb2ff8e707092ce3b6f17"><div class="ttname"><a href="class_i_i_r_filter.html#abdea7d7cbeccb2ff8e707092ce3b6f17">IIRFilter::calculate</a></div><div class="ttdeci">float calculate(float x)</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8cpp_source.html#l00019">IIRFilter.cpp:19</a></div></div>
 <div class="ttc" id="aclass_i_i_r_filter_html_ac3927e7b1b07cb0d89c9bdae50ee8478"><div class="ttname"><a href="class_i_i_r_filter.html#ac3927e7b1b07cb0d89c9bdae50ee8478">IIRFilter::order</a></div><div class="ttdeci">int order</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00019">IIRFilter.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
