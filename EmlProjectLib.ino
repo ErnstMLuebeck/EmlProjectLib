@@ -17,11 +17,11 @@
 
 #include <Arduino.h>
 
+#include "ProjectLib.h"
 #include "LowPassFilter.h"
 #include "TurnOnOffDelay.h"
 #include "StateSpaceModel.h"
 #include "PidCtrlr.h"
-#include "ProjectLib.h"
 #include "SignalMonitor.h"
 #include "Hysteresis.h"
 #include "IIRFilter.h"
@@ -267,8 +267,8 @@ void loop()
         /* Plot Signals */
         Serial.print(x1, 4);
         Serial.print(", ");
-        Serial.print(x2, 4);
-        Serial.print(", ");
+        // Serial.print(x2, 4);
+        // Serial.print(", ");
         Serial.print(y1, 4);
         Serial.print(", ");
         Serial.print(y2, 4);

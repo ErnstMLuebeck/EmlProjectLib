@@ -2,12 +2,7 @@
 #define STATESPACEMODEL_H
 
 #include <Arduino.h>
-#include <math.h>
-
-#define NX 3
-#define NY 1
-#define NU 2
-#define NZ 1
+#include "ProjectLib.h"
 
 /**
  * State Space Model (MIMO compatible) with state observer:
@@ -43,20 +38,11 @@ public:
     void getOutputsKn1(float* _y_kn1);
     
 private:
-    void MatrixMultiply(float* A, float* B, int m, int p, int n, float* C);
-    void MatrixPrint(float* A, int m, int n);
-    void MatrixSubtract(float* A, float* B, int m, int n, float* C);
-    void MatrixAdd(float* A, float* B, int m, int n, float* C);
-    void MatrixScale(float* A, int m, int n, float k, float* C);
-    void MatrixCopy(float* A, int n, int m, float* B);
-    void MatrixTranspose(float* A, int m, int n, float* C);
-    int MatrixInvert(float* A, int n);
-
     /* Plant Model Parameters */
     float Ts = {0.00100};
-    int Nx = {3};
-    int Nu = {2};
-    int Ny = {1};
+    int Nx = 1;
+    int Nu = 1;
+    int Ny = 1;
 
     /* Memory is allocated in the init functions */
     float* A;
