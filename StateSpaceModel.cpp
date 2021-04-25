@@ -26,13 +26,13 @@ void StateSpaceModel::initStateSpaceModel(float* Aa, float* Bb, float* Cc, int _
     Ny = _Ny;
     Ts = _Ts;
 
-    A = (float*)malloc(sizeof(float) * Nx * Nx);
-    B = (float*)malloc(sizeof(float) * Nx * Nu);
-    C = (float*)malloc(sizeof(float) * Ny * Nx);
+    A = (float*)calloc(sizeof(float), Nx * Nx);
+    B = (float*)calloc(sizeof(float), Nx * Nu);
+    C = (float*)calloc(sizeof(float), Ny * Nx);
 
-    x_kn1 = (float*)malloc(sizeof(float) * Nx * 1);
-    y_k = (float*)malloc(sizeof(float) * Ny * 1);
-    y_kn1 = (float*)malloc(sizeof(float) * Ny * 1);
+    x_kn1 = (float*)calloc(sizeof(float), Nx * 1);
+    y_k = (float*)calloc(sizeof(float), Ny * 1);
+    y_kn1 = (float*)calloc(sizeof(float), Ny * 1);
 
     ProjectLib::MatrixCopy((float*)Aa, Nx, Nx, A);
     // MatrixPrint(A, Nx, Nx);
@@ -54,13 +54,13 @@ void StateSpaceModel::initStateSpaceModel(float* Aa, float* Bb, float* Cc, int _
  */ 
 void StateSpaceModel::initStateObserver(float* Ll, float* pp)
 {
-    L = (float*)malloc(sizeof(float) * Nx * 1);
-    p = (float*)malloc(sizeof(float) * 1 * Nx);
+    L = (float*)calloc(sizeof(float), Nx * 1);
+    p = (float*)calloc(sizeof(float), 1 * Nx);
 
-    L_C = (float*)malloc(sizeof(float) * Nx * Nx); /* L*C */
-    A_L_C = (float*)malloc(sizeof(float) * Nx * Nx); /* A-L*C */
+    L_C = (float*)calloc(sizeof(float), Nx * Nx); /* L*C */
+    A_L_C = (float*)calloc(sizeof(float), Nx * Nx); /* A-L*C */
 
-    x_hat_kn1 = (float*)malloc(sizeof(float) * Nx * 1);
+    x_hat_kn1 = (float*)calloc(sizeof(float), Nx * 1);
 
     ProjectLib::MatrixCopy((float*)Ll, Nx, 1, L);
     // MatrixPrint(L, Nx, 1);
