@@ -5,21 +5,83 @@
  */
 StateSpaceModel::StateSpaceModel()
 {   
+
+}
+
+/**
+ * Initialize the SSM with all matrices and dimensions. Be careful what to pass this method, 
+ * since it can easily mess with undesired memory sections!
+ * 
+ * @param Aa pointer to source matrix
+ * @param Bb pointer to source matrix
+ * @param Cc pointer to source matrix
+ * @param Nx number of states
+ * @param Nu number of inputs (actuators)
+ * @param Ny outputs 
+ */ 
+void StateSpaceModel::initStateSpaceModel(float* Aa, float* Bb, float* Cc, int _Nx, int _Nu, int _Ny, float _Ts)
+{
+    Nx = _Nx;
+    Nu = _Nu;
+    Ny = _Ny;
+    Ts = _Ts;
+
+    A = (float*)malloc(sizeof(float) * Nx * Nx);
+    B = (float*)malloc(sizeof(float) * Nx * Nu);
+    C = (float*)malloc(sizeof(float) * Ny * Nx);
+
+    x_kn1 = (float*)malloc(sizeof(float) * Nx * 1);
+    y_k = (float*)malloc(sizeof(float) * Ny * 1);
+    y_kn1 = (float*)malloc(sizeof(float) * Ny * 1);
+
+    MatrixCopy((float*)Aa, Nx, Nx, A);
+    // MatrixPrint(A, Nx, Nx);
+
+    MatrixCopy((float*)Bb, Nx, Nu, B);
+    // MatrixPrint(B, Nx, Nu);
+
+    MatrixCopy((float*)Cc, Ny, Nx, C);
+    // MatrixPrint(C, Ny, Nx);
+
+}
+
+/**
+ * Initialize the state observer with all matrices and dimensions. Be careful what to pass this method, 
+ * since it can easily mess with undesired memory sections!
+ * 
+ * @param Ll pointer to source matrix
+ * @param pp pointer to pole matrix
+ */ 
+void StateSpaceModel::initStateObserver(float* Ll, float* pp)
+{
+    L = (float*)malloc(sizeof(float) * Nx * 1);
+    p = (float*)malloc(sizeof(float) * 1 * Nx);
+
+    L_C = (float*)malloc(sizeof(float) * Nx * Nx); /* L*C */
+    A_L_C = (float*)malloc(sizeof(float) * Nx * Nx); /* A-L*C */
+
+    x_hat_kn1 = (float*)malloc(sizeof(float) * Nx * 1);
+
+    MatrixCopy((float*)Ll, Nx, 1, L);
+    // MatrixPrint(L, Nx, 1);
+
+    MatrixCopy((float*)pp, 1, Nx, p);
+    // MatrixPrint(p, 1, Nx);
+
     /* Pre-calculate arrays */
     int row1 = NX;
     int col1 = 1;
     int row2 = 1;
     int col2 = NX;
     MatrixMultiply((float*)L, (float*)C, row1, col1, col2, (float*)L_C); 
-    //MatrixPrint((float*)L_C, row1, col2);
+    // MatrixPrint((float*)L_C, row1, col2);
 
     row1 = NX;
     col1 = NX;
     row2 = NX;
     col2 = NX;
     MatrixSubtract((float*)A, (float*)L_C, row1, col1, (float*)A_L_C);
-    //MatrixPrint((float*) A_L_C, row1, col1);
-
+    // MatrixPrint((float*) A_L_C, row1, col1);
 }
 
 /**

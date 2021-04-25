@@ -28,6 +28,9 @@ class StateSpaceModel
 
 public:
     StateSpaceModel();
+    void initStateSpaceModel(float* Aa, float* Bb, float* Cc, int _Nx, int _Nu, int _Ny, float _Ts);
+    void initStateObserver(float* Ll, float* pp);
+
     void calculate(float* u_k);
     void calculateObserver(float* u_k, float* y_sens);
 
@@ -55,31 +58,44 @@ private:
     int Nu = {2};
     int Ny = {1};
 
-    float A[3][3] = {{0.70970, -0.03520, 0.00000},
-    {0.05609, 0.99858, 0.00000},
-    {0.00003, 0.00100, 1.00000}};
-    float B[3][2] = {{0.10057, 0.00220},
-    {0.00330, -0.12491},
-    {0.00000, -0.00006}};
+    /* Memory is allocated in the init functions */
+    float* A;
+    float* B;
+    float* C;
+    float* L;
+    float* p;
 
-    float C[1][3] = {{0.00001, 0.00050, 1.00000}};
-    float D[1][2] = {{0.00000, -0.00003}};
+    float* x_kn1;  
+    float* y_k; 
+    float* y_kn1;
+
+    float* x_hat_kn1;
+    float* L_C; /* L*C */
+    float* A_L_C; /* A-L*C */
+
+    // float A[3][3] = {{0.70970, -0.03520, 0.00000},
+    // {0.05609, 0.99858, 0.00000},
+    // {0.00003, 0.00100, 1.00000}};
+    // float B[3][2] = {{0.10057, 0.00220},
+    // {0.00330, -0.12491},
+    // {0.00000, -0.00006}};
+
+    // float C[1][3] = {{0.00001, 0.00050, 1.00000}};
+    // float D[1][2] = {{0.00000, -0.00003}};
 
     /* Observer Parameters */
-    float p[1][3] = {{0.80000, 0.81000, 0.82000}};
-    float L[3][1] = {{-22.65057},
-    {25.86176},
-    {0.26568}};
+    // float p[1][3] = {{0.80000, 0.81000, 0.82000}};
+    // float L[3][1] = {{-22.65057}, {25.86176}, {0.26568}};
 
     /* Pre-calculated matrices */
-    float L_C[NX][NX] = {{0}}; /* L*C */
-    float A_L_C[NX][NX]; /* A-L*C */
+    // float L_C[NX][NX] = {{0}}; /* L*C */
+    // float A_L_C[NX][NX] = {{0}};; /* A-L*C */
 
-    float x_kn1[NX][1] = {{0}};  
-    float y_k[NY][1] = {{0}}; 
-    float y_kn1[NY][1] = {{0}};
+    // float x_kn1[NX][1] = {{0}};  
+    // float y_k[NY][1] = {{0}}; 
+    // float y_kn1[NY][1] = {{0}};
 
-    float x_hat_kn1[NX][1] = {{10}, {20},{33}};
+    // float x_hat_kn1[NX][1] = {{10}, {20}, {33}};
     
 };
 
