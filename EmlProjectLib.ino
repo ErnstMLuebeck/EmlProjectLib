@@ -208,17 +208,32 @@ void loop()
         x1 = Triangle[i];
         y1 = mapfloat(x1, -1, 1, -2, 2);
 
+        /* TC015 Bit operations */
+        uint16_t Status = 0;
+        Status = setBit16(Status, 1);
+        Serial.println(Status, BIN); /* Must be: 0b10*/
+        Status = toggleBit16(Status, 1);
+        Serial.println(Status, BIN); /* Must be: 0b0*/
+        Status = setBit16(Status, 7);
+        Serial.println(Status, BIN); /* Must be: 0b10000000 */
+        Serial.println(getBit16(Status, 7)); /* Must be: 1 */
+        Status = putBit16(Status, 6, 0);
+        Serial.println(Status, BIN); /* Must be: 0b10000000 */
+        Status = putBit16(Status, 5, 1);
+        Serial.println(Status, BIN); /* Must be: 0b10100000 */
+        Status = putBit16(Status, 7, 0);
+        Serial.println(Status, BIN); /* Must be: 0b100000 */
+
         /* TC015 IIR Filter */
         //IIR1.printFilterData();
 
-
         /* Plot Signals */
-        Serial.print(x1, 4);
-        Serial.print(", ");
+        // Serial.print(x1, 4);
+        // Serial.print(", ");
         // Serial.print(x2, 4);
         // Serial.print(", ");
-        Serial.print(y1, 4);
-        Serial.print(", ");
+        // Serial.print(y1, 4);
+        // Serial.print(", ");
         // Serial.print(y2, 4);
         // Serial.print(", ");
         // Serial.print(y3, 4);

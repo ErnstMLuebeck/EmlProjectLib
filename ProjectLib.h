@@ -129,8 +129,14 @@ uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew)
  
 uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)
 {
-    if(BitWord & (1 << PosnBit)) BitWord &= ~(1 << PosnBit);
-    else BitWord |=  1 << PosnBit;
+    if(BitWord & (1 << PosnBit)) 
+    {
+        BitWord &= ~(1 << PosnBit);
+    }
+    else 
+    {   
+        BitWord |=  1 << PosnBit;
+    }
     return(BitWord);
 }
 

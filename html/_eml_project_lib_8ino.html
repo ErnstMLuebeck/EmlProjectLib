@@ -87,6 +87,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="_project_lib_8h_source.html">ProjectLib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_signal_monitor_8h_source.html">SignalMonitor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_hysteresis_8h_source.html">Hysteresis.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i_i_r_filter_8h_source.html">IIRFilter.h</a>&quot;</code><br />
 </div>
 <p><a href="_eml_project_lib_8ino_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -120,6 +121,12 @@ Variables</h2></td></tr>
 <tr class="separator:a902bc9721ead963125b3f314dbc032cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5055472bf41a246b706640cf21c839a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hysteresis.html">Hysteresis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9">HYS1</a> = <a class="el" href="class_hysteresis.html">Hysteresis</a>(-0.5, 0.5, 0)</td></tr>
 <tr class="separator:a5055472bf41a246b706640cf21c839a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd64b598f4d4bd889e9a16c02600deb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_eml_project_lib_8ino.html#a3bd64b598f4d4bd889e9a16c02600deb">test_num</a> [3] = {0.052004382885834, 0.008913673017008, 0.666}</td></tr>
+<tr class="separator:a3bd64b598f4d4bd889e9a16c02600deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef434198259cd67e7176499d5dd0db7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_eml_project_lib_8ino.html#afef434198259cd67e7176499d5dd0db7">test_den</a> [3] = {1.000000000000000, -0.939081944097158, 0.666}</td></tr>
+<tr class="separator:afef434198259cd67e7176499d5dd0db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8913743b57b0ff21062f3be964734fff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_i_r_filter.html">IIRFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_eml_project_lib_8ino.html#a8913743b57b0ff21062f3be964734fff">IIR1</a> = <a class="el" href="class_i_i_r_filter.html">IIRFilter</a>(<a class="el" href="_eml_project_lib_8ino.html#a3bd64b598f4d4bd889e9a16c02600deb">test_num</a>, <a class="el" href="_eml_project_lib_8ino.html#afef434198259cd67e7176499d5dd0db7">test_den</a>, 3)</td></tr>
+<tr class="separator:a8913743b57b0ff21062f3be964734fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9e86c10191f6399f46ad89f2afeb885"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a> [<a class="el" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>]</td></tr>
 <tr class="separator:af9e86c10191f6399f46ad89f2afeb885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a017be58b0a8e44d77f20273b6348af69"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a> [<a class="el" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>]</td></tr>
@@ -144,7 +151,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00029">29</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00030">30</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -160,7 +167,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00028">28</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00029">29</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -180,7 +187,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00086">86</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00102">102</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -199,7 +206,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00047">47</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00052">52</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -216,7 +223,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00042">42</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00047">47</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -232,7 +239,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00038">38</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00039">39</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+
+</div>
+</div>
+<a id="a8913743b57b0ff21062f3be964734fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8913743b57b0ff21062f3be964734fff">&#9670;&nbsp;</a></span>IIR1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_i_r_filter.html">IIRFilter</a> IIR1 = <a class="el" href="class_i_i_r_filter.html">IIRFilter</a>(<a class="el" href="_eml_project_lib_8ino.html#a3bd64b598f4d4bd889e9a16c02600deb">test_num</a>, <a class="el" href="_eml_project_lib_8ino.html#afef434198259cd67e7176499d5dd0db7">test_den</a>, 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00043">43</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -248,7 +271,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00033">33</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00034">34</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -264,7 +287,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00036">36</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00037">37</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -280,7 +303,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00044">44</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00049">49</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -296,7 +319,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00041">41</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00046">46</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -312,7 +335,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00037">37</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00038">38</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -328,7 +351,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00043">43</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00048">48</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -344,7 +367,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00035">35</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00036">36</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+
+</div>
+</div>
+<a id="afef434198259cd67e7176499d5dd0db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef434198259cd67e7176499d5dd0db7">&#9670;&nbsp;</a></span>test_den</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float test_den[3] = {1.000000000000000, -0.939081944097158, 0.666}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00042">42</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+
+</div>
+</div>
+<a id="a3bd64b598f4d4bd889e9a16c02600deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd64b598f4d4bd889e9a16c02600deb">&#9670;&nbsp;</a></span>test_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float test_num[3] = {0.052004382885834, 0.008913673017008, 0.666}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00041">41</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -360,7 +415,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00034">34</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00035">35</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -376,7 +431,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00045">45</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00050">50</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
@@ -392,7 +447,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00031">31</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_eml_project_lib_8ino_source.html#l00032">32</a> of file <a class="el" href="_eml_project_lib_8ino_source.html">EmlProjectLib.ino</a>.</p>
 
 </div>
 </div>
