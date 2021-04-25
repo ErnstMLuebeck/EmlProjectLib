@@ -1,17 +1,64 @@
 #include "IIRFilter.h"
 
-/** Construct hysteresis object
+/** Construct IIR filter object
  * 
- * @param _ThrLeft [-], left threshold (turn off)
- * @param _ThrRight [-], right threshold (turn on)
- * @param _y_kn1 [-], state of hysteresis block y[k-1]
+ * @param _num numerator coefficient vector
+ * @param _den denominator coefficient vector
+ * @param _length number of elements in num and den (filter order)
  */
-IIRFilter::IIRFilter(float _ThrLeft, float _ThrRight, boolean _y_kn1)
-{
+IIRFilter::IIRFilter(float _num[], float _den[], uint8_t _length)
+{   
+    order = _length;
+    IdxWrite = 0;
 
+    num = (float*)malloc(sizeof(float) * order);
+    den = (float*)malloc(sizeof(float) * order);
+    input_buffer = (float*)malloc(sizeof(float) * order);
+    output_buffer = (float*)malloc(sizeof(float) * order);
+
+    for(int i=0; i<order; i++)
+    {   
+        *(num+i) = _num[i];
+        *(den+i) = _den[i];
+        *(input_buffer+i) = 0;
+        *(output_buffer+i) = 0;
+    }
 }
 
-/** Update hysteresis block
+/** Print out filter coefficients and buffer content for debugging
+ */
+void IIRFilter::printFilterData()
+{   
+    Serial.println(".");
+    for(int i=0; i<order; i++)
+    {   Serial.print("num[");
+        Serial.print(i);
+        Serial.print("] = ");
+        Serial.print(*(num+i),6);
+        Serial.print(", ");
+
+        Serial.print("den[");
+        Serial.print(i);
+        Serial.print("] = ");
+        Serial.print(*(den+i),6);
+        Serial.print(", ");
+
+        Serial.print("input_buffer[");
+        Serial.print(i);
+        Serial.print("] = ");
+        Serial.print(*(input_buffer+i),6);
+        Serial.print(", ");
+
+        Serial.print("output_buffer[");
+        Serial.print(i);
+        Serial.print("] = ");
+        Serial.print(*(output_buffer+i),6);
+        Serial.print(", ");
+        Serial.println();
+    }
+}
+
+/** Calculate IIR filter algorithm
  * 
  * @param x [-], input signal
  * @return y [-], hysteresis state
@@ -23,13 +70,19 @@ float IIRFilter::calculate(float x)
        order specifies the number of coefficients which are stored in
        the global variables num and den. The output buffer gets updated
        and the out value is returned */
+
+    /* Todo: implement ringbuffer */
+    input_buffer[IdxWrite] = x;
+
+    if(IdxWrite < (order-1)) IdxWrite++;
+    else IdxWrite = 0;
     
     float out = 0.0;
     
     for(int i = 0; i<order; i++)
     {
-      out += num[i] * input_buffer[i];
-      out += den[i] * output_buffer[i];
+        out += num[i] * input_buffer[i];
+        out += den[i] * output_buffer[i];
     }
     
 
