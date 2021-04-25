@@ -4,6 +4,7 @@
 #include <Arduino.h>
 #include <stdio.h>
 #include <math.h>
+#include "ProjectLib.h"
 
 #define NX 2
 #define NY 1
@@ -28,16 +29,7 @@ public:
     void getUoptKn1(float* _U_opt_kn1);
     void getXhat(float* _x_opt);
     
-private:
-    void MatrixMultiply(float* A, float* B, int m, int p, int n, float* C);
-    void MatrixPrint(float* A, int m, int n);
-    void MatrixSubtract(float* A, float* B, int m, int n, float* C);
-    void MatrixAdd(float* A, float* B, int m, int n, float* C);
-    void MatrixScale(float* A, int m, int n, float k, float* C);
-    void MatrixCopy(float* A, int n, int m, float* B);
-    void MatrixTranspose(float* A, int m, int n, float* C);
-    int MatrixInvert(float* A, int n);
-    
+private:   
     void calcF(float* A, float* C, int nx, int ny, int np, float* F);
     void calcPhi(float* A, float* B, float* C, int nx, int ny, int nu, int np, float* Phi);
     
