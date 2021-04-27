@@ -69,6 +69,20 @@ float mapfloat(float x, float in_min, float in_max, float out_min, float out_max
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+/**
+ * Check input against interval. If it is inside the range, return 1.
+ * 
+ * @param in [-], signal input
+ * @param LimLwr [-], lower range limit
+ * @param LimUpr [-], upper range limit
+ */
+boolean checkInterval(float in, float LimLwr, float LimUpr)
+{   
+    boolean ret = 1;
+    if((in > LimUpr) || (in < LimLwr)) ret = 0;
+    return(ret);
+}
+
 boolean getBit16(uint16_t BitWord, uint16_t PosnBit)
 {
     if(BitWord & (1 << PosnBit))

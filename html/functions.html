@@ -98,6 +98,21 @@ $(function() {
 : <a class="el" href="class_simple_mpc.html#af9db23f635da63075744222eba378d68">SimpleMpc</a>
 , <a class="el" href="class_state_space_model.html#a9b9bb4d64e98cb9deb8d46e073d4fcc5">StateSpaceModel</a>
 </li>
+<li>bessel_fc0p1
+: <a class="el" href="class_i_i_r_filter_biquad.html#a9da1553ad746a30891c78bcbb18b7e84">IIRFilterBiquad</a>
+</li>
+<li>bessel_fc0p25
+: <a class="el" href="class_i_i_r_filter_biquad.html#adaac6f5da69e2fe71f9f38b0ac9da6e6">IIRFilterBiquad</a>
+</li>
+<li>butterworth_fc0p1
+: <a class="el" href="class_i_i_r_filter_biquad.html#aa1c204ae83c790f91a3d1a5ec6e2fe70">IIRFilterBiquad</a>
+</li>
+<li>butterworth_fc0p25
+: <a class="el" href="class_i_i_r_filter_biquad.html#a2e8bef5e6c26f559adab7496430faf37">IIRFilterBiquad</a>
+</li>
+<li>butterworth_fc0p4
+: <a class="el" href="class_i_i_r_filter_biquad.html#a4dd8a9aaee5c632330649d9bb1517ce8">IIRFilterBiquad</a>
+</li>
 </ul>
 
 
@@ -113,7 +128,7 @@ $(function() {
 : <a class="el" href="class_simple_mpc.html#acd865b38b35b6941d0381713d032a91d">SimpleMpc</a>
 </li>
 <li>calculate()
-: <a class="el" href="class_i_i_r_filter.html#abdea7d7cbeccb2ff8e707092ce3b6f17">IIRFilter</a>
+: <a class="el" href="class_i_i_r_filter_biquad.html#a817b060dba483a6f08ca80b26d8a4e6e">IIRFilterBiquad</a>
 , <a class="el" href="class_low_pass_filter.html#af913e20eb292ce6056689840ce80e824">LowPassFilter</a>
 , <a class="el" href="class_pid_ctrlr.html#a5f7a7ec3a4362d27b263d4d2e3b42687">PidCtrlr</a>
 , <a class="el" href="class_simple_mpc.html#a504183a0307cf93e8ef833717c5b9028">SimpleMpc</a>
@@ -127,6 +142,9 @@ $(function() {
 </li>
 <li>cntrDeBnce
 : <a class="el" href="class_pin_monitor.html#a79d220d64f4754a09129474c54e31bb2">PinMonitor</a>
+</li>
+<li>coeff
+: <a class="el" href="class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6">IIRFilterBiquad</a>
 </li>
 <li>CoeffFiltDpart
 : <a class="el" href="class_pid_ctrlr.html#a4db65e8820170a07e2bd45fc08551456">PidCtrlr</a>
@@ -147,9 +165,6 @@ $(function() {
 <li>deltaU_opt_kn1
 : <a class="el" href="class_simple_mpc.html#ac132c41b99c644426985f95386b48832">SimpleMpc</a>
 </li>
-<li>den
-: <a class="el" href="class_i_i_r_filter.html#a749253064fa5001eb70cbe09d81fd6a8">IIRFilter</a>
-</li>
 <li>derivative_kn1
 : <a class="el" href="class_pid_ctrlr.html#a28e7e0d7d54014d7e5945dcb654a2a29">PidCtrlr</a>
 </li>
@@ -166,6 +181,9 @@ $(function() {
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>EnaIpart
+: <a class="el" href="class_pid_ctrlr.html#a2c07440cfd83a15340cc7df0fa0d95ee">PidCtrlr</a>
+</li>
 <li>error_kn1
 : <a class="el" href="class_pid_ctrlr.html#a64d3f15c2190e6d0c2cf426a6244857c">PidCtrlr</a>
 </li>
@@ -193,6 +211,12 @@ $(function() {
 </li>
 <li>flgRisngEdgePndng
 : <a class="el" href="class_pin_monitor.html#ae17061988a95c88271cee1764ed42a98">PinMonitor</a>
+</li>
+<li>FlgTmrRunning
+: <a class="el" href="class_soft_timer.html#acd6a0c6103a2f8382a47619370717276">SoftTimer</a>
+</li>
+<li>freezeIpart()
+: <a class="el" href="class_pid_ctrlr.html#a0adb0cae08912972a69f22933d11b78f">PidCtrlr</a>
 </li>
 </ul>
 
@@ -227,6 +251,9 @@ $(function() {
 </li>
 <li>getStates()
 : <a class="el" href="class_state_space_model.html#ae78abcea793dbd0ad16949b8bd987bb3">StateSpaceModel</a>
+</li>
+<li>getTime()
+: <a class="el" href="class_soft_timer.html#a3569ad5efe2bdd22a12957ac84a10a73">SoftTimer</a>
 </li>
 <li>getUopt()
 : <a class="el" href="class_simple_mpc.html#a3f78918dc03f518f74d3d08990069769">SimpleMpc</a>
@@ -266,26 +293,20 @@ $(function() {
 <li>id
 : <a class="el" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">ListItem</a>
 </li>
-<li>IdxWrite
-: <a class="el" href="class_i_i_r_filter.html#a7b8bfa6925fa3c2c9760338dd52b760f">IIRFilter</a>
-</li>
 <li>ignoreNxtFallngEdge()
 : <a class="el" href="class_pin_monitor.html#adaf88a4b1e2f863d69594827d3e7b5a6">PinMonitor</a>
 </li>
 <li>ignoreNxtRisngEdge()
 : <a class="el" href="class_pin_monitor.html#ac22e234c49351266f51b955b58d7ed13">PinMonitor</a>
 </li>
-<li>IIRFilter()
-: <a class="el" href="class_i_i_r_filter.html#aad41c93c235a1999f2845fa133e347ed">IIRFilter</a>
+<li>IIRFilterBiquad()
+: <a class="el" href="class_i_i_r_filter_biquad.html#a653cda71594f813f7e3b69d12a1441fd">IIRFilterBiquad</a>
 </li>
 <li>initStateObserver()
 : <a class="el" href="class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352">StateSpaceModel</a>
 </li>
 <li>initStateSpaceModel()
 : <a class="el" href="class_state_space_model.html#a11ce7040397b542d06baa957c351cc42">StateSpaceModel</a>
-</li>
-<li>input_buffer
-: <a class="el" href="class_i_i_r_filter.html#ae7054cee1819bdd7a6b9d350dbc07dc2">IIRFilter</a>
 </li>
 <li>integral
 : <a class="el" href="class_pid_ctrlr.html#a29ec2d28ba5d5e5a346019f024bd6467">PidCtrlr</a>
@@ -330,29 +351,11 @@ $(function() {
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
-<li>MatrixAdd()
-: <a class="el" href="class_simple_mpc.html#a1706dce6959c1fbac5ddd7c6a9539026">SimpleMpc</a>
+<li>ModeFilter
+: <a class="el" href="class_i_i_r_filter_biquad.html#a3ef6bd06bd02cdf7af34db28cc9bac2b">IIRFilterBiquad</a>
 </li>
-<li>MatrixCopy()
-: <a class="el" href="class_simple_mpc.html#a1b54daf15cde7ed176f5447782cc4afb">SimpleMpc</a>
-</li>
-<li>MatrixInvert()
-: <a class="el" href="class_simple_mpc.html#a291861542521fd3440d0c280e9cb97fa">SimpleMpc</a>
-</li>
-<li>MatrixMultiply()
-: <a class="el" href="class_simple_mpc.html#a5731de2e37d5da764a7da27a066d27b0">SimpleMpc</a>
-</li>
-<li>MatrixPrint()
-: <a class="el" href="class_simple_mpc.html#a59c2ae759d09bcba4007cc22a9310b81">SimpleMpc</a>
-</li>
-<li>MatrixScale()
-: <a class="el" href="class_simple_mpc.html#a9da8fdf33ca9fce59fb93d1e7199f0cc">SimpleMpc</a>
-</li>
-<li>MatrixSubtract()
-: <a class="el" href="class_simple_mpc.html#a9378950623a68de6363aae07c3959b49">SimpleMpc</a>
-</li>
-<li>MatrixTranspose()
-: <a class="el" href="class_simple_mpc.html#a44b827224522baf8955fa5471cfb6279">SimpleMpc</a>
+<li>ModeTmr
+: <a class="el" href="class_soft_timer.html#adb04811f437b3a79c9ea0aaa565e2177">SoftTimer</a>
 </li>
 </ul>
 
@@ -363,9 +366,6 @@ $(function() {
 </li>
 <li>Nu
 : <a class="el" href="class_state_space_model.html#a370e21c037e4b5d0a931aa336b839f53">StateSpaceModel</a>
-</li>
-<li>num
-: <a class="el" href="class_i_i_r_filter.html#a45eb6f75ede7f9aa2753b11916e20f83">IIRFilter</a>
 </li>
 <li>numDeBnceCycles
 : <a class="el" href="class_pin_monitor.html#a5594513960387d5e16abbf27e6e6a95d">PinMonitor</a>
@@ -385,19 +385,12 @@ $(function() {
 </ul>
 
 
-<h3><a id="index_o"></a>- o -</h3><ul>
-<li>order
-: <a class="el" href="class_i_i_r_filter.html#ac3927e7b1b07cb0d89c9bdae50ee8478">IIRFilter</a>
-</li>
-<li>output_buffer
-: <a class="el" href="class_i_i_r_filter.html#ab3585ae23111a552094d1a76321a7299">IIRFilter</a>
-</li>
-</ul>
-
-
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>p
 : <a class="el" href="class_state_space_model.html#aea2cc45b8b86e00fb8203f3877517992">StateSpaceModel</a>
+</li>
+<li>pause()
+: <a class="el" href="class_soft_timer.html#afd4fca238fb181215d001eb4c0f9e648">SoftTimer</a>
 </li>
 <li>Phi
 : <a class="el" href="class_simple_mpc.html#ac4ff36b7d3aad466e6e7425c4e0c7a3c">SimpleMpc</a>
@@ -407,9 +400,6 @@ $(function() {
 </li>
 <li>PinMonitor()
 : <a class="el" href="class_pin_monitor.html#a429dc85269549dbad2c61bcf3195feb3">PinMonitor</a>
-</li>
-<li>printFilterData()
-: <a class="el" href="class_i_i_r_filter.html#a380b153ab88ffb673b9647d2447937b4">IIRFilter</a>
 </li>
 <li>printListConsole()
 : <a class="el" href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">DataList</a>
@@ -425,6 +415,15 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>reset()
+: <a class="el" href="class_soft_timer.html#ac3994025128b5ba59c9acce3986af5b1">SoftTimer</a>
+</li>
+<li>resume()
+: <a class="el" href="class_soft_timer.html#aaf949e83310960095b953e1e7e6db56d">SoftTimer</a>
+</li>
+<li>resumeIpart()
+: <a class="el" href="class_pid_ctrlr.html#a8365cb9b6962a6b1db7fa63d2516fadb">PidCtrlr</a>
+</li>
 <li>risingEdge()
 : <a class="el" href="class_pin_monitor.html#a0d9d07b9518673fac553d1e67bb45ac8">PinMonitor</a>
 </li>
@@ -435,6 +434,9 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>setCoeff()
+: <a class="el" href="class_i_i_r_filter_biquad.html#a4ccdaf3ed10a1350372e3d730269bfa2">IIRFilterBiquad</a>
+</li>
 <li>setCtrlrGains()
 : <a class="el" href="class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e">PidCtrlr</a>
 </li>
@@ -489,8 +491,14 @@ $(function() {
 <li>SimpleMpc()
 : <a class="el" href="class_simple_mpc.html#a839e9935e259edc4387ec9396fbdd6bc">SimpleMpc</a>
 </li>
+<li>SoftTimer()
+: <a class="el" href="class_soft_timer.html#af178657a814deb0580e88dfd0262eaef">SoftTimer</a>
+</li>
 <li>stActv
 : <a class="el" href="class_pin_monitor.html#a9006633eaabcd6f4229eb1db804d1da3">PinMonitor</a>
+</li>
+<li>start()
+: <a class="el" href="class_soft_timer.html#ab6a4885ba875a3f26aebd21f90ee81ca">SoftTimer</a>
 </li>
 <li>StateSpaceModel()
 : <a class="el" href="class_state_space_model.html#a578d1e313e891dd7df4ec07f07d7ee61">StateSpaceModel</a>
@@ -534,6 +542,15 @@ $(function() {
 : <a class="el" href="class_pin_monitor.html#a3f045ae77ec6dee849f4d81ce4dbc6cb">PinMonitor</a>
 , <a class="el" href="class_turn_on_off_delay.html#a6d8549b66a51ac3281aece1a000ce1d4">TurnOnOffDelay</a>
 </li>
+<li>TiTmr
+: <a class="el" href="class_soft_timer.html#a83ece1a6c172f468be93c53963a8a860">SoftTimer</a>
+</li>
+<li>TiTmrStart
+: <a class="el" href="class_soft_timer.html#a5288b98f77d6d1c663df4a41313e0bd5">SoftTimer</a>
+</li>
+<li>TiTmrStop
+: <a class="el" href="class_soft_timer.html#a32ad187a57148416840930940ca1e905">SoftTimer</a>
+</li>
 <li>Ts
 : <a class="el" href="class_low_pass_filter.html#a31bbf3dc56fec8f0ad178c82729707b2">LowPassFilter</a>
 , <a class="el" href="class_pid_ctrlr.html#a6ee7f1a60d80f2d38bedb7d1682197cd">PidCtrlr</a>
@@ -566,9 +583,13 @@ $(function() {
 , <a class="el" href="class_state_space_model.html#a8bc20c500e3b05f9e3f340c32d823ab7">StateSpaceModel</a>
 </li>
 <li>x_kn1
-: <a class="el" href="class_signal_monitor.html#ad32238066ac2344041c68a517155c9b3">SignalMonitor</a>
+: <a class="el" href="class_i_i_r_filter_biquad.html#aaa144a3eda66d5ea5fc7b6f62134de05">IIRFilterBiquad</a>
+, <a class="el" href="class_signal_monitor.html#ad32238066ac2344041c68a517155c9b3">SignalMonitor</a>
 , <a class="el" href="class_state_space_model.html#a63118ad58bf11cd6d88b31e6b15855aa">StateSpaceModel</a>
 , <a class="el" href="class_turn_on_off_delay.html#ad6d5f3d92cadb1358cc08de8220c1ccf">TurnOnOffDelay</a>
+</li>
+<li>x_kn2
+: <a class="el" href="class_i_i_r_filter_biquad.html#ac732dfdc4bcace77e8559e01ed809aea">IIRFilterBiquad</a>
 </li>
 </ul>
 
@@ -585,8 +606,12 @@ $(function() {
 </li>
 <li>y_kn1
 : <a class="el" href="class_hysteresis.html#a244164c0e497ae9f8d5267aef8bc20d1">Hysteresis</a>
+, <a class="el" href="class_i_i_r_filter_biquad.html#aa294e9d104df74d89b156af523a060b4">IIRFilterBiquad</a>
 , <a class="el" href="class_low_pass_filter.html#aaea94c6ff1d479e529dc823b10012222">LowPassFilter</a>
 , <a class="el" href="class_state_space_model.html#afceba65c7e7fd98631d707c9022e1753">StateSpaceModel</a>
+</li>
+<li>y_kn2
+: <a class="el" href="class_i_i_r_filter_biquad.html#a0d8e54ceb86035b0c1a1cfbabbdfdefe">IIRFilterBiquad</a>
 </li>
 <li>y_n1
 : <a class="el" href="class_pin_monitor.html#aad4ab510b0e914d8584a149f13bc4f1e">PinMonitor</a>

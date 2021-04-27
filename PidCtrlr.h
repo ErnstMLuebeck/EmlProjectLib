@@ -1,6 +1,8 @@
 #ifndef PIDCTRLR_H_
 #define PIDCTRLR_H_
 
+#include <Arduino.h>
+
 /** 
  * Parallel PID controller with anti-windup and filtered D-part. The class also features
  * functions for gain scheduling (update controller gains during run-time), set value of integrator,
@@ -18,6 +20,8 @@ class PidCtrlr
     void setCtrlrGains(float _Kp, float _Ki, float _Kd, float _Kaw);
     void setIpart(float _IpartInit);
     void setTcDpart(float _TcDpart);
+    void freezeIpart();
+    void resumeIpart();
 
     private:
     float Ts; /* [s], sample time */
@@ -28,6 +32,7 @@ class PidCtrlr
     float integral; /* [-], integrator of integral part */
     float TcDpart; /* [s], filter time constant of derivative part filter */
     float CoeffFiltDpart; /* [-], filter coefficient of derivative part filter */
+    boolean EnaIpart;
 };
 
 #endif /*  PIDCTRLR_H_ */

@@ -18,6 +18,7 @@ PidCtrlr::PidCtrlr(float _Kp, float _Ki, float _Kd, float _Kaw, float _TcDpart, 
     Kd = _Kd;
     Kaw = _Kaw;
     TcDpart = _TcDpart;
+    EnaIpart = 1;
 
     /* Calculate filter coefficient from time constant */
     CoeffFiltDpart = 1 - Ts/TcDpart;
@@ -99,8 +100,12 @@ float PidCtrlr::calculate(float y_sp, float y, float u_true, float u_ff)
     float up, ui, ud;
     
     error_k = y_sp - y;
-    integral = integral + (error_k * Ts) + (Kaw * (u_true - u_kn1));
 
+    if(EnaIpart)
+    {
+        integral = integral + (error_k * Ts) + (Kaw * (u_true - u_kn1));
+    }
+    
     derivative = (error_k - error_kn1) / Ts;
     error_kn1 = error_k;
 
@@ -115,6 +120,22 @@ float PidCtrlr::calculate(float y_sp, float y, float u_true, float u_ff)
     u_kn1 = up + ui + ud + u_ff;
 
     return(u_kn1);
+}
+
+/**
+ * Freeze integral part with current value but continue all other parts
+ */
+void PidCtrlr::freezeIpart()
+{
+    EnaIpart = 0;
+}
+
+/**
+ * Reume calculation of integral part from last frozen value
+ */
+void PidCtrlr::resumeIpart()
+{
+    EnaIpart = 1;
 }
 
 

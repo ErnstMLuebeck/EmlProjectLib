@@ -91,7 +91,7 @@ $(function() {
 : <a class="el" href="class_simple_mpc.html#acd865b38b35b6941d0381713d032a91d">SimpleMpc</a>
 </li>
 <li>calculate()
-: <a class="el" href="class_i_i_r_filter.html#abdea7d7cbeccb2ff8e707092ce3b6f17">IIRFilter</a>
+: <a class="el" href="class_i_i_r_filter_biquad.html#a817b060dba483a6f08ca80b26d8a4e6e">IIRFilterBiquad</a>
 , <a class="el" href="class_low_pass_filter.html#af913e20eb292ce6056689840ce80e824">LowPassFilter</a>
 , <a class="el" href="class_pid_ctrlr.html#a5f7a7ec3a4362d27b263d4d2e3b42687">PidCtrlr</a>
 , <a class="el" href="class_simple_mpc.html#a504183a0307cf93e8ef833717c5b9028">SimpleMpc</a>
@@ -126,6 +126,9 @@ $(function() {
 <li>fallingEdge()
 : <a class="el" href="class_pin_monitor.html#a1a41f48e7d3b8cbf139f0fbbf610fd84">PinMonitor</a>
 </li>
+<li>freezeIpart()
+: <a class="el" href="class_pid_ctrlr.html#a0adb0cae08912972a69f22933d11b78f">PidCtrlr</a>
+</li>
 </ul>
 
 
@@ -159,6 +162,9 @@ $(function() {
 </li>
 <li>getStates()
 : <a class="el" href="class_state_space_model.html#ae78abcea793dbd0ad16949b8bd987bb3">StateSpaceModel</a>
+</li>
+<li>getTime()
+: <a class="el" href="class_soft_timer.html#a3569ad5efe2bdd22a12957ac84a10a73">SoftTimer</a>
 </li>
 <li>getUopt()
 : <a class="el" href="class_simple_mpc.html#a3f78918dc03f518f74d3d08990069769">SimpleMpc</a>
@@ -195,8 +201,8 @@ $(function() {
 <li>ignoreNxtRisngEdge()
 : <a class="el" href="class_pin_monitor.html#ac22e234c49351266f51b955b58d7ed13">PinMonitor</a>
 </li>
-<li>IIRFilter()
-: <a class="el" href="class_i_i_r_filter.html#aad41c93c235a1999f2845fa133e347ed">IIRFilter</a>
+<li>IIRFilterBiquad()
+: <a class="el" href="class_i_i_r_filter_biquad.html#a653cda71594f813f7e3b69d12a1441fd">IIRFilterBiquad</a>
 </li>
 <li>initStateObserver()
 : <a class="el" href="class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352">StateSpaceModel</a>
@@ -217,43 +223,15 @@ $(function() {
 </ul>
 
 
-<h3><a id="index_m"></a>- m -</h3><ul>
-<li>MatrixAdd()
-: <a class="el" href="class_simple_mpc.html#a1706dce6959c1fbac5ddd7c6a9539026">SimpleMpc</a>
-</li>
-<li>MatrixCopy()
-: <a class="el" href="class_simple_mpc.html#a1b54daf15cde7ed176f5447782cc4afb">SimpleMpc</a>
-</li>
-<li>MatrixInvert()
-: <a class="el" href="class_simple_mpc.html#a291861542521fd3440d0c280e9cb97fa">SimpleMpc</a>
-</li>
-<li>MatrixMultiply()
-: <a class="el" href="class_simple_mpc.html#a5731de2e37d5da764a7da27a066d27b0">SimpleMpc</a>
-</li>
-<li>MatrixPrint()
-: <a class="el" href="class_simple_mpc.html#a59c2ae759d09bcba4007cc22a9310b81">SimpleMpc</a>
-</li>
-<li>MatrixScale()
-: <a class="el" href="class_simple_mpc.html#a9da8fdf33ca9fce59fb93d1e7199f0cc">SimpleMpc</a>
-</li>
-<li>MatrixSubtract()
-: <a class="el" href="class_simple_mpc.html#a9378950623a68de6363aae07c3959b49">SimpleMpc</a>
-</li>
-<li>MatrixTranspose()
-: <a class="el" href="class_simple_mpc.html#a44b827224522baf8955fa5471cfb6279">SimpleMpc</a>
-</li>
-</ul>
-
-
 <h3><a id="index_p"></a>- p -</h3><ul>
+<li>pause()
+: <a class="el" href="class_soft_timer.html#afd4fca238fb181215d001eb4c0f9e648">SoftTimer</a>
+</li>
 <li>PidCtrlr()
 : <a class="el" href="class_pid_ctrlr.html#a7a88a75c2210bf1678c57824f8c3d7bb">PidCtrlr</a>
 </li>
 <li>PinMonitor()
 : <a class="el" href="class_pin_monitor.html#a429dc85269549dbad2c61bcf3195feb3">PinMonitor</a>
-</li>
-<li>printFilterData()
-: <a class="el" href="class_i_i_r_filter.html#a380b153ab88ffb673b9647d2447937b4">IIRFilter</a>
 </li>
 <li>printListConsole()
 : <a class="el" href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">DataList</a>
@@ -262,6 +240,15 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>reset()
+: <a class="el" href="class_soft_timer.html#ac3994025128b5ba59c9acce3986af5b1">SoftTimer</a>
+</li>
+<li>resume()
+: <a class="el" href="class_soft_timer.html#aaf949e83310960095b953e1e7e6db56d">SoftTimer</a>
+</li>
+<li>resumeIpart()
+: <a class="el" href="class_pid_ctrlr.html#a8365cb9b6962a6b1db7fa63d2516fadb">PidCtrlr</a>
+</li>
 <li>risingEdge()
 : <a class="el" href="class_pin_monitor.html#a0d9d07b9518673fac553d1e67bb45ac8">PinMonitor</a>
 </li>
@@ -269,6 +256,9 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>setCoeff()
+: <a class="el" href="class_i_i_r_filter_biquad.html#a4ccdaf3ed10a1350372e3d730269bfa2">IIRFilterBiquad</a>
+</li>
 <li>setCtrlrGains()
 : <a class="el" href="class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e">PidCtrlr</a>
 </li>
@@ -322,6 +312,12 @@ $(function() {
 </li>
 <li>SimpleMpc()
 : <a class="el" href="class_simple_mpc.html#a839e9935e259edc4387ec9396fbdd6bc">SimpleMpc</a>
+</li>
+<li>SoftTimer()
+: <a class="el" href="class_soft_timer.html#af178657a814deb0580e88dfd0262eaef">SoftTimer</a>
+</li>
+<li>start()
+: <a class="el" href="class_soft_timer.html#ab6a4885ba875a3f26aebd21f90ee81ca">SoftTimer</a>
 </li>
 <li>StateSpaceModel()
 : <a class="el" href="class_state_space_model.html#a578d1e313e891dd7df4ec07f07d7ee61">StateSpaceModel</a>

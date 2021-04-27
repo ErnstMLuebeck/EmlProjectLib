@@ -85,302 +85,318 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_pid_ctrlr_8h.html">PidCtrlr.h</a>&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_signal_monitor_8h.html">SignalMonitor.h</a>&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_hysteresis_8h.html">Hysteresis.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_i_r_filter_8h.html">IIRFilter.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">   29</a></span>&#160;<span class="preprocessor">#define NUM_TESTCASE_SAMPLES 500</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">   30</a></span>&#160;<span class="preprocessor">#define NUM_PRE_SAMPLES 100</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">   32</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a> = 0.01; <span class="comment">/* [s], testcase sample time */</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e">   34</a></span>&#160;<a class="code" href="class_low_pass_filter.html">LowPassFilter</a> <a class="code" href="_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e">LPF1</a> = <a class="code" href="class_low_pass_filter.html">LowPassFilter</a>(<a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>, 0.1, 0);</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#ac3bdafe5e82e19280b4ee9cd190c9514">   35</a></span>&#160;<a class="code" href="class_turn_on_off_delay.html">TurnOnOffDelay</a> <a class="code" href="_eml_project_lib_8ino.html#ac3bdafe5e82e19280b4ee9cd190c9514">TOOD1</a> = <a class="code" href="class_turn_on_off_delay.html">TurnOnOffDelay</a>(0, 0);</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">   36</a></span>&#160;<a class="code" href="class_state_space_model.html">StateSpaceModel</a> <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a> = <a class="code" href="class_state_space_model.html">StateSpaceModel</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a4eccdc0123a996df550204b7675d77e3">   37</a></span>&#160;<a class="code" href="class_pid_ctrlr.html">PidCtrlr</a> <a class="code" href="_eml_project_lib_8ino.html#a4eccdc0123a996df550204b7675d77e3">PIDC1</a> = <a class="code" href="class_pid_ctrlr.html">PidCtrlr</a>(1.0, 1.0, 0.0, 0.0, 0.0, <a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a902bc9721ead963125b3f314dbc032cf">   38</a></span>&#160;<a class="code" href="class_signal_monitor.html">SignalMonitor</a> <a class="code" href="_eml_project_lib_8ino.html#a902bc9721ead963125b3f314dbc032cf">SM1</a> = <a class="code" href="class_signal_monitor.html">SignalMonitor</a>(0);</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9">   39</a></span>&#160;<a class="code" href="class_hysteresis.html">Hysteresis</a> <a class="code" href="_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9">HYS1</a> = <a class="code" href="class_hysteresis.html">Hysteresis</a>(-0.5, 0.5, 0);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a3bd64b598f4d4bd889e9a16c02600deb">   41</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#a3bd64b598f4d4bd889e9a16c02600deb">test_num</a>[3] = {0.052004382885834, 0.008913673017008, 0.666};</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#afef434198259cd67e7176499d5dd0db7">   42</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#afef434198259cd67e7176499d5dd0db7">test_den</a>[3] = {1.000000000000000, -0.939081944097158, 0.666};</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a8913743b57b0ff21062f3be964734fff">   43</a></span>&#160;<a class="code" href="class_i_i_r_filter.html">IIRFilter</a> <a class="code" href="_eml_project_lib_8ino.html#a8913743b57b0ff21062f3be964734fff">IIR1</a> = <a class="code" href="class_i_i_r_filter.html">IIRFilter</a>(<a class="code" href="_eml_project_lib_8ino.html#a3bd64b598f4d4bd889e9a16c02600deb">test_num</a>, <a class="code" href="_eml_project_lib_8ino.html#afef434198259cd67e7176499d5dd0db7">test_den</a>, 3);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/* Testcase stimuli */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">   46</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">   47</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">   48</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">   49</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">Saw</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">   50</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a>()</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Serial.begin(9600);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">while</span>(!Serial); <span class="comment">/* does not work without PC connected! */</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">/* Generate testcase stimuli */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>; i++)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a>[i] = 0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[i] = 0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">boolean</span> state = 0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>; i&lt;<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>; i++)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a>[i] = 1;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[i] = 0;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">int</span> Len = 75;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">int</span> LenMod = (i-<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>)%Len;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span>(LenMod == 0) state = !state;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span>(state) </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[i] = 1.0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a>[i] = 2*LenMod/(float)Len - 1.0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[i] = -1.0;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a>[i] = 2*(Len-LenMod)/(<span class="keywordtype">float</span>)Len - 1.0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">Saw</a>[i] = LenMod/(float)Len;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>] = 1;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">/* TC006 State Space Model */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">float</span> A[3][3] = {{0.70970, -0.03520, 0.00000}, {0.05609, 0.99858, 0.00000}, {0.00003, 0.00100, 1.00000}};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">float</span> B[3][2] = {{0.10057, 0.00220}, {0.00330, -0.12491}, {0.00000, -0.00006}};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">float</span> C[1][3] = {{0.00001, 0.00050, 1.00000}};</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a>.<a class="code" href="class_state_space_model.html#a11ce7040397b542d06baa957c351cc42">initStateSpaceModel</a>((<span class="keywordtype">float</span>*)A, (<span class="keywordtype">float</span>*)B, (<span class="keywordtype">float</span>*)C, 3, 2, 1, <a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">float</span> p[1][3] = {{0.80000, 0.81000, 0.82000}};</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">float</span> L[3][1] = {{-22.65057}, {25.86176}, {0.26568}};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a>.<a class="code" href="class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352">initStateObserver</a>((<span class="keywordtype">float</span>*)L, (<span class="keywordtype">float</span>*)p);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">/* TC015 IIR Filter debugging */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_i_r_filter_biquad_8h.html">IIRFilterBiquad.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_soft_timer_8h.html">SoftTimer.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">   30</a></span>&#160;<span class="preprocessor">#define NUM_TESTCASE_SAMPLES 500</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">   31</a></span>&#160;<span class="preprocessor">#define NUM_PRE_SAMPLES 100</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">   33</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a> = 0.01; <span class="comment">/* [s], testcase sample time */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e">   35</a></span>&#160;<a class="code" href="class_low_pass_filter.html">LowPassFilter</a> <a class="code" href="_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e">LPF1</a> = <a class="code" href="class_low_pass_filter.html">LowPassFilter</a>(<a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>, 0.1, 0);</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#ac3bdafe5e82e19280b4ee9cd190c9514">   36</a></span>&#160;<a class="code" href="class_turn_on_off_delay.html">TurnOnOffDelay</a> <a class="code" href="_eml_project_lib_8ino.html#ac3bdafe5e82e19280b4ee9cd190c9514">TOOD1</a> = <a class="code" href="class_turn_on_off_delay.html">TurnOnOffDelay</a>(0, 0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">   37</a></span>&#160;<a class="code" href="class_state_space_model.html">StateSpaceModel</a> <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a> = <a class="code" href="class_state_space_model.html">StateSpaceModel</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a4eccdc0123a996df550204b7675d77e3">   38</a></span>&#160;<a class="code" href="class_pid_ctrlr.html">PidCtrlr</a> <a class="code" href="_eml_project_lib_8ino.html#a4eccdc0123a996df550204b7675d77e3">PIDC1</a> = <a class="code" href="class_pid_ctrlr.html">PidCtrlr</a>(1.0, 1.0, 0.0, 0.0, 0.0, <a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a902bc9721ead963125b3f314dbc032cf">   39</a></span>&#160;<a class="code" href="class_signal_monitor.html">SignalMonitor</a> <a class="code" href="_eml_project_lib_8ino.html#a902bc9721ead963125b3f314dbc032cf">SM1</a> = <a class="code" href="class_signal_monitor.html">SignalMonitor</a>(0);</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9">   40</a></span>&#160;<a class="code" href="class_hysteresis.html">Hysteresis</a> <a class="code" href="_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9">HYS1</a> = <a class="code" href="class_hysteresis.html">Hysteresis</a>(-0.5, 0.5, 0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a7c3d6e4f1b80be90dc28d97979b8fba0">   41</a></span>&#160;<a class="code" href="class_soft_timer.html">SoftTimer</a> <a class="code" href="_eml_project_lib_8ino.html#a7c3d6e4f1b80be90dc28d97979b8fba0">ST1</a> = <a class="code" href="class_soft_timer.html">SoftTimer</a>(0);</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#ae87db9e0caa91316ed80b7023f7b38cf">   42</a></span>&#160;<a class="code" href="class_i_i_r_filter_biquad.html">IIRFilterBiquad</a> <a class="code" href="_eml_project_lib_8ino.html#ae87db9e0caa91316ed80b7023f7b38cf">IIR1</a> = <a class="code" href="class_i_i_r_filter_biquad.html">IIRFilterBiquad</a>(4);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/* Testcase stimuli */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">   45</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">   46</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">   47</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">   48</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">Saw</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">   49</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a>[<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    Serial.begin(9600);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">while</span>(!Serial); <span class="comment">/* does not work without PC connected! */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">/* Generate testcase stimuli */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>; i++)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a>[i] = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[i] = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">boolean</span> state = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>; i&lt;<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>; i++)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a>[i] = 1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[i] = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> Len = 75;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">int</span> LenMod = (i-<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>)%Len;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span>(LenMod == 0) state = !state;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span>(state) </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[i] = 1.0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a>[i] = 2*LenMod/(float)Len - 1.0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[i] = -1.0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a>[i] = 2*(Len-LenMod)/(<span class="keywordtype">float</span>)Len - 1.0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">Saw</a>[i] = LenMod/(float)Len;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a>[<a class="code" href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a>] = 1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">/* TC006 State Space Model */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">float</span> A[3][3] = {{0.70970, -0.03520, 0.00000}, {0.05609, 0.99858, 0.00000}, {0.00003, 0.00100, 1.00000}};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">float</span> B[3][2] = {{0.10057, 0.00220}, {0.00330, -0.12491}, {0.00000, -0.00006}};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">float</span> C[1][3] = {{0.00001, 0.00050, 1.00000}};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a>.<a class="code" href="class_state_space_model.html#a11ce7040397b542d06baa957c351cc42">initStateSpaceModel</a>((<span class="keywordtype">float</span>*)A, (<span class="keywordtype">float</span>*)B, (<span class="keywordtype">float</span>*)C, 3, 2, 1, <a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">float</span> p[1][3] = {{0.80000, 0.81000, 0.82000}};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">float</span> L[3][1] = {{-22.65057}, {25.86176}, {0.26568}};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a>.<a class="code" href="class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352">initStateObserver</a>((<span class="keywordtype">float</span>*)L, (<span class="keywordtype">float</span>*)p);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">/* TC015 IIR Filter debugging */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// IIR1.printFilterData();</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// IIR1.calculate(1);</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">// IIR1.printFilterData();</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// IIR1.calculate(1);</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// IIR1.calculate(2);</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">// IIR1.printFilterData();</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// IIR1.calculate(2);</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// IIR1.calculate(3);</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// IIR1.printFilterData();</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// IIR1.calculate(3);</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// IIR1.calculate(4);</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// IIR1.printFilterData();</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// IIR1.calculate(4);</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// IIR1.printFilterData();</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">/* TC017 SoftTimer */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// ST1.start();</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#afe461d27b9c48d5921c00d521181f12f">  115</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_eml_project_lib_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a>()</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">float</span> x1 = 0;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">float</span> x2 = 0;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">float</span> y1 = 0;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">float</span> y2 = 0;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">float</span> y3 = 0; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">/* Execut testcases */</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>; i++)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">/* TC001 Lowpass filter */</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// LPF1.setTc(0.1);</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// x1 = Sigma[i];</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">// y1 = LPF1.calculate(x1);</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">/* TC002 Lowpass filter */</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">// LPF1.setTc(0.03);</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="comment">// x1 = Delta[i];</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">// y1 = LPF1.calculate(x1);</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="comment">/* TC003 Turn on delay */</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">// TOOD1.setTiDly(100, 0);</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">// y1 = TOOD1.update(x1);</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">/* TC004 Turn off delay */</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">// TOOD1.setTiDly(0, 100);</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">// y1 = TOOD1.update(x1);</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="comment">/* TC005 Turn on/off delay */</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// TOOD1.setTiDly(50, 100);</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">// y1 = TOOD1.update(x1);</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="comment">/* TC006 State Space Model */</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        x1 = <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[i]; <span class="comment">/* Vq */</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        x2 = 0; <span class="comment">/* TqLoa */</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">float</span> u[2][1], y[1][1];</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        u[0][0] = x1;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        u[1][0] = x2;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a>.<a class="code" href="class_state_space_model.html#a0f0f419fe5212b2a89c9669465197332">calculate</a>((<span class="keywordtype">float</span>*)u);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a>.<a class="code" href="class_state_space_model.html#ae78abcea793dbd0ad16949b8bd987bb3">getStates</a>((<span class="keywordtype">float</span>*)y);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        y1 = y[0][0];</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        y2 = y[1][0];</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        y3 = y[2][0];</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="comment">/* TC007 PID Controller (using State Space Model) */</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="comment">// PIDC1.setCtrlrGains(2.0, 1.2, 0.0, 0.0);</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="comment">// PIDC1.setTcDpart(0.2);</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">// x1 = Sigma[i]; /* y_sp */</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="comment">// x2 = PIDC1.calculate(x1, y2, x2, 0.0); /* u1 */</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">//IIR1.setCoeff(10, 100);</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="_eml_project_lib_8ino.html#afe461d27b9c48d5921c00d521181f12f">  118</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_eml_project_lib_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a>()</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">float</span> x1 = 0;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">float</span> x2 = 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">float</span> y1 = 0;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">float</span> y2 = 0;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">float</span> y3 = 0; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">/* Execut testcases */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a>; i++)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">/* TC001 Lowpass filter */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">// LPF1.setTc(0.1);</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">// x1 = Sigma[i];</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">// y1 = LPF1.calculate(x1);</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">/* TC002 Lowpass filter */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// LPF1.setTc(0.03);</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="comment">// x1 = Delta[i];</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">// y1 = LPF1.calculate(x1);</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">/* TC003 Turn on delay */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">// TOOD1.setTiDly(100, 0);</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">// y1 = TOOD1.update(x1);</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">/* TC004 Turn off delay */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">// TOOD1.setTiDly(0, 100);</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// y1 = TOOD1.update(x1);</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">/* TC005 Turn on/off delay */</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="comment">// TOOD1.setTiDly(50, 100);</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">// y1 = TOOD1.update(x1);</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">/* TC006 State Space Model */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="comment">// x1 = Square[i]; /* Vq */</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">// x2 = 0; /* TqLoa */</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="comment">// float u[2][1], y[1][1];</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">// u[0][0] = x1;</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// u[1][0] = x2;</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="comment">// SSM1.calculate((float*)u);</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="comment">// SSM1.getStates((float*)y);</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">// y1 = y[0][0];</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="comment">// y2 = y[1][0];</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="comment">// y3 = y[2][0];</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="comment">/* TC007 PID Controller (using State Space Model) */</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">// PIDC1.setCtrlrGains(2.0, 1.2, 0.0, 0.0);</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="comment">// PIDC1.setTcDpart(0.2);</span></div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="comment">// float u[2][1], y[1][1];</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="comment">// u[0][0] = x2;</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="comment">// u[1][0] = 0;</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="comment">// SSM1.calculate((float*)u);</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">// SSM1.getStates((float*)y);</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="comment">// y1 = y[0][0]; /* not used */</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="comment">// y2 = y[1][0]; /* controlled variable */</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="comment">// y3 = y[2][0]; /* not used */</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">/* TC008 PID Controller (using State Space Model) with anti-windup */</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">// PIDC1.setCtrlrGains(2.0, 1.2, 0.0, 0.0);</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="comment">// PIDC1.setTcDpart(0.2);</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// x1 = Sigma[i]; /* y_sp */</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// x2 = PIDC1.calculate(x1, y2, x2, 0.0); /* u1 */</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="comment">// x1 = Sigma[i]; /* y_sp */</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="comment">// x2 = PIDC1.calculate(x1, y2, x2, 0.0); /* u1 */</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="comment">// float u[2][1], y[1][1];</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">// u[0][0] = x2;</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="comment">// u[1][0] = 0;</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="comment">// SSM1.calculate((float*)u);</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="comment">// SSM1.getStates((float*)y);</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">// y1 = y[0][0]; /* not used */</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">// y2 = y[1][0]; /* controlled variable */</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">// y3 = y[2][0]; /* not used */</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="comment">/* TC008 PID Controller (using State Space Model) with anti-windup */</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// PIDC1.setCtrlrGains(2.0, 1.2, 0.0, 0.0);</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// PIDC1.setTcDpart(0.2);</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">// x2 = saturate(x2, -1.5, 1.5);</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">// float u[2][1], y[1][1];</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">// u[0][0] = x2;</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">// u[1][0] = 0;</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="comment">// SSM1.calculate((float*)u);</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// SSM1.getStates((float*)y);</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">// y1 = y[0][0]; /* not used */</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">// y2 = y[1][0]; /* controlled variable */</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="comment">// y3 = y[2][0]; /* not used */</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">/* TC009 Signal Monitor (change) */</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="comment">// y1 = SM1.detectChange(x1);</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="comment">/* TC010 Signal Monitor (increase) */</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="comment">// y1 = SM1.detectIncrease(x1);</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">/* TC011 Signal Monitor (decrease) */</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">// y1 = SM1.detectDecrease(x1);</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="comment">/* TC012 Hysteresis */</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="comment">// HYS1.setThresholds(-0.4, 0.8);</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="comment">// x1 = Triangle[i];</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="comment">// y1 = HYS1.update(x1);</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="comment">/* TC013 LookupTable */</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// x1 = Triangle[i];</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// float axis[3] = {0, 1, 2};</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="comment">// float data[3] = {2, 1, 0};</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="comment">// y1 = ProjectLib::LookupTable(axis, data, 3, x1);</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="comment">/* TC014 mapfloat */</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="comment">// x1 = Triangle[i];</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="comment">// y1 = ProjectLib::mapfloat(x1, -1, 1, -2, 2);</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="comment">/* TC015 Bit operations */</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="comment">// uint16_t Status = 0;</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="comment">// Status = ProjectLib::setBit16(Status, 1);</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b10*/</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="comment">// Status = ProjectLib::toggleBit16(Status, 1);</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b0*/</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">// Status = ProjectLib::setBit16(Status, 7);</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b10000000 */</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="comment">// Serial.println(ProjectLib::getBit16(Status, 7)); /* Must be: 1 */</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="comment">// Status = ProjectLib::putBit16(Status, 6, 0);</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">// x1 = Sigma[i]; /* y_sp */</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// x2 = PIDC1.calculate(x1, y2, x2, 0.0); /* u1 */</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">// x2 = saturate(x2, -1.5, 1.5);</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="comment">// float u[2][1], y[1][1];</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// u[0][0] = x2;</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">// u[1][0] = 0;</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">// SSM1.calculate((float*)u);</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="comment">// SSM1.getStates((float*)y);</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">// y1 = y[0][0]; /* not used */</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">// y2 = y[1][0]; /* controlled variable */</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">// y3 = y[2][0]; /* not used */</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="comment">/* TC009 Signal Monitor (change) */</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="comment">// y1 = SM1.detectChange(x1);</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="comment">/* TC010 Signal Monitor (increase) */</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">// y1 = SM1.detectIncrease(x1);</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="comment">/* TC011 Signal Monitor (decrease) */</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="comment">// y1 = SM1.detectDecrease(x1);</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="comment">/* TC012 Hysteresis */</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="comment">// HYS1.setThresholds(-0.4, 0.8);</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="comment">// x1 = Triangle[i];</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// y1 = HYS1.update(x1);</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="comment">/* TC013 LookupTable */</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="comment">// x1 = Triangle[i];</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">// float axis[3] = {0, 1, 2};</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="comment">// float data[3] = {2, 1, 0};</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="comment">// y1 = ProjectLib::LookupTable(axis, data, 3, x1);</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="comment">/* TC014 mapfloat */</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="comment">// x1 = Triangle[i];</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="comment">// y1 = ProjectLib::mapfloat(x1, -1, 1, -2, 2);</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="comment">/* TC015 Bit operations */</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="comment">// uint16_t Status = 0;</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">// Status = ProjectLib::setBit16(Status, 1);</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b10*/</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="comment">// Status = ProjectLib::toggleBit16(Status, 1);</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b0*/</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="comment">// Status = ProjectLib::setBit16(Status, 7);</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b10000000 */</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="comment">// Status = ProjectLib::putBit16(Status, 5, 1);</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b10100000 */</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="comment">// Status = ProjectLib::putBit16(Status, 7, 0);</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b100000 */</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="comment">/* TC016 Matrix operations */</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">// float A[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="comment">// float x[3][1] = {{1}, {2}, {3}};</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="comment">// float B[3][3] = {{0}};</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="comment">// float C[3][3] = {{0}};</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="comment">// int rows = 3;</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="comment">// int cols = 3;</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)A, rows, cols);</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">// ProjectLib::MatrixTranspose((float*)A, rows, cols, (float*)B);</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)B, rows, cols);</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// ProjectLib::MatrixAdd((float*)A, (float*)B, rows, cols, (float*)C);</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="comment">// ProjectLib::MatrixSubtract((float*)C, (float*)B, rows, cols, (float*)C);</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="comment">// ProjectLib::MatrixScale((float*)A, rows, cols, 0.5,(float*)C);</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="comment">// ProjectLib::MatrixCopy((float*)A, rows, cols, (float*)C);</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="comment">// ProjectLib::MatrixMultiply((float*)A, (float*)x, rows, cols, 1, (float*)C);</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, 1);</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="comment">// ProjectLib::MatrixInvert((float*)A, rows);</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)A, rows, cols);</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">/* TC015 IIR Filter */</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="comment">//IIR1.printFilterData();</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="comment">// Serial.println(ProjectLib::getBit16(Status, 7)); /* Must be: 1 */</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// Status = ProjectLib::putBit16(Status, 6, 0);</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b10000000 */</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="comment">// Status = ProjectLib::putBit16(Status, 5, 1);</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b10100000 */</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="comment">// Status = ProjectLib::putBit16(Status, 7, 0);</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">// Serial.println(Status, BIN); /* Must be: 0b100000 */</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="comment">/* TC016 Matrix operations */</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="comment">// float A[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="comment">// float x[3][1] = {{1}, {2}, {3}};</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="comment">// float B[3][3] = {{0}};</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="comment">// float C[3][3] = {{0}};</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="comment">// int rows = 3;</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">// int cols = 3;</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)A, rows, cols);</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="comment">// ProjectLib::MatrixTranspose((float*)A, rows, cols, (float*)B);</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)B, rows, cols);</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">// ProjectLib::MatrixAdd((float*)A, (float*)B, rows, cols, (float*)C);</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="comment">// ProjectLib::MatrixSubtract((float*)C, (float*)B, rows, cols, (float*)C);</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="comment">// ProjectLib::MatrixScale((float*)A, rows, cols, 0.5,(float*)C);</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="comment">// ProjectLib::MatrixCopy((float*)A, rows, cols, (float*)C);</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, cols);</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">// ProjectLib::MatrixMultiply((float*)A, (float*)x, rows, cols, 1, (float*)C);</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)C, rows, 1);</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">// ProjectLib::MatrixInvert((float*)A, rows);</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="comment">// ProjectLib::MatrixPrint((float*)A, rows, cols);</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="comment">/* Plot Signals */</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        Serial.print(x1, 4);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// Serial.print(x2, 4);</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="comment">// Serial.print(&quot;, &quot;);</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        Serial.print(y1, 4);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        Serial.print(y2, 4);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        Serial.print(y3, 4);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        Serial.println();</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        delay(<a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>*1000);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="comment">/* TC017 Software Timer: pause/resume */</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="comment">// if(x1 == 1.0) ST1.pause();</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// else ST1.resume();</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="comment">// y1 = ST1.getTime()/(float)1000;</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="comment">/* TC018 Software Timer: reset */</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="comment">// x1 = Square[i];</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="comment">// if(x1 == 1.0) ST1.reset();</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="comment">// else ST1.start();</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">// y1 = ST1.getTime()/(float)1000;</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="comment">/* TC019 IIR Biquad Filter */</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        x1 = <a class="code" href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a>[i];</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        y1 = <a class="code" href="_eml_project_lib_8ino.html#ae87db9e0caa91316ed80b7023f7b38cf">IIR1</a>.<a class="code" href="class_i_i_r_filter_biquad.html#a817b060dba483a6f08ca80b26d8a4e6e">calculate</a>(x1);</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">/* Stop execution */</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">while</span>(1);    </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a017be58b0a8e44d77f20273b6348af69"><div class="ttname"><a href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a></div><div class="ttdeci">float Delta[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00047">EmlProjectLib.ino:47</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a0ac927fdbd9d8301136c2327533fab1e"><div class="ttname"><a href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a></div><div class="ttdeci">StateSpaceModel SSM1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00036">EmlProjectLib.ino:36</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a0e23de53614d150b9b8ed5ff85b6b35e"><div class="ttname"><a href="_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e">LPF1</a></div><div class="ttdeci">LowPassFilter LPF1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00034">EmlProjectLib.ino:34</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a1e03000e410797f2145e11d8cedc3318"><div class="ttname"><a href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a></div><div class="ttdeci">#define NUM_TESTCASE_SAMPLES</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00029">EmlProjectLib.ino:29</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a3bd64b598f4d4bd889e9a16c02600deb"><div class="ttname"><a href="_eml_project_lib_8ino.html#a3bd64b598f4d4bd889e9a16c02600deb">test_num</a></div><div class="ttdeci">float test_num[3]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00041">EmlProjectLib.ino:41</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a4eccdc0123a996df550204b7675d77e3"><div class="ttname"><a href="_eml_project_lib_8ino.html#a4eccdc0123a996df550204b7675d77e3">PIDC1</a></div><div class="ttdeci">PidCtrlr PIDC1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00037">EmlProjectLib.ino:37</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00052">EmlProjectLib.ino:52</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a5055472bf41a246b706640cf21c839a9"><div class="ttname"><a href="_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9">HYS1</a></div><div class="ttdeci">Hysteresis HYS1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00039">EmlProjectLib.ino:39</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a81de132a556a45e91b88b50cd160758c"><div class="ttname"><a href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a></div><div class="ttdeci">float Triangle[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00050">EmlProjectLib.ino:50</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a8913743b57b0ff21062f3be964734fff"><div class="ttname"><a href="_eml_project_lib_8ino.html#a8913743b57b0ff21062f3be964734fff">IIR1</a></div><div class="ttdeci">IIRFilter IIR1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00043">EmlProjectLib.ino:43</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_a902bc9721ead963125b3f314dbc032cf"><div class="ttname"><a href="_eml_project_lib_8ino.html#a902bc9721ead963125b3f314dbc032cf">SM1</a></div><div class="ttdeci">SignalMonitor SM1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00038">EmlProjectLib.ino:38</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_aa6901fa10efafe191d6c2302ebd13d2d"><div class="ttname"><a href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a></div><div class="ttdeci">#define NUM_PRE_SAMPLES</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00030">EmlProjectLib.ino:30</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_ac3bdafe5e82e19280b4ee9cd190c9514"><div class="ttname"><a href="_eml_project_lib_8ino.html#ac3bdafe5e82e19280b4ee9cd190c9514">TOOD1</a></div><div class="ttdeci">TurnOnOffDelay TOOD1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00035">EmlProjectLib.ino:35</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_ac3c6e4cae8d5913a62a2dd47dee0a5a7"><div class="ttname"><a href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">Saw</a></div><div class="ttdeci">float Saw[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00049">EmlProjectLib.ino:49</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_ae404d1d1555eede4ef92c630399e0566"><div class="ttname"><a href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a></div><div class="ttdeci">float Ts</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00032">EmlProjectLib.ino:32</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_af35f4c60aaf8b250dfeafcfecfd0429c"><div class="ttname"><a href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a></div><div class="ttdeci">float Square[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00048">EmlProjectLib.ino:48</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_af9e86c10191f6399f46ad89f2afeb885"><div class="ttname"><a href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a></div><div class="ttdeci">float Sigma[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00046">EmlProjectLib.ino:46</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="_eml_project_lib_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00115">EmlProjectLib.ino:115</a></div></div>
-<div class="ttc" id="a_eml_project_lib_8ino_html_afef434198259cd67e7176499d5dd0db7"><div class="ttname"><a href="_eml_project_lib_8ino.html#afef434198259cd67e7176499d5dd0db7">test_den</a></div><div class="ttdeci">float test_den[3]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00042">EmlProjectLib.ino:42</a></div></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="comment">/* Plot Signals */</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        Serial.print(x1, 4);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="comment">// Serial.print(x2, 4);</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="comment">// Serial.print(&quot;, &quot;);</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        Serial.print(y1, 4);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        Serial.print(y2, 4);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        Serial.print(y3, 4);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        Serial.println();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        delay(<a class="code" href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a>*1000);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">/* Stop execution */</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">while</span>(1);    </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a017be58b0a8e44d77f20273b6348af69"><div class="ttname"><a href="_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69">Delta</a></div><div class="ttdeci">float Delta[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00046">EmlProjectLib.ino:46</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a0ac927fdbd9d8301136c2327533fab1e"><div class="ttname"><a href="_eml_project_lib_8ino.html#a0ac927fdbd9d8301136c2327533fab1e">SSM1</a></div><div class="ttdeci">StateSpaceModel SSM1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00037">EmlProjectLib.ino:37</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a0e23de53614d150b9b8ed5ff85b6b35e"><div class="ttname"><a href="_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e">LPF1</a></div><div class="ttdeci">LowPassFilter LPF1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00035">EmlProjectLib.ino:35</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a1e03000e410797f2145e11d8cedc3318"><div class="ttname"><a href="_eml_project_lib_8ino.html#a1e03000e410797f2145e11d8cedc3318">NUM_TESTCASE_SAMPLES</a></div><div class="ttdeci">#define NUM_TESTCASE_SAMPLES</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00030">EmlProjectLib.ino:30</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a4eccdc0123a996df550204b7675d77e3"><div class="ttname"><a href="_eml_project_lib_8ino.html#a4eccdc0123a996df550204b7675d77e3">PIDC1</a></div><div class="ttdeci">PidCtrlr PIDC1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00038">EmlProjectLib.ino:38</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00051">EmlProjectLib.ino:51</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a5055472bf41a246b706640cf21c839a9"><div class="ttname"><a href="_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9">HYS1</a></div><div class="ttdeci">Hysteresis HYS1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00040">EmlProjectLib.ino:40</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a7c3d6e4f1b80be90dc28d97979b8fba0"><div class="ttname"><a href="_eml_project_lib_8ino.html#a7c3d6e4f1b80be90dc28d97979b8fba0">ST1</a></div><div class="ttdeci">SoftTimer ST1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00041">EmlProjectLib.ino:41</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a81de132a556a45e91b88b50cd160758c"><div class="ttname"><a href="_eml_project_lib_8ino.html#a81de132a556a45e91b88b50cd160758c">Triangle</a></div><div class="ttdeci">float Triangle[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00049">EmlProjectLib.ino:49</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_a902bc9721ead963125b3f314dbc032cf"><div class="ttname"><a href="_eml_project_lib_8ino.html#a902bc9721ead963125b3f314dbc032cf">SM1</a></div><div class="ttdeci">SignalMonitor SM1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00039">EmlProjectLib.ino:39</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_aa6901fa10efafe191d6c2302ebd13d2d"><div class="ttname"><a href="_eml_project_lib_8ino.html#aa6901fa10efafe191d6c2302ebd13d2d">NUM_PRE_SAMPLES</a></div><div class="ttdeci">#define NUM_PRE_SAMPLES</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00031">EmlProjectLib.ino:31</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_ac3bdafe5e82e19280b4ee9cd190c9514"><div class="ttname"><a href="_eml_project_lib_8ino.html#ac3bdafe5e82e19280b4ee9cd190c9514">TOOD1</a></div><div class="ttdeci">TurnOnOffDelay TOOD1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00036">EmlProjectLib.ino:36</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_ac3c6e4cae8d5913a62a2dd47dee0a5a7"><div class="ttname"><a href="_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7">Saw</a></div><div class="ttdeci">float Saw[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00048">EmlProjectLib.ino:48</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_ae404d1d1555eede4ef92c630399e0566"><div class="ttname"><a href="_eml_project_lib_8ino.html#ae404d1d1555eede4ef92c630399e0566">Ts</a></div><div class="ttdeci">float Ts</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00033">EmlProjectLib.ino:33</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_ae87db9e0caa91316ed80b7023f7b38cf"><div class="ttname"><a href="_eml_project_lib_8ino.html#ae87db9e0caa91316ed80b7023f7b38cf">IIR1</a></div><div class="ttdeci">IIRFilterBiquad IIR1</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00042">EmlProjectLib.ino:42</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_af35f4c60aaf8b250dfeafcfecfd0429c"><div class="ttname"><a href="_eml_project_lib_8ino.html#af35f4c60aaf8b250dfeafcfecfd0429c">Square</a></div><div class="ttdeci">float Square[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00047">EmlProjectLib.ino:47</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_af9e86c10191f6399f46ad89f2afeb885"><div class="ttname"><a href="_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885">Sigma</a></div><div class="ttdeci">float Sigma[NUM_TESTCASE_SAMPLES]</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00045">EmlProjectLib.ino:45</a></div></div>
+<div class="ttc" id="a_eml_project_lib_8ino_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="_eml_project_lib_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="_eml_project_lib_8ino_source.html#l00118">EmlProjectLib.ino:118</a></div></div>
 <div class="ttc" id="a_hysteresis_8h_html"><div class="ttname"><a href="_hysteresis_8h.html">Hysteresis.h</a></div></div>
-<div class="ttc" id="a_i_i_r_filter_8h_html"><div class="ttname"><a href="_i_i_r_filter_8h.html">IIRFilter.h</a></div></div>
+<div class="ttc" id="a_i_i_r_filter_biquad_8h_html"><div class="ttname"><a href="_i_i_r_filter_biquad_8h.html">IIRFilterBiquad.h</a></div></div>
 <div class="ttc" id="a_low_pass_filter_8h_html"><div class="ttname"><a href="_low_pass_filter_8h.html">LowPassFilter.h</a></div></div>
 <div class="ttc" id="a_pid_ctrlr_8h_html"><div class="ttname"><a href="_pid_ctrlr_8h.html">PidCtrlr.h</a></div></div>
 <div class="ttc" id="a_project_lib_8h_html"><div class="ttname"><a href="_project_lib_8h.html">ProjectLib.h</a></div></div>
 <div class="ttc" id="a_signal_monitor_8h_html"><div class="ttname"><a href="_signal_monitor_8h.html">SignalMonitor.h</a></div></div>
+<div class="ttc" id="a_soft_timer_8h_html"><div class="ttname"><a href="_soft_timer_8h.html">SoftTimer.h</a></div></div>
 <div class="ttc" id="a_state_space_model_8h_html"><div class="ttname"><a href="_state_space_model_8h.html">StateSpaceModel.h</a></div></div>
 <div class="ttc" id="a_turn_on_off_delay_8h_html"><div class="ttname"><a href="_turn_on_off_delay_8h.html">TurnOnOffDelay.h</a></div></div>
 <div class="ttc" id="aclass_hysteresis_html"><div class="ttname"><a href="class_hysteresis.html">Hysteresis</a></div><div class="ttdef"><b>Definition:</b> <a href="_hysteresis_8h_source.html#l00012">Hysteresis.h:13</a></div></div>
-<div class="ttc" id="aclass_i_i_r_filter_html"><div class="ttname"><a href="class_i_i_r_filter.html">IIRFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_8h_source.html#l00012">IIRFilter.h:13</a></div></div>
+<div class="ttc" id="aclass_i_i_r_filter_biquad_html"><div class="ttname"><a href="class_i_i_r_filter_biquad.html">IIRFilterBiquad</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_biquad_8h_source.html#l00014">IIRFilterBiquad.h:15</a></div></div>
+<div class="ttc" id="aclass_i_i_r_filter_biquad_html_a817b060dba483a6f08ca80b26d8a4e6e"><div class="ttname"><a href="class_i_i_r_filter_biquad.html#a817b060dba483a6f08ca80b26d8a4e6e">IIRFilterBiquad::calculate</a></div><div class="ttdeci">float calculate(float x_k)</div><div class="ttdef"><b>Definition:</b> <a href="_i_i_r_filter_biquad_8cpp_source.html#l00097">IIRFilterBiquad.cpp:97</a></div></div>
 <div class="ttc" id="aclass_low_pass_filter_html"><div class="ttname"><a href="class_low_pass_filter.html">LowPassFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="_low_pass_filter_8h_source.html#l00010">LowPassFilter.h:11</a></div></div>
-<div class="ttc" id="aclass_pid_ctrlr_html"><div class="ttname"><a href="class_pid_ctrlr.html">PidCtrlr</a></div><div class="ttdef"><b>Definition:</b> <a href="_pid_ctrlr_8h_source.html#l00012">PidCtrlr.h:13</a></div></div>
+<div class="ttc" id="aclass_pid_ctrlr_html"><div class="ttname"><a href="class_pid_ctrlr.html">PidCtrlr</a></div><div class="ttdef"><b>Definition:</b> <a href="_pid_ctrlr_8h_source.html#l00014">PidCtrlr.h:15</a></div></div>
 <div class="ttc" id="aclass_signal_monitor_html"><div class="ttname"><a href="class_signal_monitor.html">SignalMonitor</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_monitor_8h_source.html#l00011">SignalMonitor.h:12</a></div></div>
+<div class="ttc" id="aclass_soft_timer_html"><div class="ttname"><a href="class_soft_timer.html">SoftTimer</a></div><div class="ttdef"><b>Definition:</b> <a href="_soft_timer_8h_source.html#l00012">SoftTimer.h:13</a></div></div>
 <div class="ttc" id="aclass_state_space_model_html"><div class="ttname"><a href="class_state_space_model.html">StateSpaceModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_state_space_model_8h_source.html#l00021">StateSpaceModel.h:22</a></div></div>
-<div class="ttc" id="aclass_state_space_model_html_a0f0f419fe5212b2a89c9669465197332"><div class="ttname"><a href="class_state_space_model.html#a0f0f419fe5212b2a89c9669465197332">StateSpaceModel::calculate</a></div><div class="ttdeci">void calculate(float *u_k)</div><div class="ttdef"><b>Definition:</b> <a href="_state_space_model_8cpp_source.html#l00097">StateSpaceModel.cpp:97</a></div></div>
 <div class="ttc" id="aclass_state_space_model_html_a11ce7040397b542d06baa957c351cc42"><div class="ttname"><a href="class_state_space_model.html#a11ce7040397b542d06baa957c351cc42">StateSpaceModel::initStateSpaceModel</a></div><div class="ttdeci">void initStateSpaceModel(float *Aa, float *Bb, float *Cc, int _Nx, int _Nu, int _Ny, float _Ts)</div><div class="ttdef"><b>Definition:</b> <a href="_state_space_model_8cpp_source.html#l00022">StateSpaceModel.cpp:22</a></div></div>
-<div class="ttc" id="aclass_state_space_model_html_ae78abcea793dbd0ad16949b8bd987bb3"><div class="ttname"><a href="class_state_space_model.html#ae78abcea793dbd0ad16949b8bd987bb3">StateSpaceModel::getStates</a></div><div class="ttdeci">void getStates(float *_x_k)</div><div class="ttdef"><b>Definition:</b> <a href="_state_space_model_8cpp_source.html#l00211">StateSpaceModel.cpp:211</a></div></div>
 <div class="ttc" id="aclass_state_space_model_html_ae7ec94e8261469ff66e6ed36bb6ce352"><div class="ttname"><a href="class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352">StateSpaceModel::initStateObserver</a></div><div class="ttdeci">void initStateObserver(float *Ll, float *pp)</div><div class="ttdef"><b>Definition:</b> <a href="_state_space_model_8cpp_source.html#l00055">StateSpaceModel.cpp:55</a></div></div>
 <div class="ttc" id="aclass_turn_on_off_delay_html"><div class="ttname"><a href="class_turn_on_off_delay.html">TurnOnOffDelay</a></div><div class="ttdef"><b>Definition:</b> <a href="_turn_on_off_delay_8h_source.html#l00011">TurnOnOffDelay.h:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

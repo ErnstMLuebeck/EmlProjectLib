@@ -15,6 +15,7 @@ namespace ProjectLib {
 /* Signal conditioning */
 float LookupTable(float axis[], float data[], uint8_t size, float input);
 float saturate(float in, float LimLwr, float LimUpr);
+boolean checkInterval(float in, float LimLwr, float LimUpr);
 float mapfloat(float x, float in_min, float in_max, float out_min, float out_max);
 
 /* Bit operations */

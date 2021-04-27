@@ -24,7 +24,8 @@
 #include "PidCtrlr.h"
 #include "SignalMonitor.h"
 #include "Hysteresis.h"
-#include "IIRFilter.h"
+#include "IIRFilterBiquad.h"
+#include "SoftTimer.h"
 
 #define NUM_TESTCASE_SAMPLES 500
 #define NUM_PRE_SAMPLES 100
@@ -37,10 +38,8 @@ StateSpaceModel SSM1 = StateSpaceModel();
 PidCtrlr PIDC1 = PidCtrlr(1.0, 1.0, 0.0, 0.0, 0.0, Ts);
 SignalMonitor SM1 = SignalMonitor(0);
 Hysteresis HYS1 = Hysteresis(-0.5, 0.5, 0);
-
-float test_num[3] = {0.052004382885834, 0.008913673017008, 0.666};
-float test_den[3] = {1.000000000000000, -0.939081944097158, 0.666};
-IIRFilter IIR1 = IIRFilter(test_num, test_den, 3);
+SoftTimer ST1 = SoftTimer(0);
+IIRFilterBiquad IIR1 = IIRFilterBiquad(4);
 
 /* Testcase stimuli */
 float Sigma[NUM_TESTCASE_SAMPLES];
@@ -99,7 +98,6 @@ void setup()
 
     SSM1.initStateObserver((float*)L, (float*)p);
 
-
     /* TC015 IIR Filter debugging */
     // IIR1.printFilterData();
     // IIR1.calculate(1);
@@ -110,6 +108,11 @@ void setup()
     // IIR1.printFilterData();
     // IIR1.calculate(4);
     // IIR1.printFilterData();
+
+    /* TC017 SoftTimer */
+    // ST1.start();
+
+    //IIR1.setCoeff(10, 100);
 }
 
 void loop()
@@ -149,16 +152,16 @@ void loop()
         // y1 = TOOD1.update(x1);
 
         /* TC006 State Space Model */
-        x1 = Square[i]; /* Vq */
-        x2 = 0; /* TqLoa */
-        float u[2][1], y[1][1];
-        u[0][0] = x1;
-        u[1][0] = x2;
-        SSM1.calculate((float*)u);
-        SSM1.getStates((float*)y);
-        y1 = y[0][0];
-        y2 = y[1][0];
-        y3 = y[2][0];
+        // x1 = Square[i]; /* Vq */
+        // x2 = 0; /* TqLoa */
+        // float u[2][1], y[1][1];
+        // u[0][0] = x1;
+        // u[1][0] = x2;
+        // SSM1.calculate((float*)u);
+        // SSM1.getStates((float*)y);
+        // y1 = y[0][0];
+        // y2 = y[1][0];
+        // y3 = y[2][0];
 
         /* TC007 PID Controller (using State Space Model) */
         // PIDC1.setCtrlrGains(2.0, 1.2, 0.0, 0.0);
@@ -261,8 +264,21 @@ void loop()
         // ProjectLib::MatrixInvert((float*)A, rows);
         // ProjectLib::MatrixPrint((float*)A, rows, cols);
 
-        /* TC015 IIR Filter */
-        //IIR1.printFilterData();
+        /* TC017 Software Timer: pause/resume */
+        // x1 = Square[i];
+        // if(x1 == 1.0) ST1.pause();
+        // else ST1.resume();
+        // y1 = ST1.getTime()/(float)1000;
+
+        /* TC018 Software Timer: reset */
+        // x1 = Square[i];
+        // if(x1 == 1.0) ST1.reset();
+        // else ST1.start();
+        // y1 = ST1.getTime()/(float)1000;
+
+        /* TC019 IIR Biquad Filter */
+        x1 = Square[i];
+        y1 = IIR1.calculate(x1);
 
         /* Plot Signals */
         Serial.print(x1, 4);

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iirfilter_257',['IIRFilter',['../class_i_i_r_filter.html',1,'']]]
+  ['iirfilterbiquad_276',['IIRFilterBiquad',['../class_i_i_r_filter_biquad.html',1,'']]]
 ];
