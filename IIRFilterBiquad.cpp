@@ -10,27 +10,27 @@ IIRFilterBiquad::IIRFilterBiquad(int _ModeFilter)
 
     switch(ModeFilter)
     {
-        /* Butterworth LPF, fc = 0.1 */
+        /* Butterworth LPF, fc = 0.1*fs */
         case 1: 
             coeff = butterworth_fc0p1;
             break;
 
-        /* Butterworth LPF, fc = 0.25 */
+        /* Butterworth LPF, fc = 0.25*fs */
         case 2: 
             coeff = butterworth_fc0p25;
             break;
 
-        /* Butterworth LPF, fc = 0.4 */
+        /* Butterworth LPF, fc = 0.4*fs */
         case 3: 
             coeff = butterworth_fc0p4;
             break;
 
-        /* Bessel LPF, fc = 0.1 */
+        /* Bessel LPF, fc = 0.1*fs */
         case 4: 
             coeff = bessel_fc0p1;
             break;
 
-        /* Bessel LPF, fc = 0.25 */
+        /* Bessel LPF, fc = 0.25*fs */
         case 5: 
             coeff = bessel_fc0p25;
             break;

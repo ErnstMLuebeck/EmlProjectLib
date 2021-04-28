@@ -14,10 +14,12 @@ var searchData=
   ['changehiddennodesweights_24',['ChangeHiddenNodesWeights',['../_simple_neur_net_8h.html#a67169958dbf14019d7066cc1287b52c3',1,'SimpleNeurNet.h']]],
   ['changeoutputweights_25',['ChangeOutputWeights',['../_simple_neur_net_8h.html#aafc50ba127771fabfe09973552580946',1,'SimpleNeurNet.h']]],
   ['checkinterval_26',['checkInterval',['../namespace_project_lib.html#af1ab7db6e51ae8b47975e78cc184d7d4',1,'ProjectLib']]],
-  ['clearbit16_27',['clearBit16',['../namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23',1,'ProjectLib']]],
-  ['clearlist_28',['clearList',['../class_data_list.html#ac4890cf854292e7d356d9e684d23e595',1,'DataList']]],
-  ['cntrdebnce_29',['cntrDeBnce',['../class_pin_monitor.html#a79d220d64f4754a09129474c54e31bb2',1,'PinMonitor']]],
-  ['coeff_30',['coeff',['../class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6',1,'IIRFilterBiquad']]],
-  ['coefffiltdpart_31',['CoeffFiltDpart',['../class_pid_ctrlr.html#a4db65e8820170a07e2bd45fc08551456',1,'PidCtrlr']]],
-  ['collection_20of_20useful_20classes_20and_20functions_32',['Collection of useful classes and functions',['../index.html',1,'']]]
+  ['clarketransform_27',['ClarkeTransform',['../namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390',1,'ProjectLib']]],
+  ['clarketransforminverse_28',['ClarkeTransformInverse',['../namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68',1,'ProjectLib']]],
+  ['clearbit16_29',['clearBit16',['../namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23',1,'ProjectLib']]],
+  ['clearlist_30',['clearList',['../class_data_list.html#ac4890cf854292e7d356d9e684d23e595',1,'DataList']]],
+  ['cntrdebnce_31',['cntrDeBnce',['../class_pin_monitor.html#a79d220d64f4754a09129474c54e31bb2',1,'PinMonitor']]],
+  ['coeff_32',['coeff',['../class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6',1,'IIRFilterBiquad']]],
+  ['coefffiltdpart_33',['CoeffFiltDpart',['../class_pid_ctrlr.html#a4db65e8820170a07e2bd45fc08551456',1,'PidCtrlr']]],
+  ['collection_20of_20useful_20classes_20and_20functions_34',['Collection of useful classes and functions',['../index.html',1,'']]]
 ];

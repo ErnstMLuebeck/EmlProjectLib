@@ -35,4 +35,10 @@ void MatrixCopy(float* A, int n, int m, float* B);
 void MatrixTranspose(float* A, int m, int n, float* C);
 int MatrixInvert(float* A, int n);
 
+/* Field oriented control transformations */
+void ClarkeTransform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta);
+void ParkTransform(float Ialpha, float Ibeta, float Theta, float *Id, float *Iq);
+void ParkTransformInverse(float Vd, float Vq, float Theta, float *Valpha, float *Vbeta);
+void ClarkeTransformInverse(float Valpha, float Vbeta, float *Va, float *Vb, float *Vc);
+
 } /* namespace ProjectLib */

@@ -378,4 +378,78 @@ int MatrixInvert(float* A, int n)
     return 1;
 }
 
+/**
+ * Transform from 3-phase coordinate system (A, B, C) to an orthogonal
+ * Alpha/Beta coordinate system without math.sqrt(3)
+ * 
+ * @param Ia [A], current through phase A
+ * @param Ib [A], current through phase B
+ * @param Ic [A], current through phase C
+ * @return Ialpha [A], current in transformed coordinates: alpha
+ * @return Ibeta [A], current in transformed coordinates: beta
+ */
+void ClarkeTransform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)
+{   
+    /* Phase A = Alpha */
+    /* sqrt(3) = 1.7320508076 */
+    *Ialpha = Ia;
+    *Ibeta = 1/1.73205 * Ia + 2/1.73205 * Ib;
+}
+
+/**
+ * Transformation from alpha/beta frame (stationary) into I/Q frame (rotating) using
+ * math functions (inefficient!)
+ * 
+ * Note: Execution time is not constant!
+ * 
+ * @param Ialpha [A], current in transformed coordinates: alpha
+ * @param Ibeta [A], current in transformed coordinates: beta
+ * @param Theta [rad], phase angle of the rotor (0..2pi)
+ * @return Id [A], direct current
+ * @return Iq [A], quadrature current (proportional to motor torque)
+ */
+void ParkTransform(float Ialpha, float Ibeta, float Theta, float *Id, float *Iq)
+{   /* Transform from a stationary coordinate system, to a rotating 
+       coordinate system, linked to rotation angle Theta */
+
+    *Id = Ialpha * cos(Theta) + Ibeta * sin(Theta);
+    *Iq = -Ialpha * sin(Theta) + Ibeta * cos(Theta);
+}
+
+/**
+ * Transformation from I/Q frame (rotating) into alpha/beta frame (stationary) using
+ * math functions (inefficient!)
+ * 
+ * Note: Execution time is not constant!
+ * 
+ * @param Vd [V], direct voltage
+ * @param Vq [V], quadrature voltage
+ * @param Theta [rad], phase angle of the rotor (0..2pi)
+ * @return Valpha [V], voltage in transformed coordinates: alpha
+ * @return Vbeta [V], voltage in transformed coordinates: beta
+ */
+void ParkTransformInverse(float Vd, float Vq, float Theta, float *Valpha, float *Vbeta)
+{
+    *Valpha = Vd * cos(Theta) - Vq * sin(Theta);
+    *Vbeta = Vd * sin(Theta) + Vq * cos(Theta);
+}
+
+/**
+ * Transform from alpha/beta, orthogonal frame into 3-phase coordinate 
+ * system (A, B, C) without math.sqrt(3)
+ * 
+ * @param Valpha [V], voltage in transformed coordinates: alpha
+ * @param Vbeta [V], voltage in transformed coordinates: beta
+ * @return Va [V], voltage at phase A
+ * @return Vb [V], voltage at phase B
+ * @return Vc [V], voltage at phase C
+ */
+void ClarkeTransformInverse(float Valpha, float Vbeta, float *Va, float *Vb, float *Vc)
+{
+    /* sqrt(3) = 1.7320508076 */
+    *Va = Valpha;
+    *Vb = (-Valpha + 1.73205 * Vbeta)/2;
+    *Vc = (-Valpha - 1.73205 * Vbeta)/2;
+}
+
 } /* namespace ProjectLib */

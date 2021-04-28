@@ -27,6 +27,8 @@
 #include "IIRFilterBiquad.h"
 #include "SoftTimer.h"
 
+namespace PL=ProjectLib;
+
 #define NUM_TESTCASE_SAMPLES 500
 #define NUM_PRE_SAMPLES 100
 
@@ -38,8 +40,8 @@ StateSpaceModel SSM1 = StateSpaceModel();
 PidCtrlr PIDC1 = PidCtrlr(1.0, 1.0, 0.0, 0.0, 0.0, Ts);
 SignalMonitor SM1 = SignalMonitor(0);
 Hysteresis HYS1 = Hysteresis(-0.5, 0.5, 0);
-SoftTimer ST1 = SoftTimer(0);
-IIRFilterBiquad IIR1 = IIRFilterBiquad(4);
+SoftTimer ST1 = SoftTimer(1);
+IIRFilterBiquad IIR1 = IIRFilterBiquad(1);
 
 /* Testcase stimuli */
 float Sigma[NUM_TESTCASE_SAMPLES];
@@ -218,26 +220,26 @@ void loop()
         // x1 = Triangle[i];
         // float axis[3] = {0, 1, 2};
         // float data[3] = {2, 1, 0};
-        // y1 = ProjectLib::LookupTable(axis, data, 3, x1);
+        // y1 = PL::LookupTable(axis, data, 3, x1);
 
         /* TC014 mapfloat */
         // x1 = Triangle[i];
-        // y1 = ProjectLib::mapfloat(x1, -1, 1, -2, 2);
+        // y1 = PL::mapfloat(x1, -1, 1, -2, 2);
         
         /* TC015 Bit operations */
         // uint16_t Status = 0;
-        // Status = ProjectLib::setBit16(Status, 1);
+        // Status = PL::setBit16(Status, 1);
         // Serial.println(Status, BIN); /* Must be: 0b10*/
-        // Status = ProjectLib::toggleBit16(Status, 1);
+        // Status = PL::toggleBit16(Status, 1);
         // Serial.println(Status, BIN); /* Must be: 0b0*/
-        // Status = ProjectLib::setBit16(Status, 7);
+        // Status = PL::setBit16(Status, 7);
         // Serial.println(Status, BIN); /* Must be: 0b10000000 */
-        // Serial.println(ProjectLib::getBit16(Status, 7)); /* Must be: 1 */
-        // Status = ProjectLib::putBit16(Status, 6, 0);
+        // Serial.println(PL::getBit16(Status, 7)); /* Must be: 1 */
+        // Status = PL::putBit16(Status, 6, 0);
         // Serial.println(Status, BIN); /* Must be: 0b10000000 */
-        // Status = ProjectLib::putBit16(Status, 5, 1);
+        // Status = PL::putBit16(Status, 5, 1);
         // Serial.println(Status, BIN); /* Must be: 0b10100000 */
-        // Status = ProjectLib::putBit16(Status, 7, 0);
+        // Status = PL::putBit16(Status, 7, 0);
         // Serial.println(Status, BIN); /* Must be: 0b100000 */
 
         /* TC016 Matrix operations */
@@ -248,21 +250,21 @@ void loop()
         // int rows = 3;
         // int cols = 3;
 
-        // ProjectLib::MatrixPrint((float*)A, rows, cols);
-        // ProjectLib::MatrixTranspose((float*)A, rows, cols, (float*)B);
-        // ProjectLib::MatrixPrint((float*)B, rows, cols);
-        // ProjectLib::MatrixAdd((float*)A, (float*)B, rows, cols, (float*)C);
-        // ProjectLib::MatrixPrint((float*)C, rows, cols);
-        // ProjectLib::MatrixSubtract((float*)C, (float*)B, rows, cols, (float*)C);
-        // ProjectLib::MatrixPrint((float*)C, rows, cols);
-        // ProjectLib::MatrixScale((float*)A, rows, cols, 0.5,(float*)C);
-        // ProjectLib::MatrixPrint((float*)C, rows, cols);
-        // ProjectLib::MatrixCopy((float*)A, rows, cols, (float*)C);
-        // ProjectLib::MatrixPrint((float*)C, rows, cols);
-        // ProjectLib::MatrixMultiply((float*)A, (float*)x, rows, cols, 1, (float*)C);
-        // ProjectLib::MatrixPrint((float*)C, rows, 1);
-        // ProjectLib::MatrixInvert((float*)A, rows);
-        // ProjectLib::MatrixPrint((float*)A, rows, cols);
+        // PL::MatrixPrint((float*)A, rows, cols);
+        // PL::MatrixTranspose((float*)A, rows, cols, (float*)B);
+        // PL::MatrixPrint((float*)B, rows, cols);
+        // PL::MatrixAdd((float*)A, (float*)B, rows, cols, (float*)C);
+        // PL::MatrixPrint((float*)C, rows, cols);
+        // PL::MatrixSubtract((float*)C, (float*)B, rows, cols, (float*)C);
+        // PL::MatrixPrint((float*)C, rows, cols);
+        // PL::MatrixScale((float*)A, rows, cols, 0.5,(float*)C);
+        // PL::MatrixPrint((float*)C, rows, cols);
+        // PL::MatrixCopy((float*)A, rows, cols, (float*)C);
+        // PL::MatrixPrint((float*)C, rows, cols);
+        // PL::MatrixMultiply((float*)A, (float*)x, rows, cols, 1, (float*)C);
+        // PL::MatrixPrint((float*)C, rows, 1);
+        // PL::MatrixInvert((float*)A, rows);
+        // PL::MatrixPrint((float*)A, rows, cols);
 
         /* TC017 Software Timer: pause/resume */
         // x1 = Square[i];
@@ -277,9 +279,44 @@ void loop()
         // y1 = ST1.getTime()/(float)1000;
 
         /* TC019 IIR Biquad Filter */
-        x1 = Square[i];
-        y1 = IIR1.calculate(x1);
+        // x1 = Square[i];
+        // y1 = IIR1.calculate(x1);
 
+        /* TC020 FOC Inverse Park transformation */
+        // x1 = Saw[i];
+        // PL::ParkTransformInverse(0, 1, x1*2*PI, &y1, &y2);
+
+        /* TC021 FOC Inverse Park/Clarke transformation */
+        // x1 = Saw[i];
+        // float Valpha, Vbeta;
+        // PL::ParkTransformInverse(0, 1, x1*2*PI, &Valpha, &Vbeta);
+        // PL::ClarkeTransformInverse(Valpha, Vbeta, &y1, &y2, &y3);
+
+        /* TC022 FOC Inverse- and forward Park/Clarke transformation */
+        // x1 = Saw[i];
+        // float Valpha, Vbeta, Va, Vb, Vc;
+        // PL::ParkTransformInverse(1, 0, x1*2*PI, &Valpha, &Vbeta);
+        // PL::ClarkeTransformInverse(Valpha, Vbeta, &Va, &Vb, &Vc);
+        // PL::ClarkeTransform(Va, Vb, Vc, &Valpha, &Vbeta);
+        // PL::ParkTransform(Valpha, Vbeta, x1*2*PI, &y1, &y2);
+
+        /* TC022 Performance: FOC Inverse- and forward Park/Clarke transformation */
+        x1 = Saw[i];
+
+        int N = 10000; /* number of calculations */
+        ST1.reset();
+        ST1.start();
+        for(int i=0; i<N; i++)
+        {
+            float Valpha, Vbeta, Va, Vb, Vc;
+            PL::ParkTransformInverse(1, 0, x1*2*PI, &Valpha, &Vbeta);
+            PL::ClarkeTransformInverse(Valpha, Vbeta, &Va, &Vb, &Vc);
+            PL::ClarkeTransform(Va, Vb, Vc, &Valpha, &Vbeta);
+            PL::ParkTransform(Valpha, Vbeta, x1*2*PI, &y1, &y2);
+        }
+        y3 = ST1.getTime(); /* Calculation time in [us] */
+
+        /*-----------------------------------------------------------------------------------*/
         /* Plot Signals */
         Serial.print(x1, 4);
         Serial.print(", ");
