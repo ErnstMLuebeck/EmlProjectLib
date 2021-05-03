@@ -14,6 +14,7 @@ class LowPassFilter
         float calculate(float _x);
         void setValue(float _y_kn1);
         void setTc(float _Tc);
+        void setTs(float _Ts);
 
     private:     
         /** previous state y[k-1] */

@@ -63,5 +63,23 @@ void LowPassFilter::setTc(float _Tc)
 
 }
 
+/**
+ * The filter sample time is updated by:
+ * 
+ * \f$ \alpha = 1 - \frac{Ts}{Tc} \f$
+ * 
+ * The coefficient is then limited between 0 and 1 in case the user input is incorrect.
+ *  
+ * @param _Ts [s], filter sample time
+ */
+void LowPassFilter::setTs(float _Ts) 
+{
+    Ts = _Ts;
+    alpha = 1-Ts/Tc;
+    if(alpha > 1.0) alpha = 1.0;
+    if(alpha < 0.0) alpha = 0.0;
+
+}
+
 
 
