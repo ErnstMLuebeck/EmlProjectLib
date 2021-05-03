@@ -392,8 +392,9 @@ void ClarkeTransform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)
 {   
     /* Phase A = Alpha */
     /* sqrt(3) = 1.7320508076 */
+    /* 1/sqrt(3) = 0.5773502692 */
     *Ialpha = Ia;
-    *Ibeta = 1/1.73205 * Ia + 2/1.73205 * Ib;
+    *Ibeta = 0.5773502692 * Ia + 2*0.5773502692 * Ib;
 }
 
 /**
