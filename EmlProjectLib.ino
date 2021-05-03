@@ -26,6 +26,7 @@
 #include "Hysteresis.h"
 #include "IIRFilterBiquad.h"
 #include "SoftTimer.h"
+#include "BatteryMonitor.h"
 
 namespace PL=ProjectLib;
 
@@ -42,6 +43,7 @@ SignalMonitor SM1 = SignalMonitor(0);
 Hysteresis HYS1 = Hysteresis(-0.5, 0.5, 0);
 SoftTimer ST1 = SoftTimer(1);
 IIRFilterBiquad IIR1 = IIRFilterBiquad(1);
+BatteryMonitor BM1 = BatteryMonitor(1800, 300, A2, 10, 1);
 
 /* Testcase stimuli */
 float Sigma[NUM_TESTCASE_SAMPLES];
@@ -52,6 +54,10 @@ float Triangle[NUM_TESTCASE_SAMPLES];
 
 void setup()
 {
+    /* Hold power supply MOSFET switched on */
+    pinMode(6, OUTPUT);
+    digitalWrite(6, HIGH);
+
     Serial.begin(9600);
     while(!Serial); /* does not work without PC connected! */
 
@@ -115,6 +121,11 @@ void setup()
     // ST1.start();
 
     //IIR1.setCoeff(10, 100);
+
+    /* TC024 Battery Monitor */
+    BM1.setVBattFilt(Ts, 1);
+    BM1.calVBattAdc(539.0, 3.25, 622.0, 3.97);
+    BM1.init();
 }
 
 void loop()
@@ -223,8 +234,10 @@ void loop()
         // y1 = PL::LookupTable(axis, data, 3, x1);
 
         /* TC014 mapfloat */
-        // x1 = Triangle[i];
-        // y1 = PL::mapfloat(x1, -1, 1, -2, 2);
+        //x1 = Triangle[i];
+        // x1 = 500;
+        // //(533, 3.70, 622, 3.97)
+        // y1 = PL::mapfloat(x1, 539, 622, 3.25, 3.97);
         
         /* TC015 Bit operations */
         // uint16_t Status = 0;
@@ -300,26 +313,32 @@ void loop()
         // PL::ClarkeTransform(Va, Vb, Vc, &Valpha, &Vbeta);
         // PL::ParkTransform(Valpha, Vbeta, x1*2*PI, &y1, &y2);
 
-        /* TC022 Performance: FOC Inverse- and forward Park/Clarke transformation */
-        x1 = Saw[i];
+        /* TC023 Performance: FOC Inverse- and forward Park/Clarke transformation */
+        // x1 = Saw[i];
+        // int N = 10000; /* number of calculations */
+        // ST1.reset();
+        // ST1.start();
+        // for(int i=0; i<N; i++)
+        // {
+        //     float Valpha, Vbeta, Va, Vb, Vc;
+        //     PL::ParkTransformInverse(1, 0, x1*2*PI, &Valpha, &Vbeta);
+        //     PL::ClarkeTransformInverse(Valpha, Vbeta, &Va, &Vb, &Vc);
+        //     PL::ClarkeTransform(Va, Vb, Vc, &Valpha, &Vbeta);
+        //     PL::ParkTransform(Valpha, Vbeta, x1*2*PI, &y1, &y2);
+        // }
+        // y3 = ST1.getTime(); /* Calculation time in [us] */
 
-        int N = 10000; /* number of calculations */
-        ST1.reset();
-        ST1.start();
-        for(int i=0; i<N; i++)
-        {
-            float Valpha, Vbeta, Va, Vb, Vc;
-            PL::ParkTransformInverse(1, 0, x1*2*PI, &Valpha, &Vbeta);
-            PL::ClarkeTransformInverse(Valpha, Vbeta, &Va, &Vb, &Vc);
-            PL::ClarkeTransform(Va, Vb, Vc, &Valpha, &Vbeta);
-            PL::ParkTransform(Valpha, Vbeta, x1*2*PI, &y1, &y2);
-        }
-        y3 = ST1.getTime(); /* Calculation time in [us] */
+        /* TC024 Battery Monitor */
+        BM1.update();
+        BM1.readAdcValue(&y1, &y2);
+        y3 = BM1.getVBattRaw();
+        // y2 = BM1.getVBattFilt();
+        // y3 = BM1.getSocBatt();
 
         /*-----------------------------------------------------------------------------------*/
         /* Plot Signals */
-        Serial.print(x1, 4);
-        Serial.print(", ");
+        // Serial.print(x1, 4);
+        // Serial.print(", ");
         // Serial.print(x2, 4);
         // Serial.print(", ");
         Serial.print(y1, 4);

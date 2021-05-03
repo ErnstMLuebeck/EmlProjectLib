@@ -44,6 +44,7 @@ void BatteryMonitor::setVBattFilt(float _TsFilterVBatt, float _TcFilterVBatt)
 
 /**
  * Set the 2-point calibration values for the VBatt ADC (ADC values and true voltages at two points)
+ * Note: Call this function before init() because readBattVoltage() requires calibration.
  * 
  * @param _ValAdcCal1 [-], ADC value at lower voltage (default: 0)
  * @param _VTrueAdcCal1 [V], corresponding true voltage measured with multimeter (default: 0.0)
