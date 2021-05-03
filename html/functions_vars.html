@@ -115,6 +115,9 @@ $(function() {
 : <a class="el" href="class_simple_mpc.html#af7c0cd0c04178e411a5611ccac20f744">SimpleMpc</a>
 , <a class="el" href="class_state_space_model.html#a66e98b3bf944c5e0c08913538bfff739">StateSpaceModel</a>
 </li>
+<li>CapBattery
+: <a class="el" href="class_battery_monitor.html#aff07fee20dab1d9af6c563a63be0b3f5">BatteryMonitor</a>
+</li>
 <li>cntrDeBnce
 : <a class="el" href="class_pin_monitor.html#a79d220d64f4754a09129474c54e31bb2">PinMonitor</a>
 </li>
@@ -146,6 +149,9 @@ $(function() {
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>EnaIpart
 : <a class="el" href="class_pid_ctrlr.html#a2c07440cfd83a15340cc7df0fa0d95ee">PidCtrlr</a>
+</li>
+<li>EnaVBattFilt
+: <a class="el" href="class_battery_monitor.html#a5af46f7eef1913c8d5fba100c8e4407f">BatteryMonitor</a>
 </li>
 <li>error_kn1
 : <a class="el" href="class_pid_ctrlr.html#a64d3f15c2190e6d0c2cf426a6244857c">PidCtrlr</a>
@@ -225,6 +231,12 @@ $(function() {
 <li>link
 : <a class="el" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">ListItem</a>
 </li>
+<li>LpfAdc
+: <a class="el" href="class_battery_monitor.html#a8025d93dfdd866a87f00db41e71fff2c">BatteryMonitor</a>
+</li>
+<li>LpfVBatt
+: <a class="el" href="class_battery_monitor.html#af5893875b9c57ec7ff161e87a488309e">BatteryMonitor</a>
+</li>
 </ul>
 
 
@@ -241,6 +253,9 @@ $(function() {
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>name
 : <a class="el" href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">ListItem</a>
+</li>
+<li>NrMeasAvg
+: <a class="el" href="class_battery_monitor.html#a536e04445067bf5abb30a0027f5267a0">BatteryMonitor</a>
 </li>
 <li>Nu
 : <a class="el" href="class_state_space_model.html#a370e21c037e4b5d0a931aa336b839f53">StateSpaceModel</a>
@@ -270,6 +285,9 @@ $(function() {
 <li>Phi
 : <a class="el" href="class_simple_mpc.html#ac4ff36b7d3aad466e6e7425c4e0c7a3c">SimpleMpc</a>
 </li>
+<li>PinVBatt
+: <a class="el" href="class_battery_monitor.html#a7157b54c073199bd6fb4e3ffa8a24246">BatteryMonitor</a>
+</li>
 </ul>
 
 
@@ -288,6 +306,9 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>SocBatt
+: <a class="el" href="class_battery_monitor.html#a773ffef88b6d19a7cffdb2494834f646">BatteryMonitor</a>
+</li>
 <li>stActv
 : <a class="el" href="class_pin_monitor.html#a9006633eaabcd6f4229eb1db804d1da3">PinMonitor</a>
 </li>
@@ -303,6 +324,9 @@ $(function() {
 </li>
 <li>TcDpart
 : <a class="el" href="class_pid_ctrlr.html#af22ccc3acbb82b3ba494e4cb8ef17d4f">PidCtrlr</a>
+</li>
+<li>TcFilterVBatt
+: <a class="el" href="class_battery_monitor.html#a2eeac0a4cf6df92da0374c4690104b40">BatteryMonitor</a>
 </li>
 <li>ThrLeft
 : <a class="el" href="class_hysteresis.html#a21e3f0de7959c6c690d3eaa35ec8aaad">Hysteresis</a>
@@ -320,11 +344,20 @@ $(function() {
 <li>TiLowLim
 : <a class="el" href="class_pin_monitor.html#a0e799088f93f5de89d16683bad05d9f3">PinMonitor</a>
 </li>
+<li>TiMeasDlyMs
+: <a class="el" href="class_battery_monitor.html#ae92b79b9e637ae710cc13f9c3b61024a">BatteryMonitor</a>
+</li>
 <li>TiOffDly
 : <a class="el" href="class_turn_on_off_delay.html#abd14b55291f5c75510d09fb6e346478a">TurnOnOffDelay</a>
 </li>
 <li>TiOnDly
 : <a class="el" href="class_turn_on_off_delay.html#a893870b3508d9c9cb273dc89f7fadc50">TurnOnOffDelay</a>
+</li>
+<li>TiOpBattFull
+: <a class="el" href="class_battery_monitor.html#a5e0fa148c742ad86341d85d21dea1008">BatteryMonitor</a>
+</li>
+<li>TiOpRemain
+: <a class="el" href="class_battery_monitor.html#a909c3e3f552772c66293e8ef1a6adc90">BatteryMonitor</a>
 </li>
 <li>TiRisngEdge
 : <a class="el" href="class_pin_monitor.html#a3f045ae77ec6dee849f4d81ce4dbc6cb">PinMonitor</a>
@@ -344,12 +377,46 @@ $(function() {
 , <a class="el" href="class_pid_ctrlr.html#a6ee7f1a60d80f2d38bedb7d1682197cd">PidCtrlr</a>
 , <a class="el" href="class_state_space_model.html#a01dac646074153d86480134c543dcb68">StateSpaceModel</a>
 </li>
+<li>TsFilterVBatt
+: <a class="el" href="class_battery_monitor.html#a1e1a0f287fe23051485b891177b3af1a">BatteryMonitor</a>
+</li>
 </ul>
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>u_kn1
 : <a class="el" href="class_pid_ctrlr.html#ac220c23e14c6d91b0e4e3d62d8554f98">PidCtrlr</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>ValAdcCal1
+: <a class="el" href="class_battery_monitor.html#a77bf52286bf0e4c376e2fead8e97f8f1">BatteryMonitor</a>
+</li>
+<li>ValAdcCal2
+: <a class="el" href="class_battery_monitor.html#a6a0edf38e82a99d8c22f6c93e68756b3">BatteryMonitor</a>
+</li>
+<li>VBat2Soc_A
+: <a class="el" href="class_battery_monitor.html#a0b08dfda04e74ba25532d9609dac0384">BatteryMonitor</a>
+</li>
+<li>VBat2Soc_M
+: <a class="el" href="class_battery_monitor.html#a5ae2dfcc23cb92c73e07b8e7c6c5414f">BatteryMonitor</a>
+</li>
+<li>VBat2Soc_N
+: <a class="el" href="class_battery_monitor.html#a6f78da1832c8460e88bb9e2ec01b5818">BatteryMonitor</a>
+</li>
+<li>VBattFilt
+: <a class="el" href="class_battery_monitor.html#a1cbf7e0f33915263ae8b222be864f0fb">BatteryMonitor</a>
+</li>
+<li>VBattRaw
+: <a class="el" href="class_battery_monitor.html#a83606e0e3d65cc517410d1b4e4c7cf2e">BatteryMonitor</a>
+</li>
+<li>VTrueAdcCal1
+: <a class="el" href="class_battery_monitor.html#ab49d583351064365030bc3f02dd8ac9a">BatteryMonitor</a>
+</li>
+<li>VTrueAdcCal2
+: <a class="el" href="class_battery_monitor.html#abb4f96aa2cb57d987b6f61290471d891">BatteryMonitor</a>
 </li>
 </ul>
 

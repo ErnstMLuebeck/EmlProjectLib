@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iirfilterbiquad_280',['IIRFilterBiquad',['../class_i_i_r_filter_biquad.html',1,'']]]
+  ['hysteresis_314',['Hysteresis',['../class_hysteresis.html',1,'']]]
 ];

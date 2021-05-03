@@ -1,5 +1,26 @@
 var searchData=
 [
-  ['highlong_362',['highLong',['../class_pin_monitor.html#a5a867f9f4430d8d016be88c46383b68b',1,'PinMonitor']]],
-  ['hysteresis_363',['Hysteresis',['../class_hysteresis.html#a59c9f3db94cfb75301e60b33de26e00a',1,'Hysteresis']]]
+  ['getbit16_382',['getBit16',['../namespace_project_lib.html#ad053391ef987e1193ca74d5c4b4070aa',1,'ProjectLib']]],
+  ['gethightime_383',['getHighTime',['../class_pin_monitor.html#a61b52c4b59370651380ce818cdc92643',1,'PinMonitor']]],
+  ['getitemdata_384',['getItemData',['../class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206',1,'DataList']]],
+  ['getitemname_385',['getItemName',['../class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9',1,'DataList']]],
+  ['getlowtime_386',['getLowTime',['../class_pin_monitor.html#aad16c4b5a60a916d991ce19da2aa0eb1',1,'PinMonitor']]],
+  ['getnumitems_387',['getNumItems',['../class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff',1,'DataList']]],
+  ['getobserverstates_388',['getObserverStates',['../class_state_space_model.html#aee323da64468472e008ea59567e22488',1,'StateSpaceModel']]],
+  ['getoutputs_389',['getOutputs',['../class_state_space_model.html#a6257e5a180c8b0b161a26a5c674eda17',1,'StateSpaceModel']]],
+  ['getoutputskn1_390',['getOutputsKn1',['../class_state_space_model.html#a7fc79402025e8137a54a82e05b953d6b',1,'StateSpaceModel']]],
+  ['getsocbatt_391',['getSocBatt',['../class_battery_monitor.html#a8c91e670957177aae81d17a024d16a5f',1,'BatteryMonitor']]],
+  ['getstate_392',['getState',['../class_pin_monitor.html#a6dcd8137655a84e67fd6011855cca3bc',1,'PinMonitor']]],
+  ['getstates_393',['getStates',['../class_state_space_model.html#ae78abcea793dbd0ad16949b8bd987bb3',1,'StateSpaceModel']]],
+  ['getsunstatus_394',['getSunStatus',['../_sun_mdl_8h.html#a75688dfda6733efa6c65ed6b70e82c0e',1,'SunMdl.h']]],
+  ['getsunstatusfromvect_395',['getSunStatusFromVect',['../_sun_mdl_8h.html#a9c791b4a249b0e0c5c25c9f9570f3c97',1,'SunMdl.h']]],
+  ['gettime_396',['getTime',['../class_soft_timer.html#a3569ad5efe2bdd22a12957ac84a10a73',1,'SoftTimer']]],
+  ['gettiopremain_397',['getTiOpRemain',['../class_battery_monitor.html#ab8489ece554f01072507413935df9e4f',1,'BatteryMonitor']]],
+  ['getuopt_398',['getUopt',['../class_simple_mpc.html#a3f78918dc03f518f74d3d08990069769',1,'SimpleMpc']]],
+  ['getuoptkn1_399',['getUoptKn1',['../class_simple_mpc.html#ade262ed371b1b2b40134094c6c58a735',1,'SimpleMpc']]],
+  ['getvbattfilt_400',['getVBattFilt',['../class_battery_monitor.html#a7993a484ad8857f092e4afdaca3533e7',1,'BatteryMonitor']]],
+  ['getvbattraw_401',['getVBattRaw',['../class_battery_monitor.html#af2df0472d0e03f2b96ff446a91989d2e',1,'BatteryMonitor']]],
+  ['getxhat_402',['getXhat',['../class_simple_mpc.html#a28d4afffa3056d8cd7506e9c3e3cea08',1,'SimpleMpc']]],
+  ['getyopt_403',['getYopt',['../class_simple_mpc.html#a4659d5f90a5a3b0629510595f2e3e7cb',1,'SimpleMpc']]],
+  ['getyoptkn1_404',['getYoptKn1',['../class_simple_mpc.html#a78ee62cc8d62114cc8becb5759c6826a',1,'SimpleMpc']]]
 ];

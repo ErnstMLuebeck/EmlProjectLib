@@ -1,6 +1,29 @@
 var searchData=
 [
-  ['togglebit16_421',['toggleBit16',['../namespace_project_lib.html#a05a00c2653259cab750d2796870464a9',1,'ProjectLib']]],
-  ['trainneurnet_422',['trainNeurNet',['../_simple_neur_net_8h.html#a88b42a7501fe9ef934d0ff3cd5300947',1,'SimpleNeurNet.h']]],
-  ['turnonoffdelay_423',['TurnOnOffDelay',['../class_turn_on_off_delay.html#a2aaf69779503362ca57ce3db35d02169',1,'TurnOnOffDelay']]]
+  ['saturate_442',['saturate',['../namespace_project_lib.html#af85cd20dbe0d80e643869595663a107b',1,'ProjectLib']]],
+  ['setbit16_443',['setBit16',['../namespace_project_lib.html#aeaa1036eac482abf39615abdcdf7a8cf',1,'ProjectLib']]],
+  ['setcoeff_444',['setCoeff',['../class_i_i_r_filter_biquad.html#a4ccdaf3ed10a1350372e3d730269bfa2',1,'IIRFilterBiquad']]],
+  ['setctrlrgains_445',['setCtrlrGains',['../class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e',1,'PidCtrlr']]],
+  ['setipart_446',['setIpart',['../class_pid_ctrlr.html#af05a9a6032e3f00e88cf707a248ed9b4',1,'PidCtrlr']]],
+  ['setnumdebncecyckes_447',['setNumDeBnceCyckes',['../class_pin_monitor.html#aded79491597b9fa724fac677febb20c6',1,'PinMonitor']]],
+  ['setobserverstates_448',['setObserverStates',['../class_state_space_model.html#a4ce33a53f266b7df4547b4ce381162f9',1,'StateSpaceModel']]],
+  ['setstate_449',['setState',['../class_hysteresis.html#aeacf6fa1aa2dec3f013d8deb6ba21c8c',1,'Hysteresis']]],
+  ['setstates_450',['setStates',['../class_state_space_model.html#a4a6c553555d627bc9db2ec6d28ec93dd',1,'StateSpaceModel']]],
+  ['settc_451',['setTc',['../class_low_pass_filter.html#a5c9f36025737b3cfeb65a133d9ff971f',1,'LowPassFilter']]],
+  ['settcdpart_452',['setTcDpart',['../class_pid_ctrlr.html#a69b21185102e3a17442a34378b0f9375',1,'PidCtrlr']]],
+  ['setthresholds_453',['setThresholds',['../class_hysteresis.html#ae4fb5249af8a6a48929b5ee5615d7060',1,'Hysteresis']]],
+  ['settidly_454',['setTiDly',['../class_turn_on_off_delay.html#a3c3f4ba34b9621073872d9e920fa90a5',1,'TurnOnOffDelay']]],
+  ['settihighlim_455',['setTiHighLim',['../class_pin_monitor.html#ae348a8aef5abd3fffebbefa63aea1102',1,'PinMonitor']]],
+  ['settilowlim_456',['setTiLowLim',['../class_pin_monitor.html#a640d9a47efde4985a12b52991e842996',1,'PinMonitor']]],
+  ['setts_457',['setTs',['../class_low_pass_filter.html#a8be45cfdc82382034d29ebf0fd1e54f1',1,'LowPassFilter::setTs()'],['../class_pid_ctrlr.html#ad281921fc4f38db0a981a320794b7409',1,'PidCtrlr::setTs()']]],
+  ['setup_458',['setup',['../_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'EmlProjectLib.ino']]],
+  ['setvalue_459',['setValue',['../class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775',1,'LowPassFilter']]],
+  ['setvbattfilt_460',['setVBattFilt',['../class_battery_monitor.html#ab05290090f84e7c537a8b4625706a86e',1,'BatteryMonitor']]],
+  ['setyref_461',['setYref',['../class_simple_mpc.html#a0a43714523600b52c46446aaf577b362',1,'SimpleMpc']]],
+  ['setyrefreceeding_462',['setYrefReceeding',['../class_simple_mpc.html#a1ecb519cfb7e11cf5f0730c0eb9b0923',1,'SimpleMpc']]],
+  ['signalmonitor_463',['SignalMonitor',['../class_signal_monitor.html#a11ec4280331d302ad92c28cc7fa9f7e2',1,'SignalMonitor']]],
+  ['simplempc_464',['SimpleMpc',['../class_simple_mpc.html#a839e9935e259edc4387ec9396fbdd6bc',1,'SimpleMpc']]],
+  ['softtimer_465',['SoftTimer',['../class_soft_timer.html#af178657a814deb0580e88dfd0262eaef',1,'SoftTimer']]],
+  ['start_466',['start',['../class_soft_timer.html#ab6a4885ba875a3f26aebd21f90ee81ca',1,'SoftTimer']]],
+  ['statespacemodel_467',['StateSpaceModel',['../class_state_space_model.html#a578d1e313e891dd7df4ec07f07d7ee61',1,'StateSpaceModel']]]
 ];

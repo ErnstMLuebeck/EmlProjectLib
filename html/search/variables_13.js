@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['x_5fhat_545',['x_hat',['../class_simple_mpc.html#ad163b5fb2fb54b366e1c979f116f4a08',1,'SimpleMpc']]],
-  ['x_5fhat_5fkn1_546',['x_hat_kn1',['../class_simple_mpc.html#a490ce5c2bac66665ad6723213a4b6553',1,'SimpleMpc::x_hat_kn1()'],['../class_state_space_model.html#a8bc20c500e3b05f9e3f340c32d823ab7',1,'StateSpaceModel::x_hat_kn1()']]],
-  ['x_5fkn1_547',['x_kn1',['../class_i_i_r_filter_biquad.html#aaa144a3eda66d5ea5fc7b6f62134de05',1,'IIRFilterBiquad::x_kn1()'],['../class_signal_monitor.html#ad32238066ac2344041c68a517155c9b3',1,'SignalMonitor::x_kn1()'],['../class_state_space_model.html#a63118ad58bf11cd6d88b31e6b15855aa',1,'StateSpaceModel::x_kn1()'],['../class_turn_on_off_delay.html#ad6d5f3d92cadb1358cc08de8220c1ccf',1,'TurnOnOffDelay::x_kn1()']]],
-  ['x_5fkn2_548',['x_kn2',['../class_i_i_r_filter_biquad.html#ac732dfdc4bcace77e8559e01ed809aea',1,'IIRFilterBiquad']]]
+  ['valadccal1_605',['ValAdcCal1',['../class_battery_monitor.html#a77bf52286bf0e4c376e2fead8e97f8f1',1,'BatteryMonitor']]],
+  ['valadccal2_606',['ValAdcCal2',['../class_battery_monitor.html#a6a0edf38e82a99d8c22f6c93e68756b3',1,'BatteryMonitor']]],
+  ['vbat2soc_5fa_607',['VBat2Soc_A',['../class_battery_monitor.html#a0b08dfda04e74ba25532d9609dac0384',1,'BatteryMonitor']]],
+  ['vbat2soc_5fm_608',['VBat2Soc_M',['../class_battery_monitor.html#a5ae2dfcc23cb92c73e07b8e7c6c5414f',1,'BatteryMonitor']]],
+  ['vbat2soc_5fn_609',['VBat2Soc_N',['../class_battery_monitor.html#a6f78da1832c8460e88bb9e2ec01b5818',1,'BatteryMonitor']]],
+  ['vbattfilt_610',['VBattFilt',['../class_battery_monitor.html#a1cbf7e0f33915263ae8b222be864f0fb',1,'BatteryMonitor']]],
+  ['vbattraw_611',['VBattRaw',['../class_battery_monitor.html#a83606e0e3d65cc517410d1b4e4c7cf2e',1,'BatteryMonitor']]],
+  ['vtrueadccal1_612',['VTrueAdcCal1',['../class_battery_monitor.html#ab49d583351064365030bc3f02dd8ac9a',1,'BatteryMonitor']]],
+  ['vtrueadccal2_613',['VTrueAdcCal2',['../class_battery_monitor.html#abb4f96aa2cb57d987b6f61290471d891',1,'BatteryMonitor']]]
 ];

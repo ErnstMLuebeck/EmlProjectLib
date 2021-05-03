@@ -83,27 +83,27 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">switch</span>(<a class="code" href="class_i_i_r_filter_biquad.html#a3ef6bd06bd02cdf7af34db28cc9bac2b">ModeFilter</a>)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment">/* Butterworth LPF, fc = 0.1 */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment">/* Butterworth LPF, fc = 0.1*fs */</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">case</span> 1: </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6">coeff</a> = <a class="code" href="class_i_i_r_filter_biquad.html#aa1c204ae83c790f91a3d1a5ec6e2fe70">butterworth_fc0p1</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">/* Butterworth LPF, fc = 0.25 */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">/* Butterworth LPF, fc = 0.25*fs */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">case</span> 2: </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6">coeff</a> = <a class="code" href="class_i_i_r_filter_biquad.html#a2e8bef5e6c26f559adab7496430faf37">butterworth_fc0p25</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">/* Butterworth LPF, fc = 0.4 */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">/* Butterworth LPF, fc = 0.4*fs */</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">case</span> 3: </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6">coeff</a> = <a class="code" href="class_i_i_r_filter_biquad.html#a4dd8a9aaee5c632330649d9bb1517ce8">butterworth_fc0p4</a>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">/* Bessel LPF, fc = 0.1 */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">/* Bessel LPF, fc = 0.1*fs */</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">case</span> 4: </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6">coeff</a> = <a class="code" href="class_i_i_r_filter_biquad.html#a9da1553ad746a30891c78bcbb18b7e84">bessel_fc0p1</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">/* Bessel LPF, fc = 0.25 */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">/* Bessel LPF, fc = 0.25*fs */</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">case</span> 5: </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6">coeff</a> = <a class="code" href="class_i_i_r_filter_biquad.html#adaac6f5da69e2fe71f9f38b0ac9da6e6">bessel_fc0p25</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">break</span>;</div>

@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['y_267',['y',['../class_turn_on_off_delay.html#acad1668f8653ad7e59e15df16165e9f4',1,'TurnOnOffDelay']]],
-  ['y_5f0_268',['y_0',['../class_pin_monitor.html#ad990f50f4860cf0092ee32c79a281fb3',1,'PinMonitor']]],
-  ['y_5fk_269',['y_k',['../class_state_space_model.html#afb0f026c432ab17fb70a4bac918718c2',1,'StateSpaceModel']]],
-  ['y_5fkn1_270',['y_kn1',['../class_hysteresis.html#a244164c0e497ae9f8d5267aef8bc20d1',1,'Hysteresis::y_kn1()'],['../class_i_i_r_filter_biquad.html#aa294e9d104df74d89b156af523a060b4',1,'IIRFilterBiquad::y_kn1()'],['../class_low_pass_filter.html#aaea94c6ff1d479e529dc823b10012222',1,'LowPassFilter::y_kn1()'],['../class_state_space_model.html#afceba65c7e7fd98631d707c9022e1753',1,'StateSpaceModel::y_kn1()']]],
-  ['y_5fkn2_271',['y_kn2',['../class_i_i_r_filter_biquad.html#a0d8e54ceb86035b0c1a1cfbabbdfdefe',1,'IIRFilterBiquad']]],
-  ['y_5fn1_272',['y_n1',['../class_pin_monitor.html#aad4ab510b0e914d8584a149f13bc4f1e',1,'PinMonitor']]],
-  ['y_5fopt_273',['Y_opt',['../class_simple_mpc.html#a758f56ef1e0a9e69da66efa2dcfeffcf',1,'SimpleMpc']]],
-  ['y_5fopt_5fkn1_274',['Y_opt_kn1',['../class_simple_mpc.html#aa4d63cdca11168071545155020241050',1,'SimpleMpc']]],
-  ['y_5fref_275',['Y_ref',['../class_simple_mpc.html#aafac728380f27b4191d343eec4f4fe3f',1,'SimpleMpc']]],
-  ['y_5fref_5fkn1_276',['Y_ref_kn1',['../class_simple_mpc.html#a9f43ca37d9f298cfb49f44b35a0f8d32',1,'SimpleMpc']]],
-  ['y_5fsensor_277',['y_sensor',['../class_simple_mpc.html#ab161a59cd9d8024d0590dd1a8bd425e6',1,'SimpleMpc']]]
+  ['x_5fhat_297',['x_hat',['../class_simple_mpc.html#ad163b5fb2fb54b366e1c979f116f4a08',1,'SimpleMpc']]],
+  ['x_5fhat_5fkn1_298',['x_hat_kn1',['../class_simple_mpc.html#a490ce5c2bac66665ad6723213a4b6553',1,'SimpleMpc::x_hat_kn1()'],['../class_state_space_model.html#a8bc20c500e3b05f9e3f340c32d823ab7',1,'StateSpaceModel::x_hat_kn1()']]],
+  ['x_5fkn1_299',['x_kn1',['../class_i_i_r_filter_biquad.html#aaa144a3eda66d5ea5fc7b6f62134de05',1,'IIRFilterBiquad::x_kn1()'],['../class_signal_monitor.html#ad32238066ac2344041c68a517155c9b3',1,'SignalMonitor::x_kn1()'],['../class_state_space_model.html#a63118ad58bf11cd6d88b31e6b15855aa',1,'StateSpaceModel::x_kn1()'],['../class_turn_on_off_delay.html#ad6d5f3d92cadb1358cc08de8220c1ccf',1,'TurnOnOffDelay::x_kn1()']]],
+  ['x_5fkn2_300',['x_kn2',['../class_i_i_r_filter_biquad.html#ac732dfdc4bcace77e8559e01ed809aea',1,'IIRFilterBiquad']]]
 ];

@@ -83,6 +83,13 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_b"></a>- b -</h3><ul>
+<li>BatteryMonitor()
+: <a class="el" href="class_battery_monitor.html#ae295db180c4cbb58497f1d7c71726ee2">BatteryMonitor</a>
+</li>
+</ul>
+
+
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>calcF()
 : <a class="el" href="class_simple_mpc.html#a725cf1b8362b1237836c85ffb47d176f">SimpleMpc</a>
@@ -99,6 +106,9 @@ $(function() {
 </li>
 <li>calculateObserver()
 : <a class="el" href="class_state_space_model.html#a2c0cb5dab56850c28f01a79d6ddb8700">StateSpaceModel</a>
+</li>
+<li>calVBattAdc()
+: <a class="el" href="class_battery_monitor.html#a396e63b9ca97eacac38bb33a21f0bdcc">BatteryMonitor</a>
 </li>
 <li>clearList()
 : <a class="el" href="class_data_list.html#ac4890cf854292e7d356d9e684d23e595">DataList</a>
@@ -157,6 +167,9 @@ $(function() {
 <li>getOutputsKn1()
 : <a class="el" href="class_state_space_model.html#a7fc79402025e8137a54a82e05b953d6b">StateSpaceModel</a>
 </li>
+<li>getSocBatt()
+: <a class="el" href="class_battery_monitor.html#a8c91e670957177aae81d17a024d16a5f">BatteryMonitor</a>
+</li>
 <li>getState()
 : <a class="el" href="class_pin_monitor.html#a6dcd8137655a84e67fd6011855cca3bc">PinMonitor</a>
 </li>
@@ -166,11 +179,20 @@ $(function() {
 <li>getTime()
 : <a class="el" href="class_soft_timer.html#a3569ad5efe2bdd22a12957ac84a10a73">SoftTimer</a>
 </li>
+<li>getTiOpRemain()
+: <a class="el" href="class_battery_monitor.html#ab8489ece554f01072507413935df9e4f">BatteryMonitor</a>
+</li>
 <li>getUopt()
 : <a class="el" href="class_simple_mpc.html#a3f78918dc03f518f74d3d08990069769">SimpleMpc</a>
 </li>
 <li>getUoptKn1()
 : <a class="el" href="class_simple_mpc.html#ade262ed371b1b2b40134094c6c58a735">SimpleMpc</a>
+</li>
+<li>getVBattFilt()
+: <a class="el" href="class_battery_monitor.html#a7993a484ad8857f092e4afdaca3533e7">BatteryMonitor</a>
+</li>
+<li>getVBattRaw()
+: <a class="el" href="class_battery_monitor.html#af2df0472d0e03f2b96ff446a91989d2e">BatteryMonitor</a>
 </li>
 <li>getXhat()
 : <a class="el" href="class_simple_mpc.html#a28d4afffa3056d8cd7506e9c3e3cea08">SimpleMpc</a>
@@ -203,6 +225,9 @@ $(function() {
 </li>
 <li>IIRFilterBiquad()
 : <a class="el" href="class_i_i_r_filter_biquad.html#a653cda71594f813f7e3b69d12a1441fd">IIRFilterBiquad</a>
+</li>
+<li>init()
+: <a class="el" href="class_battery_monitor.html#acf197e22e860c1e960cd4fdeb63aaf60">BatteryMonitor</a>
 </li>
 <li>initStateObserver()
 : <a class="el" href="class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352">StateSpaceModel</a>
@@ -240,6 +265,12 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>readAdcValue()
+: <a class="el" href="class_battery_monitor.html#afccd7f806fa82ad54fa20c2b13bb71de">BatteryMonitor</a>
+</li>
+<li>readBattVoltage()
+: <a class="el" href="class_battery_monitor.html#aeae07812c5e6e19ad6bf1b4ff610b054">BatteryMonitor</a>
+</li>
 <li>reset()
 : <a class="el" href="class_soft_timer.html#ac3994025128b5ba59c9acce3986af5b1">SoftTimer</a>
 </li>
@@ -296,10 +327,14 @@ $(function() {
 : <a class="el" href="class_pin_monitor.html#a640d9a47efde4985a12b52991e842996">PinMonitor</a>
 </li>
 <li>setTs()
-: <a class="el" href="class_pid_ctrlr.html#ad281921fc4f38db0a981a320794b7409">PidCtrlr</a>
+: <a class="el" href="class_low_pass_filter.html#a8be45cfdc82382034d29ebf0fd1e54f1">LowPassFilter</a>
+, <a class="el" href="class_pid_ctrlr.html#ad281921fc4f38db0a981a320794b7409">PidCtrlr</a>
 </li>
 <li>setValue()
 : <a class="el" href="class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775">LowPassFilter</a>
+</li>
+<li>setVBattFilt()
+: <a class="el" href="class_battery_monitor.html#ab05290090f84e7c537a8b4625706a86e">BatteryMonitor</a>
 </li>
 <li>setYref()
 : <a class="el" href="class_simple_mpc.html#a0a43714523600b52c46446aaf577b362">SimpleMpc</a>
@@ -334,7 +369,8 @@ $(function() {
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>update()
-: <a class="el" href="class_hysteresis.html#ac575ecc263c2670b8ddb9a11b7c6a9e8">Hysteresis</a>
+: <a class="el" href="class_battery_monitor.html#a5f0a20f00b7640904f5880a1fbdba2e9">BatteryMonitor</a>
+, <a class="el" href="class_hysteresis.html#ac575ecc263c2670b8ddb9a11b7c6a9e8">Hysteresis</a>
 , <a class="el" href="class_pin_monitor.html#af80899b6ecd68ca9a6c2a0d629b8ab91">PinMonitor</a>
 , <a class="el" href="class_turn_on_off_delay.html#a4cd3c834af83ec45af832048d768c39c">TurnOnOffDelay</a>
 </li>

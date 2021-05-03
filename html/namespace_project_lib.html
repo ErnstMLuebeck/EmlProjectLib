@@ -223,7 +223,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Ialpha [A], current in transformed coordinates: alpha </dd>
 <dd>
-Ialpha [A], current in transformed coordinates: beta </dd></dl>
+Ibeta [A], current in transformed coordinates: beta </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00391">391</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
@@ -286,7 +286,7 @@ Vb [V], voltage at phase B </dd>
 <dd>
 Vc [V], voltage at phase C </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00443">443</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00448">448</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -924,10 +924,11 @@ Vc [V], voltage at phase C </dd></dl>
       </table>
 </div><div class="memdoc">
 <p>Transformation from alpha/beta frame (stationary) into I/Q frame (rotating) using math functions (inefficient!)</p>
+<p>Note: Execution time is not constant!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Ialpha</td><td>[A], current in transformed coordinates: alpha </td></tr>
-    <tr><td class="paramname">Ialpha</td><td>[A], current in transformed coordinates: beta </td></tr>
+    <tr><td class="paramname">Ibeta</td><td>[A], current in transformed coordinates: beta </td></tr>
     <tr><td class="paramname">Theta</td><td>[rad], phase angle of the rotor (0..2pi) </td></tr>
   </table>
   </dd>
@@ -936,7 +937,7 @@ Vc [V], voltage at phase C </dd></dl>
 <dd>
 Iq [A], quadrature current (proportional to motor torque) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00409">409</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00412">412</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -984,6 +985,7 @@ Iq [A], quadrature current (proportional to motor torque) </dd></dl>
       </table>
 </div><div class="memdoc">
 <p>Transformation from I/Q frame (rotating) into alpha/beta frame (stationary) using math functions (inefficient!)</p>
+<p>Note: Execution time is not constant!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Vd</td><td>[V], direct voltage </td></tr>
@@ -996,7 +998,7 @@ Iq [A], quadrature current (proportional to motor torque) </dd></dl>
 <dd>
 Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00427">427</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00432">432</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>

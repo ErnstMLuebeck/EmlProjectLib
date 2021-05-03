@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['fallingedge_341',['fallingEdge',['../class_pin_monitor.html#a1a41f48e7d3b8cbf139f0fbbf610fd84',1,'PinMonitor']]],
-  ['freezeipart_342',['freezeIpart',['../class_pid_ctrlr.html#a0adb0cae08912972a69f22933d11b78f',1,'PidCtrlr']]]
+  ['datalist_375',['DataList',['../class_data_list.html#a50bf22872663290e2781182590eb5a9a',1,'DataList']]],
+  ['date2day_376',['date2day',['../_sun_mdl_8h.html#a05680959cdc5331e70277d8fe23cecd9',1,'SunMdl.h']]],
+  ['detectchange_377',['detectChange',['../class_signal_monitor.html#ac9f3ec017429d84521f3aa588696376c',1,'SignalMonitor']]],
+  ['detectdecrease_378',['detectDecrease',['../class_signal_monitor.html#af80cd4f7c04c8ca4ed1352606f94a9ca',1,'SignalMonitor']]],
+  ['detectincrease_379',['detectIncrease',['../class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65',1,'SignalMonitor']]]
 ];
