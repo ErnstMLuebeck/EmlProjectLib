@@ -130,6 +130,17 @@ void setup()
     BM1.setVBattFilt(Ts, 1);
     BM1.calVBattAdc(539.0, 3.25, 622.0, 3.97);
     BM1.init();
+
+    /* TC026 DataList */
+    char name[] = "Item1";
+    DL1.addItemHead(name, 666);
+    DL1.addItemHead(name, 667);
+    Serial.println(DL1.getNumItems());
+    DL1.printListConsole();
+    Serial.println(DL1.getItemName(1));
+    Serial.println(DL1.getItemData(1));
+
+    Serial.println(DL1.getItemData(2));
 }
 
 void loop()
@@ -340,22 +351,22 @@ void loop()
         // y3 = BM1.getSocBatt();
 
         /* TC025 Check interval */
-        x1 = Saw[i];
-        y1 = PL::checkInterval(x1, 0.2, 0.8);
+        // x1 = Saw[i];
+        // y1 = PL::checkInterval(x1, 0.2, 0.8);
 
         /*-----------------------------------------------------------------------------------*/
         /* Plot Signals */
-        Serial.print(x1, 4);
-        Serial.print(", ");
+        // Serial.print(x1, 4);
+        // Serial.print(", ");
         // Serial.print(x2, 4);
         // Serial.print(", ");
-        Serial.print(y1, 4);
-        Serial.print(", ");
+        // Serial.print(y1, 4);
+        // Serial.print(", ");
         // Serial.print(y2, 4);
         // Serial.print(", ");
         // Serial.print(y3, 4);
         // Serial.print(", ");
-        Serial.println();
+        // Serial.println();
 
         delay(Ts*1000);
     }
