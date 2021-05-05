@@ -61,7 +61,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_battery_monitor_8cpp.html",
-"class_low_pass_filter.html#a5c9f36025737b3cfeb65a133d9ff971f"
+"class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

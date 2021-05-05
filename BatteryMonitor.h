@@ -8,7 +8,7 @@
 namespace PL = ProjectLib;
 
 /**
- * Monitoring for a single cell LiPo battery
+ * @brief Monitoring of a single cell LiPo battery
  * 
  * @author E. M. Luebeck
  * @date 2021-05-03

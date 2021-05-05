@@ -3,7 +3,10 @@
 
 #include <Arduino.h> 
 
-/** Turn on/off delay
+/** 
+ * @brief Standard turn on/off delay
+ * 
+ * You can choose between turn-on and turn-off delay, or use both at the same time.
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

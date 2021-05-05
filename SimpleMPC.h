@@ -11,7 +11,11 @@
 #define NU 1
 #define NP 12
 
-/* Simple, unconstrained MIMO Model-Predictive-Control (MPC)
+/**
+ * @brief Simple, unconstrained MIMO Model-Predictive-Controller (MPC)
+ * 
+ * This controller does not feature an optimization algorithm! The simple, unconstrained
+ * MPC only used the algebraic solution of the const function. Hence, simple.
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

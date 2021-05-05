@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['batterymonitor_315',['BatteryMonitor',['../class_battery_monitor.html',1,'']]]
+  ['batterymonitor_316',['BatteryMonitor',['../class_battery_monitor.html',1,'']]]
 ];

@@ -5,8 +5,9 @@
 #include "ProjectLib.h"
 
 /**
- * State Space Model (MIMO compatible) with state observer:
+ * @brief State Space Model (MIMO compatible) with state observer.
  * 
+ * The underlying equations are: 
  * \f$ x[k] = A \cdot x[k-1] + B \cdot u[k] \f$
  * 
  * \f$ y[k] = C \cdot x[k-1] \f$
@@ -14,6 +15,8 @@
  * State observer:
  * 
  * \f$ \hat{x}[k] = (A-L\cdot C) \cdot \hat{x}[k-1] + B \cdot u[k] + L \cdot y_{sens}\f$
+ * 
+ * Note: This class requires ProjectLib.h for all matrix operations.
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

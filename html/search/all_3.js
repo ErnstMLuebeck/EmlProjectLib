@@ -9,8 +9,9 @@ var searchData=
   ['deltau_5fopt_49',['deltaU_opt',['../class_simple_mpc.html#a5b34ffd4bbf4584ff482fad6d550c244',1,'SimpleMpc']]],
   ['deltau_5fopt_5fkn1_50',['deltaU_opt_kn1',['../class_simple_mpc.html#ac132c41b99c644426985f95386b48832',1,'SimpleMpc']]],
   ['derivative_5fkn1_51',['derivative_kn1',['../class_pid_ctrlr.html#a28e7e0d7d54014d7e5945dcb654a2a29',1,'PidCtrlr']]],
-  ['detectchange_52',['detectChange',['../class_signal_monitor.html#ac9f3ec017429d84521f3aa588696376c',1,'SignalMonitor']]],
-  ['detectdecrease_53',['detectDecrease',['../class_signal_monitor.html#af80cd4f7c04c8ca4ed1352606f94a9ca',1,'SignalMonitor']]],
-  ['detectincrease_54',['detectIncrease',['../class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65',1,'SignalMonitor']]],
-  ['doxyfile_2edox_55',['Doxyfile.dox',['../_doxyfile_8dox.html',1,'']]]
+  ['detectchange_52',['detectChange',['../class_signal_monitor.html#a07afd7f0ffd9cf09b8db44637e6396d4',1,'SignalMonitor']]],
+  ['detectdecrease_53',['detectDecrease',['../class_signal_monitor.html#adde4c27ea4646dab1a050ee0f8b44589',1,'SignalMonitor']]],
+  ['detectincrease_54',['detectIncrease',['../class_signal_monitor.html#a5b76a7481a414aa4e60ba50f5eae9b5d',1,'SignalMonitor']]],
+  ['dl1_55',['DL1',['../_eml_project_lib_8ino.html#abe591c0b018b41d80ed05f383be3c7ce',1,'EmlProjectLib.ino']]],
+  ['doxyfile_2edox_56',['Doxyfile.dox',['../_doxyfile_8dox.html',1,'']]]
 ];

@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 /**
- * 2 Stage, Biquad IIR Filter (Bessel, Butterworth, Custom)
+ * @brief Standard 2-stage, biquad IIR Filter (including coefficients: Bessel, Butterworth, etc.)
  * 
  * Source: https://www.micromodeler.com/dsp/
  * 

@@ -6,6 +6,7 @@ var _eml_project_lib_8ino =
     [ "setup", "_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d", null ],
     [ "BM1", "_eml_project_lib_8ino.html#a1a854065102be0a59f76ab2ed5743693", null ],
     [ "Delta", "_eml_project_lib_8ino.html#a017be58b0a8e44d77f20273b6348af69", null ],
+    [ "DL1", "_eml_project_lib_8ino.html#abe591c0b018b41d80ed05f383be3c7ce", null ],
     [ "HYS1", "_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9", null ],
     [ "IIR1", "_eml_project_lib_8ino.html#ae87db9e0caa91316ed80b7023f7b38cf", null ],
     [ "LPF1", "_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e", null ],

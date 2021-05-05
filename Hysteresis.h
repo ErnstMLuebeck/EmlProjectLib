@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 /**
- * Standard hysteresis
+ * @brief Standard hysteresis with left and right thresholds
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

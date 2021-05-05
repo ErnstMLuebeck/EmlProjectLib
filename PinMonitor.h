@@ -4,6 +4,8 @@
 #include <Arduino.h>
 
 /**
+ * @brief Monitoring of a GPIO pin with debouncing and edge detection
+ * 
  * The PinMonitor is watching a physical pin and can return
  * a number of events: rising edge, falling edge, toggle, state,.. 
  * The state can also be debounced.

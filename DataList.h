@@ -3,6 +3,9 @@
 
 #include <Arduino.h>
 
+/**
+ * @brief Item structure used in the DataList class 
+ */
 struct ListItem
 {   /** item id */
     int id;
@@ -15,7 +18,7 @@ struct ListItem
 };
 
 /**
- * Linked list of data structures: Id, data, name
+ * @brief Linked list of data structures: Id, data, name
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

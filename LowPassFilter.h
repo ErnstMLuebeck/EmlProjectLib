@@ -2,7 +2,7 @@
 #define LOWPASSFILTER_H
 
 /**
- * First order low-pass filter
+ * @brief Standard first order low-pass filter with time constant input
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

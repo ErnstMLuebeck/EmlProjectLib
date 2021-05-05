@@ -4,7 +4,9 @@
 #include <Arduino.h>
 
 /**
- * Software timer
+ * @brief Software timer based on millis() and micros()
+ * 
+ * This simple timer can be used to time stuff in milliseconds or microseconds.
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23

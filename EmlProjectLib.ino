@@ -29,6 +29,7 @@
 #include "IIRFilterBiquad.h"
 #include "SoftTimer.h"
 #include "BatteryMonitor.h"
+#include "DataList.h"
 
 namespace PL=ProjectLib;
 
@@ -46,6 +47,7 @@ Hysteresis HYS1 = Hysteresis(-0.5, 0.5, 0);
 SoftTimer ST1 = SoftTimer(1);
 IIRFilterBiquad IIR1 = IIRFilterBiquad(1);
 BatteryMonitor BM1 = BatteryMonitor(1800, 300, A2, 10, 1);
+DataList DL1 = DataList();
 
 /* Testcase stimuli */
 float Sigma[NUM_TESTCASE_SAMPLES];

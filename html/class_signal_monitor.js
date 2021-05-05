@@ -1,8 +1,8 @@
 var class_signal_monitor =
 [
-    [ "SignalMonitor", "class_signal_monitor.html#a11ec4280331d302ad92c28cc7fa9f7e2", null ],
-    [ "detectChange", "class_signal_monitor.html#ac9f3ec017429d84521f3aa588696376c", null ],
-    [ "detectDecrease", "class_signal_monitor.html#af80cd4f7c04c8ca4ed1352606f94a9ca", null ],
-    [ "detectIncrease", "class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65", null ],
-    [ "x_kn1", "class_signal_monitor.html#ad32238066ac2344041c68a517155c9b3", null ]
+    [ "SignalMonitor", "class_signal_monitor.html#a8ab40b3beeb6b0c11e69175735b76fb3", null ],
+    [ "detectChange", "class_signal_monitor.html#a07afd7f0ffd9cf09b8db44637e6396d4", null ],
+    [ "detectDecrease", "class_signal_monitor.html#adde4c27ea4646dab1a050ee0f8b44589", null ],
+    [ "detectIncrease", "class_signal_monitor.html#a5b76a7481a414aa4e60ba50f5eae9b5d", null ],
+    [ "x_kn1", "class_signal_monitor.html#a3d5d2779a9959d34a5dfebd53cd4562d", null ]
 ];
