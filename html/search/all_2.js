@@ -21,7 +21,9 @@ var searchData=
   ['clearbit16_35',['clearBit16',['../namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23',1,'ProjectLib']]],
   ['clearlist_36',['clearList',['../class_data_list.html#ac4890cf854292e7d356d9e684d23e595',1,'DataList']]],
   ['cntrdebnce_37',['cntrDeBnce',['../class_pin_monitor.html#a79d220d64f4754a09129474c54e31bb2',1,'PinMonitor']]],
-  ['coeff_38',['coeff',['../class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6',1,'IIRFilterBiquad']]],
-  ['coefffiltdpart_39',['CoeffFiltDpart',['../class_pid_ctrlr.html#a4db65e8820170a07e2bd45fc08551456',1,'PidCtrlr']]],
-  ['collection_20of_20useful_20classes_20and_20functions_40',['Collection of useful classes and functions',['../index.html',1,'']]]
+  ['codemetrics_5femlprojectlib_38',['CodeMetrics_EmlProjectLib',['../md_doc__code_metrics__eml_project_lib.html',1,'']]],
+  ['codemetrics_5femlprojectlib_2emd_39',['CodeMetrics_EmlProjectLib.md',['../_code_metrics___eml_project_lib_8md.html',1,'']]],
+  ['coeff_40',['coeff',['../class_i_i_r_filter_biquad.html#aaf87e6976fc96feb465e1075be2794d6',1,'IIRFilterBiquad']]],
+  ['coefffiltdpart_41',['CoeffFiltDpart',['../class_pid_ctrlr.html#a4db65e8820170a07e2bd45fc08551456',1,'PidCtrlr']]],
+  ['collection_20of_20useful_20classes_20and_20functions_42',['Collection of useful classes and functions',['../index.html',1,'']]]
 ];

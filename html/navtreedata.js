@@ -29,6 +29,7 @@ var NAVTREE =
       [ "Introduction", "index.html#intro_sec", null ],
       [ "License", "index.html#license_sec", null ]
     ] ],
+    [ "CodeMetrics_EmlProjectLib", "md_doc__code_metrics__eml_project_lib.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

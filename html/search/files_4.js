@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['iirfilterbiquad_2ecpp_335',['IIRFilterBiquad.cpp',['../_i_i_r_filter_biquad_8cpp.html',1,'']]],
-  ['iirfilterbiquad_2eh_336',['IIRFilterBiquad.h',['../_i_i_r_filter_biquad_8h.html',1,'']]]
+  ['hysteresis_2ecpp_336',['Hysteresis.cpp',['../_hysteresis_8cpp.html',1,'']]],
+  ['hysteresis_2eh_337',['Hysteresis.h',['../_hysteresis_8h.html',1,'']]]
 ];

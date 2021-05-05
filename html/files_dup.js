@@ -1,5 +1,6 @@
 var files_dup =
 [
+    [ "doc", "dir_e68e8157741866f444e17edd764ebbae.html", null ],
     [ "BatteryMonitor.cpp", "_battery_monitor_8cpp.html", null ],
     [ "BatteryMonitor.h", "_battery_monitor_8h.html", [
       [ "BatteryMonitor", "class_battery_monitor.html", "class_battery_monitor" ]
