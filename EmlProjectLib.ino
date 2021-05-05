@@ -13,6 +13,9 @@
  *
  * Feel free to use and adapt these function as you wish. If your rocket crashes, please do not blame me.
  *
+ * \image html EmlProjectLib.png
+ * Image.
+ * 
  */
 
 #include <Arduino.h>

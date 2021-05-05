@@ -11,5 +11,6 @@ var searchData=
   ['derivative_5fkn1_49',['derivative_kn1',['../class_pid_ctrlr.html#a28e7e0d7d54014d7e5945dcb654a2a29',1,'PidCtrlr']]],
   ['detectchange_50',['detectChange',['../class_signal_monitor.html#ac9f3ec017429d84521f3aa588696376c',1,'SignalMonitor']]],
   ['detectdecrease_51',['detectDecrease',['../class_signal_monitor.html#af80cd4f7c04c8ca4ed1352606f94a9ca',1,'SignalMonitor']]],
-  ['detectincrease_52',['detectIncrease',['../class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65',1,'SignalMonitor']]]
+  ['detectincrease_52',['detectIncrease',['../class_signal_monitor.html#ab2f2e2f7a5b3ad431837884786820c65',1,'SignalMonitor']]],
+  ['doxyfile_2edox_53',['Doxyfile.dox',['../_doxyfile_8dox.html',1,'']]]
 ];
