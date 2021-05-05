@@ -3,14 +3,15 @@
 namespace ProjectLib {
 
 /**
- * 2D look-up table (1D axis and 1D data) which uses linear interpolation between breakpoints 
- * and saturation in case the input is outside the axis range.
+ * @brief 2D look-up table (1D axis and 1D data) which uses linear interpolation between breakpoints.
+ * 
+ * If the input is outside the range of the axis, the output is saturated (no extrapolation!).
  * 
  * @param axis (float*) pointer to breakpoint vector
  * @param data (float*) pointer to curve data vector
  * @param size (uint8_t) length of axis and data vector
  * @param input (float) input to be mapped on data 
- * 
+ * @return Interpolated value based on the map data
  */
 float LookupTable(float axis[], float data[], uint8_t size, float input)
 {   /* Axis must be strictly monotonic increasing */
@@ -55,6 +56,17 @@ float LookupTable(float axis[], float data[], uint8_t size, float input)
     return(input);
 }
 
+/**
+ * @brief Limits input to a defined range (saturation).
+ * 
+ * The range is not checked for plausibility! The lower limit must be smaller
+ * than the upper limit.
+ * 
+ * @param in [-], signal input
+ * @param LimLwr [-], lower range limit
+ * @param LimUpr [-], upper range limit
+ * @return input if it is inside the range, saturated value if not
+ */
 float saturate(float in, float LimLwr, float LimUpr)
 {   float ret;
 
@@ -64,17 +76,32 @@ float saturate(float in, float LimLwr, float LimUpr)
     return(ret);
 }
 
+/**
+ * \brief Maps an input signal from its original range to a new range.
+ * 
+ * An application could be mapping an ADC sensor reading [0..1024] to a voltage [0..3.3].
+ * @param x signal to be mapped
+ * @param in_min minimum value of input
+ * @param in_max maximum value of input
+ * @param out_min new minimum value
+ * @param out_max new maximum value
+ * @return mapped output
+ */
 float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)
 {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 /**
- * Check input against interval. If it is inside the range, return 1.
+ * @brief Checks input against interval and returns 1 if it is inside the range.
+ * 
+ * The range is not checked for plausibility! The lower limit must be smaller
+ * than the upper limit.
  * 
  * @param in [-], signal input
  * @param LimLwr [-], lower range limit
  * @param LimUpr [-], upper range limit
+ * @return 1 if inside the range, 0 if outside the range
  */
 boolean checkInterval(float in, float LimLwr, float LimUpr)
 {   
@@ -83,6 +110,9 @@ boolean checkInterval(float in, float LimLwr, float LimUpr)
     return(ret);
 }
 
+/**
+ * @brief Returns the N-th bit of a uint16_t status word.
+ */
 boolean getBit16(uint16_t BitWord, uint16_t PosnBit)
 {
     if(BitWord & (1 << PosnBit))
@@ -95,18 +125,27 @@ boolean getBit16(uint16_t BitWord, uint16_t PosnBit)
     }
 }
 
+/**
+ * @brief Sets the N-th bit of a uint16_t status word to 1.
+ */
 uint16_t setBit16(uint16_t BitWord, uint16_t PosnBit)
 {
     BitWord |=  1 << PosnBit;
     return(BitWord);
 }
- 
+
+/**
+ * @brief Sets the N-th bit of a uint16_t status word to 0.
+ */
 uint16_t clearBit16(uint16_t BitWord, uint16_t PosnBit)
 {
     BitWord &= ~(1 << PosnBit);
     return(BitWord);
 }
 
+/**
+ * @brief Sets the N-th bit of a uint16_t status word to a new value (0 or 1).
+ */
 uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew)
 {
     if(BitNew)
@@ -120,7 +159,10 @@ uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew)
 
     return(BitWord);
 }
- 
+
+/**
+ * @brief Toggles the N-th bit of a uint16_t status word (in case 0 -> 1 and 1 -> 0).
+ */
 uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)
 {
     if(BitWord & (1 << PosnBit)) 

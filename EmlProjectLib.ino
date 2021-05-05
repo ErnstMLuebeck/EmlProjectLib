@@ -14,7 +14,6 @@
  * Feel free to use and adapt these function as you wish. If your rocket crashes, please do not blame me.
  *
  * \image html EmlProjectLib.png
- * Image.
  * 
  */
 
@@ -332,24 +331,28 @@ void loop()
         // y3 = ST1.getTime(); /* Calculation time in [us] */
 
         /* TC024 Battery Monitor */
-        BM1.update();
-        BM1.readAdcValue(&y1, &y2);
-        y3 = BM1.getVBattRaw();
+        // BM1.update();
+        // BM1.readAdcValue(&y1, &y2);
+        // y3 = BM1.getVBattRaw();
         // y2 = BM1.getVBattFilt();
         // y3 = BM1.getSocBatt();
 
+        /* TC025 Check interval */
+        x1 = Saw[i];
+        y1 = PL::checkInterval(x1, 0.2, 0.8);
+
         /*-----------------------------------------------------------------------------------*/
         /* Plot Signals */
-        // Serial.print(x1, 4);
-        // Serial.print(", ");
+        Serial.print(x1, 4);
+        Serial.print(", ");
         // Serial.print(x2, 4);
         // Serial.print(", ");
         Serial.print(y1, 4);
         Serial.print(", ");
-        Serial.print(y2, 4);
-        Serial.print(", ");
-        Serial.print(y3, 4);
-        Serial.print(", ");
+        // Serial.print(y2, 4);
+        // Serial.print(", ");
+        // Serial.print(y3, 4);
+        // Serial.print(", ");
         Serial.println();
 
         delay(Ts*1000);
