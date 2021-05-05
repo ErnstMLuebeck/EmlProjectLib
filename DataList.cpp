@@ -1,6 +1,7 @@
 #include "DataList.h"
 
-/** Construct list object with null pointers
+/** 
+ * Construct list object with null pointers
  */
 DataList::DataList()
 {
@@ -9,9 +10,10 @@ DataList::DataList()
     numItems = 0;
 }
 
-/** Add a data item to the head of the list
+/** 
+ * @brief Add a data item to the head of the list
  * 
- * @param _name pointer to name string
+ * @param _name pointer to name string (maximum 50 characters!)
  * @param _data data to be stored
  */
 void DataList::addItemHead(char* _name, int _data)
@@ -34,11 +36,20 @@ void DataList::addItemHead(char* _name, int _data)
     interrupts();
 }
 
+/**
+ * @brief Get number of items in the list
+ * 
+ * @return number of items stored in the list
+ */
 int DataList::getNumItems()
 {
     return(numItems);
 }
 
+/**
+ * @brief Delete complete list and free memory
+ * 
+ */
 void DataList::clearList()
 {
     noInterrupts();
@@ -54,6 +65,12 @@ void DataList::clearList()
     interrupts();
 }
 
+/**
+ * @brief Get name of item based on ID
+ * 
+ * @param _id Item ID
+ * @return pointer to name string or NULL if item does not exist
+ */
 char* DataList::getItemName(int _id)
 {
     noInterrupts();
@@ -73,6 +90,12 @@ char* DataList::getItemName(int _id)
     return(NULL);
 }
 
+/**
+ * @brief Get data value of item based on ID
+ * 
+ * @param _id Item ID
+ * @return Data value or -1 if item does not exist
+ */
 int DataList::getItemData(int _id)
 {
     noInterrupts();
@@ -89,6 +112,10 @@ int DataList::getItemData(int _id)
     return(-1);
 }
 
+/**
+ * @brief Print full list to console
+ * 
+ */
 void DataList::printListConsole()
 {
     // find end of list

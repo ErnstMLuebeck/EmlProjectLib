@@ -13,12 +13,12 @@ struct ListItem
     int data;
     /** pointer to next item */
     ListItem* link;
-    /* name of the item */
-    char name[50]; /* name of the item */
+    /** name of the item */
+    char name[50];
 };
 
 /**
- * @brief Linked list of data structures: Id, data, name
+ * @brief Simple linked list of data structures: Id, data and name
  * 
  * @author E. M. Luebeck
  * @date 2021-04-23
