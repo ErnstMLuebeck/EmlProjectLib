@@ -97,121 +97,121 @@ $(document).ready(function(){initNavTree('_data_list_8cpp_source.html',''); init
 <div class="contents">
 <a href="_data_list_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_data_list_8h.html">DataList.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_data_list.html#a50bf22872663290e2781182590eb5a9a">    5</a></span>&#160;<a class="code" href="class_data_list.html#a50bf22872663290e2781182590eb5a9a">DataList::DataList</a>()</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a> = NULL;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_data_list.html#a8d12a2f26cdf22e9712d2bd6611e13f0">tail</a> = NULL;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a> = 0;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4">DataList::addItemHead</a>(<span class="keywordtype">char</span>* _name, <span class="keywordtype">int</span> _data)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a>++;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    noInterrupts();</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_data_list.html#a50bf22872663290e2781182590eb5a9a">    6</a></span>&#160;<a class="code" href="class_data_list.html#a50bf22872663290e2781182590eb5a9a">DataList::DataList</a>()</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a> = NULL;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_data_list.html#a8d12a2f26cdf22e9712d2bd6611e13f0">tail</a> = NULL;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a> = 0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4">DataList::addItemHead</a>(<span class="keywordtype">char</span>* _name, <span class="keywordtype">int</span> _data)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a>++;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* addr = (<a class="code" href="struct_list_item.html">ListItem</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_list_item.html">ListItem</a>));</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    addr-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a> = id;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    addr-&gt;<a class="code" href="struct_list_item.html#acdccd6a4148356e84c54ccf1fddacfe2">data</a> = _data;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    strcpy(addr-&gt;<a class="code" href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">name</a>, _name);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    noInterrupts();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* addr = (<a class="code" href="struct_list_item.html">ListItem</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_list_item.html">ListItem</a>));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    addr-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a> = id;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    addr-&gt;<a class="code" href="struct_list_item.html#acdccd6a4148356e84c54ccf1fddacfe2">data</a> = _data;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">/* insert item at beginning of the list */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    addr-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a> = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a> = addr;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    interrupts();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff">   37</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff">DataList::getNumItems</a>()</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span>(<a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_data_list.html#ac4890cf854292e7d356d9e684d23e595">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_data_list.html#ac4890cf854292e7d356d9e684d23e595">DataList::clearList</a>()</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    noInterrupts();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* del;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        del = temp-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        free((<a class="code" href="struct_list_item.html">ListItem</a>*)temp);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        temp = del;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a> = NULL;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    interrupts();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9">   57</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9">DataList::getItemName</a>(<span class="keywordtype">int</span> _id)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    noInterrupts();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {   <span class="comment">//Serial.println(temp-&gt;id);</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span>(temp-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a> == _id)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {   <span class="comment">//char str[30];</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">//sprintf(str, &quot;%s&quot;, temp-&gt;name);</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//Serial.println(str);</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            interrupts();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span>(temp-&gt;<a class="code" href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">name</a>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        temp = temp-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    interrupts();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span>(NULL);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206">   76</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206">DataList::getItemData</a>(<span class="keywordtype">int</span> _id)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    noInterrupts();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span>(temp-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a> == _id)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {   interrupts();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span>(temp-&gt;<a class="code" href="struct_list_item.html#acdccd6a4148356e84c54ccf1fddacfe2">data</a>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        temp = temp-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    interrupts();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span>(-1);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">   92</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">DataList::printListConsole</a>()</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// find end of list</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    noInterrupts();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        Serial.print(temp-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        Serial.print(<span class="stringliteral">&quot;: &quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">char</span> str[30];</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        sprintf(str, <span class="stringliteral">&quot;%s&quot;</span>, temp-&gt;<a class="code" href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">name</a>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        Serial.print(str);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        Serial.print(<span class="stringliteral">&quot;, data=&quot;</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        Serial.print(temp-&gt;<a class="code" href="struct_list_item.html#acdccd6a4148356e84c54ccf1fddacfe2">data</a>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        Serial.println(<span class="stringliteral">&quot;; &quot;</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    strcpy(addr-&gt;<a class="code" href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">name</a>, _name);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/* insert item at beginning of the list */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    addr-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a> = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a> = addr;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    interrupts();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff">   44</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff">DataList::getNumItems</a>()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span>(<a class="code" href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">numItems</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_data_list.html#ac4890cf854292e7d356d9e684d23e595">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_data_list.html#ac4890cf854292e7d356d9e684d23e595">DataList::clearList</a>()</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    noInterrupts();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* del;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        del = temp-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        free((<a class="code" href="struct_list_item.html">ListItem</a>*)temp);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        temp = del;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a> = NULL;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    interrupts();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9">   74</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9">DataList::getItemName</a>(<span class="keywordtype">int</span> _id)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    noInterrupts();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {   <span class="comment">//Serial.println(temp-&gt;id);</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span>(temp-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a> == _id)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {   <span class="comment">//char str[30];</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">//sprintf(str, &quot;%s&quot;, temp-&gt;name);</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">//Serial.println(str);</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            interrupts();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span>(temp-&gt;<a class="code" href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">name</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        temp = temp-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    interrupts();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span>(NULL);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206">   99</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206">DataList::getItemData</a>(<span class="keywordtype">int</span> _id)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    noInterrupts();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span>(temp-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a> == _id)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {   interrupts();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span>(temp-&gt;<a class="code" href="struct_list_item.html#acdccd6a4148356e84c54ccf1fddacfe2">data</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        temp = temp-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    Serial.println();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    interrupts();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    interrupts();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span>(-1);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">  119</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">DataList::printListConsole</a>()</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// find end of list</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    noInterrupts();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="struct_list_item.html">ListItem</a>* temp = <a class="code" href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">head</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">while</span>(temp != NULL)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        Serial.print(temp-&gt;<a class="code" href="struct_list_item.html#a7528e3ddda91fc5ac1946f306e0fc599">id</a>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        Serial.print(<span class="stringliteral">&quot;: &quot;</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">char</span> str[30];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        sprintf(str, <span class="stringliteral">&quot;%s&quot;</span>, temp-&gt;<a class="code" href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">name</a>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        Serial.print(str);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        Serial.print(<span class="stringliteral">&quot;, data=&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        Serial.print(temp-&gt;<a class="code" href="struct_list_item.html#acdccd6a4148356e84c54ccf1fddacfe2">data</a>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        Serial.println(<span class="stringliteral">&quot;; &quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        temp = temp-&gt;<a class="code" href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">link</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Serial.println();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    interrupts();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
 <div class="ttc" id="a_data_list_8h_html"><div class="ttname"><a href="_data_list_8h.html">DataList.h</a></div></div>
-<div class="ttc" id="aclass_data_list_html_a50bf22872663290e2781182590eb5a9a"><div class="ttname"><a href="class_data_list.html#a50bf22872663290e2781182590eb5a9a">DataList::DataList</a></div><div class="ttdeci">DataList()</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00005">DataList.cpp:5</a></div></div>
+<div class="ttc" id="aclass_data_list_html_a50bf22872663290e2781182590eb5a9a"><div class="ttname"><a href="class_data_list.html#a50bf22872663290e2781182590eb5a9a">DataList::DataList</a></div><div class="ttdeci">DataList()</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00006">DataList.cpp:6</a></div></div>
 <div class="ttc" id="aclass_data_list_html_a5a1f84d261d04d37088c11dae667ca78"><div class="ttname"><a href="class_data_list.html#a5a1f84d261d04d37088c11dae667ca78">DataList::numItems</a></div><div class="ttdeci">int numItems</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8h_source.html#l00040">DataList.h:40</a></div></div>
-<div class="ttc" id="aclass_data_list_html_a7d878d4dc6e6f81c66898f318ece4bff"><div class="ttname"><a href="class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff">DataList::getNumItems</a></div><div class="ttdeci">int getNumItems()</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00037">DataList.cpp:37</a></div></div>
-<div class="ttc" id="aclass_data_list_html_a8b42ce788a9d4e96b0217bfe53fb87d4"><div class="ttname"><a href="class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4">DataList::addItemHead</a></div><div class="ttdeci">void addItemHead(char *_name, int _data)</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00017">DataList.cpp:17</a></div></div>
-<div class="ttc" id="aclass_data_list_html_a8cd7c41d88692abaac2ad30765cdb56e"><div class="ttname"><a href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">DataList::printListConsole</a></div><div class="ttdeci">void printListConsole()</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00092">DataList.cpp:92</a></div></div>
+<div class="ttc" id="aclass_data_list_html_a7d878d4dc6e6f81c66898f318ece4bff"><div class="ttname"><a href="class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff">DataList::getNumItems</a></div><div class="ttdeci">int getNumItems()</div><div class="ttdoc">Get number of items in the list.</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00044">DataList.cpp:44</a></div></div>
+<div class="ttc" id="aclass_data_list_html_a8b42ce788a9d4e96b0217bfe53fb87d4"><div class="ttname"><a href="class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4">DataList::addItemHead</a></div><div class="ttdeci">void addItemHead(char *_name, int _data)</div><div class="ttdoc">Add a data item to the head of the list.</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00019">DataList.cpp:19</a></div></div>
+<div class="ttc" id="aclass_data_list_html_a8cd7c41d88692abaac2ad30765cdb56e"><div class="ttname"><a href="class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e">DataList::printListConsole</a></div><div class="ttdeci">void printListConsole()</div><div class="ttdoc">Print full list to console.</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00119">DataList.cpp:119</a></div></div>
 <div class="ttc" id="aclass_data_list_html_a8d12a2f26cdf22e9712d2bd6611e13f0"><div class="ttname"><a href="class_data_list.html#a8d12a2f26cdf22e9712d2bd6611e13f0">DataList::tail</a></div><div class="ttdeci">ListItem * tail</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8h_source.html#l00039">DataList.h:39</a></div></div>
-<div class="ttc" id="aclass_data_list_html_aa2a394cb63f365581e8bdb3fdff404e9"><div class="ttname"><a href="class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9">DataList::getItemName</a></div><div class="ttdeci">char * getItemName(int _id)</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00057">DataList.cpp:57</a></div></div>
-<div class="ttc" id="aclass_data_list_html_ac4890cf854292e7d356d9e684d23e595"><div class="ttname"><a href="class_data_list.html#ac4890cf854292e7d356d9e684d23e595">DataList::clearList</a></div><div class="ttdeci">void clearList()</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00042">DataList.cpp:42</a></div></div>
+<div class="ttc" id="aclass_data_list_html_aa2a394cb63f365581e8bdb3fdff404e9"><div class="ttname"><a href="class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9">DataList::getItemName</a></div><div class="ttdeci">char * getItemName(int _id)</div><div class="ttdoc">Get name of item based on ID.</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00074">DataList.cpp:74</a></div></div>
+<div class="ttc" id="aclass_data_list_html_ac4890cf854292e7d356d9e684d23e595"><div class="ttname"><a href="class_data_list.html#ac4890cf854292e7d356d9e684d23e595">DataList::clearList</a></div><div class="ttdeci">void clearList()</div><div class="ttdoc">Delete complete list and free memory.</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00053">DataList.cpp:53</a></div></div>
 <div class="ttc" id="aclass_data_list_html_ace9f32628c0c5f84a59909675234e412"><div class="ttname"><a href="class_data_list.html#ace9f32628c0c5f84a59909675234e412">DataList::head</a></div><div class="ttdeci">ListItem * head</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8h_source.html#l00038">DataList.h:38</a></div></div>
-<div class="ttc" id="aclass_data_list_html_adf5d63b0922f73ecfc2b4fcb3075b206"><div class="ttname"><a href="class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206">DataList::getItemData</a></div><div class="ttdeci">int getItemData(int _id)</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00076">DataList.cpp:76</a></div></div>
+<div class="ttc" id="aclass_data_list_html_adf5d63b0922f73ecfc2b4fcb3075b206"><div class="ttname"><a href="class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206">DataList::getItemData</a></div><div class="ttdeci">int getItemData(int _id)</div><div class="ttdoc">Get data value of item based on ID.</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8cpp_source.html#l00099">DataList.cpp:99</a></div></div>
 <div class="ttc" id="astruct_list_item_html"><div class="ttname"><a href="struct_list_item.html">ListItem</a></div><div class="ttdoc">Item structure used in the DataList class.</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8h_source.html#l00009">DataList.h:10</a></div></div>
 <div class="ttc" id="astruct_list_item_html_a4e35a6959f504cef7df8778f6f5ac8b8"><div class="ttname"><a href="struct_list_item.html#a4e35a6959f504cef7df8778f6f5ac8b8">ListItem::link</a></div><div class="ttdeci">ListItem * link</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8h_source.html#l00015">DataList.h:15</a></div></div>
 <div class="ttc" id="astruct_list_item_html_a5ac1ed9cca5b816270270611541d1ff1"><div class="ttname"><a href="struct_list_item.html#a5ac1ed9cca5b816270270611541d1ff1">ListItem::name</a></div><div class="ttdeci">char name[50]</div><div class="ttdef"><b>Definition:</b> <a href="_data_list_8h_source.html#l00017">DataList.h:17</a></div></div>
