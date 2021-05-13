@@ -1,0 +1,8 @@
+<map id="BatteryMonitor::init" name="BatteryMonitor::init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,62,139,89"/>
+<area shape="rect" id="node2" href="$class_low_pass_filter.html#af913e20eb292ce6056689840ce80e824" title=" " alt="" coords="435,7,600,34"/>
+<area shape="rect" id="node3" href="$class_battery_monitor.html#afccd7f806fa82ad54fa20c2b13bb71de" title=" " alt="" coords="187,33,387,59"/>
+<area shape="rect" id="node4" href="$class_battery_monitor.html#aeae07812c5e6e19ad6bf1b4ff610b054" title=" " alt="" coords="203,84,370,125"/>
+<area shape="rect" id="node6" href="$class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775" title=" " alt="" coords="204,150,369,177"/>
+<area shape="rect" id="node5" href="$namespace_project_lib.html#a93c50891e9122c26e6b23ffeedfec17e" title="Maps an input signal from its original range to a new range." alt="" coords="447,91,587,118"/>
+</map>

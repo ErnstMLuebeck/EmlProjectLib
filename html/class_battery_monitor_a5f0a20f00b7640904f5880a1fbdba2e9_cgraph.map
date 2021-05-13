@@ -1,0 +1,7 @@
+<map id="BatteryMonitor::update" name="BatteryMonitor::update">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,163,83"/>
+<area shape="rect" id="node2" href="$class_low_pass_filter.html#af913e20eb292ce6056689840ce80e824" title=" " alt="" coords="211,5,377,32"/>
+<area shape="rect" id="node3" href="$namespace_project_lib.html#a3031cfd8611234ad052ea77b733bf1c1" title="2D look&#45;up table (1D axis and 1D data) which uses linear interpolation between breakpoints." alt="" coords="211,56,377,83"/>
+<area shape="rect" id="node4" href="$class_battery_monitor.html#aeae07812c5e6e19ad6bf1b4ff610b054" title=" " alt="" coords="211,107,377,149"/>
+<area shape="rect" id="node5" href="$namespace_project_lib.html#a93c50891e9122c26e6b23ffeedfec17e" title="Maps an input signal from its original range to a new range." alt="" coords="425,115,565,141"/>
+</map>

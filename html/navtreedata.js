@@ -30,6 +30,8 @@ var NAVTREE =
       [ "License", "index.html#license_sec", null ]
     ] ],
     [ "CodeMetrics_EmlProjectLib", "md_doc__code_metrics__eml_project_lib.html", null ],
+    [ "Bug List", "bug.html", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -61,7 +63,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_battery_monitor_8cpp.html",
-"class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775"
+"class_low_pass_filter.html#a4f178b15dc85b3122cbcddcb6e4dc13b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

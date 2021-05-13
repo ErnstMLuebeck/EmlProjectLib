@@ -1,0 +1,23 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node1" title=" " alt="" coords="5,233,60,260"/>
+<area shape="rect" id="node2" href="$class_data_list.html#a8b42ce788a9d4e96b0217bfe53fb87d4" title="Add a data item to the head of the list." alt="" coords="123,5,282,32"/>
+<area shape="rect" id="node3" href="$class_battery_monitor.html#a396e63b9ca97eacac38bb33a21f0bdcc" title=" " alt="" coords="108,56,297,83"/>
+<area shape="rect" id="node4" href="$class_data_list.html#adf5d63b0922f73ecfc2b4fcb3075b206" title="Get data value of item based on ID." alt="" coords="127,107,278,133"/>
+<area shape="rect" id="node5" href="$class_data_list.html#aa2a394cb63f365581e8bdb3fdff404e9" title="Get name of item based on ID." alt="" coords="123,157,282,184"/>
+<area shape="rect" id="node6" href="$class_data_list.html#a7d878d4dc6e6f81c66898f318ece4bff" title="Get number of items in the list." alt="" coords="124,208,281,235"/>
+<area shape="rect" id="node7" href="$class_battery_monitor.html#acf197e22e860c1e960cd4fdeb63aaf60" title=" " alt="" coords="136,259,269,285"/>
+<area shape="rect" id="node13" href="$class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352" title=" " alt="" coords="111,375,294,417"/>
+<area shape="rect" id="node17" href="$class_state_space_model.html#a11ce7040397b542d06baa957c351cc42" title=" " alt="" coords="111,310,294,351"/>
+<area shape="rect" id="node18" href="$class_data_list.html#a8cd7c41d88692abaac2ad30765cdb56e" title="Print full list to console." alt="" coords="116,441,289,468"/>
+<area shape="rect" id="node19" href="$class_battery_monitor.html#ab05290090f84e7c537a8b4625706a86e" title=" " alt="" coords="111,492,295,519"/>
+<area shape="rect" id="node8" href="$class_low_pass_filter.html#af913e20eb292ce6056689840ce80e824" title=" " alt="" coords="593,140,759,167"/>
+<area shape="rect" id="node9" href="$class_battery_monitor.html#afccd7f806fa82ad54fa20c2b13bb71de" title=" " alt="" coords="345,165,545,192"/>
+<area shape="rect" id="node10" href="$class_battery_monitor.html#aeae07812c5e6e19ad6bf1b4ff610b054" title=" " alt="" coords="362,217,529,258"/>
+<area shape="rect" id="node12" href="$class_low_pass_filter.html#a54320ac1e367691c2dc8e96fa9469775" title=" " alt="" coords="363,283,528,309"/>
+<area shape="rect" id="node11" href="$namespace_project_lib.html#a93c50891e9122c26e6b23ffeedfec17e" title="Maps an input signal from its original range to a new range." alt="" coords="606,224,746,251"/>
+<area shape="rect" id="node14" href="$namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9" title=" " alt="" coords="367,333,523,360"/>
+<area shape="rect" id="node15" href="$namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093" title=" " alt="" coords="360,384,531,411"/>
+<area shape="rect" id="node16" href="$namespace_project_lib.html#a1300416169292f42f2292adb06fb268a" title=" " alt="" coords="358,435,533,461"/>
+<area shape="rect" id="node20" href="$class_low_pass_filter.html#a5c9f36025737b3cfeb65a133d9ff971f" title=" " alt="" coords="373,489,518,516"/>
+<area shape="rect" id="node21" href="$class_low_pass_filter.html#a8be45cfdc82382034d29ebf0fd1e54f1" title=" " alt="" coords="373,540,518,567"/>
+</map>

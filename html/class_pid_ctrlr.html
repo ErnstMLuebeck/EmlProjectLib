@@ -108,20 +108,28 @@ $(document).ready(function(){initNavTree('class_pid_ctrlr.html',''); initResizab
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a88a75c2210bf1678c57824f8c3d7bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a7a88a75c2210bf1678c57824f8c3d7bb">PidCtrlr</a> (float _Kp, float _Ki, float _Kd, float _Kaw, float _TcDpart, float _Ts)</td></tr>
+<tr class="memdesc:a7a88a75c2210bf1678c57824f8c3d7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct object with controller parameters and time constants.  <a href="class_pid_ctrlr.html#a7a88a75c2210bf1678c57824f8c3d7bb">More...</a><br /></td></tr>
 <tr class="separator:a7a88a75c2210bf1678c57824f8c3d7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f7a7ec3a4362d27b263d4d2e3b42687"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a5f7a7ec3a4362d27b263d4d2e3b42687">calculate</a> (float y_sp, float y, float u_true, float u_ff)</td></tr>
+<tr class="memdesc:a5f7a7ec3a4362d27b263d4d2e3b42687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the next PID controller output.  <a href="class_pid_ctrlr.html#a5f7a7ec3a4362d27b263d4d2e3b42687">More...</a><br /></td></tr>
 <tr class="separator:a5f7a7ec3a4362d27b263d4d2e3b42687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad281921fc4f38db0a981a320794b7409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#ad281921fc4f38db0a981a320794b7409">setTs</a> (float _Ts)</td></tr>
+<tr class="memdesc:ad281921fc4f38db0a981a320794b7409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update controller sample time.  <a href="class_pid_ctrlr.html#ad281921fc4f38db0a981a320794b7409">More...</a><br /></td></tr>
 <tr class="separator:ad281921fc4f38db0a981a320794b7409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab218e096b304b274a584ec04a9e6430e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e">setCtrlrGains</a> (float _Kp, float _Ki, float _Kd, float _Kaw)</td></tr>
+<tr class="memdesc:ab218e096b304b274a584ec04a9e6430e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the controller gains during run-time in case gain-scheduling is used.  <a href="class_pid_ctrlr.html#ab218e096b304b274a584ec04a9e6430e">More...</a><br /></td></tr>
 <tr class="separator:ab218e096b304b274a584ec04a9e6430e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af05a9a6032e3f00e88cf707a248ed9b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#af05a9a6032e3f00e88cf707a248ed9b4">setIpart</a> (float _IpartInit)</td></tr>
+<tr class="memdesc:af05a9a6032e3f00e88cf707a248ed9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize integrator with a defined value.  <a href="class_pid_ctrlr.html#af05a9a6032e3f00e88cf707a248ed9b4">More...</a><br /></td></tr>
 <tr class="separator:af05a9a6032e3f00e88cf707a248ed9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69b21185102e3a17442a34378b0f9375"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a69b21185102e3a17442a34378b0f9375">setTcDpart</a> (float _TcDpart)</td></tr>
+<tr class="memdesc:a69b21185102e3a17442a34378b0f9375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update filter constant of derivative part low-pass filter.  <a href="class_pid_ctrlr.html#a69b21185102e3a17442a34378b0f9375">More...</a><br /></td></tr>
 <tr class="separator:a69b21185102e3a17442a34378b0f9375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0adb0cae08912972a69f22933d11b78f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a0adb0cae08912972a69f22933d11b78f">freezeIpart</a> ()</td></tr>
+<tr class="memdesc:a0adb0cae08912972a69f22933d11b78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Freeze integral part with current value but continue all other parts.  <a href="class_pid_ctrlr.html#a0adb0cae08912972a69f22933d11b78f">More...</a><br /></td></tr>
 <tr class="separator:a0adb0cae08912972a69f22933d11b78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8365cb9b6962a6b1db7fa63d2516fadb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pid_ctrlr.html#a8365cb9b6962a6b1db7fa63d2516fadb">resumeIpart</a> ()</td></tr>
+<tr class="memdesc:a8365cb9b6962a6b1db7fa63d2516fadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume calculation of integral part from last frozen value onwards.  <a href="class_pid_ctrlr.html#a8365cb9b6962a6b1db7fa63d2516fadb">More...</a><br /></td></tr>
 <tr class="separator:a8365cb9b6962a6b1db7fa63d2516fadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -208,7 +216,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct object with controller parameters.</p>
+
+<p>Construct object with controller parameters and time constants. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_Kp</td><td>[-], proportional controller gain </td></tr>
@@ -220,6 +229,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>2021-05-13 MFO: this is a test bug! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>this is a test todo! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>this is second test todo! </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00013">13</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
@@ -263,7 +275,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Calculate PID control algorithm. Note that the actuator is typically limited to physical limits (e.g. 0..100%). If not, u_true can simply be set to u_kn1, the last controller output. If feed-foorward is not used, set it to 0.</p>
+
+<p>Calculate the next PID controller output. </p>
+<p>Note that the actuator is typically limited to physical limits (e.g. 0..100%). If not, u_true can simply be set to u_kn1, the last controller output. If feed-foorward is not used, simply set it to 0.</p>
+<p>\( \text{integral}[k] = \text{integral[k-1]} + (e[k] \cdot Ts) + K_{AW} \cdot (u_\text{true} - u[k-1]) \)</p>
+<p>\( u[k] = e[k] \cdot K_P + \text{integral}[k] \cdot K_I \)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">y_sp</td><td>plant output setpoint </td></tr>
@@ -275,7 +291,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>u unlimited actuator position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00097">97</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00111">111</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
 </div>
 </div>
@@ -293,9 +309,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Freeze integral part with current value but continue all other parts </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00128">128</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+<p>Freeze integral part with current value but continue all other parts. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00142">142</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
 </div>
 </div>
@@ -313,9 +330,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reume calculation of integral part from last frozen value </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00136">136</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+<p>Resume calculation of integral part from last frozen value onwards. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00150">150</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +374,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Update the controller gains during run-time in case gain-scheduling is used</p>
+
+<p>Update the controller gains during run-time in case gain-scheduling is used. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_Kp</td><td>[-], proportional controller gain </td></tr>
@@ -367,7 +386,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00052">52</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00058">58</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +405,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize integrator with defined value</p>
+
+<p>Initialize integrator with a defined value. </p>
+<p>Typically this function is used to reset the integrator to 0 in case the conditions change drastically (e.g. during fuel cut-off in a lambda controller)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_IpartInit</td><td>[-], reset value for integrator </td></tr>
@@ -394,7 +415,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00080">80</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00089">89</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +434,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Update filter constant of derivative part low-pass filter</p>
+
+<p>Update filter constant of derivative part low-pass filter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_TcDpart</td><td>[s], filter time constant of derivative filter </td></tr>
@@ -421,7 +443,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00065">65</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00071">71</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
 </div>
 </div>
@@ -440,7 +462,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Update sample time (it is recommended to keep it fixed)</p>
+
+<p>Update controller sample time. </p>
+<p>However, it is recommended to keep it fixed</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_Ts</td><td>[s], controller sample time </td></tr>
@@ -448,7 +472,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00039">39</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8cpp_source.html#l00045">45</a> of file <a class="el" href="_pid_ctrlr_8cpp_source.html">PidCtrlr.cpp</a>.</p>
 
 </div>
 </div>
@@ -472,8 +496,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], filter coefficient of derivative part filter </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00036">36</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00044">44</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -496,8 +521,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], previous derivative part for low-pass filter </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00033">33</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00038">38</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -520,8 +546,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], enable bit for integral part </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00037">37</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00046">46</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -544,8 +571,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], control error of last sample kn1 = [k-1], k being the time index </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00031">31</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00034">34</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -568,8 +596,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], integrator of integral part </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00034">34</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00040">40</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -593,7 +622,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00030">30</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00032">32</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -617,7 +646,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00030">30</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00032">32</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -641,7 +670,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00030">30</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00032">32</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -664,8 +693,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], controller gains </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00030">30</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00032">32</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -688,8 +718,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[s], filter time constant of derivative part filter </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00035">35</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00042">42</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -712,8 +743,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[s], sample time </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00029">29</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00030">30</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>
@@ -736,8 +768,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>[-], controller output of last sample </p>
 
-<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00032">32</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pid_ctrlr_8h_source.html#l00036">36</a> of file <a class="el" href="_pid_ctrlr_8h_source.html">PidCtrlr.h</a>.</p>
 
 </div>
 </div>

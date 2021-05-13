@@ -26,14 +26,23 @@ class PidCtrlr
     void resumeIpart();
 
     private:
-    float Ts; /* [s], sample time */
-    float Kp, Ki, Kd, Kaw; /* [-], controller gains */
-    float error_kn1; /* [-], control error of last sample kn1 = [k-1], k being the time index*/
-    float u_kn1; /* [-], controller output of last sample */
-    float derivative_kn1; /* [-], previous derivative part for low-pass filter */
-    float integral; /* [-], integrator of integral part */
-    float TcDpart; /* [s], filter time constant of derivative part filter */
-    float CoeffFiltDpart; /* [-], filter coefficient of derivative part filter */
+    /** [s], sample time */ 
+    float Ts; 
+    /** [-], controller gains */
+    float Kp, Ki, Kd, Kaw; 
+    /** [-], control error of last sample kn1 = [k-1], k being the time index */
+    float error_kn1;
+    /** [-], controller output of last sample */ 
+    float u_kn1; 
+    /** [-], previous derivative part for low-pass filter */
+    float derivative_kn1; 
+    /** [-], integrator of integral part */
+    float integral;
+    /** [s], filter time constant of derivative part filter */ 
+    float TcDpart; 
+    /** [-], filter coefficient of derivative part filter */
+    float CoeffFiltDpart; 
+    /** [-], enable bit for integral part */
     boolean EnaIpart;
 };
 

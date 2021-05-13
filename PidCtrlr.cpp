@@ -1,7 +1,7 @@
 #include "PidCtrlr.h"
 
 /**
- * Construct object with controller parameters. 
+ * @brief Construct object with controller parameters and time constants
  * 
  * @param _Kp [-], proportional controller gain
  * @param _Ki [-], integral controller gain
@@ -20,6 +20,10 @@ PidCtrlr::PidCtrlr(float _Kp, float _Ki, float _Kd, float _Kaw, float _TcDpart, 
     TcDpart = _TcDpart;
     EnaIpart = 1;
 
+    /** \bug 2021-05-13 MFO: this is a test bug! */
+    /** \todo this is a test todo! */
+    /** \todo this is second test todo! */
+
     /* Calculate filter coefficient from time constant */
     CoeffFiltDpart = 1 - Ts/TcDpart;
     if(CoeffFiltDpart > 1.0) CoeffFiltDpart = 1.0;
@@ -32,7 +36,9 @@ PidCtrlr::PidCtrlr(float _Kp, float _Ki, float _Kd, float _Kaw, float _TcDpart, 
 }
 
 /**
- * Update sample time (it is recommended to keep it fixed) 
+ * @brief Update controller sample time
+ * 
+ * However, it is recommended to keep it fixed 
  * 
  * @param _Ts [s], controller sample time
  */
@@ -42,7 +48,7 @@ void PidCtrlr::setTs(float _Ts)
 }
 
 /**
- * Update the controller gains during run-time in case gain-scheduling is used
+ * @brief Update the controller gains during run-time in case gain-scheduling is used
  * 
  * @param _Kp [-], proportional controller gain
  * @param _Ki [-], integral controller gain
@@ -58,7 +64,7 @@ void PidCtrlr::setCtrlrGains(float _Kp, float _Ki, float _Kd, float _Kaw)
 }
 
 /**
- * Update filter constant of derivative part low-pass filter
+ * @brief Update filter constant of derivative part low-pass filter
  * 
  * @param _TcDpart [s], filter time constant of derivative filter
  */
@@ -73,7 +79,10 @@ void PidCtrlr::setTcDpart(float _TcDpart)
 }
 
 /**
- * Initialize integrator with defined value
+ * @brief Initialize integrator with a defined value
+ * 
+ * Typically this function is used to reset the integrator to 0 in case the conditions 
+ * change drastically (e.g. during fuel cut-off in a lambda controller)
  * 
  * @param _IpartInit [-], reset value for integrator
  */
@@ -83,10 +92,15 @@ void PidCtrlr::setIpart(float _IpartInit)
 }
 
 /**
- * Calculate PID control algorithm.
+ * @brief Calculate the next PID controller output
+ * 
  * Note that the actuator is typically limited to physical limits (e.g. 0..100%).
  * If not, u_true can simply be set to u_kn1, the last controller output.
- * If feed-foorward is not used, set it to 0.
+ * If feed-foorward is not used, simply set it to 0.
+ * 
+ * \f$ \text{integral}[k] = \text{integral[k-1]} + (e[k] \cdot Ts) + K_{AW} \cdot (u_\text{true} - u[k-1]) \f$
+ * 
+ * \f$ u[k] = e[k] \cdot K_P + \text{integral}[k] \cdot K_I \f$
  * 
  * @param y_sp plant output setpoint
  * @param y actual/measured plant output
@@ -123,7 +137,7 @@ float PidCtrlr::calculate(float y_sp, float y, float u_true, float u_ff)
 }
 
 /**
- * Freeze integral part with current value but continue all other parts
+ * @brief Freeze integral part with current value but continue all other parts
  */
 void PidCtrlr::freezeIpart()
 {
@@ -131,7 +145,7 @@ void PidCtrlr::freezeIpart()
 }
 
 /**
- * Reume calculation of integral part from last frozen value
+ * @brief Resume calculation of integral part from last frozen value onwards
  */
 void PidCtrlr::resumeIpart()
 {

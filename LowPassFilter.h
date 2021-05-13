@@ -1,6 +1,8 @@
 #ifndef LOWPASSFILTER_H
 #define LOWPASSFILTER_H
 
+#include <Arduino.h>
+
 /**
  * @brief Standard first order low-pass filter with time constant input
  * 

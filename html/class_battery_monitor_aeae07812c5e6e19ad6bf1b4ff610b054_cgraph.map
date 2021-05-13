@@ -1,0 +1,4 @@
+<map id="BatteryMonitor::readBattVoltage" name="BatteryMonitor::readBattVoltage">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node2" href="$namespace_project_lib.html#a93c50891e9122c26e6b23ffeedfec17e" title="Maps an input signal from its original range to a new range." alt="" coords="220,13,360,39"/>
+</map>
