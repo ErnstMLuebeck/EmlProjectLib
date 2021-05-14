@@ -1,0 +1,16 @@
+/** \mainpage Collection of useful classes and functions
+ *
+ * \section intro_sec Introduction
+ *
+ * This collection of classes and functions is aimed to be used in microcontroller hardware
+ * projected, e.g Arduino, Teensy, ESP32, etc.
+ * 
+ * Most of them are tested in the EmlProjectLib.ino sketch, where (very) simple testcases are executed.
+ *
+ * \section license_sec License
+ *
+ * Feel free to use and adapt these function as you wish. If your rocket crashes, please do not blame me.
+ *
+ * \image html EmlProjectLib.png
+ * 
+ */
