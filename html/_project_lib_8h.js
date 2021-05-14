@@ -4,6 +4,7 @@ var _project_lib_8h =
     [ "ClarkeTransform", "_project_lib_8h.html#aed8cf5ecf7b1ba39e2c765ea6e126390", null ],
     [ "ClarkeTransformInverse", "_project_lib_8h.html#a404bfe8812fa0468dc74e1f137a55d68", null ],
     [ "clearBit16", "_project_lib_8h.html#aa2a3d03adaed0e69ae752316ec6b2d23", null ],
+    [ "genPrbs7", "_project_lib_8h.html#ae3b9cd472df20801afcfc3d0d9b5447c", null ],
     [ "getBit16", "_project_lib_8h.html#ad053391ef987e1193ca74d5c4b4070aa", null ],
     [ "LookupTable", "_project_lib_8h.html#a3031cfd8611234ad052ea77b733bf1c1", null ],
     [ "mapfloat", "_project_lib_8h.html#a93c50891e9122c26e6b23ffeedfec17e", null ],

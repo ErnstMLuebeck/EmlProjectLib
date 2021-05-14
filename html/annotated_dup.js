@@ -6,6 +6,7 @@ var annotated_dup =
     [ "IIRFilterBiquad", "class_i_i_r_filter_biquad.html", "class_i_i_r_filter_biquad" ],
     [ "ListItem", "struct_list_item.html", "struct_list_item" ],
     [ "LowPassFilter", "class_low_pass_filter.html", "class_low_pass_filter" ],
+    [ "MovgAvgFilter", "class_movg_avg_filter.html", "class_movg_avg_filter" ],
     [ "PidCtrlr", "class_pid_ctrlr.html", "class_pid_ctrlr" ],
     [ "PinMonitor", "class_pin_monitor.html", "class_pin_monitor" ],
     [ "SignalMonitor", "class_signal_monitor.html", "class_signal_monitor" ],

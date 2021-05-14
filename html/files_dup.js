@@ -23,6 +23,10 @@ var files_dup =
     [ "LowPassFilter.h", "_low_pass_filter_8h.html", [
       [ "LowPassFilter", "class_low_pass_filter.html", "class_low_pass_filter" ]
     ] ],
+    [ "MovgAvgFilter.cpp", "_movg_avg_filter_8cpp.html", null ],
+    [ "MovgAvgFilter.h", "_movg_avg_filter_8h.html", [
+      [ "MovgAvgFilter", "class_movg_avg_filter.html", "class_movg_avg_filter" ]
+    ] ],
     [ "PidCtrlr.cpp", "_pid_ctrlr_8cpp.html", null ],
     [ "PidCtrlr.h", "_pid_ctrlr_8h.html", [
       [ "PidCtrlr", "class_pid_ctrlr.html", "class_pid_ctrlr" ]

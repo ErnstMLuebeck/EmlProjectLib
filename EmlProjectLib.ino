@@ -1,22 +1,5 @@
 /**@file EmlProjectLib.ino */
 
-/*! \mainpage Collection of useful classes and functions
- *
- * \section intro_sec Introduction
- *
- * This collection of classes and functions is aimed to be used in microcontroller hardware
- * projected, e.g Arduino, Teensy, ESP32, etc.
- * 
- * Most of them are tested in the EmlProjectLib.ino sketch, where (very) simple testcases are executed.
- *
- * \section license_sec License
- *
- * Feel free to use and adapt these function as you wish. If your rocket crashes, please do not blame me.
- *
- * \image html EmlProjectLib.png
- * 
- */
-
 #include <Arduino.h>
 
 #include "ProjectLib.h"
@@ -30,6 +13,7 @@
 #include "SoftTimer.h"
 #include "BatteryMonitor.h"
 #include "DataList.h"
+#include "MovgAvgFilter.h"
 
 namespace PL=ProjectLib;
 
@@ -48,6 +32,7 @@ SoftTimer ST1 = SoftTimer(1);
 IIRFilterBiquad IIR1 = IIRFilterBiquad(1);
 BatteryMonitor BM1 = BatteryMonitor(1800, 300, A2, 10, 1);
 DataList DL1 = DataList();
+MovgAvgFilter MAF1 = MovgAvgFilter(30);
 
 /* Testcase stimuli */
 float Sigma[NUM_TESTCASE_SAMPLES];
@@ -127,20 +112,20 @@ void setup()
     //IIR1.setCoeff(10, 100);
 
     /* TC024 Battery Monitor */
-    BM1.setVBattFilt(Ts, 1);
-    BM1.calVBattAdc(539.0, 3.25, 622.0, 3.97);
-    BM1.init();
+    // BM1.setVBattFilt(Ts, 1);
+    // BM1.calVBattAdc(539.0, 3.25, 622.0, 3.97);
+    // BM1.init();
 
     /* TC026 DataList */
-    char name[] = "Item1";
-    DL1.addItemHead(name, 666);
-    DL1.addItemHead(name, 667);
-    Serial.println(DL1.getNumItems());
-    DL1.printListConsole();
-    Serial.println(DL1.getItemName(1));
-    Serial.println(DL1.getItemData(1));
+    // char name[] = "Item1";
+    // DL1.addItemHead(name, 666);
+    // DL1.addItemHead(name, 667);
+    // Serial.println(DL1.getNumItems());
+    // DL1.printListConsole();
+    // Serial.println(DL1.getItemName(1));
+    // Serial.println(DL1.getItemData(1));
 
-    Serial.println(DL1.getItemData(2));
+    // Serial.println(DL1.getItemData(2));
 }
 
 void loop()
@@ -354,19 +339,26 @@ void loop()
         // x1 = Saw[i];
         // y1 = PL::checkInterval(x1, 0.2, 0.8);
 
+        /* TC026 Pseudo random sequence */
+        // y1 = PL::genPrbs7(3);
+
+        /* TC027 Moving average filter */
+        x1 = Square[i];
+        y1 = MAF1.calculate(x1);
+
         /*-----------------------------------------------------------------------------------*/
         /* Plot Signals */
-        // Serial.print(x1, 4);
-        // Serial.print(", ");
+        Serial.print(x1, 4);
+        Serial.print(", ");
         // Serial.print(x2, 4);
         // Serial.print(", ");
-        // Serial.print(y1, 4);
-        // Serial.print(", ");
+        Serial.print(y1, 4);
+        Serial.print(", ");
         // Serial.print(y2, 4);
         // Serial.print(", ");
         // Serial.print(y3, 4);
         // Serial.print(", ");
-        // Serial.println();
+        Serial.println();
 
         delay(Ts*1000);
     }

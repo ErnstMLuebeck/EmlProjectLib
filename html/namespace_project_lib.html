@@ -127,6 +127,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a05a00c2653259cab750d2796870464a9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">toggleBit16</a> (uint16_t BitWord, uint16_t PosnBit)</td></tr>
 <tr class="memdesc:a05a00c2653259cab750d2796870464a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the N-th bit of a uint16_t status word (in case 0 -&gt; 1 and 1 -&gt; 0).  <a href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">More...</a><br /></td></tr>
 <tr class="separator:a05a00c2653259cab750d2796870464a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b9cd472df20801afcfc3d0d9b5447c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ae3b9cd472df20801afcfc3d0d9b5447c">genPrbs7</a> (uint8_t seed)</td></tr>
+<tr class="separator:ae3b9cd472df20801afcfc3d0d9b5447c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5f3b556189dc85ad958a1010e9f093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">MatrixMultiply</a> (float *A, float *B, int m, int p, int n, float *C)</td></tr>
 <tr class="separator:a3d5f3b556189dc85ad958a1010e9f093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7341e3c81322f065cca086a9e2d44ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">MatrixPrint</a> (float *A, int m, int n)</td></tr>
@@ -257,7 +259,7 @@ Functions</h2></td></tr>
 <dd>
 Ibeta [A], current in transformed coordinates: beta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00433">433</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00453">453</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -318,7 +320,7 @@ Vb [V], voltage at phase B </dd>
 <dd>
 Vc [V], voltage at phase C </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00490">490</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00510">510</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -351,6 +353,36 @@ Vc [V], voltage at phase C </dd></dl>
 <p>Sets the N-th bit of a uint16_t status word to 0. </p>
 
 <p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00140">140</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae3b9cd472df20801afcfc3d0d9b5447c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b9cd472df20801afcfc3d0d9b5447c">&#9670;&nbsp;</a></span>genPrbs7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ProjectLib::genPrbs7 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>seed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pseudo-random binary sequence generator</p>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Pseudorandom_binary_sequence">https://en.wikipedia.org/wiki/Pseudorandom_binary_sequence</a></p>
+<p>Note that there is a static variable which holds the old sequence value. Therefore the function can only have one instance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seed</td><td>starting value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>next pseudo-random number in the sequence </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00190">190</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -557,7 +589,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00242">242</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00262">262</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +641,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00301">301</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00321">321</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +679,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00341">341</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00361">361</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -713,7 +745,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00189">189</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00209">209</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +790,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00214">214</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00234">234</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -817,7 +849,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00286">286</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00306">306</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -876,7 +908,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00264">264</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00284">284</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -928,7 +960,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00319">319</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00339">339</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1021,7 @@ Vc [V], voltage at phase C </dd></dl>
 <dd>
 Iq [A], quadrature current (proportional to motor torque) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00454">454</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00474">474</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1082,7 @@ Iq [A], quadrature current (proportional to motor torque) </dd></dl>
 <dd>
 Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00474">474</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00494">494</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>

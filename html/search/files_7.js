@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['pidctrlr_2ecpp_345',['PidCtrlr.cpp',['../_pid_ctrlr_8cpp.html',1,'']]],
-  ['pidctrlr_2eh_346',['PidCtrlr.h',['../_pid_ctrlr_8h.html',1,'']]],
-  ['pinmonitor_2ecpp_347',['PinMonitor.cpp',['../_pin_monitor_8cpp.html',1,'']]],
-  ['pinmonitor_2eh_348',['PinMonitor.h',['../_pin_monitor_8h.html',1,'']]],
-  ['projectlib_2ecpp_349',['ProjectLib.cpp',['../_project_lib_8cpp.html',1,'']]],
-  ['projectlib_2eh_350',['ProjectLib.h',['../_project_lib_8h.html',1,'']]]
+  ['mainpage_2etxt_355',['Mainpage.txt',['../_mainpage_8txt.html',1,'']]],
+  ['movgavgfilter_2ecpp_356',['MovgAvgFilter.cpp',['../_movg_avg_filter_8cpp.html',1,'']]],
+  ['movgavgfilter_2eh_357',['MovgAvgFilter.h',['../_movg_avg_filter_8h.html',1,'']]]
 ];

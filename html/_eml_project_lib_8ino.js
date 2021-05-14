@@ -10,6 +10,7 @@ var _eml_project_lib_8ino =
     [ "HYS1", "_eml_project_lib_8ino.html#a5055472bf41a246b706640cf21c839a9", null ],
     [ "IIR1", "_eml_project_lib_8ino.html#ae87db9e0caa91316ed80b7023f7b38cf", null ],
     [ "LPF1", "_eml_project_lib_8ino.html#a0e23de53614d150b9b8ed5ff85b6b35e", null ],
+    [ "MAF1", "_eml_project_lib_8ino.html#a51bde22a7f9dcb3eb948fdd9e1d0668c", null ],
     [ "PIDC1", "_eml_project_lib_8ino.html#a4eccdc0123a996df550204b7675d77e3", null ],
     [ "Saw", "_eml_project_lib_8ino.html#ac3c6e4cae8d5913a62a2dd47dee0a5a7", null ],
     [ "Sigma", "_eml_project_lib_8ino.html#af9e86c10191f6399f46ad89f2afeb885", null ],

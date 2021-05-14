@@ -214,233 +214,244 @@ $(document).ready(function(){initNavTree('_project_lib_8cpp_source.html',''); in
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span>(BitWord);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">  189</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">MatrixMultiply</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> p, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{   <span class="comment">// MatrixMath.cpp Library for Matrix Math</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">// A = input matrix (m x p)</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">// B = input matrix (p x n)</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">// m = number of rows in A</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// p = number of columns in A = number of rows in B</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">// n = number of columns in B</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">// C = output matrix = A*B (m x n)</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">int</span> i, j, k;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            C[n * i + j] = 0;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">for</span> (k = 0; k &lt; p; k++)</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                C[n * i + j] = C[n * i + j] + A[p * i + k] * B[n * k + j];</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">  214</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">MatrixPrint</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="comment">//printf(&quot;%f &quot;, A[n * i + j]);</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            Serial.print(A[n * i + j],4);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="comment">//printf(&quot;\n&quot;);</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        Serial.println();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    Serial.println();</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">  242</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">MatrixAdd</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">// B = input matrix (m x n)</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">// m = number of rows in A = number of rows in B</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">// n = number of columns in A = number of columns in B</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">// C = output matrix = A+B (m x n)</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            C[n * i + j] = A[n * i + j] + B[n * i + j];</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">  264</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">MatrixSubtract</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// B = input matrix (m x n)</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// m = number of rows in A = number of rows in B</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">// n = number of columns in A = number of columns in B</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// C = output matrix = A-B (m x n)</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            C[n * i + j] = A[n * i + j] - B[n * i + j];</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">  286</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">MatrixScale</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span> k, <span class="keywordtype">float</span>* C)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; i++)</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            C[n * i + j] = A[n * i + j] * k;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">  301</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">MatrixCopy</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">float</span>* B)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            B[n * i + j] = A[n * i + j];</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">  319</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">MatrixTranspose</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;{</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="comment">// m = number of rows in A</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">// n = number of columns in A</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">// C = output matrix = the transpose of A (n x m)</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            C[m * j + i] = A[n * i + j];</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#ae3b9cd472df20801afcfc3d0d9b5447c">  190</a></span>&#160;uint8_t <a class="code" href="namespace_project_lib.html#ae3b9cd472df20801afcfc3d0d9b5447c">genPrbs7</a>(uint8_t seed) </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">static</span> uint8_t y_kn1 = seed;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">int</span> newbit = (((y_kn1 &gt;&gt; 6) ^ (y_kn1 &gt;&gt; 5)) &amp; 1);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    y_kn1 = ((y_kn1 &lt;&lt; 1) | newbit) &amp; 0x7f;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span>(y_kn1);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">  209</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">MatrixMultiply</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> p, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{   <span class="comment">// MatrixMath.cpp Library for Matrix Math</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">// A = input matrix (m x p)</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">// B = input matrix (p x n)</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">// m = number of rows in A</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">// p = number of columns in A = number of rows in B</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">// n = number of columns in B</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="comment">// C = output matrix = A*B (m x n)</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">int</span> i, j, k;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            C[n * i + j] = 0;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">for</span> (k = 0; k &lt; p; k++)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                C[n * i + j] = C[n * i + j] + A[p * i + k] * B[n * k + j];</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">  234</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">MatrixPrint</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="comment">//printf(&quot;%f &quot;, A[n * i + j]);</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            Serial.print(A[n * i + j],4);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="comment">//printf(&quot;\n&quot;);</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        Serial.println();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    Serial.println();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">  262</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">MatrixAdd</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// B = input matrix (m x n)</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">// m = number of rows in A = number of rows in B</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// n = number of columns in A = number of columns in B</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// C = output matrix = A+B (m x n)</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            C[n * i + j] = A[n * i + j] + B[n * i + j];</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">  284</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">MatrixSubtract</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">float</span>* B, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">// B = input matrix (m x n)</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="comment">// m = number of rows in A = number of rows in B</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">// n = number of columns in A = number of columns in B</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">// C = output matrix = A-B (m x n)</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            C[n * i + j] = A[n * i + j] - B[n * i + j];</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">  306</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">MatrixScale</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span> k, <span class="keywordtype">float</span>* C)</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            C[n * i + j] = A[n * i + j] * k;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">  321</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">MatrixCopy</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> m, <span class="keywordtype">float</span>* B)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            B[n * i + j] = A[n * i + j];</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;}</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">  341</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">MatrixInvert</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;{</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">// A = input matrix AND result matrix</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="comment">// n = number of rows = number of columns in A (n x n)</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">int</span> pivrow = 0;        <span class="comment">// keeps track of current pivot row</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">int</span> k, i, j;        <span class="comment">// k: overall index along diagonal; i: row index; j: col index</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">int</span> pivrows[n]; <span class="comment">// keeps track of rows swaps to undo at end</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">float</span> tmp;        <span class="comment">// used for finding max value and making column swaps</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; n; k++)</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="comment">// find pivot row, the row with biggest entry in current column</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        tmp = 0;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">for</span> (i = k; i &lt; n; i++)</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">if</span> (abs(A[i * n + k]) &gt;= tmp)    <span class="comment">// &#39;Avoid using other functions inside abs()?&#39;</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                tmp = abs(A[i * n + k]);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                pivrow = i;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        }</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        </div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="comment">// check for singular matrix</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">if</span> (A[pivrow * n + k] == 0.0f)</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            Serial.println(<span class="stringliteral">&quot;Inversion failed due to singular matrix&quot;</span>);</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        </div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="comment">// Execute pivot (row swap) if needed</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">if</span> (pivrow != k)</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        {</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <span class="comment">// swap row k with pivrow</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            {</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                tmp = A[k * n + j];</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                A[k * n + j] = A[pivrow * n + j];</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                A[pivrow * n + j] = tmp;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        pivrows[k] = pivrow;    <span class="comment">// record row swap (even if no swap happened)</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">  339</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">MatrixTranspose</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keywordtype">float</span>* C)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="comment">// A = input matrix (m x n)</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">// m = number of rows in A</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">// n = number of columns in A</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="comment">// C = output matrix = the transpose of A (n x m)</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            C[m * j + i] = A[n * i + j];</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">  361</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">MatrixInvert</a>(<span class="keywordtype">float</span>* A, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;{</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="comment">// A = input matrix AND result matrix</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="comment">// n = number of rows = number of columns in A (n x n)</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">int</span> pivrow = 0;        <span class="comment">// keeps track of current pivot row</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">int</span> k, i, j;        <span class="comment">// k: overall index along diagonal; i: row index; j: col index</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">int</span> pivrows[n]; <span class="comment">// keeps track of rows swaps to undo at end</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">float</span> tmp;        <span class="comment">// used for finding max value and making column swaps</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; n; k++)</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="comment">// find pivot row, the row with biggest entry in current column</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        tmp = 0;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">for</span> (i = k; i &lt; n; i++)</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordflow">if</span> (abs(A[i * n + k]) &gt;= tmp)    <span class="comment">// &#39;Avoid using other functions inside abs()?&#39;</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                tmp = abs(A[i * n + k]);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                pivrow = i;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        }</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        tmp = 1.0f / A[k * n + k];    <span class="comment">// invert pivot element</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        A[k * n + k] = 1.0f;        <span class="comment">// This element of input matrix becomes result matrix</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        </div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="comment">// Perform row reduction (divide every element by pivot)</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            A[k * n + j] = A[k * n + j] * tmp;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="comment">// Now eliminate all other entries in this column</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        {</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordflow">if</span> (i != k)</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                tmp = A[i * n + k];</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                A[i * n + k] = 0.0f; <span class="comment">// The other place where in matrix becomes result mat</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                    A[i * n + j] = A[i * n + j] - A[k * n + j] * tmp;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                }</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            }</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        }</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    </div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="comment">// Done, now need to undo pivot row swaps by doing column swaps in reverse order</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordflow">for</span> (k = n - 1; k &gt;= 0; k--)</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    {</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">if</span> (pivrows[k] != k)</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        {</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                tmp = A[i * n + k];</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                A[i * n + k] = A[i * n + pivrows[k]];</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                A[i * n + pivrows[k]] = tmp;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            }</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        }</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    }</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;}</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">  433</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">ClarkeTransform</a>(<span class="keywordtype">float</span> Ia, <span class="keywordtype">float</span> Ib, <span class="keywordtype">float</span> Ic, <span class="keywordtype">float</span> *Ialpha, <span class="keywordtype">float</span> *Ibeta)</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;{   </div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="comment">/* Phase A = Alpha */</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="comment">/* sqrt(3) = 1.7320508076 */</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="comment">/* 1/sqrt(3) = 0.5773502692 */</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    *Ialpha = Ia;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    *Ibeta = 0.5773502692 * Ia + 2*0.5773502692 * Ib;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
-<div class="line"><a name="l00454"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">  454</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">ParkTransform</a>(<span class="keywordtype">float</span> Ialpha, <span class="keywordtype">float</span> Ibeta, <span class="keywordtype">float</span> Theta, <span class="keywordtype">float</span> *Id, <span class="keywordtype">float</span> *Iq)</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;{   <span class="comment">/* Transform from a stationary coordinate system, to a rotating </span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment">       coordinate system, linked to rotation angle Theta */</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    *Id = Ialpha * cos(Theta) + Ibeta * sin(Theta);</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    *Iq = -Ialpha * sin(Theta) + Ibeta * cos(Theta);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="comment">// check for singular matrix</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">if</span> (A[pivrow * n + k] == 0.0f)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        {</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            Serial.println(<span class="stringliteral">&quot;Inversion failed due to singular matrix&quot;</span>);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="comment">// Execute pivot (row swap) if needed</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span> (pivrow != k)</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="comment">// swap row k with pivrow</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                tmp = A[k * n + j];</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                A[k * n + j] = A[pivrow * n + j];</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                A[pivrow * n + j] = tmp;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            }</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        pivrows[k] = pivrow;    <span class="comment">// record row swap (even if no swap happened)</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        tmp = 1.0f / A[k * n + k];    <span class="comment">// invert pivot element</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        A[k * n + k] = 1.0f;        <span class="comment">// This element of input matrix becomes result matrix</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="comment">// Perform row reduction (divide every element by pivot)</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            A[k * n + j] = A[k * n + j] * tmp;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="comment">// Now eliminate all other entries in this column</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keywordflow">if</span> (i != k)</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                tmp = A[i * n + k];</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                A[i * n + k] = 0.0f; <span class="comment">// The other place where in matrix becomes result mat</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                    A[i * n + j] = A[i * n + j] - A[k * n + j] * tmp;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="comment">// Done, now need to undo pivot row swaps by doing column swaps in reverse order</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">for</span> (k = n - 1; k &gt;= 0; k--)</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    {</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">if</span> (pivrows[k] != k)</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            {</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                tmp = A[i * n + k];</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                A[i * n + k] = A[i * n + pivrows[k]];</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                A[i * n + pivrows[k]] = tmp;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">  453</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">ClarkeTransform</a>(<span class="keywordtype">float</span> Ia, <span class="keywordtype">float</span> Ib, <span class="keywordtype">float</span> Ic, <span class="keywordtype">float</span> *Ialpha, <span class="keywordtype">float</span> *Ibeta)</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;{   </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="comment">/* Phase A = Alpha */</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="comment">/* sqrt(3) = 1.7320508076 */</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="comment">/* 1/sqrt(3) = 0.5773502692 */</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    *Ialpha = Ia;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    *Ibeta = 0.5773502692 * Ia + 2*0.5773502692 * Ib;</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;}</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
-<div class="line"><a name="l00474"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">  474</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">ParkTransformInverse</a>(<span class="keywordtype">float</span> Vd, <span class="keywordtype">float</span> Vq, <span class="keywordtype">float</span> Theta, <span class="keywordtype">float</span> *Valpha, <span class="keywordtype">float</span> *Vbeta)</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;{</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    *Valpha = Vd * cos(Theta) - Vq * sin(Theta);</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    *Vbeta = Vd * sin(Theta) + Vq * cos(Theta);</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;}</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
-<div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">  490</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">ClarkeTransformInverse</a>(<span class="keywordtype">float</span> Valpha, <span class="keywordtype">float</span> Vbeta, <span class="keywordtype">float</span> *Va, <span class="keywordtype">float</span> *Vb, <span class="keywordtype">float</span> *Vc)</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;{</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="comment">/* sqrt(3) = 1.7320508076 */</span></div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    *Va = Valpha;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    *Vb = (-Valpha + 1.73205 * Vbeta)/2;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    *Vc = (-Valpha - 1.73205 * Vbeta)/2;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;}</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;} <span class="comment">/* namespace ProjectLib */</span></div>
+<div class="line"><a name="l00474"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">  474</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">ParkTransform</a>(<span class="keywordtype">float</span> Ialpha, <span class="keywordtype">float</span> Ibeta, <span class="keywordtype">float</span> Theta, <span class="keywordtype">float</span> *Id, <span class="keywordtype">float</span> *Iq)</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;{   <span class="comment">/* Transform from a stationary coordinate system, to a rotating </span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment">       coordinate system, linked to rotation angle Theta */</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    *Id = Ialpha * cos(Theta) + Ibeta * sin(Theta);</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    *Iq = -Ialpha * sin(Theta) + Ibeta * cos(Theta);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
+<div class="line"><a name="l00494"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">  494</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">ParkTransformInverse</a>(<span class="keywordtype">float</span> Vd, <span class="keywordtype">float</span> Vq, <span class="keywordtype">float</span> Theta, <span class="keywordtype">float</span> *Valpha, <span class="keywordtype">float</span> *Vbeta)</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;{</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    *Valpha = Vd * cos(Theta) - Vq * sin(Theta);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    *Vbeta = Vd * sin(Theta) + Vq * cos(Theta);</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;}</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno"><a class="line" href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">  510</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">ClarkeTransformInverse</a>(<span class="keywordtype">float</span> Valpha, <span class="keywordtype">float</span> Vbeta, <span class="keywordtype">float</span> *Va, <span class="keywordtype">float</span> *Vb, <span class="keywordtype">float</span> *Vc)</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;{</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="comment">/* sqrt(3) = 1.7320508076 */</span></div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    *Va = Valpha;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    *Vb = (-Valpha + 1.73205 * Vbeta)/2;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    *Vc = (-Valpha - 1.73205 * Vbeta)/2;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;}</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; </div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;} <span class="comment">/* namespace ProjectLib */</span></div>
 <div class="ttc" id="a_project_lib_8h_html"><div class="ttname"><a href="_project_lib_8h.html">ProjectLib.h</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html"><div class="ttname"><a href="namespace_project_lib.html">ProjectLib</a></div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00003">ProjectLib.cpp:3</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_a05a00c2653259cab750d2796870464a9"><div class="ttname"><a href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">ProjectLib::toggleBit16</a></div><div class="ttdeci">uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdoc">Toggles the N-th bit of a uint16_t status word (in case 0 -&gt; 1 and 1 -&gt; 0).</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00166">ProjectLib.cpp:166</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_a0a7035117925528bdd96e32ac48222e0"><div class="ttname"><a href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">ProjectLib::MatrixAdd</a></div><div class="ttdeci">void MatrixAdd(float *A, float *B, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00242">ProjectLib.cpp:242</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_a1300416169292f42f2292adb06fb268a"><div class="ttname"><a href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">ProjectLib::MatrixSubtract</a></div><div class="ttdeci">void MatrixSubtract(float *A, float *B, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00264">ProjectLib.cpp:264</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a0a7035117925528bdd96e32ac48222e0"><div class="ttname"><a href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">ProjectLib::MatrixAdd</a></div><div class="ttdeci">void MatrixAdd(float *A, float *B, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00262">ProjectLib.cpp:262</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a1300416169292f42f2292adb06fb268a"><div class="ttname"><a href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">ProjectLib::MatrixSubtract</a></div><div class="ttdeci">void MatrixSubtract(float *A, float *B, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00284">ProjectLib.cpp:284</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_a3031cfd8611234ad052ea77b733bf1c1"><div class="ttname"><a href="namespace_project_lib.html#a3031cfd8611234ad052ea77b733bf1c1">ProjectLib::LookupTable</a></div><div class="ttdeci">float LookupTable(float axis[], float data[], uint8_t size, float input)</div><div class="ttdoc">2D look-up table (1D axis and 1D data) which uses linear interpolation between breakpoints.</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00016">ProjectLib.cpp:16</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_a3d5f3b556189dc85ad958a1010e9f093"><div class="ttname"><a href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">ProjectLib::MatrixMultiply</a></div><div class="ttdeci">void MatrixMultiply(float *A, float *B, int m, int p, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00189">ProjectLib.cpp:189</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_a404bfe8812fa0468dc74e1f137a55d68"><div class="ttname"><a href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">ProjectLib::ClarkeTransformInverse</a></div><div class="ttdeci">void ClarkeTransformInverse(float Valpha, float Vbeta, float *Va, float *Vb, float *Vc)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00490">ProjectLib.cpp:490</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_a51f1f895ff3722e042707703a89beaf1"><div class="ttname"><a href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">ProjectLib::MatrixTranspose</a></div><div class="ttdeci">void MatrixTranspose(float *A, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00319">ProjectLib.cpp:319</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_a90a2fee7aff56e006e5f20eb732d5acb"><div class="ttname"><a href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">ProjectLib::ParkTransform</a></div><div class="ttdeci">void ParkTransform(float Ialpha, float Ibeta, float Theta, float *Id, float *Iq)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00454">ProjectLib.cpp:454</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a3d5f3b556189dc85ad958a1010e9f093"><div class="ttname"><a href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">ProjectLib::MatrixMultiply</a></div><div class="ttdeci">void MatrixMultiply(float *A, float *B, int m, int p, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00209">ProjectLib.cpp:209</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a404bfe8812fa0468dc74e1f137a55d68"><div class="ttname"><a href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">ProjectLib::ClarkeTransformInverse</a></div><div class="ttdeci">void ClarkeTransformInverse(float Valpha, float Vbeta, float *Va, float *Vb, float *Vc)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00510">ProjectLib.cpp:510</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a51f1f895ff3722e042707703a89beaf1"><div class="ttname"><a href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">ProjectLib::MatrixTranspose</a></div><div class="ttdeci">void MatrixTranspose(float *A, int m, int n, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00339">ProjectLib.cpp:339</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a90a2fee7aff56e006e5f20eb732d5acb"><div class="ttname"><a href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">ProjectLib::ParkTransform</a></div><div class="ttdeci">void ParkTransform(float Ialpha, float Ibeta, float Theta, float *Id, float *Iq)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00474">ProjectLib.cpp:474</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_a93c50891e9122c26e6b23ffeedfec17e"><div class="ttname"><a href="namespace_project_lib.html#a93c50891e9122c26e6b23ffeedfec17e">ProjectLib::mapfloat</a></div><div class="ttdeci">float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)</div><div class="ttdoc">Maps an input signal from its original range to a new range.</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00090">ProjectLib.cpp:90</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_a9e530260812c5f9d102844c8a71df6e1"><div class="ttname"><a href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">ProjectLib::ParkTransformInverse</a></div><div class="ttdeci">void ParkTransformInverse(float Vd, float Vq, float Theta, float *Valpha, float *Vbeta)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00474">ProjectLib.cpp:474</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_a9e530260812c5f9d102844c8a71df6e1"><div class="ttname"><a href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">ProjectLib::ParkTransformInverse</a></div><div class="ttdeci">void ParkTransformInverse(float Vd, float Vq, float Theta, float *Valpha, float *Vbeta)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00494">ProjectLib.cpp:494</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_aa2a3d03adaed0e69ae752316ec6b2d23"><div class="ttname"><a href="namespace_project_lib.html#aa2a3d03adaed0e69ae752316ec6b2d23">ProjectLib::clearBit16</a></div><div class="ttdeci">uint16_t clearBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdoc">Sets the N-th bit of a uint16_t status word to 0.</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00140">ProjectLib.cpp:140</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_aa9c52ceab3cae778cd494433c1d665e9"><div class="ttname"><a href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">ProjectLib::MatrixCopy</a></div><div class="ttdeci">void MatrixCopy(float *A, int n, int m, float *B)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00301">ProjectLib.cpp:301</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_aa9c52ceab3cae778cd494433c1d665e9"><div class="ttname"><a href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">ProjectLib::MatrixCopy</a></div><div class="ttdeci">void MatrixCopy(float *A, int n, int m, float *B)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00321">ProjectLib.cpp:321</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_ab771b14d351a9aec4c59964bf84bf207"><div class="ttname"><a href="namespace_project_lib.html#ab771b14d351a9aec4c59964bf84bf207">ProjectLib::putBit16</a></div><div class="ttdeci">uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew)</div><div class="ttdoc">Sets the N-th bit of a uint16_t status word to a new value (0 or 1).</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00149">ProjectLib.cpp:149</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_ab9034ece3e96a976d51e9addeaef6e7a"><div class="ttname"><a href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">ProjectLib::MatrixScale</a></div><div class="ttdeci">void MatrixScale(float *A, int m, int n, float k, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00286">ProjectLib.cpp:286</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_acabdc9a082b0a8def81ceb00ab67e3e0"><div class="ttname"><a href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">ProjectLib::MatrixInvert</a></div><div class="ttdeci">int MatrixInvert(float *A, int n)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00341">ProjectLib.cpp:341</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_ab9034ece3e96a976d51e9addeaef6e7a"><div class="ttname"><a href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">ProjectLib::MatrixScale</a></div><div class="ttdeci">void MatrixScale(float *A, int m, int n, float k, float *C)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00306">ProjectLib.cpp:306</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_acabdc9a082b0a8def81ceb00ab67e3e0"><div class="ttname"><a href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">ProjectLib::MatrixInvert</a></div><div class="ttdeci">int MatrixInvert(float *A, int n)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00361">ProjectLib.cpp:361</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_ad053391ef987e1193ca74d5c4b4070aa"><div class="ttname"><a href="namespace_project_lib.html#ad053391ef987e1193ca74d5c4b4070aa">ProjectLib::getBit16</a></div><div class="ttdeci">boolean getBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdoc">Returns the N-th bit of a uint16_t status word.</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00116">ProjectLib.cpp:116</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_ad7341e3c81322f065cca086a9e2d44ac"><div class="ttname"><a href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">ProjectLib::MatrixPrint</a></div><div class="ttdeci">void MatrixPrint(float *A, int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00214">ProjectLib.cpp:214</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_ad7341e3c81322f065cca086a9e2d44ac"><div class="ttname"><a href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">ProjectLib::MatrixPrint</a></div><div class="ttdeci">void MatrixPrint(float *A, int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00234">ProjectLib.cpp:234</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_ae3b9cd472df20801afcfc3d0d9b5447c"><div class="ttname"><a href="namespace_project_lib.html#ae3b9cd472df20801afcfc3d0d9b5447c">ProjectLib::genPrbs7</a></div><div class="ttdeci">uint8_t genPrbs7(uint8_t seed)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00190">ProjectLib.cpp:190</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_aeaa1036eac482abf39615abdcdf7a8cf"><div class="ttname"><a href="namespace_project_lib.html#aeaa1036eac482abf39615abdcdf7a8cf">ProjectLib::setBit16</a></div><div class="ttdeci">uint16_t setBit16(uint16_t BitWord, uint16_t PosnBit)</div><div class="ttdoc">Sets the N-th bit of a uint16_t status word to 1.</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00131">ProjectLib.cpp:131</a></div></div>
-<div class="ttc" id="anamespace_project_lib_html_aed8cf5ecf7b1ba39e2c765ea6e126390"><div class="ttname"><a href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">ProjectLib::ClarkeTransform</a></div><div class="ttdeci">void ClarkeTransform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00433">ProjectLib.cpp:433</a></div></div>
+<div class="ttc" id="anamespace_project_lib_html_aed8cf5ecf7b1ba39e2c765ea6e126390"><div class="ttname"><a href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">ProjectLib::ClarkeTransform</a></div><div class="ttdeci">void ClarkeTransform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00453">ProjectLib.cpp:453</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_af1ab7db6e51ae8b47975e78cc184d7d4"><div class="ttname"><a href="namespace_project_lib.html#af1ab7db6e51ae8b47975e78cc184d7d4">ProjectLib::checkInterval</a></div><div class="ttdeci">boolean checkInterval(float in, float LimLwr, float LimUpr)</div><div class="ttdoc">Checks input against interval and returns 1 if it is inside the range.</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00106">ProjectLib.cpp:106</a></div></div>
 <div class="ttc" id="anamespace_project_lib_html_af85cd20dbe0d80e643869595663a107b"><div class="ttname"><a href="namespace_project_lib.html#af85cd20dbe0d80e643869595663a107b">ProjectLib::saturate</a></div><div class="ttdeci">float saturate(float in, float LimLwr, float LimUpr)</div><div class="ttdoc">Limits input to a defined range (saturation).</div><div class="ttdef"><b>Definition:</b> <a href="_project_lib_8cpp_source.html#l00070">ProjectLib.cpp:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
