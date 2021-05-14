@@ -24,6 +24,7 @@ uint16_t setBit16(uint16_t BitWord, uint16_t PosnBit);
 uint16_t clearBit16(uint16_t BitWord, uint16_t PosnBit);
 uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit);
 uint16_t putBit16(uint16_t BitWord, uint16_t PosnBit, boolean BitNew);
+uint8_t genPrbs7(uint8_t seed);
 
 /* Matrix operations */
 void MatrixMultiply(float* A, float* B, int m, int p, int n, float* C);

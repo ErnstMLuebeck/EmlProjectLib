@@ -177,6 +177,26 @@ uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)
 }
 
 /** 
+ * Pseudo-random binary sequence generator
+ * 
+ * Source: https://en.wikipedia.org/wiki/Pseudorandom_binary_sequence
+ * 
+ * Note that there is a static variable which holds the old sequence value.
+ * Therefore the function can only have one instance.
+ * 
+ * @param seed starting value
+ * @return next pseudo-random number in the sequence
+ */
+uint8_t genPrbs7(uint8_t seed) 
+{
+    static uint8_t y_kn1 = seed;
+    int newbit = (((y_kn1 >> 6) ^ (y_kn1 >> 5)) & 1);
+    y_kn1 = ((y_kn1 << 1) | newbit) & 0x7f;
+
+    return(y_kn1);
+}
+
+/** 
  * Multiply two matrices with matching dimensions
  * 
  * @param A pointer to first matrix
@@ -494,5 +514,6 @@ void ClarkeTransformInverse(float Valpha, float Vbeta, float *Va, float *Vb, flo
     *Vb = (-Valpha + 1.73205 * Vbeta)/2;
     *Vc = (-Valpha - 1.73205 * Vbeta)/2;
 }
+
 
 } /* namespace ProjectLib */
