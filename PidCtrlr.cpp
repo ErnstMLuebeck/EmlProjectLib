@@ -98,9 +98,9 @@ void PidCtrlr::setIpart(float _IpartInit)
  * If not, u_true can simply be set to u_kn1, the last controller output.
  * If feed-foorward is not used, simply set it to 0.
  * 
- * \f$ \text{integral}[k] = \text{integral[k-1]} + (e[k] \cdot Ts) + K_{AW} \cdot (u_\text{true} - u[k-1]) \f$
+ * \f$ integral[k] = integral[k-1] + (e[k] \cdot Ts) + K_{AW} \cdot (u_{true} - u[k-1]) \f$
  * 
- * \f$ u[k] = e[k] \cdot K_P + \text{integral}[k] \cdot K_I \f$
+ * \f$ u[k] = e[k] \cdot K_P + integral[k] \cdot K_I \f$
  * 
  * @param y_sp plant output setpoint
  * @param y actual/measured plant output
