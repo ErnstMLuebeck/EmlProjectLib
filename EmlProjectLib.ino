@@ -40,6 +40,7 @@ float Delta[NUM_TESTCASE_SAMPLES];
 float Square[NUM_TESTCASE_SAMPLES];
 float Saw[NUM_TESTCASE_SAMPLES];
 float Triangle[NUM_TESTCASE_SAMPLES];
+float Random[NUM_TESTCASE_SAMPLES];
 
 void setup()
 {
@@ -58,6 +59,7 @@ void setup()
     }
 
     boolean state = 0;
+    float temp = 0;
     for(int i=NUM_PRE_SAMPLES; i<NUM_TESTCASE_SAMPLES; i++)
     {
         Sigma[i] = 1;
@@ -79,6 +81,12 @@ void setup()
             Triangle[i] = 2*(Len-LenMod)/(float)Len - 1.0;
         }
         Saw[i] = LenMod/(float)Len;
+
+        /* Pseudo random sequence */
+        //if(SM1.detectChange(Square[i]))
+        {   temp = 2 * ( (float)PL::genPrbs7(5)/(float)127 - 0.5);
+        }
+        Random[i] = temp;
     }
 
     Delta[NUM_PRE_SAMPLES] = 1;
@@ -126,6 +134,23 @@ void setup()
     // Serial.println(DL1.getItemData(1));
 
     // Serial.println(DL1.getItemData(2));
+
+    /* TC027 Sunset and sunrise time model */
+    // Coordinates Graz Kossgasse
+    float lati = 47.0651;
+    float longi = 15.4631;
+    int month, daym, h, min;
+    month = 5;
+    day = 14;
+    PL::calcSunriseTime(lati, longi, month, day, 8.0, &h, &min);
+    Serial.print(h);
+    Serial.print(":");
+    Serial.println(min);
+
+    PL::calcSunsetTime(lati, longi, month, day, 0.0, &h, &min);
+    Serial.print(h);
+    Serial.print(":");
+    Serial.println(min);
 }
 
 void loop()
@@ -343,22 +368,29 @@ void loop()
         // y1 = PL::genPrbs7(3);
 
         /* TC027 Moving average filter */
-        x1 = Square[i];
-        y1 = MAF1.calculate(x1);
+        // x1 = Random[i];
+        // y1 = MAF1.calculate(x1);
+
+        /* TC027 Sun model */
+        // Coordinates Graz Kossgasse
+        // float lati = 47.0651;
+        // float longi = 15.4631;
+        // x1 = Saw[i]*12;
+        // PL::calcSunAngle(lati, longi, x1, 1, 12, 0, &y1, &y2);
 
         /*-----------------------------------------------------------------------------------*/
         /* Plot Signals */
-        Serial.print(x1, 4);
-        Serial.print(", ");
+        // Serial.print(x1, 4);
+        // Serial.print(", ");
         // Serial.print(x2, 4);
         // Serial.print(", ");
-        Serial.print(y1, 4);
-        Serial.print(", ");
+        // Serial.print(y1, 4);
+        // Serial.print(", ");
         // Serial.print(y2, 4);
         // Serial.print(", ");
         // Serial.print(y3, 4);
         // Serial.print(", ");
-        Serial.println();
+        // Serial.println();
 
         delay(Ts*1000);
     }
