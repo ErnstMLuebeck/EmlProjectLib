@@ -42,4 +42,10 @@ void ParkTransform(float Ialpha, float Ibeta, float Theta, float *Id, float *Iq)
 void ParkTransformInverse(float Vd, float Vq, float Theta, float *Valpha, float *Vbeta);
 void ClarkeTransformInverse(float Valpha, float Vbeta, float *Va, float *Vb, float *Vc);
 
+/* Sun model */
+int date2day(int day, int month);
+void calcSunAngle(float lati, float longi, int month, int day, int hour, int minute, float* azimut, float* elevation);
+void calcSunriseTime(float lati, float longi, int month, int day, float AgEleMin, int* rise_h, int* rise_min);
+void calcSunsetTime(float lati, float longi, int month, int day, float AgEleMin, int* set_h, int* set_min);
+
 } /* namespace ProjectLib */

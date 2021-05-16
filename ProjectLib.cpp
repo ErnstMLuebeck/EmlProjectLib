@@ -14,7 +14,10 @@ namespace ProjectLib {
  * @return Interpolated value based on the map data
  */
 float LookupTable(float axis[], float data[], uint8_t size, float input)
-{   /* Axis must be strictly monotonic increasing */
+{   
+    /** Axis must be strictly monotonic increasing, if not
+     * the first breakpoint is used.
+     */
 
     float output = 0;
     float factor = 0;
@@ -45,14 +48,17 @@ float LookupTable(float axis[], float data[], uint8_t size, float input)
                 // Serial.print(axis[i],3);
                 // Serial.println("]");
 
+                /* Calculate distance to the nearest breakpoints */
                 factor = (input-axis[i-1]) / (axis[i]-axis[i-1]);
+
+                /* Scale the data points according to the breakpoint distance */
                 output = factor * (data[i]-data[i-1]) + data[i-1];
                 return(output);
             }
         }
     }
 
-    /* should not be reached */
+    /* should never be reached */
     return(input);
 }
 
@@ -177,7 +183,7 @@ uint16_t toggleBit16(uint16_t BitWord, uint16_t PosnBit)
 }
 
 /** 
- * Pseudo-random binary sequence generator
+ * @brief Generates pseudo-random binary sequence
  * 
  * Source: https://en.wikipedia.org/wiki/Pseudorandom_binary_sequence
  * 
@@ -197,14 +203,16 @@ uint8_t genPrbs7(uint8_t seed)
 }
 
 /** 
- * Multiply two matrices with matching dimensions
+ * @brief Multiplies two matrices with matching dimensions
+ * 
+ * Operation: C = A * B
  * 
  * @param A pointer to first matrix
  * @param B pointer to second matrix
  * @param m number of rows in A
  * @param p number of cols in A = number of rows in B
  * @param n number of columns in B
- * @param C pointer to output matrix (m x n)
+ * @return C pointer to output matrix (m x n)
  */
 void MatrixMultiply(float* A, float* B, int m, int p, int n, float* C)
 {   // MatrixMath.cpp Library for Matrix Math
@@ -225,7 +233,7 @@ void MatrixMultiply(float* A, float* B, int m, int p, int n, float* C)
 }
 
 /** 
- * Print out matrix in console
+ * @brief Prints out matrix in console in a readable format
  * 
  * @param A pointer to matrix
  * @param m number of rows
@@ -251,13 +259,15 @@ void MatrixPrint(float* A, int m, int n)
 }
 
 /** 
- * Add two matrices of equal size
+ * @brief Adds two matrices of equal dimensions
+ * 
+ * Operation: C = A + B
  * 
  * @param A pointer to first matrix
  * @param B pointer to second matrix
  * @param m number of rows
  * @param n number of columns
- * @param C pointer to output matrix
+ * @return C pointer to output matrix
  */
 void MatrixAdd(float* A, float* B, int m, int n, float* C)
 {
@@ -273,13 +283,15 @@ void MatrixAdd(float* A, float* B, int m, int n, float* C)
 }
 
 /** 
- * Subtract two matrices of equal size
+ * @brief Subtracts two matrices of equal dimensions
+ * 
+ * Operation: C = A - B
  * 
  * @param A pointer to first matrix
  * @param B pointer to second matrix
  * @param m number of rows
  * @param n number of columns
- * @param C pointer to output matrix
+ * @return C pointer to output matrix
  */
 void MatrixSubtract(float* A, float* B, int m, int n, float* C)
 {
@@ -295,13 +307,16 @@ void MatrixSubtract(float* A, float* B, int m, int n, float* C)
 }
 
 /** 
- * Scale a matrix of size (m x n)
+ * @brief Scales a matrix of size (m x n)
+ * 
+ * Operation: C = A * k
+ * Every matrix entry is multiplied by the scalar k
  * 
  * @param A pointer to first matrix
  * @param m number of rows
  * @param n number of columns
  * @param k scalar
- * @param C pointer to output matrix
+ * @return C pointer to output matrix
  */
 void MatrixScale(float* A, int m, int n, float k, float* C)
 {
@@ -311,12 +326,17 @@ void MatrixScale(float* A, int m, int n, float k, float* C)
 }
 
 /** 
- * Copy a matrix of size (m x n) to a new location
+ * @brief Copies a matrix of size (n x m) to a new location
+ * 
+ * Operation: B = A
+ * 
+ * Copies all values at pointer &A (n x m values) to pointer &B
+ * Note that the memory must be allocated properly to avoid memory corruption.
  * 
  * @param A pointer to matrix to be copied
  * @param m number of rows
  * @param n number of columns
- * @param C pointer to destination matrix
+ * @return B pointer to destination matrix
  */
 void MatrixCopy(float* A, int n, int m, float* B)
 {
@@ -329,7 +349,9 @@ void MatrixCopy(float* A, int n, int m, float* B)
 }
 
 /**
- * Transpose matrix (flip along main diagonal)
+ * @brief Transposes a square matrix (flip along main diagonal)
+ * 
+ * Operation: C = A'
  * 
  * @param A pointer to input matrix (m x n)
  * @param m number of rows
@@ -348,12 +370,16 @@ void MatrixTranspose(float* A, int m, int n, float* C)
             C[m * j + i] = A[n * i + j];
 }
 
-/** Matrix Inversion Routine
+/** 
+ * @brief Inverts a square matrix (when possible!)
+ * 
+ * Operation A = A^(-1)
+ * 
  * This function inverts a matrix based on the Gauss Jordan method.
  * Specifically, it uses partial pivoting to improve numeric stability.
  * The algorithm is drawn from those presented in NUMERICAL RECIPES: The Art of Scientific Computing.
  * The function returns 1 on success, 0 on failure.
- * NOTE: The argument is ALSO the result matrix, meaning the input matrix is REPLACED
+ * Note: The argument is ALSO the result matrix, meaning the input matrix is REPLACED
  * 
  * @param A matrix input AND output of inversion
  * @param n number of rows = columns
@@ -441,8 +467,8 @@ int MatrixInvert(float* A, int n)
 }
 
 /**
- * Transform from 3-phase coordinate system (A, B, C) to an orthogonal
- * Alpha/Beta coordinate system without math.sqrt(3)
+ * @brief Transforms from 3-phase coordinate system (A, B, C) to an orthogonal
+ * alpha/beta coordinate system without math.sqrt(3)
  * 
  * @param Ia [A], current through phase A
  * @param Ib [A], current through phase B
@@ -460,10 +486,10 @@ void ClarkeTransform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)
 }
 
 /**
- * Transformation from alpha/beta frame (stationary) into I/Q frame (rotating) using
+ * @brief Transforms from alpha/beta frame (stationary) into I/Q frame (rotating) using
  * math functions (inefficient!)
  * 
- * Note: Execution time is not constant!
+ * Note: Execution time is not constant but depends on input!
  * 
  * @param Ialpha [A], current in transformed coordinates: alpha
  * @param Ibeta [A], current in transformed coordinates: beta
@@ -480,7 +506,7 @@ void ParkTransform(float Ialpha, float Ibeta, float Theta, float *Id, float *Iq)
 }
 
 /**
- * Transformation from I/Q frame (rotating) into alpha/beta frame (stationary) using
+ * @brief Transforms from I/Q frame (rotating) into alpha/beta frame (stationary) using
  * math functions (inefficient!)
  * 
  * Note: Execution time is not constant!
@@ -498,7 +524,7 @@ void ParkTransformInverse(float Vd, float Vq, float Theta, float *Valpha, float 
 }
 
 /**
- * Transform from alpha/beta, orthogonal frame into 3-phase coordinate 
+ * @brief Transforms from alpha/beta, orthogonal frame into 3-phase coordinate 
  * system (A, B, C) without math.sqrt(3)
  * 
  * @param Valpha [V], voltage in transformed coordinates: alpha
@@ -513,6 +539,124 @@ void ClarkeTransformInverse(float Valpha, float Vbeta, float *Va, float *Vb, flo
     *Va = Valpha;
     *Vb = (-Valpha + 1.73205 * Vbeta)/2;
     *Vc = (-Valpha - 1.73205 * Vbeta)/2;
+}
+
+/**
+ * @brief Converts conventional date to day within the year
+ * 
+ * @param day of the date (1..31)
+ * @param month of the date (1..12)
+ * @return day within the year (1..365)
+ */
+int date2day(int day, int month)
+{
+    int days_per_monat[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int days = 0;
+
+    for(int i=0; i<month; i++) days += days_per_monat[i];
+
+    days += day;
+
+    return(days);
+}
+
+/**
+ * @brief Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates
+ * 
+ * @param latitude
+ * @param longitude
+ * @param month
+ * @param day
+ * @param hour
+ * @param minute
+ * @return azimut (-180..+180) [deg]
+ * @return elevation (0..90) [deg]
+ */
+void calcSunAngle(float lati, float longi, int month, int day, int hour, int minute, float* azimut, float* elevation)
+{ 
+    int days = date2day(day,month);
+  
+    float pi = 3.1415926536;
+    float K = pi/180.0;   
+  
+    float deklination = -23.45*cos(K*360*(days+10)/365); 
+    float zeitgleichung = 60*(-0.171*sin(0.0337*days + 0.465) - 0.1299 * sin(0.01787*days - 0.168));
+    float stundenwinkel = 15.0*(hour + minute/60.0 - (15.0-longi)/15.0 - 12.0 + zeitgleichung/60.0);
+    float sin_hoehe = sin(K*lati)*sin(K*deklination) + cos(K*lati)*cos(K*deklination)*cos(K*stundenwinkel);
+    float y = -(sin(K*lati) * sin_hoehe - sin(K*deklination)) / (cos(K*lati) * sin( acos(sin_hoehe)));
+  
+    *azimut = acos(y)/K;             
+    *elevation = asin(sin_hoehe)/K;  
+  
+    if(hour>=12) *azimut = 360 - *azimut;
+  
+    /* calculation validated agains MATLAB. Identical results. */
+}
+
+/**
+ * @brief Calculates the sunrise time of a specific day at a specific point on earth
+ * 
+ * @param latitude, GPS coordinates
+ * @param longitude, GPS coordinates
+ * @param month [m]
+ * @param day [d]
+ * @param AgEleMin [deg], minimum elevation angle
+ * @return hour of sunrise [h]
+ * @return minute of sunrise [min]
+ */
+void calcSunriseTime(float lati, float longi, int month, int day, float AgEleMin, int* rise_h, int* rise_min)
+{
+    float azimut, elevation;
+  
+    for(int i=0; i<1440; i++)
+    {
+        int h = floor(i/60);
+        int m = i%60;
+
+        calcSunAngle(lati, longi, month, day, h, m, &azimut, &elevation);
+    
+        /* Find first time of elevation angle which is above the ground */
+        if(elevation >= AgEleMin) 
+        {   
+            *rise_h = h;
+            *rise_min = m;
+            break;
+        }
+    }
+}
+
+/**
+ * @brief Calculates the sunset time of a specific day at a specific point on earth
+ * 
+ * @param latitude, GPS coordinates
+ * @param longitude, GPS coordinates
+ * @param month [m]
+ * @param day [d]
+ * @return hour of sunset [h]
+ * @return minute of sunset [min]
+ */
+void calcSunsetTime(float lati, float longi, int month, int day, float AgEleMin, int* set_h, int* set_min)
+{
+    float azimut, elevation;
+
+    // search from noon to evening
+    for(int i=720; i<1440; i++)
+    {
+        int h = floor(i/60);
+        int m = i%60;
+
+        //Serial.print(h); Serial.print(":");Serial.println(m);
+
+        calcSunAngle(lati, longi, month, day, h, m, &azimut, &elevation);
+
+        /* Find first time of elevation angle which is below the ground */
+        if(elevation <= AgEleMin) 
+        {   //Serial.print(h); Serial.print(":");Serial.println(m);
+            *set_h = h;
+            *set_min = m;
+            break;
+        }
+    }
 }
 
 
