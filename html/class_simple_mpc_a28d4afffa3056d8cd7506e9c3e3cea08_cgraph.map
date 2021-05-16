@@ -1,5 +1,5 @@
 <map id="SimpleMpc::getXhat" name="SimpleMpc::getXhat">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,147,57"/>
-<area shape="rect" id="node2" href="$namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9" title=" " alt="" coords="195,5,351,32"/>
-<area shape="rect" id="node3" href="$namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac" title=" " alt="" coords="197,56,349,83"/>
+<area shape="rect" id="node2" href="$namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9" title="Copies a matrix of size (n x m) to a new location." alt="" coords="195,5,351,32"/>
+<area shape="rect" id="node3" href="$namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac" title="Prints out matrix in console in a readable format." alt="" coords="197,56,349,83"/>
 </map>

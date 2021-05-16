@@ -85,7 +85,7 @@ void calcSunAngle(float lati, float longi, int month, int day, int hour, int min
 }
 
 /**
- * Calculate the sunrise time of a specific day
+ * Calculates the sunrise time of a specific day
  * 
  * @param latitude
  * @param longitude
@@ -117,7 +117,7 @@ void calcSunriseTime(float lati, float longi, int month, int day, int& rise_h, i
 }
 
 /**
- * Calculate the sunset time of a specific day
+ * Calculates the sunset time of a specific day
  * 
  * @param latitude
  * @param longitude

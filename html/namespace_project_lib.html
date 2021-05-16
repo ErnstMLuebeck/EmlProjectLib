@@ -128,33 +128,318 @@ Functions</h2></td></tr>
 <tr class="memdesc:a05a00c2653259cab750d2796870464a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the N-th bit of a uint16_t status word (in case 0 -&gt; 1 and 1 -&gt; 0).  <a href="namespace_project_lib.html#a05a00c2653259cab750d2796870464a9">More...</a><br /></td></tr>
 <tr class="separator:a05a00c2653259cab750d2796870464a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3b9cd472df20801afcfc3d0d9b5447c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ae3b9cd472df20801afcfc3d0d9b5447c">genPrbs7</a> (uint8_t seed)</td></tr>
+<tr class="memdesc:ae3b9cd472df20801afcfc3d0d9b5447c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates pseudo-random binary sequence.  <a href="namespace_project_lib.html#ae3b9cd472df20801afcfc3d0d9b5447c">More...</a><br /></td></tr>
 <tr class="separator:ae3b9cd472df20801afcfc3d0d9b5447c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5f3b556189dc85ad958a1010e9f093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">MatrixMultiply</a> (float *A, float *B, int m, int p, int n, float *C)</td></tr>
+<tr class="memdesc:a3d5f3b556189dc85ad958a1010e9f093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies two matrices with matching dimensions.  <a href="namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093">More...</a><br /></td></tr>
 <tr class="separator:a3d5f3b556189dc85ad958a1010e9f093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7341e3c81322f065cca086a9e2d44ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">MatrixPrint</a> (float *A, int m, int n)</td></tr>
+<tr class="memdesc:ad7341e3c81322f065cca086a9e2d44ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints out matrix in console in a readable format.  <a href="namespace_project_lib.html#ad7341e3c81322f065cca086a9e2d44ac">More...</a><br /></td></tr>
 <tr class="separator:ad7341e3c81322f065cca086a9e2d44ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a7035117925528bdd96e32ac48222e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">MatrixAdd</a> (float *A, float *B, int m, int n, float *C)</td></tr>
+<tr class="memdesc:a0a7035117925528bdd96e32ac48222e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two matrices of equal dimensions.  <a href="namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0">More...</a><br /></td></tr>
 <tr class="separator:a0a7035117925528bdd96e32ac48222e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1300416169292f42f2292adb06fb268a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">MatrixSubtract</a> (float *A, float *B, int m, int n, float *C)</td></tr>
+<tr class="memdesc:a1300416169292f42f2292adb06fb268a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts two matrices of equal dimensions.  <a href="namespace_project_lib.html#a1300416169292f42f2292adb06fb268a">More...</a><br /></td></tr>
 <tr class="separator:a1300416169292f42f2292adb06fb268a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9034ece3e96a976d51e9addeaef6e7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">MatrixScale</a> (float *A, int m, int n, float k, float *C)</td></tr>
+<tr class="memdesc:ab9034ece3e96a976d51e9addeaef6e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales a matrix of size (m x n)  <a href="namespace_project_lib.html#ab9034ece3e96a976d51e9addeaef6e7a">More...</a><br /></td></tr>
 <tr class="separator:ab9034ece3e96a976d51e9addeaef6e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9c52ceab3cae778cd494433c1d665e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">MatrixCopy</a> (float *A, int n, int m, float *B)</td></tr>
+<tr class="memdesc:aa9c52ceab3cae778cd494433c1d665e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a matrix of size (n x m) to a new location.  <a href="namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9">More...</a><br /></td></tr>
 <tr class="separator:aa9c52ceab3cae778cd494433c1d665e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f1f895ff3722e042707703a89beaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">MatrixTranspose</a> (float *A, int m, int n, float *C)</td></tr>
+<tr class="memdesc:a51f1f895ff3722e042707703a89beaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transposes a square matrix (flip along main diagonal)  <a href="namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1">More...</a><br /></td></tr>
 <tr class="separator:a51f1f895ff3722e042707703a89beaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acabdc9a082b0a8def81ceb00ab67e3e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">MatrixInvert</a> (float *A, int n)</td></tr>
+<tr class="memdesc:acabdc9a082b0a8def81ceb00ab67e3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts a square matrix (when possible!)  <a href="namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0">More...</a><br /></td></tr>
 <tr class="separator:acabdc9a082b0a8def81ceb00ab67e3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed8cf5ecf7b1ba39e2c765ea6e126390"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">ClarkeTransform</a> (float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)</td></tr>
+<tr class="memdesc:aed8cf5ecf7b1ba39e2c765ea6e126390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms from 3-phase coordinate system (A, B, C) to an orthogonal alpha/beta coordinate system without math.sqrt(3)  <a href="namespace_project_lib.html#aed8cf5ecf7b1ba39e2c765ea6e126390">More...</a><br /></td></tr>
 <tr class="separator:aed8cf5ecf7b1ba39e2c765ea6e126390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90a2fee7aff56e006e5f20eb732d5acb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">ParkTransform</a> (float Ialpha, float Ibeta, float Theta, float *Id, float *Iq)</td></tr>
+<tr class="memdesc:a90a2fee7aff56e006e5f20eb732d5acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms from alpha/beta frame (stationary) into I/Q frame (rotating) using math functions (inefficient!)  <a href="namespace_project_lib.html#a90a2fee7aff56e006e5f20eb732d5acb">More...</a><br /></td></tr>
 <tr class="separator:a90a2fee7aff56e006e5f20eb732d5acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e530260812c5f9d102844c8a71df6e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">ParkTransformInverse</a> (float Vd, float Vq, float Theta, float *Valpha, float *Vbeta)</td></tr>
+<tr class="memdesc:a9e530260812c5f9d102844c8a71df6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms from I/Q frame (rotating) into alpha/beta frame (stationary) using math functions (inefficient!)  <a href="namespace_project_lib.html#a9e530260812c5f9d102844c8a71df6e1">More...</a><br /></td></tr>
 <tr class="separator:a9e530260812c5f9d102844c8a71df6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a404bfe8812fa0468dc74e1f137a55d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">ClarkeTransformInverse</a> (float Valpha, float Vbeta, float *Va, float *Vb, float *Vc)</td></tr>
+<tr class="memdesc:a404bfe8812fa0468dc74e1f137a55d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms from alpha/beta, orthogonal frame into 3-phase coordinate system (A, B, C) without math.sqrt(3)  <a href="namespace_project_lib.html#a404bfe8812fa0468dc74e1f137a55d68">More...</a><br /></td></tr>
 <tr class="separator:a404bfe8812fa0468dc74e1f137a55d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf7f928fa7e548fe53e2b2064e03d1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a5cf7f928fa7e548fe53e2b2064e03d1a">date2day</a> (int day, int month)</td></tr>
+<tr class="memdesc:a5cf7f928fa7e548fe53e2b2064e03d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts conventional date to day within the year.  <a href="namespace_project_lib.html#a5cf7f928fa7e548fe53e2b2064e03d1a">More...</a><br /></td></tr>
+<tr class="separator:a5cf7f928fa7e548fe53e2b2064e03d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677be22828d463749708405ee20bfd98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a677be22828d463749708405ee20bfd98">calcSunAngle</a> (float lati, float longi, int month, int day, int hour, int minute, float *azimut, float *elevation)</td></tr>
+<tr class="memdesc:a677be22828d463749708405ee20bfd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates.  <a href="namespace_project_lib.html#a677be22828d463749708405ee20bfd98">More...</a><br /></td></tr>
+<tr class="separator:a677be22828d463749708405ee20bfd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7489e77800a73db7613883b8a663e492"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a7489e77800a73db7613883b8a663e492">calcSunriseTime</a> (float lati, float longi, int month, int day, float AgEleMin, int *rise_h, int *rise_min)</td></tr>
+<tr class="memdesc:a7489e77800a73db7613883b8a663e492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sunrise time of a specific day at a specific point on earth.  <a href="namespace_project_lib.html#a7489e77800a73db7613883b8a663e492">More...</a><br /></td></tr>
+<tr class="separator:a7489e77800a73db7613883b8a663e492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c7862ce536a540f72139a0f7edbc25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_project_lib.html#a29c7862ce536a540f72139a0f7edbc25">calcSunsetTime</a> (float lati, float longi, int month, int day, float AgEleMin, int *set_h, int *set_min)</td></tr>
+<tr class="memdesc:a29c7862ce536a540f72139a0f7edbc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sunset time of a specific day at a specific point on earth.  <a href="namespace_project_lib.html#a29c7862ce536a540f72139a0f7edbc25">More...</a><br /></td></tr>
+<tr class="separator:a29c7862ce536a540f72139a0f7edbc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a677be22828d463749708405ee20bfd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677be22828d463749708405ee20bfd98">&#9670;&nbsp;</a></span>calcSunAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProjectLib::calcSunAngle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lati</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>longi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>azimut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>elevation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latitude</td><td></td></tr>
+    <tr><td class="paramname">longitude</td><td></td></tr>
+    <tr><td class="paramname">month</td><td></td></tr>
+    <tr><td class="paramname">day</td><td></td></tr>
+    <tr><td class="paramname">hour</td><td></td></tr>
+    <tr><td class="paramname">minute</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>azimut (-180..+180) [deg] </dd>
+<dd>
+elevation (0..90) [deg] </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00575">575</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_project_lib_a677be22828d463749708405ee20bfd98_cgraph.png" border="0" usemap="#anamespace_project_lib_a677be22828d463749708405ee20bfd98_cgraph" alt=""/></div>
+<map name="anamespace_project_lib_a677be22828d463749708405ee20bfd98_cgraph" id="anamespace_project_lib_a677be22828d463749708405ee20bfd98_cgraph">
+<area shape="rect" title="Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates." alt="" coords="5,5,176,32"/>
+<area shape="rect" href="namespace_project_lib.html#a5cf7f928fa7e548fe53e2b2064e03d1a" title="Converts conventional date to day within the year." alt="" coords="224,5,368,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7489e77800a73db7613883b8a663e492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7489e77800a73db7613883b8a663e492">&#9670;&nbsp;</a></span>calcSunriseTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProjectLib::calcSunriseTime </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lati</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>longi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>AgEleMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rise_h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rise_min</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the sunrise time of a specific day at a specific point on earth. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latitude,GPS</td><td>coordinates </td></tr>
+    <tr><td class="paramname">longitude,GPS</td><td>coordinates </td></tr>
+    <tr><td class="paramname">month</td><td>[m] </td></tr>
+    <tr><td class="paramname">day</td><td>[d] </td></tr>
+    <tr><td class="paramname">AgEleMin</td><td>[deg], minimum elevation angle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>hour of sunrise [h] </dd>
+<dd>
+minute of sunrise [min] </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00607">607</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_project_lib_a7489e77800a73db7613883b8a663e492_cgraph.png" border="0" usemap="#anamespace_project_lib_a7489e77800a73db7613883b8a663e492_cgraph" alt=""/></div>
+<map name="anamespace_project_lib_a7489e77800a73db7613883b8a663e492_cgraph" id="anamespace_project_lib_a7489e77800a73db7613883b8a663e492_cgraph">
+<area shape="rect" title="Calculates the sunrise time of a specific day at a specific point on earth." alt="" coords="5,5,192,32"/>
+<area shape="rect" href="namespace_project_lib.html#a677be22828d463749708405ee20bfd98" title="Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates." alt="" coords="240,5,411,32"/>
+<area shape="rect" href="namespace_project_lib.html#a5cf7f928fa7e548fe53e2b2064e03d1a" title="Converts conventional date to day within the year." alt="" coords="459,5,603,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29c7862ce536a540f72139a0f7edbc25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c7862ce536a540f72139a0f7edbc25">&#9670;&nbsp;</a></span>calcSunsetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProjectLib::calcSunsetTime </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lati</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>longi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>AgEleMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>set_h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>set_min</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the sunset time of a specific day at a specific point on earth. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latitude,GPS</td><td>coordinates </td></tr>
+    <tr><td class="paramname">longitude,GPS</td><td>coordinates </td></tr>
+    <tr><td class="paramname">month</td><td>[m] </td></tr>
+    <tr><td class="paramname">day</td><td>[d] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>hour of sunset [h] </dd>
+<dd>
+minute of sunset [min] </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00638">638</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_project_lib_a29c7862ce536a540f72139a0f7edbc25_cgraph.png" border="0" usemap="#anamespace_project_lib_a29c7862ce536a540f72139a0f7edbc25_cgraph" alt=""/></div>
+<map name="anamespace_project_lib_a29c7862ce536a540f72139a0f7edbc25_cgraph" id="anamespace_project_lib_a29c7862ce536a540f72139a0f7edbc25_cgraph">
+<area shape="rect" title="Calculates the sunset time of a specific day at a specific point on earth." alt="" coords="5,5,189,32"/>
+<area shape="rect" href="namespace_project_lib.html#a677be22828d463749708405ee20bfd98" title="Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates." alt="" coords="237,5,408,32"/>
+<area shape="rect" href="namespace_project_lib.html#a5cf7f928fa7e548fe53e2b2064e03d1a" title="Converts conventional date to day within the year." alt="" coords="456,5,600,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="af1ab7db6e51ae8b47975e78cc184d7d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1ab7db6e51ae8b47975e78cc184d7d4">&#9670;&nbsp;</a></span>checkInterval()</h2>
 
@@ -199,7 +484,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 if inside the range, 0 if outside the range </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00106">106</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00112">112</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -246,7 +531,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Transform from 3-phase coordinate system (A, B, C) to an orthogonal Alpha/Beta coordinate system without math.sqrt(3)</p>
+
+<p>Transforms from 3-phase coordinate system (A, B, C) to an orthogonal alpha/beta coordinate system without math.sqrt(3) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Ia</td><td>[A], current through phase A </td></tr>
@@ -259,7 +545,7 @@ Functions</h2></td></tr>
 <dd>
 Ibeta [A], current in transformed coordinates: beta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00453">453</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00479">479</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -306,7 +592,8 @@ Ibeta [A], current in transformed coordinates: beta </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Transform from alpha/beta, orthogonal frame into 3-phase coordinate system (A, B, C) without math.sqrt(3)</p>
+
+<p>Transforms from alpha/beta, orthogonal frame into 3-phase coordinate system (A, B, C) without math.sqrt(3) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Valpha</td><td>[V], voltage in transformed coordinates: alpha </td></tr>
@@ -320,7 +607,7 @@ Vb [V], voltage at phase B </dd>
 <dd>
 Vc [V], voltage at phase C </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00510">510</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00536">536</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -352,7 +639,47 @@ Vc [V], voltage at phase C </dd></dl>
 
 <p>Sets the N-th bit of a uint16_t status word to 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00140">140</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00146">146</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5cf7f928fa7e548fe53e2b2064e03d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf7f928fa7e548fe53e2b2064e03d1a">&#9670;&nbsp;</a></span>date2day()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProjectLib::date2day </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts conventional date to day within the year. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">day</td><td>of the date (1..31) </td></tr>
+    <tr><td class="paramname">month</td><td>of the date (1..12) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>day within the year (1..365) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00551">551</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +698,8 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pseudo-random binary sequence generator</p>
+
+<p>Generates pseudo-random binary sequence. </p>
 <p>Source: <a href="https://en.wikipedia.org/wiki/Pseudorandom_binary_sequence">https://en.wikipedia.org/wiki/Pseudorandom_binary_sequence</a></p>
 <p>Note that there is a static variable which holds the old sequence value. Therefore the function can only have one instance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -382,7 +710,7 @@ Vc [V], voltage at phase C </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>next pseudo-random number in the sequence </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00190">190</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00196">196</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -414,7 +742,7 @@ Vc [V], voltage at phase C </dd></dl>
 
 <p>Returns the N-th bit of a uint16_t status word. </p>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00116">116</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00122">122</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,6 +796,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Interpolated value based on the map data </dd></dl>
+<p>Axis must be strictly monotonic increasing, if not the first breakpoint is used.</p>
 
 <p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00016">16</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
@@ -530,7 +859,7 @@ Vc [V], voltage at phase C </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mapped output </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00090">90</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00096">96</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -577,19 +906,21 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add two matrices of equal size</p>
+
+<p>Adds two matrices of equal dimensions. </p>
+<p>Operation: C = A + B</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>pointer to first matrix </td></tr>
     <tr><td class="paramname">B</td><td>pointer to second matrix </td></tr>
     <tr><td class="paramname">m</td><td>number of rows </td></tr>
     <tr><td class="paramname">n</td><td>number of columns </td></tr>
-    <tr><td class="paramname">C</td><td>pointer to output matrix </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>C pointer to output matrix </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00262">262</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00272">272</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -630,18 +961,21 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Copy a matrix of size (m x n) to a new location</p>
+
+<p>Copies a matrix of size (n x m) to a new location. </p>
+<p>Operation: B = A</p>
+<p>Copies all values at pointer &amp;A (n x m values) to pointer &amp;B Note that the memory must be allocated properly to avoid memory corruption.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>pointer to matrix to be copied </td></tr>
     <tr><td class="paramname">m</td><td>number of rows </td></tr>
     <tr><td class="paramname">n</td><td>number of columns </td></tr>
-    <tr><td class="paramname">C</td><td>pointer to destination matrix </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>B pointer to destination matrix </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00321">321</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00341">341</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -670,7 +1004,10 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Matrix Inversion Routine This function inverts a matrix based on the Gauss Jordan method. Specifically, it uses partial pivoting to improve numeric stability. The algorithm is drawn from those presented in NUMERICAL RECIPES: The Art of Scientific Computing. The function returns 1 on success, 0 on failure. NOTE: The argument is ALSO the result matrix, meaning the input matrix is REPLACED</p>
+
+<p>Inverts a square matrix (when possible!) </p>
+<p>Operation A = A^(-1)</p>
+<p>This function inverts a matrix based on the Gauss Jordan method. Specifically, it uses partial pivoting to improve numeric stability. The algorithm is drawn from those presented in NUMERICAL RECIPES: The Art of Scientific Computing. The function returns 1 on success, 0 on failure. Note: The argument is ALSO the result matrix, meaning the input matrix is REPLACED</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>matrix input AND output of inversion </td></tr>
@@ -679,7 +1016,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00361">361</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00387">387</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -732,7 +1069,9 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Multiply two matrices with matching dimensions</p>
+
+<p>Multiplies two matrices with matching dimensions. </p>
+<p>Operation: C = A * B</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>pointer to first matrix </td></tr>
@@ -740,12 +1079,12 @@ Vc [V], voltage at phase C </dd></dl>
     <tr><td class="paramname">m</td><td>number of rows in A </td></tr>
     <tr><td class="paramname">p</td><td>number of cols in A = number of rows in B </td></tr>
     <tr><td class="paramname">n</td><td>number of columns in B </td></tr>
-    <tr><td class="paramname">C</td><td>pointer to output matrix (m x n) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>C pointer to output matrix (m x n) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00209">209</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00217">217</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -780,7 +1119,8 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Print out matrix in console</p>
+
+<p>Prints out matrix in console in a readable format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>pointer to matrix </td></tr>
@@ -790,7 +1130,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00234">234</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00242">242</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -837,19 +1177,21 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Scale a matrix of size (m x n)</p>
+
+<p>Scales a matrix of size (m x n) </p>
+<p>Operation: C = A * k Every matrix entry is multiplied by the scalar k</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>pointer to first matrix </td></tr>
     <tr><td class="paramname">m</td><td>number of rows </td></tr>
     <tr><td class="paramname">n</td><td>number of columns </td></tr>
     <tr><td class="paramname">k</td><td>scalar </td></tr>
-    <tr><td class="paramname">C</td><td>pointer to output matrix </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>C pointer to output matrix </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00306">306</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00321">321</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -896,19 +1238,21 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Subtract two matrices of equal size</p>
+
+<p>Subtracts two matrices of equal dimensions. </p>
+<p>Operation: C = A - B</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>pointer to first matrix </td></tr>
     <tr><td class="paramname">B</td><td>pointer to second matrix </td></tr>
     <tr><td class="paramname">m</td><td>number of rows </td></tr>
     <tr><td class="paramname">n</td><td>number of columns </td></tr>
-    <tr><td class="paramname">C</td><td>pointer to output matrix </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>C pointer to output matrix </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00284">284</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00296">296</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -949,7 +1293,9 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Transpose matrix (flip along main diagonal)</p>
+
+<p>Transposes a square matrix (flip along main diagonal) </p>
+<p>Operation: C = A'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>pointer to input matrix (m x n) </td></tr>
@@ -960,7 +1306,7 @@ Vc [V], voltage at phase C </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00339">339</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00361">361</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1007,8 +1353,9 @@ Vc [V], voltage at phase C </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Transformation from alpha/beta frame (stationary) into I/Q frame (rotating) using math functions (inefficient!)</p>
-<p>Note: Execution time is not constant!</p>
+
+<p>Transforms from alpha/beta frame (stationary) into I/Q frame (rotating) using math functions (inefficient!) </p>
+<p>Note: Execution time is not constant but depends on input!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Ialpha</td><td>[A], current in transformed coordinates: alpha </td></tr>
@@ -1021,7 +1368,7 @@ Vc [V], voltage at phase C </dd></dl>
 <dd>
 Iq [A], quadrature current (proportional to motor torque) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00474">474</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00500">500</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1068,7 +1415,8 @@ Iq [A], quadrature current (proportional to motor torque) </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Transformation from I/Q frame (rotating) into alpha/beta frame (stationary) using math functions (inefficient!)</p>
+
+<p>Transforms from I/Q frame (rotating) into alpha/beta frame (stationary) using math functions (inefficient!) </p>
 <p>Note: Execution time is not constant!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1082,7 +1430,7 @@ Iq [A], quadrature current (proportional to motor torque) </dd></dl>
 <dd>
 Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00494">494</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00520">520</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1468,7 @@ Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 
 <p>Sets the N-th bit of a uint16_t status word to a new value (0 or 1). </p>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00149">149</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00155">155</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1168,7 +1516,7 @@ Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>input if it is inside the range, saturated value if not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00070">70</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00076">76</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1200,7 +1548,7 @@ Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 
 <p>Sets the N-th bit of a uint16_t status word to 1. </p>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00131">131</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00137">137</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1232,7 +1580,7 @@ Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 
 <p>Toggles the N-th bit of a uint16_t status word (in case 0 -&gt; 1 and 1 -&gt; 0). </p>
 
-<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00166">166</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_project_lib_8cpp_source.html#l00172">172</a> of file <a class="el" href="_project_lib_8cpp_source.html">ProjectLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -1242,7 +1590,7 @@ Vbeta [V], voltage in transformed coordinates: beta </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_project_lib.html">ProjectLib</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun May 16 2021 11:27:32 for EML Project Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -1,0 +1,5 @@
+<map id="ProjectLib::calcSunsetTime" name="ProjectLib::calcSunsetTime">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,189,32"/>
+<area shape="rect" id="node2" href="$namespace_project_lib.html#a677be22828d463749708405ee20bfd98" title="Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates." alt="" coords="237,5,408,32"/>
+<area shape="rect" id="node3" href="$namespace_project_lib.html#a5cf7f928fa7e548fe53e2b2064e03d1a" title="Converts conventional date to day within the year." alt="" coords="456,5,600,32"/>
+</map>

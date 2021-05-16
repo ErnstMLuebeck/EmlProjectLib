@@ -1,10 +1,10 @@
 <map id="SimpleMpc::SimpleMpc" name="SimpleMpc::SimpleMpc">
 <area shape="rect" id="node1" title=" " alt="" coords="5,132,167,159"/>
 <area shape="rect" id="node2" href="$class_simple_mpc.html#a725cf1b8362b1237836c85ffb47d176f" title=" " alt="" coords="245,5,372,32"/>
-<area shape="rect" id="node4" href="$namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093" title=" " alt="" coords="451,56,621,83"/>
+<area shape="rect" id="node4" href="$namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093" title="Multiplies two matrices with matching dimensions." alt="" coords="451,56,621,83"/>
 <area shape="rect" id="node5" href="$class_simple_mpc.html#acd865b38b35b6941d0381713d032a91d" title=" " alt="" coords="239,56,378,83"/>
-<area shape="rect" id="node6" href="$namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0" title=" " alt="" coords="234,157,383,184"/>
-<area shape="rect" id="node7" href="$namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0" title=" " alt="" coords="229,208,388,235"/>
-<area shape="rect" id="node8" href="$namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1" title=" " alt="" coords="215,259,403,285"/>
-<area shape="rect" id="node3" href="$namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9" title=" " alt="" coords="458,5,614,32"/>
+<area shape="rect" id="node6" href="$namespace_project_lib.html#a0a7035117925528bdd96e32ac48222e0" title="Adds two matrices of equal dimensions." alt="" coords="234,157,383,184"/>
+<area shape="rect" id="node7" href="$namespace_project_lib.html#acabdc9a082b0a8def81ceb00ab67e3e0" title="Inverts a square matrix (when possible!)" alt="" coords="229,208,388,235"/>
+<area shape="rect" id="node8" href="$namespace_project_lib.html#a51f1f895ff3722e042707703a89beaf1" title="Transposes a square matrix (flip along main diagonal)" alt="" coords="215,259,403,285"/>
+<area shape="rect" id="node3" href="$namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9" title="Copies a matrix of size (n x m) to a new location." alt="" coords="458,5,614,32"/>
 </map>

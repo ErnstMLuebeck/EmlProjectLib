@@ -1,0 +1,4 @@
+<map id="ProjectLib::calcSunAngle" name="ProjectLib::calcSunAngle">
+<area shape="rect" id="node1" title="Calculates the sun angle (azimut and elevation) based on date, time and GPS coordinates." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$namespace_project_lib.html#a5cf7f928fa7e548fe53e2b2064e03d1a" title="Converts conventional date to day within the year." alt="" coords="224,5,368,32"/>
+</map>

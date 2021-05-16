@@ -1,9 +1,13 @@
 var _project_lib_8h =
 [
+    [ "calcSunAngle", "_project_lib_8h.html#a677be22828d463749708405ee20bfd98", null ],
+    [ "calcSunriseTime", "_project_lib_8h.html#a7489e77800a73db7613883b8a663e492", null ],
+    [ "calcSunsetTime", "_project_lib_8h.html#a29c7862ce536a540f72139a0f7edbc25", null ],
     [ "checkInterval", "_project_lib_8h.html#af1ab7db6e51ae8b47975e78cc184d7d4", null ],
     [ "ClarkeTransform", "_project_lib_8h.html#aed8cf5ecf7b1ba39e2c765ea6e126390", null ],
     [ "ClarkeTransformInverse", "_project_lib_8h.html#a404bfe8812fa0468dc74e1f137a55d68", null ],
     [ "clearBit16", "_project_lib_8h.html#aa2a3d03adaed0e69ae752316ec6b2d23", null ],
+    [ "date2day", "_project_lib_8h.html#a5cf7f928fa7e548fe53e2b2064e03d1a", null ],
     [ "genPrbs7", "_project_lib_8h.html#ae3b9cd472df20801afcfc3d0d9b5447c", null ],
     [ "getBit16", "_project_lib_8h.html#ad053391ef987e1193ca74d5c4b4070aa", null ],
     [ "LookupTable", "_project_lib_8h.html#a3031cfd8611234ad052ea77b733bf1c1", null ],

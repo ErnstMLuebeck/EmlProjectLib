@@ -1,8 +1,13 @@
 <map id="setup" name="setup">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,60,73"/>
-<area shape="rect" id="node2" href="$class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352" title=" " alt="" coords="108,71,291,112"/>
-<area shape="rect" id="node6" href="$class_state_space_model.html#a11ce7040397b542d06baa957c351cc42" title=" " alt="" coords="108,5,291,47"/>
-<area shape="rect" id="node3" href="$namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9" title=" " alt="" coords="348,19,504,46"/>
-<area shape="rect" id="node4" href="$namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093" title=" " alt="" coords="341,74,511,101"/>
-<area shape="rect" id="node5" href="$namespace_project_lib.html#a1300416169292f42f2292adb06fb268a" title=" " alt="" coords="339,125,513,151"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node2" href="$_sun_mdl_8h.html#aaf5766be46e7d491a594fc0a62eec283" title=" " alt="" coords="139,5,259,32"/>
+<area shape="rect" id="node5" href="$_sun_mdl_8h.html#a2e25bde21f951298aaba538522d298b9" title=" " alt="" coords="141,56,258,83"/>
+<area shape="rect" id="node6" href="$namespace_project_lib.html#ae3b9cd472df20801afcfc3d0d9b5447c" title="Generates pseudo&#45;random binary sequence." alt="" coords="127,107,272,133"/>
+<area shape="rect" id="node7" href="$class_state_space_model.html#ae7ec94e8261469ff66e6ed36bb6ce352" title=" " alt="" coords="108,223,291,265"/>
+<area shape="rect" id="node11" href="$class_state_space_model.html#a11ce7040397b542d06baa957c351cc42" title=" " alt="" coords="108,158,291,199"/>
+<area shape="rect" id="node3" href="$_sun_mdl_8h.html#a48cbe53ef0d8256a6322b9d6fee87383" title=" " alt="" coords="374,31,478,57"/>
+<area shape="rect" id="node4" href="$_sun_mdl_8h.html#a05680959cdc5331e70277d8fe23cecd9" title=" " alt="" coords="561,31,639,57"/>
+<area shape="rect" id="node8" href="$namespace_project_lib.html#aa9c52ceab3cae778cd494433c1d665e9" title="Copies a matrix of size (n x m) to a new location." alt="" coords="348,169,504,196"/>
+<area shape="rect" id="node9" href="$namespace_project_lib.html#a3d5f3b556189dc85ad958a1010e9f093" title="Multiplies two matrices with matching dimensions." alt="" coords="341,227,511,253"/>
+<area shape="rect" id="node10" href="$namespace_project_lib.html#a1300416169292f42f2292adb06fb268a" title="Subtracts two matrices of equal dimensions." alt="" coords="339,277,513,304"/>
 </map>
