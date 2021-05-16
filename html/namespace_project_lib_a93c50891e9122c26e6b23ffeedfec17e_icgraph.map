@@ -1,7 +1,0 @@
-<map id="ProjectLib::mapfloat" name="ProjectLib::mapfloat">
-<area shape="rect" id="node1" title="Maps an input signal from its original range to a new range." alt="" coords="528,31,668,57"/>
-<area shape="rect" id="node2" href="$class_battery_monitor.html#aeae07812c5e6e19ad6bf1b4ff610b054" title=" " alt="" coords="313,23,480,65"/>
-<area shape="rect" id="node3" href="$class_battery_monitor.html#acf197e22e860c1e960cd4fdeb63aaf60" title=" " alt="" coords="120,5,253,32"/>
-<area shape="rect" id="node5" href="$class_battery_monitor.html#a5f0a20f00b7640904f5880a1fbdba2e9" title=" " alt="" coords="108,56,265,83"/>
-<area shape="rect" id="node4" href="$_eml_project_lib_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,60,32"/>
-</map>
