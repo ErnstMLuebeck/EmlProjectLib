@@ -1,7 +1,7 @@
 #include "PinMonitor.h"
 
 /**
- * Construct pin monitor object
+ * @brief Construct pin monitor object
  *  
  * @param _numPin [-], pin number
  * @param _numDeBnceCycles [-], number of debounce cycles
@@ -42,7 +42,7 @@ PinMonitor::PinMonitor(int _numPin, uint16_t _numDeBnceCycles, boolean _stActv, 
 }
 
 /**
- * Set the time limit to detect "long" states 
+ * @brief Set the time limit to detect "long" states 
  * 
  * @param _TiHighLim [ms], time limit to detect long HIGH states
  */
@@ -52,7 +52,7 @@ void PinMonitor::setTiHighLim(unsigned long _TiHighLim)
 }
 
 /**
- * Set the time limit to detect "long" LOW states 
+ * @brief Set the time limit to detect "long" LOW states 
  * 
  * @param _TiLowLim [ms], time limit to detect long LOW states
  */
@@ -62,7 +62,7 @@ void PinMonitor::setTiLowLim(unsigned long _TiLowLim)
 }
 
 /**
- * Set number of debounce cycles
+ * @brief Set number of debounce cycles
  * 
  * @param _numDeBnceCycles [-], number of debounce cycles
  */
@@ -72,7 +72,8 @@ void PinMonitor::setNumDeBnceCyckes(uint16_t _numDeBnceCycles)
 }
 
 /**
- * Update pin monitor states.
+ * @brief Update pin monitor states.
+ * 
  * This function needs to be called regularly. The pin is sampled and a debounce counter is 
  * incremented/decremented according to the pin state. If the debounce threshold is reached, 
  * the state is set. All kind of edges are detected. There is an inhibit flag to skip the next edge.
@@ -121,7 +122,7 @@ void PinMonitor::update()
 }
 
 /**
- * Check if a rising edge occured.
+ * @brief Check if a rising edge occured.
  * 
  * @return Flag [-], rising edge occured
  */
@@ -135,7 +136,7 @@ boolean PinMonitor::risingEdge()
 }
 
 /**
- * Check if a falling edge occured.
+ * @brief Check if a falling edge occured.
  * 
  * @return Flag [-], falling edge occured
  */
@@ -149,7 +150,7 @@ boolean PinMonitor::fallingEdge()
 }
 
 /**
- * Check if any edge occured.
+ * @brief Check if any edge occured.
  * 
  * @return Flag [-], any edge occured
  */
@@ -163,7 +164,7 @@ boolean PinMonitor::anyEdge()
 }
 
 /**
- * Get the current state of the pin
+ * @brief Get the current state of the pin
  * 
  * @return Flag [-], pin state
  */
@@ -173,7 +174,7 @@ boolean PinMonitor::getState()
 }
 
 /**
- * Get the time the pin spent being high
+ * @brief Get the time the pin spent being high
  * 
  * @return TiPinHigh [ms], time pin was HIGH
  */
@@ -184,7 +185,7 @@ unsigned long PinMonitor::getHighTime()
 }
 
 /**
- * Get the time the pin spent being LOW
+ * @brief Get the time the pin spent being LOW
  * 
  * @return TiPinHigh [ms], time pin was LOW
  */
@@ -195,7 +196,7 @@ unsigned long PinMonitor::getLowTime()
 }
 
 /**
- * Check if pin was HIGH longer than the TiHighLim time
+ * @brief Check if pin was HIGH longer than the TiHighLim time
  * 
  * @return Flag [-], pin was HIGH for a long time
  */
@@ -209,7 +210,7 @@ boolean PinMonitor::highLong()
 }
 
 /**
- * Check if pin was LOW longer than the TiLowLim time
+ * @brief Check if pin was LOW longer than the TiLowLim time
  * 
  * @return Flag [-], pin was LOW for a long time
  */
@@ -223,7 +224,7 @@ boolean PinMonitor::lowLong()
 }
 
 /**
- * Set the inhibit flag to ignore the next rising edge
+ * @brief Set the inhibit flag to ignore the next rising edge
  */
 void PinMonitor::ignoreNxtRisngEdge()
 {
@@ -231,7 +232,7 @@ void PinMonitor::ignoreNxtRisngEdge()
 }
 
 /**
- * Set the inhibit flag to ignore the next falling edge
+ * @brief Set the inhibit flag to ignore the next falling edge
  */
 void PinMonitor::ignoreNxtFallngEdge()
 {
